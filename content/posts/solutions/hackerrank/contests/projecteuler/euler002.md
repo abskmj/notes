@@ -4,7 +4,9 @@ date: 2017-11-04T20:36:33+05:30
 tags: ["Mathematics","HackerRank","Solution","Java"]
 ---
 
-This solution resulted in test cases #2,3 to timeout.
+# Solution #1
+
+Test cases 2,3 timed out for below solution.
 
 ```java
 import java.io.*;
@@ -46,7 +48,7 @@ public class Solution {
 }
 ```
 
-# Solution
+# Solution #2
 
 - Every 3rd number in the fibonacci series is even. This is based on the fact that sum of a odd and an even number is always odd and sum of 2 odd numbers is always even.
 - This fact results in a formula `F(n) = 4(n-1) + F(n-2)`, where F(n) represents the even numbered fibonacci series.

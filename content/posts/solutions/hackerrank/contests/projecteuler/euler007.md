@@ -8,7 +8,7 @@ tags: ["HackerRank","Solution","Java"]
 - Iterate from 2 to the given number. Consider odd numbers only except 2.
 - Check each iteration for prime number.
 
-However, below solution resulted in test case #4 to timeout.
+However, Test case 4 timed out for below solution.
 
 ```java
 import java.io.*;
