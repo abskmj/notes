@@ -1,7 +1,7 @@
 ---
 title: "HackerEarth - Mirror Image"
 date: 2017-11-18T11:36:52+05:30
-tags: ["HackerEarth","Solution","Java"]
+tags: ["HackerEarth","Solution","Java","Binary Tree"]
 ---
 
 # Solution
