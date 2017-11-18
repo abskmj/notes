@@ -4,13 +4,15 @@ date: 2017-11-08T20:54:03+05:30
 tags: ["HackerRank","Solution","Java"]
 ---
 
-# Solution #1
-- Iterate through each combination of two and check if smaller is factor of bigger number.
-- A given number is potential answer if number of times it is a factor is 0.
-
-Test case 11 to 25 timed out for below solution.
+# Solution
+- Start iterating numbers from b to a because combination of larger numbers are more likely to be indivisible.
+- Keep an array representing all numbers including a and b.
+- Strike out multiples of current number from array in each iteration.
 
 ```java
+/* Solution to HackerRank: Mutual Indivisibility
+ * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/mutual-indivisibility
+ */
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -27,31 +29,40 @@ public class Solution {
             int b = in.nextInt();
             int x = in.nextInt();
             
-            int offset = b-a;
+            int[] skills =  new int[b-a+1];
             
-            int[] check = new int[offset+1];
+            int zeros = 0;
             
-            // calculate the number of times i is factor of j
-            for(int i = a; i < b; i++){
-                for(int j = i+1; j <=b; j++){
-                    if(j%i == 0){
-                        check[i-a]++;
-                    }
+            for(int i=b; i>=a; i--){
+                zeros++;
+                    
+                int multiple = i*2;
+                int count = 2;
+
+                while(multiple <= b){
+                    // strike out the multiple, hence decrease number of zero count
+                    skills[multiple-a] = 1;
+                    zeros--;
+
+                    count++;
+                    multiple = i*count;
                 }
-            }
-            
-            List<Integer> answer = new ArrayList<>();
-            
-            // add to the answer list if value is zero
-            for(int i=0; i < check.length; i++){
-                if(check[i] == 0){
-                    answer.add(i+a);
+                
+                if(zeros == x){
+                    break;
                 }
-            }
+            }        
             
-            if(answer.size() >= x){
-                for(int i=0; i < x; i++){
-                    System.out.print(answer.get(i)+" ");
+            
+            if(zeros >= x){
+                int i = skills.length-1;
+                while(i >= 0 && x > 0){
+                   if(skills[i] == 0){
+                       System.out.print(i+a);
+                       System.out.print(" ");
+                       x--;
+                   }
+                   i--;
                 }
                 
                 System.out.println("");
@@ -59,76 +70,10 @@ public class Solution {
             else{
                 System.out.println(-1);
             }
-        }
-        in.close();
-    }
-}
-```
-
-# Solution #2
-- Iterate through each number one by one.
-- If current number is divisible by any of the potential answer list, then remove it.
-- Add current number to the potential answer list.
-- Break the loop if size of potential answer list is equal to the expected size.
-
-Test case 11 to 25 timed out for below solution as well.
-
-```java
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-
-public class Solution {
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
-        for(int a0 = 0; a0 < t; a0++){
-            int a = in.nextInt();
-            int b = in.nextInt();
-            int x = in.nextInt();
-            
-            boolean noAns = true;
-            
-            List<Integer> list = new ArrayList<>();
-            
-            list.add(a);
-            
-            while(a++ <= b){
-                List<Integer> list1 = new ArrayList<>();
-                for(int num: list){
-                    if(a%num == 0){
-
-                    }
-                    else{
-                        list1.add(num);
-                    }
-                }
-                
-                list = list1;
-                
-                list.add(a);
-                
-                if(list.size() == x){
-                    noAns = false;
-                    
-                    for(int num: list){
-                        System.out.print(num+" ");
-                    }
-                    
-                    System.out.println("");
-                    break;
-                }
-            }
-            
-            if(noAns){
-                System.out.println(-1);
-            }
             
         }
         in.close();
     }
 }
+
 ```
