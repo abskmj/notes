@@ -31,31 +31,33 @@ public class Solution {
             
             int[] skills =  new int[b-a+1];
             
-            int zeros = 0;
+            int teamSize = 0;
             
             for(int i=b; i>=a; i--){
-                zeros++;
+                teamSize++;
                     
                 int multiple = i*2;
                 int count = 2;
 
                 while(multiple <= b){
-                    // strike out the multiple, hence decrease number of zero count
+                    // strike out the multiple, hence decrease team size
                     skills[multiple-a] = 1;
-                    zeros--;
+                    teamSize--;
 
                     count++;
                     multiple = i*count;
                 }
                 
-                if(zeros == x){
+                // break as needed team size is reached
+                if(teamSize == x){
                     break;
                 }
             }        
             
             
-            if(zeros >= x){
+            if(teamSize >= x){
                 int i = skills.length-1;
+                
                 while(i >= 0 && x > 0){
                    if(skills[i] == 0){
                        System.out.print(i+a);
