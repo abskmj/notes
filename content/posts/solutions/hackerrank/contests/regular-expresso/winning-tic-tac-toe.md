@@ -21,8 +21,8 @@ tags: ["HackerRank","Solution","Regular Expression"]
 
 will take care of
 
-X 0 -
-0 X O
+X O -
+O X O
 - - X 
 ```
 
@@ -58,14 +58,14 @@ O - X
 will take care of 
 
 O - X
-- X 0
+- X O
 X O -
 
 false positive if ..$ is not included
 
 O X -
-X 0 X
-- 0 X
+X O X
+- O X
 ```
 
 ### Case 4
@@ -81,7 +81,7 @@ O - O
 
 OR 
 
-0 - 0
+O - O
 X X X
 O - -
 
@@ -95,5 +95,5 @@ false positive if (...)*$ is not included
 
 O - X
 X X -
-- 0 0
+- O O
 ```

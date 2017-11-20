@@ -36,7 +36,9 @@ var cid = hash(request.headers['x-forwarded-for'] || request.connection.remoteAd
 - IP value should be hashed to avoid collecting sensitive user or client information.
 
 ## User Analytics
-Most of this data is captured by processing user's IP address and browser's [user agent](https://en.wikipedia.org/wiki/User_agent). In this case, user's IP and UA is not passed to Google Analytics rather the server's IP is passed. To fix this, `uip` & `ua` fields can be used to set user information.
+Most of this data is captured by processing user's IP address and browser's [user agent](https://en.wikipedia.org/wiki/User_agent). In this case, user's IP and UA is not passed to Google Analytics rather the server's IP is passed. All the analytics will have details of the servers only.
+
+To fix this, `uip` & `ua` fields can be used to set user information.
 
 ```
 &uip=1.2.3.4     // IP address override.
