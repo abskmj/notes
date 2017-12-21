@@ -28,7 +28,7 @@ theme = "hugo_theme_pickles"
   # Disqus shortname
   # disqus = ""
   # Google Analytics API key.
-  # ga_api_key = "Your Google Analytics tracking id"
+  ga_api_key = "UA-82450306-3"
   author = "abskmj"
   # authorwebsite = "example.com"
   # avatar = "/path/to/avatar"
