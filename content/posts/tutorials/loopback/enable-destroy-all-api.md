@@ -9,7 +9,7 @@ Destroy All API (`Model.destroyAll()`) is, by default, disabled to avoid acciden
 # Remote Method
 A corresponding remote method can be added to the `model.js` file to enable this API. This method also supports a filter to enable selective deletion.
 
-```
+```javascript
 module.exports = function (Model) {
     Model.remoteMethod('destroyAll', {
         isStatic: true,
