@@ -1,5 +1,5 @@
 ---
-title: "Authenticating REST APIs using JWT"
+title: "Authenticate REST APIs using JWT"
 date: 2018-05-08T10:41:21Z
 tags: ["Topic","REST APIs","JWT","Authentication","Security"]
 ---

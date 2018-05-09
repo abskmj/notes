@@ -1,1 +1,1 @@
-hugo server -D --bind=$IP --port=$PORT --baseUrl=http://$C9_HOSTNAME/
+hugo server -D --bind=$IP --port=$PORT --baseUrl=https://$C9_HOSTNAME/ --appendPort=false
