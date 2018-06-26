@@ -14,7 +14,7 @@ git init --bare
 Configure `project.source` as working folder for source code by adding below to `project.git/hooks/post-receive`
 ```
 #!/bin/sh
-git --work-tree=/<path>/project.source --git-dir=/<path>/project.git checkout -f
+git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
 ```
 
 Change file persion to `755` to make it executable.
@@ -24,7 +24,7 @@ chmod 755 project.git/hooks/post-receive
 
 Add a remote to local repo
 ```
-git remote add dev git+ssh://user@server/projects/ppe_mc/ppe.git
+git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
 ```
 
 Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.
@@ -37,10 +37,10 @@ Steps to install dependencies, build, test, deploy can be added to the `post-rec
 
 ```
 #!/bin/sh
-git --work-tree=/<path>/project.source --git-dir=/<path>/project.git checkout -f
+git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
 
 # Steps to build and deploy nodejs application
-cd /<path>/project.source
+cd /{{path}}/project.source
 npm install
 npm run build
 pm2 restart node_app
