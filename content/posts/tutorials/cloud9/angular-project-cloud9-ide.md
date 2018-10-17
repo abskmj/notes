@@ -1,5 +1,5 @@
 ---
-title: "Developing and Angular project on Cloud9 IDE"
+title: "Developing an Angular project on Cloud9 IDE"
 date: 2018-07-10T12:46:13Z
 tags: ["Angular", "Node.js", "NPM" , "Tutorial", "Cloud9 IDE"]
 ---
