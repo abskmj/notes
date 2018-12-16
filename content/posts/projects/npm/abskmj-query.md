@@ -5,7 +5,7 @@ tags: ["Project","NPM","NodeJS"]
 ---
 
 # [@abskmj/query](https://www.npmjs.com/package/@abskmj/query)
-It is a npm module that converts complex json with arrays and nested objects into url parameters or query string. It can also parse such query string back to json. 
+It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON. 
 
 ## Example
 ```javascript
@@ -57,5 +57,5 @@ console:
 ```
 
 
-# Why I wrote it?
-I have been working on lots of MEVN/MEAN stack applications lately. I thought it would a great idea to write the mongoose queries in the front-end code  rather than creating multiple apis for different queries. It saves lots of effort on the backend code.
+# Motivation
+I have been working on lots of MEVN/MEAN stack applications lately. I thought it would a great idea to write the mongoose queries in the front-end code rather than creating multiple APIs for different queries. It saves lots of effort on the backend code.
