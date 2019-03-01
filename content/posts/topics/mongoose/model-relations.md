@@ -6,7 +6,7 @@ tags: ["Topic","Mongoose","Model","Relations"]
 
 # Model Relations
 
-Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of same or another model.
+Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of the same or another model.
 
 A relation between models are generally of two types:
 
@@ -67,8 +67,21 @@ schema.virtual('posts', {
 ## Populate
 Now the author of a blog post can be easily populated by:
 ```javascript
-Post.find({}).populate('posts');
+User.find({}).populate('posts');
 ```
 
+# Note 
+Virtuals are not included in string version of the model instances by default. To include them, set the `virtuals` option to `true` on schema's `toObject` and `toJSON` options.
+``` javascript
+const User = new Schema(userSchema, {
+    toObject: { virtuals: true }, 
+    toJSON: { virtuals: true } 
+});
+```
+
+
 # Code Repository
-A working code respository is available at [github](https://github.com/abskmj/example-model-relations).
+A working code repository is available at [github](https://github.com/abskmj/example-model-relations).
+
+# Reference
+- https://mongoosejs.com/docs/populate.html#populate-virtuals
