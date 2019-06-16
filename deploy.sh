@@ -1,2 +1,2 @@
 hugo
-surge --domain clog.logicize.co ./public 
+npx surge --domain clog.logicize.co ./public 

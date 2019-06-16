@@ -1,0 +1,21 @@
+{
+  "name": "clog",
+  "version": "1.0.0",
+  "description": "Personal blog",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "surge": "^0.21.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "hugo && surge --domain clog.logicize.co ./public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/abskmj/clog.git"
+  },
+  "author": "abskmj@gmail.com",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/abskmj/clog#readme"
+}
