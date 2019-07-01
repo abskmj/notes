@@ -12,22 +12,15 @@ The steps listed below is different from the traditional steps listed on the off
 # Serverless Framework
 
 ## Installation
-Install both the framework and the Spotinst plugin.
-
+Install the framework globally
 ```
-npm install --save-dev serverless serverless-spotinst-funtions
-```
-
-## Credentials
-Save the spotinst credentials for serverless framework.
-```
-HOME=./ npx serverless config credentials --provider spotinst --token {{your token}}  --account {{your account id}}
+npm install -g serverless
 ```
 
-- `HOME=./` sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of `~/.spotinst/credentials`.
-- `npx` is used (instead of `npm`) as serverless is installed as a local module.
-- Spotinst Account ID can be found at https://console.spotinst.com/#/settings/account/general
-- Spotinst Token can be found at https://console.spotinst.com/#/settings/tokens/permanent
+Install the Spotinst functions plugin locally.
+```
+npm install --save-dev serverless-spotinst-functions
+```
 
 ## Configuration
 Create a `serverless.yml` file in the root directory of the project.
@@ -52,6 +45,14 @@ provider:
   #stage: <Stage Name>  #Optional. Defaults to 'dev', see https://help.spotinst.com/hc/en-us/articles/115005893409
   spotinst:
     environment: env-c0XXbXeb #<env-XXXX> Required.
+
+# exclude serverless files that are needed to be deployed
+package:
+  exclude:
+    - .aws/**
+    - .config/**
+    - .serverlessrc
+    - .spotinst/**       
 
 functions:
   hello:
@@ -82,6 +83,17 @@ plugins:
   - serverless-spotinst-functions
 
 ```
+
+## Credentials
+Save the spotinst credentials for serverless framework.
+```
+HOME=./ serverless config credentials --provider spotinst --token {{your token}}  --account {{your account id}}
+```
+
+- `HOME=./` sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of `~/.spotinst/credentials`.
+- Spotinst Account ID can be found at https://console.spotinst.com/#/settings/account/general
+- Spotinst Token can be found at https://console.spotinst.com/#/settings/tokens/permanent
+
 ## Deployment
 Add a `deploy` script to `package.json` file.
 ```
