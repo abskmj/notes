@@ -32,7 +32,7 @@ jobs:
     - name: Install hugo
       run: |
        sudo apt-get install hugo
-       hugo --version
+       hugo version
     - name: Install hugo theme
       run: |
         mkdir themes
