@@ -31,7 +31,7 @@ jobs:
         echo test, and deploy your project.
     - name: Install hugo
       run: |
-       sudo apt-get install hugo
+       snap install hugo
        hugo version
     - name: Install hugo theme
       run: |
