@@ -5,6 +5,9 @@ Title = "console.log('Hello World!');"
 copyright = "&copy; 2017 abskmj"
 theme = "hugo_theme_pickles"
 
+# Google Analytics API key.
+googleAnalytics = "G-CMVNGMLVMF"
+
 [params]
   paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
