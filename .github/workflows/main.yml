@@ -20,27 +20,21 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
     - name: Install hugo
       run: |
        sudo snap install hugo
        hugo version
+
     - name: Install hugo theme
       run: |
         mkdir themes
         cd themes
         git clone -b release https://github.com/mismith0227/hugo_theme_pickles
         cd ..
+
     - name: Build
       run: hugo --cleanDestinationDir --verbose
+      
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
