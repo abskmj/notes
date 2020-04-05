@@ -40,7 +40,7 @@ jobs:
         git clone -b release https://github.com/mismith0227/hugo_theme_pickles
         cd ..
     - name: Build
-      run: hugo
+      run: hugo --cleanDestinationDir --verbose
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
