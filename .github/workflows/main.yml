@@ -31,3 +31,9 @@ jobs:
         echo test, and deploy your project.
     - name: Install hugo
       run: sudo apt-get install hugo
+    - name: Install hugo theme
+      run: |
+        mkdir themes
+        cd themes
+        git clone -b release https://github.com/mismith0227/hugo_theme_pickles
+        cd ..
