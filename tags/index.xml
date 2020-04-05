@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 18:26:32 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>apt-get</title>
+      <link>https://abskmj.github.io/notes/tags/apt-get/</link>
+      <pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/apt-get/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>https://abskmj.github.io/notes/tags/debian/</link>
+      <pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WD MyCloud</title>
+      <link>https://abskmj.github.io/notes/tags/wd-mycloud/</link>
+      <pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/wd-mycloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wheezy</title>
+      <link>https://abskmj.github.io/notes/tags/wheezy/</link>
+      <pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/wheezy/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Airbnb</title>

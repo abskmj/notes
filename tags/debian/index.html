@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Posts</title>
-  <meta property="og:title" content="Posts" />
-  <meta name="twitter:title" content="Posts" />
+  <title>Debian</title>
+  <meta property="og:title" content="Debian" />
+  <meta name="twitter:title" content="Debian" />
   
 
   
 
   <meta name="author" content="abskmj"/>
   <meta property="og:site_name" content="console.log(&#39;Hello World!&#39;);" />
-  <meta property="og:url" content="https://abskmj.github.io/notes/posts/" />
+  <meta property="og:url" content="https://abskmj.github.io/notes/tags/debian/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -58,219 +58,27 @@
   </header>
   <main id="main" class="l-main">
 
-<h2 class="c-title p-tag-title">Posts</h2>
+<h2 class="c-title p-tag-title">Debian</h2>
 
 
 
 
 <article class="c-article p-list-article">
   <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/">HackerRank - Divisible Sum Pairs</a></h2>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/">Sources List for Debian Wheezy</a></h2>
     <p class="c-article__meta">
       Posted on
-      <time datetime="2018-09-10T08:14:46Z">
-        Sep 10, 2018
+      <time datetime="2020-04-05T18:26:32&#43;05:30">
+        Apr 5, 2020
       </time>
     </p>
   </header>
   <div class="c-article__summary">
-    Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: https://www.hackerrank.com/challenges/divisible-sum-pairs */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the divisibleSumPairs function below. static int divisibleSumPairs(int n, int k, int[] ar) { int count = 0; for(int i=0; i &lt; n; i++){ for(int j=i+1; j &lt; n; j++){ if((ar[i]+ar[j])%k == 0){ count++; } } } return count; } private static final Scanner scanner = new Scanner(System.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/">HackerRank - The Time in Words</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-09-10T07:16:41Z">
-        Sep 10, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution /* Solution to HackerRank: The Time in Words * URL: https://www.hackerrank.com/challenges/the-time-in-words */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the timeInWords function below.  static String timeInWords(int h, int m) { String[] words = {&#34;zero&#34;, &#34;one&#34;, &#34;two&#34;, &#34;three&#34;, &#34;four&#34;, &#34;five&#34;, &#34;six&#34;, &#34;seven&#34;, &#34;eight&#34;, &#34;nine&#34;, &#34;ten&#34;, &#34;eleven&#34;, &#34;twelve&#34;, &#34;thirteen&#34;, &#34;fourteen&#34;, &#34;fifteen&#34;, &#34;sixteen&#34;, &#34;seventeen&#34;, &#34;eighteen&#34;, &#34;nineteen&#34;, &#34;twenty&#34;}; if (m == 0){ return words[h] + &#34; o&#39; clock&#34;; } else if (m == 15){ return &#34;quarter past &#34; + words[h]; } else if (m == 30){ return &#34;half past &#34; + words[h]; } else if (m == 45){ return &#34;quarter to &#34; + words[h+1]; } else if (m == 1){ return &#34;one minute past &#34; + words[h]; } else if (m == 59){ return &#34;one minute to &#34; + words[h+1]; } else if (m &lt; 21){ return words[m] + &#34; minutes past &#34; + words[h]; } else if (m &gt; 39){ return words[60-m] + &#34; minutes to &#34; + words[h+1]; } else if (m &gt; 30){ return &#34;twenty &#34; + words[(60-m)%20] + &#34; minutes to &#34; + words[h+1]; } else{ return &#34;twenty &#34; + words[m%20] + &#34; minutes past &#34; + words[h]; } } private static final Scanner scanner = new Scanner(System.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/">Developing an Angular project on Cloud9 IDE</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-07-10T12:46:13Z">
-        Jul 10, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Update NodeJS version  All of the blank VMs on cloud9 have nvm pre installed. List all the available versions from the official site.  nvm ls-remote  Choose to install the latest version  nvm install v10.6.0  Choose to use the latest version  nvm use v10.6.0  Check the version in use  node --version Angular  Install latest Angular CLI package  npm install -g @angular/cli  Create a new project named my-project (you can use any name you need)  ng new my-project cd my-project  Change start script in package.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/">Using a remote repository with Glitch.com</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-06-18T11:25:57Z">
-        Jun 18, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Glitch is a online workspace that support javascript for development with live previews.
-A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.
-Rather, a separate git repository can be set using the current project as working directory.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/">Fix TWRP E3004 Error on OnePlus2</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-05-18T11:15:44Z">
-        May 18, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    I have recently installed LineageOS custom ROM on my OnePlus2 device to keep on trying new android versions as they come. While installing/updating the OS, I was getting below error on TWRP recovery screen.
-script aborted: E3004: This package is for device: OnePlus2,oneplus2; this device is . To fix this, I updated to the lastest version of TWRP for OnePlus2.
-  </div>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/">Set Proxy for Maven</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-05-18T10:54:22Z">
-        May 18, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file. Changes to this file doesn&rsquo;t require maven restart.
-... &lt;proxies&gt; &lt;!-- proxy | Specification for one proxy, to be used in connecting to the network. |--&gt; &lt;proxy&gt; &lt;id&gt;optional&lt;/id&gt; &lt;active&gt;true&lt;/active&gt; &lt;protocol&gt;http&lt;/protocol&gt; &lt;username&gt;&lt;/username&gt; &lt;password&gt;&lt;/password&gt; &lt;host&gt;{{proxy_host_or_ip}}&lt;/host&gt; &lt;port&gt;8080&lt;/port&gt; &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt; &lt;/proxy&gt; &lt;/proxies&gt; ... 
-  </div>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/">Deploy a NodeJS application using Git</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-05-09T05:09:36Z">
-        May 9, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
-git init --bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
-#!/bin/sh git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
-chmod 755 project.git/hooks/post-receive Add a remote to local repo
-git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/topics/rest-api/authentication-jwt-rest-apis/">Authenticate REST APIs using JWT</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-05-08T10:41:21Z">
-        May 8, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Authentication vs Authorization  Authentication: identifying the user who is accessing the resource Authorization: checking if the user has permission to perform an action on the resource (e.g updating the resource)  JWT for Authentication JWT or JSON Web Token is a preferrable method for authenticating REST APIs because:
- A datastore is not required for its verification. It can be issued and verified by a specific application server which has access to the secret key.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/topics/rest-api/authentication-jwt-rest-apis/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/">Custom Model Methods in Loopback</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-05-07T08:44:22Z">
-        May 7, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Loopback models can be extended by adding custom methods to them. A method can be:
- Model Method: the method is available on Model itself. Instance Method: the method is available on an instance of the model.  Model JS file // Model.js module.exports = function(Model) { // Model Method  Model.method = function() { ... } // Instance Method  Model.prototype.method = function() { ... } } // Model method var Model = app.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/projects/bhaina-bot/">Status of Indian Railway PNR on Facebook Messenger</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-02-24T19:33:50&#43;05:30">
-        Feb 24, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR. You don&rsquo;t have to install any extra application on your mobile to use this service.
-Give it a try on your messenger!
+     As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.
+   Open /etc/apt/sources.list
+  Comment existing sources
+  Add below sources
+  deb http://archive.debian.org/debian/ wheezy main non-free contrib deb-src http://archive.debian.org/debian/ wheezy main non-free contrib  Now you can run  apt-get update  If you get below error  There is no public key available for the following key IDs  Install below package  apt-get install debian-archive-keyring  Now you can rerun  apt-get update 
   </div>
   
 </article>
@@ -281,16 +89,12 @@ Give it a try on your messenger!
   <div class="c-pagination__ctrl">
     <div class="c-pagination__newer">
       
-      <a href="/notes/posts/">Newer</a>
-      
     </div>
     <div class="c-pagination__older">
       
-      <a href="/notes/posts/page/3/">Older</a>
-      
     </div>
   </div>
-  <span class="c-pagination__count p-pagination__count">Page 2 of 5</span>
+  <span class="c-pagination__count p-pagination__count">Page 1 of 1</span>
 </nav>
 
 

@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 18:26:32 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sources List for Debian Wheezy</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</link>
+      <pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</guid>
+      <description> As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.
+   Open /etc/apt/sources.list
+  Comment existing sources
+  Add below sources
+  deb http://archive.debian.org/debian/ wheezy main non-free contrib deb-src http://archive.debian.org/debian/ wheezy main non-free contrib  Now you can run  apt-get update  If you get below error  There is no public key available for the following key IDs  Install below package  apt-get install debian-archive-keyring  Now you can rerun  apt-get update </description>
+    </item>
     
     <item>
       <title>Configure ES Lint with Airbnb rules for a Node.js Application</title>

@@ -3,17 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://abskmj.github.io/notes/tags/apt-get/</loc>
+    <lastmod>2020-04-05T18:26:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/</loc>
+    <lastmod>2020-04-05T18:26:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/debian/</loc>
+    <lastmod>2020-04-05T18:26:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/posts/</loc>
+    <lastmod>2020-04-05T18:26:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</loc>
+    <lastmod>2020-04-05T18:26:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/</loc>
+    <lastmod>2020-04-05T18:26:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/wd-mycloud/</loc>
+    <lastmod>2020-04-05T18:26:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/wheezy/</loc>
+    <lastmod>2020-04-05T18:26:32+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://abskmj.github.io/notes/tags/airbnb/</loc>
     <lastmod>2019-07-01T20:15:18+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</loc>
-    <lastmod>2019-07-01T20:15:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/</loc>
     <lastmod>2019-07-01T20:15:18+05:30</lastmod>
   </url>
   
@@ -29,16 +64,6 @@
   
   <url>
     <loc>https://abskmj.github.io/notes/tags/nodejs/</loc>
-    <lastmod>2019-07-01T20:15:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/posts/</loc>
-    <lastmod>2019-07-01T20:15:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/</loc>
     <lastmod>2019-07-01T20:15:18+05:30</lastmod>
   </url>
   
