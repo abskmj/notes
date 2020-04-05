@@ -6,7 +6,7 @@ copyright = "&copy; 2017 abskmj"
 theme = "hugo_theme_pickles"
 
 # Google Analytics API key.
-googleAnalytics = "G-CMVNGMLVMF"
+# googleAnalytics = ""
 
 [params]
   paginate = 10
