@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solution on console.log(&#39;Hello World!&#39;);</title>
+    <link>http://clog.logicize.co/tags/solution/</link>
+    <description>Recent content in Solution on console.log(&#39;Hello World!&#39;);</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Mon, 07 Jan 2019 12:50:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://clog.logicize.co/tags/solution/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Largest product in a series</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler008/</link>
+      <pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler008/</guid>
+      <description>Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int T = scan.nextInt(); for(int j=0;j&amp;lt;T;j++){ int N = scan.nextInt(); int K = scan.nextInt(); scan.nextLine(); char[] data = scan.nextLine().toCharArray(); int max = 0; for(int i=0;i&amp;lt;N-K;i++){ int prod = getProduct(data,i,K); if(prod&amp;gt;max){ max = prod; } } System.out.println(max); } } static int getProduct(char[] data, int start, int length){ int product = 1; for(int i=start;i&amp;lt;start+length;i++){ product = product * Character.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Multiples of 3 and 5</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler001/</link>
+      <pubDate>Mon, 07 Jan 2019 12:45:33 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler001/</guid>
+      <description>Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int numCases = scan.nextInt(); for(int index=0;index&amp;lt;numCases;index++){ long num = scan.nextInt()-1; System.out.println(sumOfMultiples(num/3,3)+sumOfMultiples(num/5,5)-sumOfMultiples(num/15,15)); } } public static long sumOfMultiples(long num, long multiple){ return (multiple*num*(num+1))/2; } } </description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Divisible Sum Pairs</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</link>
+      <pubDate>Mon, 10 Sep 2018 08:14:46 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</guid>
+      <description>Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: https://www.hackerrank.com/challenges/divisible-sum-pairs */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the divisibleSumPairs function below. static int divisibleSumPairs(int n, int k, int[] ar) { int count = 0; for(int i=0; i &amp;lt; n; i++){ for(int j=i+1; j &amp;lt; n; j++){ if((ar[i]+ar[j])%k == 0){ count++; } } } return count; } private static final Scanner scanner = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - The Time in Words</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/</link>
+      <pubDate>Mon, 10 Sep 2018 07:16:41 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/</guid>
+      <description>Solution /* Solution to HackerRank: The Time in Words * URL: https://www.hackerrank.com/challenges/the-time-in-words */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the timeInWords function below.  static String timeInWords(int h, int m) { String[] words = {&amp;#34;zero&amp;#34;, &amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;, &amp;#34;five&amp;#34;, &amp;#34;six&amp;#34;, &amp;#34;seven&amp;#34;, &amp;#34;eight&amp;#34;, &amp;#34;nine&amp;#34;, &amp;#34;ten&amp;#34;, &amp;#34;eleven&amp;#34;, &amp;#34;twelve&amp;#34;, &amp;#34;thirteen&amp;#34;, &amp;#34;fourteen&amp;#34;, &amp;#34;fifteen&amp;#34;, &amp;#34;sixteen&amp;#34;, &amp;#34;seventeen&amp;#34;, &amp;#34;eighteen&amp;#34;, &amp;#34;nineteen&amp;#34;, &amp;#34;twenty&amp;#34;}; if (m == 0){ return words[h] + &amp;#34; o&amp;#39; clock&amp;#34;; } else if (m == 15){ return &amp;#34;quarter past &amp;#34; + words[h]; } else if (m == 30){ return &amp;#34;half past &amp;#34; + words[h]; } else if (m == 45){ return &amp;#34;quarter to &amp;#34; + words[h+1]; } else if (m == 1){ return &amp;#34;one minute past &amp;#34; + words[h]; } else if (m == 59){ return &amp;#34;one minute to &amp;#34; + words[h+1]; } else if (m &amp;lt; 21){ return words[m] + &amp;#34; minutes past &amp;#34; + words[h]; } else if (m &amp;gt; 39){ return words[60-m] + &amp;#34; minutes to &amp;#34; + words[h+1]; } else if (m &amp;gt; 30){ return &amp;#34;twenty &amp;#34; + words[(60-m)%20] + &amp;#34; minutes to &amp;#34; + words[h+1]; } else{ return &amp;#34;twenty &amp;#34; + words[m%20] + &amp;#34; minutes past &amp;#34; + words[h]; } } private static final Scanner scanner = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Large Sum</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler013/</link>
+      <pubDate>Fri, 08 Dec 2017 16:21:47 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler013/</guid>
+      <description>Solution  Use BigInteger to calculate the sum and print first 10 characters by converting to string.  /* Solution to HackerRank: Large Sum * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler013 */ import java.io.*; import java.util.*; import java.math.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); BigInteger sum = new BigInteger(&amp;#34;0&amp;#34;); for(int t=0; t&amp;lt;N; t++){ sum = sum.add(new BigInteger(in.next())); } System.out.println(sum.toString().substring(0, 10)); } } </description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Power Digit Sum</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler016/</link>
+      <pubDate>Fri, 08 Dec 2017 16:03:31 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler016/</guid>
+      <description>Solution  2 to the power 1000 will be a huge number hence consider using BigInteger. Recursively calculate the sum of all the digits.  /* Solution to HackerRank: Power Digit Sum * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler016 */ import java.io.*; import java.util.*; import java.math.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int T = in.nextInt(); for(int t=0; t&amp;lt;T; t++){ int N = in.nextInt(); BigInteger base = new BigInteger(&amp;#34;2&amp;#34;); BigInteger pow = base.</description>
+    </item>
+    
+    <item>
+      <title>HackerEarth - Binary Tree</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</link>
+      <pubDate>Mon, 20 Nov 2017 20:04:29 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</guid>
+      <description>Solution  Diameter of a binary tree is maximum of diameter of current node, its left and right child.  /* Solution to HackerEarth: Binary Tree * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/tutorial/ */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { Scanner in = new Scanner(System.in); int T = in.nextInt(); int X = in.nextInt(); Node root = new Node(X); for(int t=0; t &amp;lt; T-1; t++){ String path = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Regular Expresso - Vowels in the Back</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</link>
+      <pubDate>Sun, 19 Nov 2017 20:57:21 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</guid>
+      <description>Solution /* Solution to HackerRank: Vowels in the Back * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/vowels-in-the-back */ &amp;#34;[aeiouy][a-z]{9}$&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Regular Expresso - Balanced Strings</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</link>
+      <pubDate>Sun, 19 Nov 2017 20:52:09 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</guid>
+      <description>Solution /* Solution to HackerRank: Balanced Strings * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings */ &amp;#34;^(ab|ba)+$&amp;#34; possible strings: ababab abba babaab but not: a bab abbaaba </description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Regular Expresso - Winning Tic Tac Toe</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</link>
+      <pubDate>Sun, 19 Nov 2017 20:31:51 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</guid>
+      <description>Solution /* Solution to HackerRank: Winning Tic Tac Toe * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe */ &amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34; Case 1 (...\\1){2}) or (...\\1...\\1) will take care of X O - O X O - - X Case 2 (..\\1..\\1) will take care of X - O X O - X - O OR - X O O X - - X O OR - O X O - X - O X Case 3 (.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Goodland Electricity</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/pylons/</link>
+      <pubDate>Sat, 18 Nov 2017 20:30:35 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/pylons/</guid>
+      <description>Solution  Iterate through each city and check if it is already under range of previous tower. If not, find a tower within the range to switch on.  /* Solution to HackerRank: Goodland Electricity * URL: https://www.hackerrank.com/challenges/pylons */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); int K = in.nextInt(); int[] cities = new int[N]; for(int i=0; i &amp;lt; N; i++){ cities[i] = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Max Min</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/angry-children/</link>
+      <pubDate>Sat, 18 Nov 2017 17:20:41 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/angry-children/</guid>
+      <description>Solution  Sort the array of numbers Find the minimum difference between ith and (i+K-1)th element in each iteration.  /* Solution to HackerRank: Max Min * URL: https://www.hackerrank.com/challenges/angry-children */ import java.io.BufferedReader; import java.io.IOException; import java.io.InputStreamReader; import java.util.Arrays; public class Solution { public static void main(String[] args) throws NumberFormatException, IOException { BufferedReader in = new BufferedReader(new InputStreamReader(System.in)); int N = Integer.parseInt(in.readLine()); int K = Integer.parseInt(in.readLine()); int[] list = new int[N]; for(int i = 0; i &amp;lt; N; i ++) list[i] = Integer.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Maximum Perimeter Triangle</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/maximum-perimeter-triangle/</link>
+      <pubDate>Sat, 18 Nov 2017 17:01:27 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/maximum-perimeter-triangle/</guid>
+      <description>Solution  Iterate the sides in descending order Check if sides make a triangle by checking if sum of two sides is greater than third side .  /* Solution to HackerRank: Maximum Perimeter Triangle * URL: https://www.hackerrank.com/challenges/maximum-perimeter-triangle */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); int[] l = new int[N]; for(int i=0; i &amp;lt; N; i++){ l[i] = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerEarth - Mirror Image</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</link>
+      <pubDate>Sat, 18 Nov 2017 11:36:52 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</guid>
+      <description>Solution  Parse input and build the tree by maintaining an index HashMap. Traverse tree and mirror tree simultaneously to find the mirror node.  /* Solution to HackerEarth: Mirror Image * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/practice-problems/algorithm/mirror-image-2/ */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { //Scanner  Scanner in = new Scanner(System.in); int N = in.nextInt(); int Q = in.nextInt(); Map&amp;lt;Integer, Node&amp;gt; index = new HashMap&amp;lt;&amp;gt;(); // initialize root node  Node root = new Node(1); index.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Largest Permutation</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</link>
+      <pubDate>Thu, 09 Nov 2017 22:02:51 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</guid>
+      <description>Solution #1  Keep indexes of all numbers in a HashMap. Check if current maximum number is already at desired index i.e highest at index 0, second highest at index 1 and so on. If not, keep on swapping them till all the swaps are exhausted.  /* Solution to HackerRank: Largest Permutation * URL: https://www.hackerrank.com/challenges/largest-permutation */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Hackerland Radio Transmitters</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/search/hackerland-radio-transmitters/</link>
+      <pubDate>Wed, 08 Nov 2017 21:50:01 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/search/hackerland-radio-transmitters/</guid>
+      <description>Solution  Iterate through each house in a sorted order. Check if current house is in range of last transmitter. If not, find a house to put transmitter on so that current house is in range.  /* Solution to HackerRank: Hackerland Radio Transmitters * URL: https://www.hackerrank.com/challenges/hackerland-radio-transmitters */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Minimum Loss</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/search/minimum-loss/</link>
+      <pubDate>Wed, 08 Nov 2017 21:06:31 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/search/minimum-loss/</guid>
+      <description>Solution #1  Keep prices and corresponding index in a HashMap. Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices. Check that the indexes buying and selling are in correct order so that year of buying is less than year of selling.  /* Solution to HackerRank: Minimum Loss * URL: https://www.hackerrank.com/challenges/minimum-loss */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - HourRank 24 - Mutual Indivisibility</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/hourrank-24/mutual-indivisibility/</link>
+      <pubDate>Wed, 08 Nov 2017 20:54:03 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/hourrank-24/mutual-indivisibility/</guid>
+      <description>Solution  Start iterating numbers from b to a because combination of larger numbers are more likely to be indivisible. Keep an array representing all numbers including a and b. Strike out multiples of current number from array in each iteration.  /* Solution to HackerRank: Mutual Indivisibility * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/mutual-indivisibility */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - 10001st Prime</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler007/</link>
+      <pubDate>Tue, 07 Nov 2017 07:41:06 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler007/</guid>
+      <description>Solution  Iterate from 2 to the given number. Consider odd numbers only except 2. Check each iteration for prime number.  However, Test case 4 timed out for below solution.
+import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &amp;lt; t; a0++){ int n = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Sum Square Difference</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler006/</link>
+      <pubDate>Tue, 07 Nov 2017 07:19:29 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler006/</guid>
+      <description>Solution  Iterate from 1 to given number. Add each iteration to sum and square of it to another sum. Print absolute difference.  /* Solution to HackerRank: Sum Square Difference * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler006 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &amp;lt; t; a0++){ int n = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Largest Palindrome</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler004/</link>
+      <pubDate>Mon, 06 Nov 2017 22:01:58 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler004/</guid>
+      <description>Solution  Iterate from the given number to zero. Check if current iteration is a palindrome by using reverse() of StringBuilder class. Check if current iteration is a product of two 3-digit numbers.  /* Solution to HackerRank: Largest Palindrome * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler004 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Largest Prime Factor</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler003/</link>
+      <pubDate>Mon, 06 Nov 2017 20:56:26 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler003/</guid>
+      <description>Solution  Find all the factors of the given number by iterating from 1 to square root of the number. Sort all the factors in descending order and iterate to check if a factor is prime.  /* Solution to HackerRank: Largest Prime Factor * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler003 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Even Fibonacci Numbers</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler002/</link>
+      <pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler002/</guid>
+      <description>Solution #1 Test cases 2,3 timed out for below solution.
+import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &amp;lt; t; a0++){ long n = in.nextLong(); int f1 = 0; int f2 = 1; long sum = 0; while(f2 &amp;lt;= n){ // check if even  if(f2%2 == 0){ sum += f2; } // compute next in series  int f = f2 + f1; // set values for next iteration  f1 = f2; f2 = f; } System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - HourRank 24 - Strong Password</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/hourrank-24/strong-password/</link>
+      <pubDate>Sat, 04 Nov 2017 20:14:08 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/hourrank-24/strong-password/</guid>
+      <description>Solution  Count characters of each group in given string. Groups: digit, lower-case, upper-case and special characters Add one of each group to the string if not already present i.e. count is 0. Add required number of characters in case length of the string is less than 6.  /* Solution to HackerRank: Strong Password * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/strong-password */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { static int minimumNumber(int n, String password) { int digitCount = 0; int lowerCount = 0; int upperCount = 0; int specialCount = 0; int addCount = 0; for(char c : password.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Journey to the Moon</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/journey-to-the-moon/</link>
+      <pubDate>Sun, 29 Oct 2017 23:20:35 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/journey-to-the-moon/</guid>
+      <description>Solution  Graph is used to connect all astronauts to a country. Each cluster of graph represents a country. Each cluster is traversed to find the count of astronauts. Number of possible combinations are calculated based on sizes of these countries.  /* Solution to HackerRank: Journey to the Moon * URL: https://www.hackerrank.com/challenges/journey-to-the-moon */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Roads and Libraries</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/torque-and-development/</link>
+      <pubDate>Thu, 26 Oct 2017 11:05:14 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/torque-and-development/</guid>
+      <description>Minimum Cost  If the number of roads is zero or cost of building a road is more than cost of building a library, then building libraries in each of the cities will result in minimum cost. If the cost of building a library is less than cost of building a road, then building a single library and building roads to connected cities will result in minimum cost.  Clusters There can be few set of cities that are not connected to each other and are clusters.</description>
+    </item>
+    
+  </channel>
+</rss>

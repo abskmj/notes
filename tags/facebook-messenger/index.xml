@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Facebook Messenger on console.log(&#39;Hello World!&#39;);</title>
+    <link>http://clog.logicize.co/tags/facebook-messenger/</link>
+    <description>Recent content in Facebook Messenger on console.log(&#39;Hello World!&#39;);</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Sat, 24 Feb 2018 19:33:50 +0530</lastBuildDate>
+    
+	<atom:link href="http://clog.logicize.co/tags/facebook-messenger/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Status of Indian Railway PNR on Facebook Messenger</title>
+      <link>http://clog.logicize.co/posts/projects/bhaina-bot/</link>
+      <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/projects/bhaina-bot/</guid>
+      <description>Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR. You don&amp;rsquo;t have to install any extra application on your mobile to use this service.
+Give it a try on your messenger!</description>
+    </item>
+    
+  </channel>
+</rss>

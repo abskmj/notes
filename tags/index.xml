@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on console.log(&#39;Hello World!&#39;);</title>
+    <link>http://clog.logicize.co/tags/</link>
+    <description>Recent content in Tags on console.log(&#39;Hello World!&#39;);</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate>
+    
+	<atom:link href="http://clog.logicize.co/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Airbnb</title>
+      <link>http://clog.logicize.co/tags/airbnb/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/airbnb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ESLint</title>
+      <link>http://clog.logicize.co/tags/eslint/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/eslint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lint</title>
+      <link>http://clog.logicize.co/tags/lint/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/lint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NodeJS</title>
+      <link>http://clog.logicize.co/tags/nodejs/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>http://clog.logicize.co/tags/tutorial/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VSCode</title>
+      <link>http://clog.logicize.co/tags/vscode/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cheatsheet</title>
+      <link>http://clog.logicize.co/tags/cheatsheet/</link>
+      <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/cheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://clog.logicize.co/tags/git/</link>
+      <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git Stash</title>
+      <link>http://clog.logicize.co/tags/git-stash/</link>
+      <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/git-stash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hydrate</title>
+      <link>http://clog.logicize.co/tags/hydrate/</link>
+      <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/hydrate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lean</title>
+      <link>http://clog.logicize.co/tags/lean/</link>
+      <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/lean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model</title>
+      <link>http://clog.logicize.co/tags/model/</link>
+      <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mongoose</title>
+      <link>http://clog.logicize.co/tags/mongoose/</link>
+      <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/mongoose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Query</title>
+      <link>http://clog.logicize.co/tags/query/</link>
+      <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/query/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Topic</title>
+      <link>http://clog.logicize.co/tags/topic/</link>
+      <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/topic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.js</title>
+      <link>http://clog.logicize.co/tags/node.js/</link>
+      <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/node.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NPM</title>
+      <link>http://clog.logicize.co/tags/npm/</link>
+      <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Serverless</title>
+      <link>http://clog.logicize.co/tags/serverless/</link>
+      <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spotinst</title>
+      <link>http://clog.logicize.co/tags/spotinst/</link>
+      <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/spotinst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HackerRank</title>
+      <link>http://clog.logicize.co/tags/hackerrank/</link>
+      <pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/hackerrank/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://clog.logicize.co/tags/java/</link>
+      <pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solution</title>
+      <link>http://clog.logicize.co/tags/solution/</link>
+      <pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/solution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Relations</title>
+      <link>http://clog.logicize.co/tags/relations/</link>
+      <pubDate>Mon, 24 Dec 2018 09:35:35 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/relations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>API</title>
+      <link>http://clog.logicize.co/tags/api/</link>
+      <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Browser</title>
+      <link>http://clog.logicize.co/tags/browser/</link>
+      <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/browser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Client</title>
+      <link>http://clog.logicize.co/tags/client/</link>
+      <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cligen</title>
+      <link>http://clog.logicize.co/tags/cligen/</link>
+      <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/cligen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>http://clog.logicize.co/tags/javascript/</link>
+      <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>http://clog.logicize.co/tags/project/</link>
+      <pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular</title>
+      <link>http://clog.logicize.co/tags/angular/</link>
+      <pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud9 IDE</title>
+      <link>http://clog.logicize.co/tags/cloud9-ide/</link>
+      <pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/cloud9-ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Glitch.com</title>
+      <link>http://clog.logicize.co/tags/glitch.com/</link>
+      <pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/glitch.com/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android</title>
+      <link>http://clog.logicize.co/tags/android/</link>
+      <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CustomROM</title>
+      <link>http://clog.logicize.co/tags/customrom/</link>
+      <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/customrom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LineageOS</title>
+      <link>http://clog.logicize.co/tags/lineageos/</link>
+      <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/lineageos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Note</title>
+      <link>http://clog.logicize.co/tags/note/</link>
+      <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TWRP</title>
+      <link>http://clog.logicize.co/tags/twrp/</link>
+      <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/twrp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>http://clog.logicize.co/tags/maven/</link>
+      <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/maven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proxy</title>
+      <link>http://clog.logicize.co/tags/proxy/</link>
+      <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>http://clog.logicize.co/tags/deployment/</link>
+      <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git Hook</title>
+      <link>http://clog.logicize.co/tags/git-hook/</link>
+      <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/git-hook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>http://clog.logicize.co/tags/hugo/</link>
+      <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Authentication</title>
+      <link>http://clog.logicize.co/tags/authentication/</link>
+      <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JWT</title>
+      <link>http://clog.logicize.co/tags/jwt/</link>
+      <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/jwt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>REST APIs</title>
+      <link>http://clog.logicize.co/tags/rest-apis/</link>
+      <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/rest-apis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>http://clog.logicize.co/tags/security/</link>
+      <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Loopback</title>
+      <link>http://clog.logicize.co/tags/loopback/</link>
+      <pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/loopback/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Remote Method</title>
+      <link>http://clog.logicize.co/tags/remote-method/</link>
+      <pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/remote-method/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chatbot</title>
+      <link>http://clog.logicize.co/tags/chatbot/</link>
+      <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/chatbot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chatfuel</title>
+      <link>http://clog.logicize.co/tags/chatfuel/</link>
+      <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/chatfuel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Facebook Messenger</title>
+      <link>http://clog.logicize.co/tags/facebook-messenger/</link>
+      <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/facebook-messenger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Surge.sh</title>
+      <link>http://clog.logicize.co/tags/surge.sh/</link>
+      <pubDate>Mon, 20 Nov 2017 20:28:20 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/surge.sh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary Tree</title>
+      <link>http://clog.logicize.co/tags/binary-tree/</link>
+      <pubDate>Mon, 20 Nov 2017 20:04:29 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/binary-tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HackerEarth</title>
+      <link>http://clog.logicize.co/tags/hackerearth/</link>
+      <pubDate>Mon, 20 Nov 2017 20:04:29 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/hackerearth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regular Expression</title>
+      <link>http://clog.logicize.co/tags/regular-expression/</link>
+      <pubDate>Sun, 19 Nov 2017 20:57:21 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/regular-expression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Analytics</title>
+      <link>http://clog.logicize.co/tags/google-analytics/</link>
+      <pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/google-analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mathematics</title>
+      <link>http://clog.logicize.co/tags/mathematics/</link>
+      <pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Theory</title>
+      <link>http://clog.logicize.co/tags/graph-theory/</link>
+      <pubDate>Sun, 29 Oct 2017 23:20:35 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/tags/graph-theory/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

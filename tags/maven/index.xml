@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maven on console.log(&#39;Hello World!&#39;);</title>
+    <link>http://clog.logicize.co/tags/maven/</link>
+    <description>Recent content in Maven on console.log(&#39;Hello World!&#39;);</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Fri, 18 May 2018 10:54:22 +0000</lastBuildDate>
+    
+	<atom:link href="http://clog.logicize.co/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Set Proxy for Maven</title>
+      <link>http://clog.logicize.co/posts/tutorials/maven/maven-proxy/</link>
+      <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/maven/maven-proxy/</guid>
+      <description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.
+... &amp;lt;proxies&amp;gt; &amp;lt;!-- proxy | Specification for one proxy, to be used in connecting to the network. |--&amp;gt; &amp;lt;proxy&amp;gt; &amp;lt;id&amp;gt;optional&amp;lt;/id&amp;gt; &amp;lt;active&amp;gt;true&amp;lt;/active&amp;gt; &amp;lt;protocol&amp;gt;http&amp;lt;/protocol&amp;gt; &amp;lt;username&amp;gt;&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;&amp;lt;/password&amp;gt; &amp;lt;host&amp;gt;{{proxy_host_or_ip}}&amp;lt;/host&amp;gt; &amp;lt;port&amp;gt;8080&amp;lt;/port&amp;gt; &amp;lt;nonProxyHosts&amp;gt;local.net|some.host.com&amp;lt;/nonProxyHosts&amp;gt; &amp;lt;/proxy&amp;gt; &amp;lt;/proxies&amp;gt; ... </description>
+    </item>
+    
+  </channel>
+</rss>

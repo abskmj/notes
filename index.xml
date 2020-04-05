@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>console.log(&#39;Hello World!&#39;);</title>
+    <link>http://clog.logicize.co/</link>
+    <description>Recent content on console.log(&#39;Hello World!&#39;);</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate>
+    
+	<atom:link href="http://clog.logicize.co/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configure ES Lint with Airbnb rules for a Node.js Application</title>
+      <link>http://clog.logicize.co/posts/tutorials/nodejs/es-lint/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/nodejs/es-lint/</guid>
+      <description>Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.js applications. They also publish a version for React applications as eslint-config-airbnb.
+npm install --save-dev eslint-config-airbnb-base Config File Create a .eslintrc file with following contents to Airbnb rules for the Node.js Application.
+{ &amp;#34;extends&amp;#34;: &amp;#34;eslint-config-airbnb-base&amp;#34; } NPM Scripts Create few npm scripts to integrate linting into development flow.
+{ &amp;#34;scripts&amp;#34;:{ &amp;#34;start&amp;#34;: &amp;#34;node .&amp;#34;, &amp;#34;lint&amp;#34;: &amp;#34;eslint --fix .</description>
+    </item>
+    
+    <item>
+      <title>Working with Git Stash</title>
+      <link>http://clog.logicize.co/posts/tutorials/git/git-stash/</link>
+      <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/git/git-stash/</guid>
+      <description>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.
+Save the local changes in Stash git stash push -m {{ commit message}} // example git stash push -m {{ new logging module }} List all the change sets in Stash git stash list Apply a change set from Stash git stash apply {{ index }} //example git stash apply 1  Not specifying an index with automatically apply first index</description>
+    </item>
+    
+    <item>
+      <title>Lean option and Hydrate method in Mongoose</title>
+      <link>http://clog.logicize.co/posts/topics/mongoose/mongoose-lean-hydrate/</link>
+      <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/topics/mongoose/mongoose-lean-hydrate/</guid>
+      <description>Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary. Lean option can be set on such queries to return just the data directly from the database. This also improves the overall performance of the API.
+ Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments.</description>
+    </item>
+    
+    <item>
+      <title>Deploy functions on Spotinst using Serverless Framework</title>
+      <link>http://clog.logicize.co/posts/tutorials/spotinst/serverless-spotinst-setup/</link>
+      <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/spotinst/serverless-spotinst-setup/</guid>
+      <description>Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service). Serverless Framework is an NPM module which makes building serverless applications easy and open.
+Isolated Workspace The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Largest product in a series</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler008/</link>
+      <pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler008/</guid>
+      <description>Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int T = scan.nextInt(); for(int j=0;j&amp;lt;T;j++){ int N = scan.nextInt(); int K = scan.nextInt(); scan.nextLine(); char[] data = scan.nextLine().toCharArray(); int max = 0; for(int i=0;i&amp;lt;N-K;i++){ int prod = getProduct(data,i,K); if(prod&amp;gt;max){ max = prod; } } System.out.println(max); } } static int getProduct(char[] data, int start, int length){ int product = 1; for(int i=start;i&amp;lt;start+length;i++){ product = product * Character.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Multiples of 3 and 5</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler001/</link>
+      <pubDate>Mon, 07 Jan 2019 12:45:33 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler001/</guid>
+      <description>Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int numCases = scan.nextInt(); for(int index=0;index&amp;lt;numCases;index++){ long num = scan.nextInt()-1; System.out.println(sumOfMultiples(num/3,3)+sumOfMultiples(num/5,5)-sumOfMultiples(num/15,15)); } } public static long sumOfMultiples(long num, long multiple){ return (multiple*num*(num+1))/2; } } </description>
+    </item>
+    
+    <item>
+      <title>Model Relations in Mongoose</title>
+      <link>http://clog.logicize.co/posts/topics/mongoose/model-relations/</link>
+      <pubDate>Mon, 24 Dec 2018 09:35:35 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/topics/mongoose/model-relations/</guid>
+      <description>Model Relations Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of the same or another model.
+A relation between models are generally of two types:
+ BelongsTo: A document in source model is connected with a document in destination model by putting the id of destination document in the source document. Has Many / Has One: A document in source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).</description>
+    </item>
+    
+    <item>
+      <title>Implement a Javascript Client for Crypto Compare API </title>
+      <link>http://clog.logicize.co/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link>
+      <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid>
+      <description>Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available here.
+Javascript Client I&amp;rsquo;m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I&amp;rsquo;m using an NPM module called Cligen to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.</description>
+    </item>
+    
+    <item>
+      <title>NPM Module - Complex JSON to Query String</title>
+      <link>http://clog.logicize.co/posts/projects/npm/abskmj-query/</link>
+      <pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/projects/npm/abskmj-query/</guid>
+      <description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.
+Example const query = require(&amp;#39;@abskmj/query&amp;#39;); // query to get a list of 10 people between age 17 and 66, sorted by their age  let filters = { where: { age: { $gt: 17, $lt: 66 }, }, options: { limit: 10, sort: { age: -1 } } } const queryString = query.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Divisible Sum Pairs</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</link>
+      <pubDate>Mon, 10 Sep 2018 08:14:46 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</guid>
+      <description>Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: https://www.hackerrank.com/challenges/divisible-sum-pairs */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the divisibleSumPairs function below. static int divisibleSumPairs(int n, int k, int[] ar) { int count = 0; for(int i=0; i &amp;lt; n; i++){ for(int j=i+1; j &amp;lt; n; j++){ if((ar[i]+ar[j])%k == 0){ count++; } } } return count; } private static final Scanner scanner = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - The Time in Words</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/</link>
+      <pubDate>Mon, 10 Sep 2018 07:16:41 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/</guid>
+      <description>Solution /* Solution to HackerRank: The Time in Words * URL: https://www.hackerrank.com/challenges/the-time-in-words */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the timeInWords function below.  static String timeInWords(int h, int m) { String[] words = {&amp;#34;zero&amp;#34;, &amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;, &amp;#34;five&amp;#34;, &amp;#34;six&amp;#34;, &amp;#34;seven&amp;#34;, &amp;#34;eight&amp;#34;, &amp;#34;nine&amp;#34;, &amp;#34;ten&amp;#34;, &amp;#34;eleven&amp;#34;, &amp;#34;twelve&amp;#34;, &amp;#34;thirteen&amp;#34;, &amp;#34;fourteen&amp;#34;, &amp;#34;fifteen&amp;#34;, &amp;#34;sixteen&amp;#34;, &amp;#34;seventeen&amp;#34;, &amp;#34;eighteen&amp;#34;, &amp;#34;nineteen&amp;#34;, &amp;#34;twenty&amp;#34;}; if (m == 0){ return words[h] + &amp;#34; o&amp;#39; clock&amp;#34;; } else if (m == 15){ return &amp;#34;quarter past &amp;#34; + words[h]; } else if (m == 30){ return &amp;#34;half past &amp;#34; + words[h]; } else if (m == 45){ return &amp;#34;quarter to &amp;#34; + words[h+1]; } else if (m == 1){ return &amp;#34;one minute past &amp;#34; + words[h]; } else if (m == 59){ return &amp;#34;one minute to &amp;#34; + words[h+1]; } else if (m &amp;lt; 21){ return words[m] + &amp;#34; minutes past &amp;#34; + words[h]; } else if (m &amp;gt; 39){ return words[60-m] + &amp;#34; minutes to &amp;#34; + words[h+1]; } else if (m &amp;gt; 30){ return &amp;#34;twenty &amp;#34; + words[(60-m)%20] + &amp;#34; minutes to &amp;#34; + words[h+1]; } else{ return &amp;#34;twenty &amp;#34; + words[m%20] + &amp;#34; minutes past &amp;#34; + words[h]; } } private static final Scanner scanner = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>Developing an Angular project on Cloud9 IDE</title>
+      <link>http://clog.logicize.co/posts/tutorials/cloud9/angular-project-cloud9-ide/</link>
+      <pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid>
+      <description>Update NodeJS version  All of the blank VMs on cloud9 have nvm pre installed. List all the available versions from the official site.  nvm ls-remote  Choose to install the latest version  nvm install v10.6.0  Choose to use the latest version  nvm use v10.6.0  Check the version in use  node --version Angular  Install latest Angular CLI package  npm install -g @angular/cli  Create a new project named my-project (you can use any name you need)  ng new my-project cd my-project  Change start script in package.</description>
+    </item>
+    
+    <item>
+      <title>Using a remote repository with Glitch.com</title>
+      <link>http://clog.logicize.co/posts/tutorials/glitch/remote-git/</link>
+      <pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/glitch/remote-git/</guid>
+      <description>Glitch is a online workspace that support javascript for development with live previews.
+A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.
+Rather, a separate git repository can be set using the current project as working directory.</description>
+    </item>
+    
+    <item>
+      <title>Fix TWRP E3004 Error on OnePlus2</title>
+      <link>http://clog.logicize.co/posts/notes/oneplus2-e3004-error/</link>
+      <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/notes/oneplus2-e3004-error/</guid>
+      <description>I have recently installed LineageOS custom ROM on my OnePlus2 device to keep on trying new android versions as they come. While installing/updating the OS, I was getting below error on TWRP recovery screen.
+script aborted: E3004: This package is for device: OnePlus2,oneplus2; this device is . To fix this, I updated to the lastest version of TWRP for OnePlus2.</description>
+    </item>
+    
+    <item>
+      <title>Set Proxy for Maven</title>
+      <link>http://clog.logicize.co/posts/tutorials/maven/maven-proxy/</link>
+      <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/maven/maven-proxy/</guid>
+      <description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.
+... &amp;lt;proxies&amp;gt; &amp;lt;!-- proxy | Specification for one proxy, to be used in connecting to the network. |--&amp;gt; &amp;lt;proxy&amp;gt; &amp;lt;id&amp;gt;optional&amp;lt;/id&amp;gt; &amp;lt;active&amp;gt;true&amp;lt;/active&amp;gt; &amp;lt;protocol&amp;gt;http&amp;lt;/protocol&amp;gt; &amp;lt;username&amp;gt;&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;&amp;lt;/password&amp;gt; &amp;lt;host&amp;gt;{{proxy_host_or_ip}}&amp;lt;/host&amp;gt; &amp;lt;port&amp;gt;8080&amp;lt;/port&amp;gt; &amp;lt;nonProxyHosts&amp;gt;local.net|some.host.com&amp;lt;/nonProxyHosts&amp;gt; &amp;lt;/proxy&amp;gt; &amp;lt;/proxies&amp;gt; ... </description>
+    </item>
+    
+    <item>
+      <title>Deploy a NodeJS application using Git</title>
+      <link>http://clog.logicize.co/posts/tutorials/git/deploy-nodejs-git/</link>
+      <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/git/deploy-nodejs-git/</guid>
+      <description>Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
+git init --bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
+#!/bin/sh git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
+chmod 755 project.git/hooks/post-receive Add a remote to local repo
+git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server.</description>
+    </item>
+    
+    <item>
+      <title>Authenticate REST APIs using JWT</title>
+      <link>http://clog.logicize.co/posts/topics/rest-api/authentication-jwt-rest-apis/</link>
+      <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/topics/rest-api/authentication-jwt-rest-apis/</guid>
+      <description>Authentication vs Authorization  Authentication: identifying the user who is accessing the resource Authorization: checking if the user has permission to perform an action on the resource (e.g updating the resource)  JWT for Authentication JWT or JSON Web Token is a preferrable method for authenticating REST APIs because:
+ A datastore is not required for its verification. It can be issued and verified by a specific application server which has access to the secret key.</description>
+    </item>
+    
+    <item>
+      <title>Custom Model Methods in Loopback</title>
+      <link>http://clog.logicize.co/posts/tutorials/loopback/custom-model-methods/</link>
+      <pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/loopback/custom-model-methods/</guid>
+      <description>Loopback models can be extended by adding custom methods to them. A method can be:
+ Model Method: the method is available on Model itself. Instance Method: the method is available on an instance of the model.  Model JS file // Model.js module.exports = function(Model) { // Model Method  Model.method = function() { ... } // Instance Method  Model.prototype.method = function() { ... } } // Model method var Model = app.</description>
+    </item>
+    
+    <item>
+      <title>Status of Indian Railway PNR on Facebook Messenger</title>
+      <link>http://clog.logicize.co/posts/projects/bhaina-bot/</link>
+      <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/projects/bhaina-bot/</guid>
+      <description>Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR. You don&amp;rsquo;t have to install any extra application on your mobile to use this service.
+Give it a try on your messenger!</description>
+    </item>
+    
+    <item>
+      <title>Enable Destroy All API for a model in Loopback</title>
+      <link>http://clog.logicize.co/posts/tutorials/loopback/enable-destroy-all-api/</link>
+      <pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/loopback/enable-destroy-all-api/</guid>
+      <description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.
+Remote Method A corresponding remote method can be added to the model.js file to enable this API. This method also supports a filter to enable selective deletion.
+module.exports = function (Model) { Model.remoteMethod(&amp;#39;destroyAll&amp;#39;, { isStatic: true, description: &amp;#39;Delete all matching records&amp;#39;, accessType: &amp;#39;WRITE&amp;#39;, accepts: { arg: &amp;#39;where&amp;#39;, type: &amp;#39;object&amp;#39;, description: &amp;#39;filter.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Large Sum</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler013/</link>
+      <pubDate>Fri, 08 Dec 2017 16:21:47 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler013/</guid>
+      <description>Solution  Use BigInteger to calculate the sum and print first 10 characters by converting to string.  /* Solution to HackerRank: Large Sum * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler013 */ import java.io.*; import java.util.*; import java.math.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); BigInteger sum = new BigInteger(&amp;#34;0&amp;#34;); for(int t=0; t&amp;lt;N; t++){ sum = sum.add(new BigInteger(in.next())); } System.out.println(sum.toString().substring(0, 10)); } } </description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Power Digit Sum</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler016/</link>
+      <pubDate>Fri, 08 Dec 2017 16:03:31 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler016/</guid>
+      <description>Solution  2 to the power 1000 will be a huge number hence consider using BigInteger. Recursively calculate the sum of all the digits.  /* Solution to HackerRank: Power Digit Sum * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler016 */ import java.io.*; import java.util.*; import java.math.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int T = in.nextInt(); for(int t=0; t&amp;lt;T; t++){ int N = in.nextInt(); BigInteger base = new BigInteger(&amp;#34;2&amp;#34;); BigInteger pow = base.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Hugo Website with Surge for Free</title>
+      <link>http://clog.logicize.co/posts/tutorials/deploy-hugo-surge-free/</link>
+      <pubDate>Mon, 20 Nov 2017 20:28:20 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/deploy-hugo-surge-free/</guid>
+      <description>Surge is static web publishing for Web Developers, right from the CLI.
+ Install Surge CLI npm install -g surge Deploy with Surge Navigate to the public folder generated by Hugo CLI.
+surge The site, by default, will hosted on a sub domain of surge.sh.
+Deploy Changes surge --domain &amp;lt;your-site&amp;gt;.surge.sh If the same domain name is not provided, another random sub domain will be prompted by Surge CLI which has to changed to original for each deployment.</description>
+    </item>
+    
+    <item>
+      <title>HackerEarth - Binary Tree</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</link>
+      <pubDate>Mon, 20 Nov 2017 20:04:29 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</guid>
+      <description>Solution  Diameter of a binary tree is maximum of diameter of current node, its left and right child.  /* Solution to HackerEarth: Binary Tree * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/tutorial/ */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { Scanner in = new Scanner(System.in); int T = in.nextInt(); int X = in.nextInt(); Node root = new Node(X); for(int t=0; t &amp;lt; T-1; t++){ String path = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Regular Expresso - Vowels in the Back</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</link>
+      <pubDate>Sun, 19 Nov 2017 20:57:21 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</guid>
+      <description>Solution /* Solution to HackerRank: Vowels in the Back * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/vowels-in-the-back */ &amp;#34;[aeiouy][a-z]{9}$&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Regular Expresso - Balanced Strings</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</link>
+      <pubDate>Sun, 19 Nov 2017 20:52:09 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</guid>
+      <description>Solution /* Solution to HackerRank: Balanced Strings * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings */ &amp;#34;^(ab|ba)+$&amp;#34; possible strings: ababab abba babaab but not: a bab abbaaba </description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Regular Expresso - Winning Tic Tac Toe</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</link>
+      <pubDate>Sun, 19 Nov 2017 20:31:51 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</guid>
+      <description>Solution /* Solution to HackerRank: Winning Tic Tac Toe * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe */ &amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34; Case 1 (...\\1){2}) or (...\\1...\\1) will take care of X O - O X O - - X Case 2 (..\\1..\\1) will take care of X - O X O - X - O OR - X O O X - - X O OR - O X O - X - O X Case 3 (.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Goodland Electricity</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/pylons/</link>
+      <pubDate>Sat, 18 Nov 2017 20:30:35 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/pylons/</guid>
+      <description>Solution  Iterate through each city and check if it is already under range of previous tower. If not, find a tower within the range to switch on.  /* Solution to HackerRank: Goodland Electricity * URL: https://www.hackerrank.com/challenges/pylons */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); int K = in.nextInt(); int[] cities = new int[N]; for(int i=0; i &amp;lt; N; i++){ cities[i] = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Max Min</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/angry-children/</link>
+      <pubDate>Sat, 18 Nov 2017 17:20:41 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/angry-children/</guid>
+      <description>Solution  Sort the array of numbers Find the minimum difference between ith and (i+K-1)th element in each iteration.  /* Solution to HackerRank: Max Min * URL: https://www.hackerrank.com/challenges/angry-children */ import java.io.BufferedReader; import java.io.IOException; import java.io.InputStreamReader; import java.util.Arrays; public class Solution { public static void main(String[] args) throws NumberFormatException, IOException { BufferedReader in = new BufferedReader(new InputStreamReader(System.in)); int N = Integer.parseInt(in.readLine()); int K = Integer.parseInt(in.readLine()); int[] list = new int[N]; for(int i = 0; i &amp;lt; N; i ++) list[i] = Integer.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Maximum Perimeter Triangle</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/maximum-perimeter-triangle/</link>
+      <pubDate>Sat, 18 Nov 2017 17:01:27 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/maximum-perimeter-triangle/</guid>
+      <description>Solution  Iterate the sides in descending order Check if sides make a triangle by checking if sum of two sides is greater than third side .  /* Solution to HackerRank: Maximum Perimeter Triangle * URL: https://www.hackerrank.com/challenges/maximum-perimeter-triangle */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); int[] l = new int[N]; for(int i=0; i &amp;lt; N; i++){ l[i] = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerEarth - Mirror Image</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</link>
+      <pubDate>Sat, 18 Nov 2017 11:36:52 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</guid>
+      <description>Solution  Parse input and build the tree by maintaining an index HashMap. Traverse tree and mirror tree simultaneously to find the mirror node.  /* Solution to HackerEarth: Mirror Image * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/practice-problems/algorithm/mirror-image-2/ */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { //Scanner  Scanner in = new Scanner(System.in); int N = in.nextInt(); int Q = in.nextInt(); Map&amp;lt;Integer, Node&amp;gt; index = new HashMap&amp;lt;&amp;gt;(); // initialize root node  Node root = new Node(1); index.</description>
+    </item>
+    
+    <item>
+      <title>Track API usage with Google Analytics</title>
+      <link>http://clog.logicize.co/posts/tutorials/track-api-usage-google-analytics/</link>
+      <pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/track-api-usage-google-analytics/</guid>
+      <description>Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.
+ Measurement Protocol can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.
+ API Hit Each invocation of an API can be tracked as a unique event.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Largest Permutation</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</link>
+      <pubDate>Thu, 09 Nov 2017 22:02:51 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</guid>
+      <description>Solution #1  Keep indexes of all numbers in a HashMap. Check if current maximum number is already at desired index i.e highest at index 0, second highest at index 1 and so on. If not, keep on swapping them till all the swaps are exhausted.  /* Solution to HackerRank: Largest Permutation * URL: https://www.hackerrank.com/challenges/largest-permutation */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Hackerland Radio Transmitters</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/search/hackerland-radio-transmitters/</link>
+      <pubDate>Wed, 08 Nov 2017 21:50:01 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/search/hackerland-radio-transmitters/</guid>
+      <description>Solution  Iterate through each house in a sorted order. Check if current house is in range of last transmitter. If not, find a house to put transmitter on so that current house is in range.  /* Solution to HackerRank: Hackerland Radio Transmitters * URL: https://www.hackerrank.com/challenges/hackerland-radio-transmitters */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Minimum Loss</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/search/minimum-loss/</link>
+      <pubDate>Wed, 08 Nov 2017 21:06:31 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/search/minimum-loss/</guid>
+      <description>Solution #1  Keep prices and corresponding index in a HashMap. Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices. Check that the indexes buying and selling are in correct order so that year of buying is less than year of selling.  /* Solution to HackerRank: Minimum Loss * URL: https://www.hackerrank.com/challenges/minimum-loss */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - HourRank 24 - Mutual Indivisibility</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/hourrank-24/mutual-indivisibility/</link>
+      <pubDate>Wed, 08 Nov 2017 20:54:03 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/hourrank-24/mutual-indivisibility/</guid>
+      <description>Solution  Start iterating numbers from b to a because combination of larger numbers are more likely to be indivisible. Keep an array representing all numbers including a and b. Strike out multiples of current number from array in each iteration.  /* Solution to HackerRank: Mutual Indivisibility * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/mutual-indivisibility */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - 10001st Prime</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler007/</link>
+      <pubDate>Tue, 07 Nov 2017 07:41:06 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler007/</guid>
+      <description>Solution  Iterate from 2 to the given number. Consider odd numbers only except 2. Check each iteration for prime number.  However, Test case 4 timed out for below solution.
+import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &amp;lt; t; a0++){ int n = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Sum Square Difference</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler006/</link>
+      <pubDate>Tue, 07 Nov 2017 07:19:29 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler006/</guid>
+      <description>Solution  Iterate from 1 to given number. Add each iteration to sum and square of it to another sum. Print absolute difference.  /* Solution to HackerRank: Sum Square Difference * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler006 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &amp;lt; t; a0++){ int n = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Largest Palindrome</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler004/</link>
+      <pubDate>Mon, 06 Nov 2017 22:01:58 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler004/</guid>
+      <description>Solution  Iterate from the given number to zero. Check if current iteration is a palindrome by using reverse() of StringBuilder class. Check if current iteration is a product of two 3-digit numbers.  /* Solution to HackerRank: Largest Palindrome * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler004 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Largest Prime Factor</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler003/</link>
+      <pubDate>Mon, 06 Nov 2017 20:56:26 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler003/</guid>
+      <description>Solution  Find all the factors of the given number by iterating from 1 to square root of the number. Sort all the factors in descending order and iterate to check if a factor is prime.  /* Solution to HackerRank: Largest Prime Factor * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler003 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Even Fibonacci Numbers</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler002/</link>
+      <pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler002/</guid>
+      <description>Solution #1 Test cases 2,3 timed out for below solution.
+import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &amp;lt; t; a0++){ long n = in.nextLong(); int f1 = 0; int f2 = 1; long sum = 0; while(f2 &amp;lt;= n){ // check if even  if(f2%2 == 0){ sum += f2; } // compute next in series  int f = f2 + f1; // set values for next iteration  f1 = f2; f2 = f; } System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank Contest - HourRank 24 - Strong Password</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/hourrank-24/strong-password/</link>
+      <pubDate>Sat, 04 Nov 2017 20:14:08 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/hourrank-24/strong-password/</guid>
+      <description>Solution  Count characters of each group in given string. Groups: digit, lower-case, upper-case and special characters Add one of each group to the string if not already present i.e. count is 0. Add required number of characters in case length of the string is less than 6.  /* Solution to HackerRank: Strong Password * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/strong-password */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { static int minimumNumber(int n, String password) { int digitCount = 0; int lowerCount = 0; int upperCount = 0; int specialCount = 0; int addCount = 0; for(char c : password.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Journey to the Moon</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/journey-to-the-moon/</link>
+      <pubDate>Sun, 29 Oct 2017 23:20:35 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/journey-to-the-moon/</guid>
+      <description>Solution  Graph is used to connect all astronauts to a country. Each cluster of graph represents a country. Each cluster is traversed to find the count of astronauts. Number of possible combinations are calculated based on sizes of these countries.  /* Solution to HackerRank: Journey to the Moon * URL: https://www.hackerrank.com/challenges/journey-to-the-moon */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
+    </item>
+    
+    <item>
+      <title>HackerRank - Roads and Libraries</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/torque-and-development/</link>
+      <pubDate>Thu, 26 Oct 2017 11:05:14 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/torque-and-development/</guid>
+      <description>Minimum Cost  If the number of roads is zero or cost of building a road is more than cost of building a library, then building libraries in each of the cities will result in minimum cost. If the cost of building a library is less than cost of building a road, then building a single library and building roads to connected cities will result in minimum cost.  Clusters There can be few set of cities that are not connected to each other and are clusters.</description>
+    </item>
+    
+  </channel>
+</rss>

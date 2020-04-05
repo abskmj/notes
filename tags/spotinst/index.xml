@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spotinst on console.log(&#39;Hello World!&#39;);</title>
+    <link>http://clog.logicize.co/tags/spotinst/</link>
+    <description>Recent content in Spotinst on console.log(&#39;Hello World!&#39;);</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Tue, 08 Jan 2019 09:56:04 +0000</lastBuildDate>
+    
+	<atom:link href="http://clog.logicize.co/tags/spotinst/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploy functions on Spotinst using Serverless Framework</title>
+      <link>http://clog.logicize.co/posts/tutorials/spotinst/serverless-spotinst-setup/</link>
+      <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/spotinst/serverless-spotinst-setup/</guid>
+      <description>Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service). Serverless Framework is an NPM module which makes building serverless applications easy and open.
+Isolated Workspace The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects.</description>
+    </item>
+    
+  </channel>
+</rss>

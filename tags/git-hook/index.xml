@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Hook on console.log(&#39;Hello World!&#39;);</title>
+    <link>http://clog.logicize.co/tags/git-hook/</link>
+    <description>Recent content in Git Hook on console.log(&#39;Hello World!&#39;);</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Wed, 09 May 2018 05:09:36 +0000</lastBuildDate>
+    
+	<atom:link href="http://clog.logicize.co/tags/git-hook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploy a NodeJS application using Git</title>
+      <link>http://clog.logicize.co/posts/tutorials/git/deploy-nodejs-git/</link>
+      <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/tutorials/git/deploy-nodejs-git/</guid>
+      <description>Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
+git init --bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
+#!/bin/sh git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
+chmod 755 project.git/hooks/post-receive Add a remote to local repo
+git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics on console.log(&#39;Hello World!&#39;);</title>
+    <link>http://clog.logicize.co/tags/mathematics/</link>
+    <description>Recent content in Mathematics on console.log(&#39;Hello World!&#39;);</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Sat, 04 Nov 2017 20:36:33 +0530</lastBuildDate>
+    
+	<atom:link href="http://clog.logicize.co/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HackerRank Contest - Project Euler - Even Fibonacci Numbers</title>
+      <link>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler002/</link>
+      <pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate>
+      
+      <guid>http://clog.logicize.co/posts/solutions/hackerrank/contests/projecteuler/euler002/</guid>
+      <description>Solution #1 Test cases 2,3 timed out for below solution.
+import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &amp;lt; t; a0++){ long n = in.nextLong(); int f1 = 0; int f2 = 1; long sum = 0; while(f2 &amp;lt;= n){ // check if even  if(f2%2 == 0){ sum += f2; } // compute next in series  int f = f2 + f1; // set values for next iteration  f1 = f2; f2 = f; } System.</description>
+    </item>
+    
+  </channel>
+</rss>
