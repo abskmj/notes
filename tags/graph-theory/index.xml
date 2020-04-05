@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graph Theory on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/graph-theory/</link>
+    <link>https://abskmj.github.io/notes/tags/graph-theory/</link>
     <description>Recent content in Graph Theory on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Sun, 29 Oct 2017 23:20:35 +0530</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/graph-theory/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/graph-theory/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HackerRank - Journey to the Moon</title>
-      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/journey-to-the-moon/</link>
+      <link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/graph-theory/journey-to-the-moon/</link>
       <pubDate>Sun, 29 Oct 2017 23:20:35 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/journey-to-the-moon/</guid>
+      <guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/graph-theory/journey-to-the-moon/</guid>
       <description>Solution  Graph is used to connect all astronauts to a country. Each cluster of graph represents a country. Each cluster is traversed to find the count of astronauts. Number of possible combinations are calculated based on sizes of these countries.  /* Solution to HackerRank: Journey to the Moon * URL: https://www.hackerrank.com/challenges/journey-to-the-moon */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.</description>
     </item>
     
     <item>
       <title>HackerRank - Roads and Libraries</title>
-      <link>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/torque-and-development/</link>
+      <link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/graph-theory/torque-and-development/</link>
       <pubDate>Thu, 26 Oct 2017 11:05:14 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/posts/solutions/hackerrank/algorithms/graph-theory/torque-and-development/</guid>
+      <guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/graph-theory/torque-and-development/</guid>
       <description>Minimum Cost  If the number of roads is zero or cost of building a road is more than cost of building a library, then building libraries in each of the cities will result in minimum cost. If the cost of building a library is less than cost of building a road, then building a single library and building roads to connected cities will result in minimum cost.  Clusters There can be few set of cities that are not connected to each other and are clusters.</description>
     </item>
     

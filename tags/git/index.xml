@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/git/</link>
+    <link>https://abskmj.github.io/notes/tags/git/</link>
     <description>Recent content in Git on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Fri, 14 Jun 2019 12:49:55 +0530</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Working with Git Stash</title>
-      <link>http://clog.logicize.co/posts/tutorials/git/git-stash/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</link>
       <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/git/git-stash/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</guid>
       <description>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.
 Save the local changes in Stash git stash push -m {{ commit message}} // example git stash push -m {{ new logging module }} List all the change sets in Stash git stash list Apply a change set from Stash git stash apply {{ index }} //example git stash apply 1  Not specifying an index with automatically apply first index</description>
     </item>
     
     <item>
       <title>Using a remote repository with Glitch.com</title>
-      <link>http://clog.logicize.co/posts/tutorials/glitch/remote-git/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</link>
       <pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/glitch/remote-git/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</guid>
       <description>Glitch is a online workspace that support javascript for development with live previews.
 A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.
 Rather, a separate git repository can be set using the current project as working directory.</description>
@@ -35,10 +35,10 @@ Rather, a separate git repository can be set using the current project as workin
     
     <item>
       <title>Deploy a NodeJS application using Git</title>
-      <link>http://clog.logicize.co/posts/tutorials/git/deploy-nodejs-git/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link>
       <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/git/deploy-nodejs-git/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid>
       <description>Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
 git init --bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
 #!/bin/sh git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.

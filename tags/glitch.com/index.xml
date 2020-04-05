@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Glitch.com on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/glitch.com/</link>
+    <link>https://abskmj.github.io/notes/tags/glitch.com/</link>
     <description>Recent content in Glitch.com on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Mon, 18 Jun 2018 11:25:57 +0000</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/glitch.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/glitch.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using a remote repository with Glitch.com</title>
-      <link>http://clog.logicize.co/posts/tutorials/glitch/remote-git/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</link>
       <pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/glitch/remote-git/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</guid>
       <description>Glitch is a online workspace that support javascript for development with live previews.
 A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.
 Rather, a separate git repository can be set using the current project as working directory.</description>

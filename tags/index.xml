@@ -2,535 +2,535 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/</link>
+    <link>https://abskmj.github.io/notes/tags/</link>
     <description>Recent content in Tags on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Airbnb</title>
-      <link>http://clog.logicize.co/tags/airbnb/</link>
+      <link>https://abskmj.github.io/notes/tags/airbnb/</link>
       <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/airbnb/</guid>
+      <guid>https://abskmj.github.io/notes/tags/airbnb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ESLint</title>
-      <link>http://clog.logicize.co/tags/eslint/</link>
+      <link>https://abskmj.github.io/notes/tags/eslint/</link>
       <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/eslint/</guid>
+      <guid>https://abskmj.github.io/notes/tags/eslint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lint</title>
-      <link>http://clog.logicize.co/tags/lint/</link>
+      <link>https://abskmj.github.io/notes/tags/lint/</link>
       <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/lint/</guid>
+      <guid>https://abskmj.github.io/notes/tags/lint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NodeJS</title>
-      <link>http://clog.logicize.co/tags/nodejs/</link>
+      <link>https://abskmj.github.io/notes/tags/nodejs/</link>
       <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/nodejs/</guid>
+      <guid>https://abskmj.github.io/notes/tags/nodejs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutorial</title>
-      <link>http://clog.logicize.co/tags/tutorial/</link>
+      <link>https://abskmj.github.io/notes/tags/tutorial/</link>
       <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/tutorial/</guid>
+      <guid>https://abskmj.github.io/notes/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VSCode</title>
-      <link>http://clog.logicize.co/tags/vscode/</link>
+      <link>https://abskmj.github.io/notes/tags/vscode/</link>
       <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/vscode/</guid>
+      <guid>https://abskmj.github.io/notes/tags/vscode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cheatsheet</title>
-      <link>http://clog.logicize.co/tags/cheatsheet/</link>
+      <link>https://abskmj.github.io/notes/tags/cheatsheet/</link>
       <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/cheatsheet/</guid>
+      <guid>https://abskmj.github.io/notes/tags/cheatsheet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>http://clog.logicize.co/tags/git/</link>
+      <link>https://abskmj.github.io/notes/tags/git/</link>
       <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/git/</guid>
+      <guid>https://abskmj.github.io/notes/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git Stash</title>
-      <link>http://clog.logicize.co/tags/git-stash/</link>
+      <link>https://abskmj.github.io/notes/tags/git-stash/</link>
       <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/git-stash/</guid>
+      <guid>https://abskmj.github.io/notes/tags/git-stash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hydrate</title>
-      <link>http://clog.logicize.co/tags/hydrate/</link>
+      <link>https://abskmj.github.io/notes/tags/hydrate/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/hydrate/</guid>
+      <guid>https://abskmj.github.io/notes/tags/hydrate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lean</title>
-      <link>http://clog.logicize.co/tags/lean/</link>
+      <link>https://abskmj.github.io/notes/tags/lean/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/lean/</guid>
+      <guid>https://abskmj.github.io/notes/tags/lean/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Model</title>
-      <link>http://clog.logicize.co/tags/model/</link>
+      <link>https://abskmj.github.io/notes/tags/model/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/model/</guid>
+      <guid>https://abskmj.github.io/notes/tags/model/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mongoose</title>
-      <link>http://clog.logicize.co/tags/mongoose/</link>
+      <link>https://abskmj.github.io/notes/tags/mongoose/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/mongoose/</guid>
+      <guid>https://abskmj.github.io/notes/tags/mongoose/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Query</title>
-      <link>http://clog.logicize.co/tags/query/</link>
+      <link>https://abskmj.github.io/notes/tags/query/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/query/</guid>
+      <guid>https://abskmj.github.io/notes/tags/query/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Topic</title>
-      <link>http://clog.logicize.co/tags/topic/</link>
+      <link>https://abskmj.github.io/notes/tags/topic/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/topic/</guid>
+      <guid>https://abskmj.github.io/notes/tags/topic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Node.js</title>
-      <link>http://clog.logicize.co/tags/node.js/</link>
+      <link>https://abskmj.github.io/notes/tags/node.js/</link>
       <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/node.js/</guid>
+      <guid>https://abskmj.github.io/notes/tags/node.js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NPM</title>
-      <link>http://clog.logicize.co/tags/npm/</link>
+      <link>https://abskmj.github.io/notes/tags/npm/</link>
       <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/npm/</guid>
+      <guid>https://abskmj.github.io/notes/tags/npm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Serverless</title>
-      <link>http://clog.logicize.co/tags/serverless/</link>
+      <link>https://abskmj.github.io/notes/tags/serverless/</link>
       <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/serverless/</guid>
+      <guid>https://abskmj.github.io/notes/tags/serverless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spotinst</title>
-      <link>http://clog.logicize.co/tags/spotinst/</link>
+      <link>https://abskmj.github.io/notes/tags/spotinst/</link>
       <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/spotinst/</guid>
+      <guid>https://abskmj.github.io/notes/tags/spotinst/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HackerRank</title>
-      <link>http://clog.logicize.co/tags/hackerrank/</link>
+      <link>https://abskmj.github.io/notes/tags/hackerrank/</link>
       <pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/hackerrank/</guid>
+      <guid>https://abskmj.github.io/notes/tags/hackerrank/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>http://clog.logicize.co/tags/java/</link>
+      <link>https://abskmj.github.io/notes/tags/java/</link>
       <pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/java/</guid>
+      <guid>https://abskmj.github.io/notes/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Solution</title>
-      <link>http://clog.logicize.co/tags/solution/</link>
+      <link>https://abskmj.github.io/notes/tags/solution/</link>
       <pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/solution/</guid>
+      <guid>https://abskmj.github.io/notes/tags/solution/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Relations</title>
-      <link>http://clog.logicize.co/tags/relations/</link>
+      <link>https://abskmj.github.io/notes/tags/relations/</link>
       <pubDate>Mon, 24 Dec 2018 09:35:35 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/relations/</guid>
+      <guid>https://abskmj.github.io/notes/tags/relations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>API</title>
-      <link>http://clog.logicize.co/tags/api/</link>
+      <link>https://abskmj.github.io/notes/tags/api/</link>
       <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/api/</guid>
+      <guid>https://abskmj.github.io/notes/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Browser</title>
-      <link>http://clog.logicize.co/tags/browser/</link>
+      <link>https://abskmj.github.io/notes/tags/browser/</link>
       <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/browser/</guid>
+      <guid>https://abskmj.github.io/notes/tags/browser/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Client</title>
-      <link>http://clog.logicize.co/tags/client/</link>
+      <link>https://abskmj.github.io/notes/tags/client/</link>
       <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/client/</guid>
+      <guid>https://abskmj.github.io/notes/tags/client/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cligen</title>
-      <link>http://clog.logicize.co/tags/cligen/</link>
+      <link>https://abskmj.github.io/notes/tags/cligen/</link>
       <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/cligen/</guid>
+      <guid>https://abskmj.github.io/notes/tags/cligen/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>http://clog.logicize.co/tags/javascript/</link>
+      <link>https://abskmj.github.io/notes/tags/javascript/</link>
       <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/javascript/</guid>
+      <guid>https://abskmj.github.io/notes/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project</title>
-      <link>http://clog.logicize.co/tags/project/</link>
+      <link>https://abskmj.github.io/notes/tags/project/</link>
       <pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/project/</guid>
+      <guid>https://abskmj.github.io/notes/tags/project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Angular</title>
-      <link>http://clog.logicize.co/tags/angular/</link>
+      <link>https://abskmj.github.io/notes/tags/angular/</link>
       <pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/angular/</guid>
+      <guid>https://abskmj.github.io/notes/tags/angular/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud9 IDE</title>
-      <link>http://clog.logicize.co/tags/cloud9-ide/</link>
+      <link>https://abskmj.github.io/notes/tags/cloud9-ide/</link>
       <pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/cloud9-ide/</guid>
+      <guid>https://abskmj.github.io/notes/tags/cloud9-ide/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Glitch.com</title>
-      <link>http://clog.logicize.co/tags/glitch.com/</link>
+      <link>https://abskmj.github.io/notes/tags/glitch.com/</link>
       <pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/glitch.com/</guid>
+      <guid>https://abskmj.github.io/notes/tags/glitch.com/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Android</title>
-      <link>http://clog.logicize.co/tags/android/</link>
+      <link>https://abskmj.github.io/notes/tags/android/</link>
       <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/android/</guid>
+      <guid>https://abskmj.github.io/notes/tags/android/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CustomROM</title>
-      <link>http://clog.logicize.co/tags/customrom/</link>
+      <link>https://abskmj.github.io/notes/tags/customrom/</link>
       <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/customrom/</guid>
+      <guid>https://abskmj.github.io/notes/tags/customrom/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LineageOS</title>
-      <link>http://clog.logicize.co/tags/lineageos/</link>
+      <link>https://abskmj.github.io/notes/tags/lineageos/</link>
       <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/lineageos/</guid>
+      <guid>https://abskmj.github.io/notes/tags/lineageos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Note</title>
-      <link>http://clog.logicize.co/tags/note/</link>
+      <link>https://abskmj.github.io/notes/tags/note/</link>
       <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/note/</guid>
+      <guid>https://abskmj.github.io/notes/tags/note/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TWRP</title>
-      <link>http://clog.logicize.co/tags/twrp/</link>
+      <link>https://abskmj.github.io/notes/tags/twrp/</link>
       <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/twrp/</guid>
+      <guid>https://abskmj.github.io/notes/tags/twrp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Maven</title>
-      <link>http://clog.logicize.co/tags/maven/</link>
+      <link>https://abskmj.github.io/notes/tags/maven/</link>
       <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/maven/</guid>
+      <guid>https://abskmj.github.io/notes/tags/maven/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Proxy</title>
-      <link>http://clog.logicize.co/tags/proxy/</link>
+      <link>https://abskmj.github.io/notes/tags/proxy/</link>
       <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/proxy/</guid>
+      <guid>https://abskmj.github.io/notes/tags/proxy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deployment</title>
-      <link>http://clog.logicize.co/tags/deployment/</link>
+      <link>https://abskmj.github.io/notes/tags/deployment/</link>
       <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/deployment/</guid>
+      <guid>https://abskmj.github.io/notes/tags/deployment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git Hook</title>
-      <link>http://clog.logicize.co/tags/git-hook/</link>
+      <link>https://abskmj.github.io/notes/tags/git-hook/</link>
       <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/git-hook/</guid>
+      <guid>https://abskmj.github.io/notes/tags/git-hook/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>http://clog.logicize.co/tags/hugo/</link>
+      <link>https://abskmj.github.io/notes/tags/hugo/</link>
       <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/hugo/</guid>
+      <guid>https://abskmj.github.io/notes/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Authentication</title>
-      <link>http://clog.logicize.co/tags/authentication/</link>
+      <link>https://abskmj.github.io/notes/tags/authentication/</link>
       <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/authentication/</guid>
+      <guid>https://abskmj.github.io/notes/tags/authentication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JWT</title>
-      <link>http://clog.logicize.co/tags/jwt/</link>
+      <link>https://abskmj.github.io/notes/tags/jwt/</link>
       <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/jwt/</guid>
+      <guid>https://abskmj.github.io/notes/tags/jwt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST APIs</title>
-      <link>http://clog.logicize.co/tags/rest-apis/</link>
+      <link>https://abskmj.github.io/notes/tags/rest-apis/</link>
       <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/rest-apis/</guid>
+      <guid>https://abskmj.github.io/notes/tags/rest-apis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security</title>
-      <link>http://clog.logicize.co/tags/security/</link>
+      <link>https://abskmj.github.io/notes/tags/security/</link>
       <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/security/</guid>
+      <guid>https://abskmj.github.io/notes/tags/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Loopback</title>
-      <link>http://clog.logicize.co/tags/loopback/</link>
+      <link>https://abskmj.github.io/notes/tags/loopback/</link>
       <pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/loopback/</guid>
+      <guid>https://abskmj.github.io/notes/tags/loopback/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Remote Method</title>
-      <link>http://clog.logicize.co/tags/remote-method/</link>
+      <link>https://abskmj.github.io/notes/tags/remote-method/</link>
       <pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/tags/remote-method/</guid>
+      <guid>https://abskmj.github.io/notes/tags/remote-method/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chatbot</title>
-      <link>http://clog.logicize.co/tags/chatbot/</link>
+      <link>https://abskmj.github.io/notes/tags/chatbot/</link>
       <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/chatbot/</guid>
+      <guid>https://abskmj.github.io/notes/tags/chatbot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chatfuel</title>
-      <link>http://clog.logicize.co/tags/chatfuel/</link>
+      <link>https://abskmj.github.io/notes/tags/chatfuel/</link>
       <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/chatfuel/</guid>
+      <guid>https://abskmj.github.io/notes/tags/chatfuel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Facebook Messenger</title>
-      <link>http://clog.logicize.co/tags/facebook-messenger/</link>
+      <link>https://abskmj.github.io/notes/tags/facebook-messenger/</link>
       <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/facebook-messenger/</guid>
+      <guid>https://abskmj.github.io/notes/tags/facebook-messenger/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Surge.sh</title>
-      <link>http://clog.logicize.co/tags/surge.sh/</link>
+      <link>https://abskmj.github.io/notes/tags/surge.sh/</link>
       <pubDate>Mon, 20 Nov 2017 20:28:20 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/surge.sh/</guid>
+      <guid>https://abskmj.github.io/notes/tags/surge.sh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Binary Tree</title>
-      <link>http://clog.logicize.co/tags/binary-tree/</link>
+      <link>https://abskmj.github.io/notes/tags/binary-tree/</link>
       <pubDate>Mon, 20 Nov 2017 20:04:29 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/binary-tree/</guid>
+      <guid>https://abskmj.github.io/notes/tags/binary-tree/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HackerEarth</title>
-      <link>http://clog.logicize.co/tags/hackerearth/</link>
+      <link>https://abskmj.github.io/notes/tags/hackerearth/</link>
       <pubDate>Mon, 20 Nov 2017 20:04:29 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/hackerearth/</guid>
+      <guid>https://abskmj.github.io/notes/tags/hackerearth/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Regular Expression</title>
-      <link>http://clog.logicize.co/tags/regular-expression/</link>
+      <link>https://abskmj.github.io/notes/tags/regular-expression/</link>
       <pubDate>Sun, 19 Nov 2017 20:57:21 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/regular-expression/</guid>
+      <guid>https://abskmj.github.io/notes/tags/regular-expression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Google Analytics</title>
-      <link>http://clog.logicize.co/tags/google-analytics/</link>
+      <link>https://abskmj.github.io/notes/tags/google-analytics/</link>
       <pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/google-analytics/</guid>
+      <guid>https://abskmj.github.io/notes/tags/google-analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mathematics</title>
-      <link>http://clog.logicize.co/tags/mathematics/</link>
+      <link>https://abskmj.github.io/notes/tags/mathematics/</link>
       <pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/mathematics/</guid>
+      <guid>https://abskmj.github.io/notes/tags/mathematics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Graph Theory</title>
-      <link>http://clog.logicize.co/tags/graph-theory/</link>
+      <link>https://abskmj.github.io/notes/tags/graph-theory/</link>
       <pubDate>Sun, 29 Oct 2017 23:20:35 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/tags/graph-theory/</guid>
+      <guid>https://abskmj.github.io/notes/tags/graph-theory/</guid>
       <description></description>
     </item>
     

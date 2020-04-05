@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Model on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/model/</link>
+    <link>https://abskmj.github.io/notes/tags/model/</link>
     <description>Recent content in Model on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Fri, 08 Mar 2019 03:09:10 +0000</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/model/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/model/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lean option and Hydrate method in Mongoose</title>
-      <link>http://clog.logicize.co/posts/topics/mongoose/mongoose-lean-hydrate/</link>
+      <link>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/topics/mongoose/mongoose-lean-hydrate/</guid>
+      <guid>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</guid>
       <description>Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary. Lean option can be set on such queries to return just the data directly from the database. This also improves the overall performance of the API.
  Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments.</description>
     </item>
     
     <item>
       <title>Model Relations in Mongoose</title>
-      <link>http://clog.logicize.co/posts/topics/mongoose/model-relations/</link>
+      <link>https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/</link>
       <pubDate>Mon, 24 Dec 2018 09:35:35 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/topics/mongoose/model-relations/</guid>
+      <guid>https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/</guid>
       <description>Model Relations Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of the same or another model.
 A relation between models are generally of two types:
  BelongsTo: A document in source model is connected with a document in destination model by putting the id of destination document in the source document. Has Many / Has One: A document in source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).</description>
@@ -35,20 +35,20 @@ A relation between models are generally of two types:
     
     <item>
       <title>Custom Model Methods in Loopback</title>
-      <link>http://clog.logicize.co/posts/tutorials/loopback/custom-model-methods/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</link>
       <pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/loopback/custom-model-methods/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</guid>
       <description>Loopback models can be extended by adding custom methods to them. A method can be:
  Model Method: the method is available on Model itself. Instance Method: the method is available on an instance of the model.  Model JS file // Model.js module.exports = function(Model) { // Model Method  Model.method = function() { ... } // Instance Method  Model.prototype.method = function() { ... } } // Model method var Model = app.</description>
     </item>
     
     <item>
       <title>Enable Destroy All API for a model in Loopback</title>
-      <link>http://clog.logicize.co/posts/tutorials/loopback/enable-destroy-all-api/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link>
       <pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/loopback/enable-destroy-all-api/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid>
       <description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.
 Remote Method A corresponding remote method can be added to the model.js file to enable this API. This method also supports a filter to enable selective deletion.
 module.exports = function (Model) { Model.remoteMethod(&amp;#39;destroyAll&amp;#39;, { isStatic: true, description: &amp;#39;Delete all matching records&amp;#39;, accessType: &amp;#39;WRITE&amp;#39;, accepts: { arg: &amp;#39;where&amp;#39;, type: &amp;#39;object&amp;#39;, description: &amp;#39;filter.</description>

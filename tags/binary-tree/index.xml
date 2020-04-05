@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Binary Tree on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/binary-tree/</link>
+    <link>https://abskmj.github.io/notes/tags/binary-tree/</link>
     <description>Recent content in Binary Tree on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Mon, 20 Nov 2017 20:04:29 +0530</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/binary-tree/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/binary-tree/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HackerEarth - Binary Tree</title>
-      <link>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</link>
+      <link>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</link>
       <pubDate>Mon, 20 Nov 2017 20:04:29 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</guid>
+      <guid>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</guid>
       <description>Solution  Diameter of a binary tree is maximum of diameter of current node, its left and right child.  /* Solution to HackerEarth: Binary Tree * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/tutorial/ */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { Scanner in = new Scanner(System.in); int T = in.nextInt(); int X = in.nextInt(); Node root = new Node(X); for(int t=0; t &amp;lt; T-1; t++){ String path = in.</description>
     </item>
     
     <item>
       <title>HackerEarth - Mirror Image</title>
-      <link>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</link>
+      <link>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</link>
       <pubDate>Sat, 18 Nov 2017 11:36:52 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</guid>
+      <guid>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</guid>
       <description>Solution  Parse input and build the tree by maintaining an index HashMap. Traverse tree and mirror tree simultaneously to find the mirror node.  /* Solution to HackerEarth: Mirror Image * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/practice-problems/algorithm/mirror-image-2/ */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { //Scanner  Scanner in = new Scanner(System.in); int N = in.nextInt(); int Q = in.nextInt(); Map&amp;lt;Integer, Node&amp;gt; index = new HashMap&amp;lt;&amp;gt;(); // initialize root node  Node root = new Node(1); index.</description>
     </item>
     

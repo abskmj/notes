@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NPM on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/npm/</link>
+    <link>https://abskmj.github.io/notes/tags/npm/</link>
     <description>Recent content in NPM on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Tue, 08 Jan 2019 09:56:04 +0000</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deploy functions on Spotinst using Serverless Framework</title>
-      <link>http://clog.logicize.co/posts/tutorials/spotinst/serverless-spotinst-setup/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</link>
       <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/spotinst/serverless-spotinst-setup/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</guid>
       <description>Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service). Serverless Framework is an NPM module which makes building serverless applications easy and open.
 Isolated Workspace The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects.</description>
     </item>
     
     <item>
       <title>Implement a Javascript Client for Crypto Compare API </title>
-      <link>http://clog.logicize.co/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link>
       <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid>
       <description>Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available here.
 Javascript Client I&amp;rsquo;m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I&amp;rsquo;m using an NPM module called Cligen to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.</description>
     </item>
     
     <item>
       <title>NPM Module - Complex JSON to Query String</title>
-      <link>http://clog.logicize.co/posts/projects/npm/abskmj-query/</link>
+      <link>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</link>
       <pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/projects/npm/abskmj-query/</guid>
+      <guid>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</guid>
       <description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.
 Example const query = require(&amp;#39;@abskmj/query&amp;#39;); // query to get a list of 10 people between age 17 and 66, sorted by their age  let filters = { where: { age: { $gt: 17, $lt: 66 }, }, options: { limit: 10, sort: { age: -1 } } } const queryString = query.</description>
     </item>
     
     <item>
       <title>Developing an Angular project on Cloud9 IDE</title>
-      <link>http://clog.logicize.co/posts/tutorials/cloud9/angular-project-cloud9-ide/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</link>
       <pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid>
       <description>Update NodeJS version  All of the blank VMs on cloud9 have nvm pre installed. List all the available versions from the official site.  nvm ls-remote  Choose to install the latest version  nvm install v10.6.0  Choose to use the latest version  nvm use v10.6.0  Check the version in use  node --version Angular  Install latest Angular CLI package  npm install -g @angular/cli  Create a new project named my-project (you can use any name you need)  ng new my-project cd my-project  Change start script in package.</description>
     </item>
     
     <item>
       <title>Track API usage with Google Analytics</title>
-      <link>http://clog.logicize.co/posts/tutorials/track-api-usage-google-analytics/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</link>
       <pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/track-api-usage-google-analytics/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</guid>
       <description>Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.
  Measurement Protocol can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.
  API Hit Each invocation of an API can be tracked as a unique event.</description>

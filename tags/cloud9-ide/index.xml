@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud9 IDE on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/cloud9-ide/</link>
+    <link>https://abskmj.github.io/notes/tags/cloud9-ide/</link>
     <description>Recent content in Cloud9 IDE on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Tue, 10 Jul 2018 12:46:13 +0000</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/cloud9-ide/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/cloud9-ide/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Developing an Angular project on Cloud9 IDE</title>
-      <link>http://clog.logicize.co/posts/tutorials/cloud9/angular-project-cloud9-ide/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</link>
       <pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid>
       <description>Update NodeJS version  All of the blank VMs on cloud9 have nvm pre installed. List all the available versions from the official site.  nvm ls-remote  Choose to install the latest version  nvm install v10.6.0  Choose to use the latest version  nvm use v10.6.0  Check the version in use  node --version Angular  Install latest Angular CLI package  npm install -g @angular/cli  Create a new project named my-project (you can use any name you need)  ng new my-project cd my-project  Change start script in package.</description>
     </item>
     

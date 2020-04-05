@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Browser on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/browser/</link>
+    <link>https://abskmj.github.io/notes/tags/browser/</link>
     <description>Recent content in Browser on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Sun, 16 Dec 2018 07:30:14 +0000</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/browser/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Implement a Javascript Client for Crypto Compare API </title>
-      <link>http://clog.logicize.co/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link>
+      <link>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link>
       <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid>
+      <guid>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid>
       <description>Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available here.
 Javascript Client I&amp;rsquo;m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I&amp;rsquo;m using an NPM module called Cligen to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.</description>
     </item>

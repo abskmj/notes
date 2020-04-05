@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project on console.log(&#39;Hello World!&#39;);</title>
-    <link>http://clog.logicize.co/tags/project/</link>
+    <link>https://abskmj.github.io/notes/tags/project/</link>
     <description>Recent content in Project on console.log(&#39;Hello World!&#39;);</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
     <lastBuildDate>Wed, 17 Oct 2018 06:38:37 +0000</lastBuildDate>
     
-	<atom:link href="http://clog.logicize.co/tags/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abskmj.github.io/notes/tags/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>NPM Module - Complex JSON to Query String</title>
-      <link>http://clog.logicize.co/posts/projects/npm/abskmj-query/</link>
+      <link>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</link>
       <pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate>
       
-      <guid>http://clog.logicize.co/posts/projects/npm/abskmj-query/</guid>
+      <guid>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</guid>
       <description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.
 Example const query = require(&amp;#39;@abskmj/query&amp;#39;); // query to get a list of 10 people between age 17 and 66, sorted by their age  let filters = { where: { age: { $gt: 17, $lt: 66 }, }, options: { limit: 10, sort: { age: -1 } } } const queryString = query.</description>
     </item>
     
     <item>
       <title>Status of Indian Railway PNR on Facebook Messenger</title>
-      <link>http://clog.logicize.co/posts/projects/bhaina-bot/</link>
+      <link>https://abskmj.github.io/notes/posts/projects/bhaina-bot/</link>
       <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
       
-      <guid>http://clog.logicize.co/posts/projects/bhaina-bot/</guid>
+      <guid>https://abskmj.github.io/notes/posts/projects/bhaina-bot/</guid>
       <description>Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR. You don&amp;rsquo;t have to install any extra application on your mobile to use this service.
 Give it a try on your messenger!</description>
     </item>
