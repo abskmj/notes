@@ -1,4 +1,4 @@
-baseurl = "http://clog.logicize.co/"
+baseurl = "https://abskmj.github.io/notes/"
 languageCode = "en-us"
 Title = "console.log('Hello World!');"
 # Copyright notice. This is displayer in the footer.
