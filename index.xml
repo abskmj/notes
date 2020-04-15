@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Sun, 05 Apr 2020 18:26:32 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 14:33:04 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install Debian Jessie on WD MyCloud (Gen1)</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</link>
+      <pubDate>Wed, 15 Apr 2020 14:33:04 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</guid>
+      <description>De-attach WD Drive  You will have to open your WD MyCloud device and remove the HDD or drive inside it. Attach the drive to your computer. If you don&amp;rsquo;t have a Linux based OS installed on your computer, you can boot your computer through a live USB. See how to create one at ubuntu.com  Create Partitions You can skip this section if you have not formatted the drive after connecting it to your computer and have the original partitions.</description>
+    </item>
     
     <item>
       <title>Sources List for Debian Wheezy</title>
