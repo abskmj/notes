@@ -64,7 +64,7 @@ mkswap /dev/sdb3
 ```
 
 # Install Debian
-- Find your WD drive on your computer, look at the partition sizes and find the one that has simar size as your WD MyCloud. For me, it was `/dev/sdb` with a size around 1.8 TB.
+- Find your WD drive on your computer, look at the partition sizes and find the one that has simar size as your WD MyCloud. For me, it was `/dev/sdb` with a size of around 1.8 TB.
 
 ```bash
 fdisk -l
@@ -95,6 +95,19 @@ wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-
 
 tar xvfz clean-debian-jessie.tgz
 ```
+> If you are planning to install one of the original packages. You can download that package instead of Debian.
+> 
+> ```bash
+> # v3.x
+> wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v03.04.01-230.tar.gz
+> 
+> tar xvfz original-v03.04.01-230.tar.gz
+> 
+> # v4.x
+> wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v04.01.02-417.tar.gz
+> 
+> tar xvfz original-v04.01.02-417.tar.gz
+> ```
 
 - Copy images to partitions
 
@@ -107,7 +120,7 @@ dd if=rootfs.img of=/dev/md0
 ```
 
 # Re-attach WD Drive
-- You can shutdown your computer and remove the WD drive.
+- You can shut your computer down and remove the WD drive.
 
 - You don't have to assemble the device completely right now, you can simply connect the plate to the drive and attach a LAN / power cord to it.
 
