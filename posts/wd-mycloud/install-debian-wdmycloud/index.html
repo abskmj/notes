@@ -134,7 +134,7 @@ set <span style="color:#ae81ff">2</span> raid on
 mkswap /dev/sdb3
 </code></pre></div><h1 id="install-debian">Install Debian</h1>
 <ul>
-<li>Find your WD drive on your computer, look at the partition sizes and find the one that has simar size as your WD MyCloud. For me, it was <code>/dev/sdb</code> with a size around 1.8 TB.</li>
+<li>Find your WD drive on your computer, look at the partition sizes and find the one that has simar size as your WD MyCloud. For me, it was <code>/dev/sdb</code> with a size of around 1.8 TB.</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fdisk -l
 </code></pre></div><ul>
@@ -157,7 +157,19 @@ cd /mnt
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
 
 tar xvfz clean-debian-jessie.tgz
-</code></pre></div><ul>
+</code></pre></div><blockquote>
+<p>If you are planning to install one of the original packages. You can download that package instead of Debian.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># v3.x</span>
+wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v03.04.01-230.tar.gz
+
+tar xvfz original-v03.04.01-230.tar.gz
+
+<span style="color:#75715e"># v4.x</span>
+wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v04.01.02-417.tar.gz
+
+tar xvfz original-v04.01.02-417.tar.gz
+</code></pre></div></blockquote>
+<ul>
 <li>Copy images to partitions</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>kernel.img of<span style="color:#f92672">=</span>/dev/sdb5
@@ -168,7 +180,7 @@ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>root
 </code></pre></div><h1 id="re-attach-wd-drive">Re-attach WD Drive</h1>
 <ul>
 <li>
-<p>You can shutdown your computer and remove the WD drive.</p>
+<p>You can shut your computer down and remove the WD drive.</p>
 </li>
 <li>
 <p>You don&rsquo;t have to assemble the device completely right now, you can simply connect the plate to the drive and attach a LAN / power cord to it.</p>
