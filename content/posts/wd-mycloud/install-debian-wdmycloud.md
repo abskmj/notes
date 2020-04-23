@@ -93,7 +93,7 @@ cd /mnt
 ```bash
 wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
 
-tar xvfz clean-debian-jessie.tgz
+tar -xvfz clean-debian-jessie.tgz
 ```
 > If you are planning to install one of the original packages. You can download that package instead of Debian.
 > 
@@ -101,12 +101,12 @@ tar xvfz clean-debian-jessie.tgz
 > # v3.x
 > wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v03.04.01-230.tar.gz
 > 
-> tar xvfz original-v03.04.01-230.tar.gz
+> tar -xvfz original-v03.04.01-230.tar.gz
 > 
 > # v4.x
 > wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v04.01.02-417.tar.gz
 > 
-> tar xvfz original-v04.01.02-417.tar.gz
+> tar -xvfz original-v04.01.02-417.tar.gz
 > ```
 
 - Copy images to partitions
