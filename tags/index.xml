@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Thu, 23 Apr 2020 13:16:58 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 22:51:06 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ARG</title>
+      <link>https://abskmj.github.io/notes/tags/arg/</link>
+      <pubDate>Sun, 26 Apr 2020 22:51:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/arg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CI</title>
+      <link>https://abskmj.github.io/notes/tags/ci/</link>
+      <pubDate>Sun, 26 Apr 2020 22:51:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://abskmj.github.io/notes/tags/docker/</link>
+      <pubDate>Sun, 26 Apr 2020 22:51:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/docker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Git</title>
