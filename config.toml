@@ -34,7 +34,7 @@ theme = "hugo_theme_pickles"
   ga_api_key = "UA-82450306-3"
   author = "abskmj"
   # authorwebsite = "example.com"
-  # avatar = "/path/to/avatar"
+  avatar = "https://github.com/abskmj.png"
   contact = "mailto:abskmj@gmail.com"
   bio = "Designing and developing web based applications since 2012. Keen on exploring and working on new technologies to implement innovative and cutting-edge solutions."
   # Short subtitle/tagline. This is displayed in the header.
