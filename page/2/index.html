@@ -63,6 +63,25 @@
   
   <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/">HackerRank Contest - Project Euler - Multiples of 3 and 5</a></h2>
+    <p class="c-article__meta">
+      Posted on
+      <time datetime="2019-01-07T12:45:33Z">
+        Jan 7, 2019
+      </time>
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int numCases = scan.nextInt(); for(int index=0;index&lt;numCases;index++){ long num = scan.nextInt()-1; System.out.println(sumOfMultiples(num/3,3)+sumOfMultiples(num/5,5)-sumOfMultiples(num/15,15)); } } public static long sumOfMultiples(long num, long multiple){ return (multiple*num*(num+1))/2; } } 
+  </div>
+  
+</article>
+
+
+  
+    
+  <article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/">Model Relations in Mongoose</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -248,31 +267,6 @@ script aborted: E3004: This package is for device: OnePlus2,oneplus2; this devic
     Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file. Changes to this file doesn&rsquo;t require maven restart.
 ... &lt;proxies&gt; &lt;!-- proxy | Specification for one proxy, to be used in connecting to the network. |--&gt; &lt;proxy&gt; &lt;id&gt;optional&lt;/id&gt; &lt;active&gt;true&lt;/active&gt; &lt;protocol&gt;http&lt;/protocol&gt; &lt;username&gt;&lt;/username&gt; &lt;password&gt;&lt;/password&gt; &lt;host&gt;{{proxy_host_or_ip}}&lt;/host&gt; &lt;port&gt;8080&lt;/port&gt; &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt; &lt;/proxy&gt; &lt;/proxies&gt; ... 
   </div>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/">Deploy a NodeJS application using Git</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-05-09T05:09:36Z">
-        May 9, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
-git init --bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
-#!/bin/sh git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
-chmod 755 project.git/hooks/post-receive Add a remote to local repo
-git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/" class="c-article__btn p-list-article__btn">Read more</a>
   
 </article>
 

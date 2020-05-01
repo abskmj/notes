@@ -63,6 +63,30 @@
   
   <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/">Turn off the color with ls command</a></h2>
+    <p class="c-article__meta">
+      Posted on
+      <time datetime="2020-05-01T10:05:46&#43;05:30">
+        May 1, 2020
+      </time>
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Alias See if there are any alias defined for ls on your terminal
+alias For me it was alias ls='ls $LS_OPTIONS' and LS_OPTIONS environment variable had a value of --color=auto
+.bashrc Check the contents of your ~/.bashrc file. Generally, these aliases are defined here. Mine had these lines
+export LS_OPTIONS='--color=auto' eval &quot;`dircolors`&quot; alias ls='ls $LS_OPTIONS' alias ll='ls $LS_OPTIONS -l' alias l='ls $LS_OPTIONS -lA' Update export LS_OPTIONS='--color=auto' to export LS_OPTIONS='--color=never' and restart the terminal
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+  
+    
+  <article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/docker/docker-args/">Pass Parameters to Docker Build</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -255,25 +279,6 @@ Isolated Workspace The steps listed below is different from the traditional step
   </div>
   
   <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/">HackerRank Contest - Project Euler - Multiples of 3 and 5</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2019-01-07T12:45:33Z">
-        Jan 7, 2019
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int numCases = scan.nextInt(); for(int index=0;index&lt;numCases;index++){ long num = scan.nextInt()-1; System.out.println(sumOfMultiples(num/3,3)+sumOfMultiples(num/5,5)-sumOfMultiples(num/15,15)); } } public static long sumOfMultiples(long num, long multiple){ return (multiple*num*(num+1))/2; } } 
-  </div>
   
 </article>
 

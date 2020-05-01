@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Sun, 26 Apr 2020 22:51:06 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 10:05:46 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Turn off the color with ls command</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</link>
+      <pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</guid>
+      <description>Alias See if there are any alias defined for ls on your terminal
+alias For me it was alias ls=&#39;ls $LS_OPTIONS&#39; and LS_OPTIONS environment variable had a value of --color=auto
+.bashrc Check the contents of your ~/.bashrc file. Generally, these aliases are defined here. Mine had these lines
+export LS_OPTIONS=&#39;--color=auto&#39; eval &amp;quot;`dircolors`&amp;quot; alias ls=&#39;ls $LS_OPTIONS&#39; alias ll=&#39;ls $LS_OPTIONS -l&#39; alias l=&#39;ls $LS_OPTIONS -lA&#39; Update export LS_OPTIONS=&#39;--color=auto&#39; to export LS_OPTIONS=&#39;--color=never&#39; and restart the terminal</description>
+    </item>
     
     <item>
       <title>Pass Parameters to Docker Build</title>
