@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>console.log(&#39;Hello World!&#39;);</title>
-  <meta property="og:title" content="console.log(&#39;Hello World!&#39;);" />
-  <meta name="twitter:title" content="console.log(&#39;Hello World!&#39;);" />
+  <title>Oracle</title>
+  <meta property="og:title" content="Oracle" />
+  <meta name="twitter:title" content="Oracle" />
   
 
   
 
   <meta name="author" content="abskmj"/>
   <meta property="og:site_name" content="console.log(&#39;Hello World!&#39;);" />
-  <meta property="og:url" content="https://abskmj.github.io/notes/" />
+  <meta property="og:url" content="https://abskmj.github.io/notes/tags/oracle/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -58,10 +58,12 @@
   </header>
   <main id="main" class="l-main">
 
+<h2 class="c-title p-tag-title">Oracle</h2>
 
 
-  
-  <article class="c-article p-list-article">
+
+
+<article class="c-article p-list-article">
   <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/sql/count-rows/">SQL: Count rows in a table without COUNT()</a></h2>
     <p class="c-article__meta">
@@ -78,209 +80,6 @@
 </article>
 
 
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/">Turn off the color with ls command</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2020-05-01T10:05:46&#43;05:30">
-        May 1, 2020
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Alias See if there are any alias defined for ls on your terminal
-alias For me it was alias ls='ls $LS_OPTIONS' and LS_OPTIONS environment variable had a value of --color=auto
-.bashrc Check the contents of your ~/.bashrc file. Generally, these aliases are defined here. Mine had these lines
-export LS_OPTIONS='--color=auto' eval &quot;`dircolors`&quot; alias ls='ls $LS_OPTIONS' alias ll='ls $LS_OPTIONS -l' alias l='ls $LS_OPTIONS -lA' Update export LS_OPTIONS='--color=auto' to export LS_OPTIONS='--color=never' and restart the terminal
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/docker/docker-args/">Pass Parameters to Docker Build</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2020-04-26T22:51:06&#43;05:30">
-        Apr 26, 2020
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    ARG in Dockerfile  The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the --build-arg &lt;varname&gt;=&lt;value&gt; flag. More details at docs.docker.com
- Example Dockerfile
-FROM debian:stable-slim ARG HUGO_VERSION LABEL maintainer &quot;abskmj@gmail.com&quot; LABEL hugo.version ${HUGO_VERSION} Pass the argument value
-docker build -t hugo --build-arg HUGO_VERSION=0.69.0 . 
-  </div>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/hugo/hugo-git-info/">Git Info Variables on Hugo</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2020-04-23T13:16:58&#43;05:30">
-        Apr 23, 2020
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Enable Git Info Variables  Enable .GitInfo object for each page (if the Hugo site is versioned by Git). This will then update the Lastmod parameter for each page using the last git commit date for that content file.
- Terminal hugo --enableGitInfo Config File  Hugo uses the config.toml, config.yaml, or config.json (if found in the site root) as the default site config file.
-The user can choose to override that default with one or more site config files using the command line --config switch.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/hugo/hugo-git-info/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/">Install Debian Jessie on WD MyCloud (Gen1)</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2020-04-15T14:33:04&#43;05:30">
-        Apr 15, 2020
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    De-attach WD Drive  You will have to open your WD MyCloud device and remove the HDD or drive inside it. Attach the drive to your computer. If you don&rsquo;t have a Linux based OS installed on your computer, you can boot your computer through a live USB. See how to create one at ubuntu.com  Create Partitions You can skip this section if you have not formatted the drive after connecting it to your computer and have the original partitions.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/">Sources List for Debian Wheezy</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2020-04-05T18:26:32&#43;05:30">
-        Apr 5, 2020
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-     As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.
-   Open /etc/apt/sources.list
-  Comment existing sources
-  Add below sources
-  deb http://archive.debian.org/debian/ wheezy main non-free contrib deb-src http://archive.debian.org/debian/ wheezy main non-free contrib  Now you can run  apt-get update  If you get below error  There is no public key available for the following key IDs  Install below package  apt-get install debian-archive-keyring  Now you can rerun  apt-get update 
-  </div>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/">Configure ES Lint with Airbnb rules for a Node.js Application</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2019-07-01T20:15:18&#43;05:30">
-        Jul 1, 2019
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.js applications. They also publish a version for React applications as eslint-config-airbnb.
-npm install --save-dev eslint-config-airbnb-base Config File Create a .eslintrc file with following contents to Airbnb rules for the Node.js Application.
-{ &#34;extends&#34;: &#34;eslint-config-airbnb-base&#34; } NPM Scripts Create few npm scripts to integrate linting into development flow.
-{ &#34;scripts&#34;:{ &#34;start&#34;: &#34;node .&#34;, &#34;lint&#34;: &#34;eslint --fix .
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/git/git-stash/">Working with Git Stash</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2019-06-14T12:49:55&#43;05:30">
-        Jun 14, 2019
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.
-Save the local changes in Stash git stash push -m {{ commit message}} // example git stash push -m {{ new logging module }} List all the change sets in Stash git stash list Apply a change set from Stash git stash apply {{ index }} //example git stash apply 1  Not specifying an index with automatically apply first index
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/git/git-stash/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/">Lean option and Hydrate method in Mongoose</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2019-03-08T03:09:10Z">
-        Mar 8, 2019
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary. Lean option can be set on such queries to return just the data directly from the database. This also improves the overall performance of the API.
- Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/">Deploy functions on Spotinst using Serverless Framework</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2019-01-08T09:56:04Z">
-        Jan 8, 2019
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service). Serverless Framework is an NPM module which makes building serverless applications easy and open.
-Isolated Workspace The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
 
 <nav class="c-pagination p-pagination">
   <div class="c-pagination__ctrl">
@@ -289,13 +88,12 @@ Isolated Workspace The steps listed below is different from the traditional step
     </div>
     <div class="c-pagination__older">
       
-      <a href="/notes/page/2/">Older</a>
-      
     </div>
   </div>
-  <span class="c-pagination__count p-pagination__count">Page 1 of 5</span>
+  <span class="c-pagination__count p-pagination__count">Page 1 of 1</span>
 </nav>
- 
+
+
 <aside class="p-author">
   
   <div class="c-avatar p-author__avatar">

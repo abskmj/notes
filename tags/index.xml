@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Fri, 01 May 2020 10:05:46 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 22:33:40 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Oracle</title>
+      <link>https://abskmj.github.io/notes/tags/oracle/</link>
+      <pubDate>Fri, 01 May 2020 22:33:40 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://abskmj.github.io/notes/tags/sql/</link>
+      <pubDate>Fri, 01 May 2020 22:33:40 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/sql/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Debian</title>

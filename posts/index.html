@@ -65,6 +65,25 @@
 
 <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/sql/count-rows/">SQL: Count rows in a table without COUNT()</a></h2>
+    <p class="c-article__meta">
+      Posted on
+      <time datetime="2020-05-01T22:33:40&#43;05:30">
+        May 1, 2020
+      </time>
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Use a dummy column  Add a dummy column to all rows with value as 1. Print the sum of this dummy column to count the rows.  SELECT SUM(ROW_COUNT) AS COUNT FROM ( SELECT NAME, 1 AS ROW_COUNT FROM EMPLOYEE ); 
+  </div>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/">Turn off the color with ls command</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -260,27 +279,6 @@ Isolated Workspace The steps listed below is different from the traditional step
   </div>
   
   <a href="https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/">HackerRank Contest - Project Euler - Largest product in a series</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2019-01-07T12:50:58Z">
-        Jan 7, 2019
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int T = scan.nextInt(); for(int j=0;j&lt;T;j++){ int N = scan.nextInt(); int K = scan.nextInt(); scan.nextLine(); char[] data = scan.nextLine().toCharArray(); int max = 0; for(int i=0;i&lt;N-K;i++){ int prod = getProduct(data,i,K); if(prod&gt;max){ max = prod; } } System.out.println(max); } } static int getProduct(char[] data, int start, int length){ int product = 1; for(int i=start;i&lt;start+length;i++){ product = product * Character.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/" class="c-article__btn p-list-article__btn">Read more</a>
   
 </article>
 

@@ -65,6 +65,27 @@
 
 <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/">HackerRank Contest - Project Euler - Largest product in a series</a></h2>
+    <p class="c-article__meta">
+      Posted on
+      <time datetime="2019-01-07T12:50:58Z">
+        Jan 7, 2019
+      </time>
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int T = scan.nextInt(); for(int j=0;j&lt;T;j++){ int N = scan.nextInt(); int K = scan.nextInt(); scan.nextLine(); char[] data = scan.nextLine().toCharArray(); int max = 0; for(int i=0;i&lt;N-K;i++){ int prod = getProduct(data,i,K); if(prod&gt;max){ max = prod; } } System.out.println(max); } } static int getProduct(char[] data, int start, int length){ int product = 1; for(int i=start;i&lt;start+length;i++){ product = product * Character.
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/">HackerRank Contest - Project Euler - Multiples of 3 and 5</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -248,26 +269,6 @@ Rather, a separate git repository can be set using the current project as workin
   <div class="c-article__summary">
     I have recently installed LineageOS custom ROM on my OnePlus2 device to keep on trying new android versions as they come. While installing/updating the OS, I was getting below error on TWRP recovery screen.
 script aborted: E3004: This package is for device: OnePlus2,oneplus2; this device is . To fix this, I updated to the lastest version of TWRP for OnePlus2.
-  </div>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/">Set Proxy for Maven</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2018-05-18T10:54:22Z">
-        May 18, 2018
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file. Changes to this file doesn&rsquo;t require maven restart.
-... &lt;proxies&gt; &lt;!-- proxy | Specification for one proxy, to be used in connecting to the network. |--&gt; &lt;proxy&gt; &lt;id&gt;optional&lt;/id&gt; &lt;active&gt;true&lt;/active&gt; &lt;protocol&gt;http&lt;/protocol&gt; &lt;username&gt;&lt;/username&gt; &lt;password&gt;&lt;/password&gt; &lt;host&gt;{{proxy_host_or_ip}}&lt;/host&gt; &lt;port&gt;8080&lt;/port&gt; &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt; &lt;/proxy&gt; &lt;/proxies&gt; ... 
   </div>
   
 </article>
