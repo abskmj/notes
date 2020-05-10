@@ -65,6 +65,28 @@
 
 <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/express/express-req-res-headers/">Express middleware to log request / response headers</a></h2>
+    <p class="c-article__meta">
+      Posted on
+      <time datetime="2020-05-10T13:03:19&#43;05:30">
+        May 10, 2020
+      </time>
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Express Middleware Logging request and response headers for tracing purpose
+app.use((req, res, nxt) =&gt; { const requestHeaders = req.headers console.log(&#39;Request Headers:&#39;, requestHeaders) // Request Headers: {  // &#39;user-agent&#39;: &#39;PostmanRuntime/7.24.1&#39;,  // accept: &#39;*/*&#39;,  // &#39;cache-control&#39;: &#39;no-cache&#39;,  // &#39;postman-token&#39;: &#39;74416f71-0d09-453f-b714-3737dfd9f6b4&#39;,  // host: &#39;localhost:3000&#39;,  // &#39;accept-encoding&#39;: &#39;gzip, deflate, br&#39;,  // connection: &#39;keep-alive&#39;  // }  res.on(&#39;finish&#39;, () =&gt; { const responseHeaders = res.getHeaders() console.log(&#39;Response Headers:&#39;, responseHeaders) // Response Headers: [Object: null prototype] {  // &#39;x-powered-by&#39;: &#39;Express&#39;,  // &#39;content-type&#39;: &#39;text/html; charset=utf-8&#39;,  // &#39;content-length&#39;: &#39;12&#39;,  // etag: &#39;W/&#34;c-Lve95gjOVATpfV8EL5X4nxwjKHE&#34;&#39;  // }  }) nxt() })  More details on response finish event and others at nodejs.
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/express/express-req-res-headers/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/sql/count-rows/">SQL: Count rows in a table without COUNT()</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -262,28 +284,6 @@ Save the local changes in Stash git stash push -m {{ commit message}} // example
 
 
 
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/">Deploy functions on Spotinst using Serverless Framework</a></h2>
-    <p class="c-article__meta">
-      Posted on
-      <time datetime="2019-01-08T09:56:04Z">
-        Jan 8, 2019
-      </time>
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service). Serverless Framework is an NPM module which makes building serverless applications easy and open.
-Isolated Workspace The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
 <nav class="c-pagination p-pagination">
   <div class="c-pagination__ctrl">
     <div class="c-pagination__newer">
@@ -295,7 +295,7 @@ Isolated Workspace The steps listed below is different from the traditional step
       
     </div>
   </div>
-  <span class="c-pagination__count p-pagination__count">Page 1 of 5</span>
+  <span class="c-pagination__count p-pagination__count">Page 1 of 6</span>
 </nav>
 
 
@@ -311,7 +311,7 @@ Isolated Workspace The steps listed below is different from the traditional step
     <p class="c-title p-author__name ">abskmj</p>
     
     
-    <p>Designing and developing web based applications since 2012. Keen on exploring and working on new technologies to implement innovative and cutting-edge solutions.</p>
+    <p>Works on Node.js, MongoDB, Docker, Kubernetes to develop &amp; deploy new apps. Writes most of his code in JavaScript. Enjoys watching movies &amp; listening to music.</p>
     
     
     <p>
