@@ -5,9 +5,6 @@ Title = "console.log('Hello World!');"
 copyright = "&copy; 2017 abskmj"
 theme = "hugo_theme_pickles"
 
-# Google Analytics API key.
-# googleAnalytics = ""
-
 [params]
   paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
@@ -36,7 +33,7 @@ theme = "hugo_theme_pickles"
   # authorwebsite = "example.com"
   avatar = "https://github.com/abskmj.png"
   contact = "mailto:abskmj@gmail.com"
-  bio = "Designing and developing web based applications since 2012. Keen on exploring and working on new technologies to implement innovative and cutting-edge solutions."
+  bio = "Works on Node.js, MongoDB, Docker, Kubernetes to develop & deploy new apps. Writes most of his code in JavaScript. Enjoys watching movies & listening to music."
   # Short subtitle/tagline. This is displayed in the header.
   # subtitle = "Short subtitle"
   # Logo image. This is displayed ogp image.
