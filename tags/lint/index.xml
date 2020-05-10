@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lint on console.log(&#39;Hello World!&#39;);</title>
+    <title>Lint on console.log(&#39;Hello World!&#39;)</title>
     <link>https://abskmj.github.io/notes/tags/lint/</link>
-    <description>Recent content in Lint on console.log(&#39;Hello World!&#39;);</description>
+    <description>Recent content in Lint on console.log(&#39;Hello World!&#39;)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
