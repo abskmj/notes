@@ -1,6 +1,6 @@
 baseurl = "https://abskmj.github.io/notes/"
 languageCode = "en-us"
-Title = "console.log('Hello World!');"
+Title = "console.log('Hello World!')"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; 2017 abskmj"
 theme = "hugo_theme_pickles"
@@ -38,4 +38,4 @@ theme = "hugo_theme_pickles"
   # subtitle = "Short subtitle"
   # Logo image. This is displayed ogp image.
   # logo = "/path/to/logo"
-  # favicon = "/path/to/favicon"
+  favicon = "https://github.com/abskmj.png"
