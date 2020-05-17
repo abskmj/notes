@@ -3,8 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/</loc>
+    <lastmod>2020-05-17T13:44:55+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://abskmj.github.io/notes/</loc>
-    <lastmod>2020-05-10T13:03:19+05:30</lastmod>
+    <lastmod>2020-05-17T13:44:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/debian/</loc>
+    <lastmod>2020-05-17T13:44:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/posts/</loc>
+    <lastmod>2020-05-17T13:44:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/</loc>
+    <lastmod>2020-05-17T13:44:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/timedatectl/</loc>
+    <lastmod>2020-05-17T13:44:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/timezone/</loc>
+    <lastmod>2020-05-17T13:44:55+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/wd-mycloud/</loc>
+    <lastmod>2020-05-17T13:44:55+05:30</lastmod>
   </url>
   
   <url>
@@ -28,22 +63,12 @@
   </url>
   
   <url>
-    <loc>https://abskmj.github.io/notes/posts/</loc>
-    <lastmod>2020-05-10T13:03:19+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://abskmj.github.io/notes/tags/request/</loc>
     <lastmod>2020-05-10T13:03:19+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://abskmj.github.io/notes/tags/response/</loc>
-    <lastmod>2020-05-10T13:03:19+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/</loc>
     <lastmod>2020-05-10T13:03:19+05:30</lastmod>
   </url>
   
@@ -63,22 +88,12 @@
   </url>
   
   <url>
-    <loc>https://abskmj.github.io/notes/tags/debian/</loc>
-    <lastmod>2020-05-01T10:05:46+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://abskmj.github.io/notes/tags/jessie/</loc>
     <lastmod>2020-05-01T10:05:46+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</loc>
-    <lastmod>2020-05-01T10:05:46+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/wd-mycloud/</loc>
     <lastmod>2020-05-01T10:05:46+05:30</lastmod>
   </url>
   
