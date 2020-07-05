@@ -4,7 +4,7 @@ date: 2018-01-13T12:39:27+05:30
 draft: true
 ---
 
-Installing OpenJDK 8 on 
+Installing OpenJDK 8 on j
 ```
 sudo apt-get install openjdk-8-jdk
 ls /usr/lib/jvm/
