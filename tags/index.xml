@@ -7,10 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Sun, 17 May 2020 13:44:55 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2020 15:09:06 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Actions</title>
+      <link>https://abskmj.github.io/notes/tags/actions/</link>
+      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/actions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Continuos Delivery</title>
+      <link>https://abskmj.github.io/notes/tags/continuos-delivery/</link>
+      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/continuos-delivery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://abskmj.github.io/notes/tags/github/</link>
+      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Snap</title>
+      <link>https://abskmj.github.io/notes/tags/snap/</link>
+      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/snap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Snapcraft</title>
+      <link>https://abskmj.github.io/notes/tags/snapcraft/</link>
+      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/snapcraft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workflow</title>
+      <link>https://abskmj.github.io/notes/tags/workflow/</link>
+      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/workflow/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Debian</title>
