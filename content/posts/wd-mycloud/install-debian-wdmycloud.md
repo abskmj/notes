@@ -137,6 +137,10 @@ ssh root@192.168.X.XXX # replace with your IP
 
 > WARNING: Executing `apt-get upgrade` sometimes bricks the device and should avoid it.
 
+# What's Next?
+- [Setup local timezone]({{< ref "debian-timezone.md" >}})
+- [Setup a Public Samba Share]({{< ref "samba-share-public.md" >}})
+
 #### References
 - Original materials from fox-exe at [fox-exe.ru](https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen1/)
 - Re-uploaded packages at [github.com](https://github.com/abskmj/wd-mycloud-gen1/releases)
