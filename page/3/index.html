@@ -65,6 +65,28 @@
   
   <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/">HackerRank - The Time in Words</a></h2>
+    <p class="c-article__meta">
+      Posted on
+<time datetime="2018-09-10T07:16:41Z">
+  Sep 10, 2018
+</time>
+
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Solution /* Solution to HackerRank: The Time in Words * URL: https://www.hackerrank.com/challenges/the-time-in-words */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the timeInWords function below.  static String timeInWords(int h, int m) { String[] words = {&#34;zero&#34;, &#34;one&#34;, &#34;two&#34;, &#34;three&#34;, &#34;four&#34;, &#34;five&#34;, &#34;six&#34;, &#34;seven&#34;, &#34;eight&#34;, &#34;nine&#34;, &#34;ten&#34;, &#34;eleven&#34;, &#34;twelve&#34;, &#34;thirteen&#34;, &#34;fourteen&#34;, &#34;fifteen&#34;, &#34;sixteen&#34;, &#34;seventeen&#34;, &#34;eighteen&#34;, &#34;nineteen&#34;, &#34;twenty&#34;}; if (m == 0){ return words[h] + &#34; o&#39; clock&#34;; } else if (m == 15){ return &#34;quarter past &#34; + words[h]; } else if (m == 30){ return &#34;half past &#34; + words[h]; } else if (m == 45){ return &#34;quarter to &#34; + words[h+1]; } else if (m == 1){ return &#34;one minute past &#34; + words[h]; } else if (m == 59){ return &#34;one minute to &#34; + words[h+1]; } else if (m &lt; 21){ return words[m] + &#34; minutes past &#34; + words[h]; } else if (m &gt; 39){ return words[60-m] + &#34; minutes to &#34; + words[h+1]; } else if (m &gt; 30){ return &#34;twenty &#34; + words[(60-m)%20] + &#34; minutes to &#34; + words[h+1]; } else{ return &#34;twenty &#34; + words[m%20] + &#34; minutes past &#34; + words[h]; } } private static final Scanner scanner = new Scanner(System.
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+  
+    
+  <article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/">Developing an Angular project on Cloud9 IDE</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -262,26 +284,6 @@ module.exports = function (Model) { Model.remoteMethod(&#39;destroyAll&#39;, { i
   </div>
   
   <a href="https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler013/">HackerRank Contest - Project Euler - Large Sum</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-12-08T16:21:47&#43;05:30">
-  Dec 8, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Use BigInteger to calculate the sum and print first 10 characters by converting to string.  /* Solution to HackerRank: Large Sum * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler013 */ import java.io.*; import java.util.*; import java.math.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); BigInteger sum = new BigInteger(&#34;0&#34;); for(int t=0; t&lt;N; t++){ sum = sum.add(new BigInteger(in.next())); } System.out.println(sum.toString().substring(0, 10)); } } 
-  </div>
   
 </article>
 

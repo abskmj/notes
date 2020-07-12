@@ -67,6 +67,31 @@
 
 <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/">Configure ES Lint with Airbnb rules for a Node.js Application</a></h2>
+    <p class="c-article__meta">
+      Posted on
+<time datetime="2019-07-01T20:15:18&#43;05:30">
+  Jul 1, 2019
+</time>
+
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.js applications. They also publish a version for React applications as eslint-config-airbnb.
+npm install --save-dev eslint-config-airbnb-base Config File Create a .eslintrc file with following contents to Airbnb rules for the Node.js Application.
+{ &#34;extends&#34;: &#34;eslint-config-airbnb-base&#34; } NPM Scripts Create few npm scripts to integrate linting into development flow.
+{ &#34;scripts&#34;:{ &#34;start&#34;: &#34;node .&#34;, &#34;lint&#34;: &#34;eslint --fix .
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/git/git-stash/">Working with Git Stash</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -262,28 +287,6 @@ Example const query = require(&#39;@abskmj/query&#39;); // query to get a list o
   </div>
   
   <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/">HackerRank - The Time in Words</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2018-09-10T07:16:41Z">
-  Sep 10, 2018
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution /* Solution to HackerRank: The Time in Words * URL: https://www.hackerrank.com/challenges/the-time-in-words */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the timeInWords function below.  static String timeInWords(int h, int m) { String[] words = {&#34;zero&#34;, &#34;one&#34;, &#34;two&#34;, &#34;three&#34;, &#34;four&#34;, &#34;five&#34;, &#34;six&#34;, &#34;seven&#34;, &#34;eight&#34;, &#34;nine&#34;, &#34;ten&#34;, &#34;eleven&#34;, &#34;twelve&#34;, &#34;thirteen&#34;, &#34;fourteen&#34;, &#34;fifteen&#34;, &#34;sixteen&#34;, &#34;seventeen&#34;, &#34;eighteen&#34;, &#34;nineteen&#34;, &#34;twenty&#34;}; if (m == 0){ return words[h] + &#34; o&#39; clock&#34;; } else if (m == 15){ return &#34;quarter past &#34; + words[h]; } else if (m == 30){ return &#34;half past &#34; + words[h]; } else if (m == 45){ return &#34;quarter to &#34; + words[h+1]; } else if (m == 1){ return &#34;one minute past &#34; + words[h]; } else if (m == 59){ return &#34;one minute to &#34; + words[h+1]; } else if (m &lt; 21){ return words[m] + &#34; minutes past &#34; + words[h]; } else if (m &gt; 39){ return words[60-m] + &#34; minutes to &#34; + words[h+1]; } else if (m &gt; 30){ return &#34;twenty &#34; + words[(60-m)%20] + &#34; minutes to &#34; + words[h+1]; } else{ return &#34;twenty &#34; + words[m%20] + &#34; minutes past &#34; + words[h]; } } private static final Scanner scanner = new Scanner(System.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/" class="c-article__btn p-list-article__btn">Read more</a>
   
 </article>
 

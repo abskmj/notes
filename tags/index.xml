@@ -7,10 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Sat, 04 Jul 2020 15:09:06 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Debian</title>
+      <link>https://abskmj.github.io/notes/tags/debian/</link>
+      <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jessie</title>
+      <link>https://abskmj.github.io/notes/tags/jessie/</link>
+      <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/jessie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Samba</title>
+      <link>https://abskmj.github.io/notes/tags/samba/</link>
+      <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/samba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Share</title>
+      <link>https://abskmj.github.io/notes/tags/share/</link>
+      <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/share/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WD MyCloud</title>
+      <link>https://abskmj.github.io/notes/tags/wd-mycloud/</link>
+      <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/wd-mycloud/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Actions</title>
@@ -67,15 +112,6 @@
     </item>
     
     <item>
-      <title>Debian</title>
-      <link>https://abskmj.github.io/notes/tags/debian/</link>
-      <pubDate>Sun, 17 May 2020 13:44:55 +0530</pubDate>
-      
-      <guid>https://abskmj.github.io/notes/tags/debian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>timedatectl</title>
       <link>https://abskmj.github.io/notes/tags/timedatectl/</link>
       <pubDate>Sun, 17 May 2020 13:44:55 +0530</pubDate>
@@ -90,15 +126,6 @@
       <pubDate>Sun, 17 May 2020 13:44:55 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/tags/timezone/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WD MyCloud</title>
-      <link>https://abskmj.github.io/notes/tags/wd-mycloud/</link>
-      <pubDate>Sun, 17 May 2020 13:44:55 +0530</pubDate>
-      
-      <guid>https://abskmj.github.io/notes/tags/wd-mycloud/</guid>
       <description></description>
     </item>
     
@@ -162,15 +189,6 @@
       <pubDate>Fri, 01 May 2020 22:33:40 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jessie</title>
-      <link>https://abskmj.github.io/notes/tags/jessie/</link>
-      <pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate>
-      
-      <guid>https://abskmj.github.io/notes/tags/jessie/</guid>
       <description></description>
     </item>
     

@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   
-  <title>Posts</title>
-  <meta property="og:title" content="Posts" />
-  <meta name="twitter:title" content="Posts" />
+  <title>Share</title>
+  <meta property="og:title" content="Share" />
+  <meta name="twitter:title" content="Share" />
   
 
   
 
   <meta name="author" content="abskmj"/>
   <meta property="og:site_name" content="console.log(&#39;Hello World!&#39;)" />
-  <meta property="og:url" content="https://abskmj.github.io/notes/posts/" />
+  <meta property="og:url" content="https://abskmj.github.io/notes/tags/share/" />
 
   
   <meta name="twitter:card" content="summary" />
@@ -60,228 +60,29 @@
 
   <main id="main" class="l-main">
 
-<h2 class="c-title p-tag-title">Posts</h2>
+<h2 class="c-title p-tag-title">Share</h2>
 
 
 
 
 <article class="c-article p-list-article">
   <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/">HackerEarth - Mirror Image</a></h2>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/">Setup a Public Samba Share</a></h2>
     <p class="c-article__meta">
       Posted on
-<time datetime="2017-11-18T11:36:52&#43;05:30">
-  Nov 18, 2017
+<time datetime="2020-07-10T16:59:31&#43;05:30">
+  Jul 10, 2020
 </time>
 
     </p>
   </header>
   <div class="c-article__summary">
-    Solution  Parse input and build the tree by maintaining an index HashMap. Traverse tree and mirror tree simultaneously to find the mirror node.  /* Solution to HackerEarth: Mirror Image * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/practice-problems/algorithm/mirror-image-2/ */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { //Scanner  Scanner in = new Scanner(System.in); int N = in.nextInt(); int Q = in.nextInt(); Map&lt;Integer, Node&gt; index = new HashMap&lt;&gt;(); // initialize root node  Node root = new Node(1); index.
+    Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.
+nano /etc/samba/smb.conf Contents of smb.conf
+[global] workgroup = WORKGROUP server string = Samba Server %v netbios name = WDMyCloud security = user map to guest = bad user dns proxy = no [Public] path = /data/shares/Public force group = users create mask = 0660 directory mask = 0771 browsable =yes writable = yes guest ok = yes Restart Samba Service The samba service has to restarted each time to use the new configuration.
   </div>
   
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/">Track API usage with Google Analytics</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-15T18:02:07&#43;05:30">
-  Nov 15, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.
- Measurement Protocol can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.
- API Hit Each invocation of an API can be tracked as a unique event.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/">HackerRank - Largest Permutation</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-09T22:02:51&#43;05:30">
-  Nov 9, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution #1  Keep indexes of all numbers in a HashMap. Check if current maximum number is already at desired index i.e highest at index 0, second highest at index 1 and so on. If not, keep on swapping them till all the swaps are exhausted.  /* Solution to HackerRank: Largest Permutation * URL: https://www.hackerrank.com/challenges/largest-permutation */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/hackerland-radio-transmitters/">HackerRank - Hackerland Radio Transmitters</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-08T21:50:01&#43;05:30">
-  Nov 8, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Iterate through each house in a sorted order. Check if current house is in range of last transmitter. If not, find a house to put transmitter on so that current house is in range.  /* Solution to HackerRank: Hackerland Radio Transmitters * URL: https://www.hackerrank.com/challenges/hackerland-radio-transmitters */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/hackerland-radio-transmitters/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/">HackerRank - Minimum Loss</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-08T21:06:31&#43;05:30">
-  Nov 8, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution #1  Keep prices and corresponding index in a HashMap. Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices. Check that the indexes buying and selling are in correct order so that year of buying is less than year of selling.  /* Solution to HackerRank: Minimum Loss * URL: https://www.hackerrank.com/challenges/minimum-loss */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/hourrank-24/mutual-indivisibility/">HackerRank Contest - HourRank 24 - Mutual Indivisibility</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-08T20:54:03&#43;05:30">
-  Nov 8, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Start iterating numbers from b to a because combination of larger numbers are more likely to be indivisible. Keep an array representing all numbers including a and b. Strike out multiples of current number from array in each iteration.  /* Solution to HackerRank: Mutual Indivisibility * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/mutual-indivisibility */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/hourrank-24/mutual-indivisibility/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler007/">HackerRank Contest - Project Euler - 10001st Prime</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-07T07:41:06&#43;05:30">
-  Nov 7, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Iterate from 2 to the given number. Consider odd numbers only except 2. Check each iteration for prime number.  However, Test case 4 timed out for below solution.
-import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &lt; t; a0++){ int n = in.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler007/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler006/">HackerRank Contest - Project Euler - Sum Square Difference</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-07T07:19:29&#43;05:30">
-  Nov 7, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Iterate from 1 to given number. Add each iteration to sum and square of it to another sum. Print absolute difference.  /* Solution to HackerRank: Sum Square Difference * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler006 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &lt; t; a0++){ int n = in.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler006/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler004/">HackerRank Contest - Project Euler - Largest Palindrome</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-06T22:01:58&#43;05:30">
-  Nov 6, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Iterate from the given number to zero. Check if current iteration is a palindrome by using reverse() of StringBuilder class. Check if current iteration is a product of two 3-digit numbers.  /* Solution to HackerRank: Largest Palindrome * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler004 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler004/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler003/">HackerRank Contest - Project Euler - Largest Prime Factor</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-06T20:56:26&#43;05:30">
-  Nov 6, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Find all the factors of the given number by iterating from 1 to square root of the number. Sort all the factors in descending order and iterate to check if a factor is prime.  /* Solution to HackerRank: Largest Prime Factor * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler003 */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler003/" class="c-article__btn p-list-article__btn">Read more</a>
+  <a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/" class="c-article__btn p-list-article__btn">Read more</a>
   
 </article>
 
@@ -291,16 +92,12 @@ import java.io.*; import java.util.*; import java.text.*; import java.math.*; im
   <div class="c-pagination__ctrl">
     <div class="c-pagination__newer">
       
-      <a href="/notes/posts/page/4/">Newer</a>
-      
     </div>
     <div class="c-pagination__older">
       
-      <a href="/notes/posts/page/6/">Older</a>
-      
     </div>
   </div>
-  <span class="c-pagination__count p-pagination__count">Page 5 of 6</span>
+  <span class="c-pagination__count p-pagination__count">Page 1 of 1</span>
 </nav>
 
 

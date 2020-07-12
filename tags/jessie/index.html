@@ -67,6 +67,30 @@
 
 <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/">Setup a Public Samba Share</a></h2>
+    <p class="c-article__meta">
+      Posted on
+<time datetime="2020-07-10T16:59:31&#43;05:30">
+  Jul 10, 2020
+</time>
+
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.
+nano /etc/samba/smb.conf Contents of smb.conf
+[global] workgroup = WORKGROUP server string = Samba Server %v netbios name = WDMyCloud security = user map to guest = bad user dns proxy = no [Public] path = /data/shares/Public force group = users create mask = 0660 directory mask = 0771 browsable =yes writable = yes guest ok = yes Restart Samba Service The samba service has to restarted each time to use the new configuration.
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/">Turn off the color with ls command</a></h2>
     <p class="c-article__meta">
       Posted on

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Samba on console.log(&#39;Hello World!&#39;)</title>
+    <link>https://abskmj.github.io/notes/tags/samba/</link>
+    <description>Recent content in Samba on console.log(&#39;Hello World!&#39;)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate>
+    
+	<atom:link href="https://abskmj.github.io/notes/tags/samba/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup a Public Samba Share</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link>
+      <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid>
+      <description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.
+nano /etc/samba/smb.conf Contents of smb.conf
+[global] workgroup = WORKGROUP server string = Samba Server %v netbios name = WDMyCloud security = user map to guest = bad user dns proxy = no [Public] path = /data/shares/Public force group = users create mask = 0660 directory mask = 0771 browsable =yes writable = yes guest ok = yes Restart Samba Service The samba service has to restarted each time to use the new configuration.</description>
+    </item>
+    
+  </channel>
+</rss>

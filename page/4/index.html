@@ -65,6 +65,26 @@
   
   <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler013/">HackerRank Contest - Project Euler - Large Sum</a></h2>
+    <p class="c-article__meta">
+      Posted on
+<time datetime="2017-12-08T16:21:47&#43;05:30">
+  Dec 8, 2017
+</time>
+
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Solution  Use BigInteger to calculate the sum and print first 10 characters by converting to string.  /* Solution to HackerRank: Large Sum * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler013 */ import java.io.*; import java.util.*; import java.math.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); BigInteger sum = new BigInteger(&#34;0&#34;); for(int t=0; t&lt;N; t++){ sum = sum.add(new BigInteger(in.next())); } System.out.println(sum.toString().substring(0, 10)); } } 
+  </div>
+  
+</article>
+
+
+  
+    
+  <article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler016/">HackerRank Contest - Project Euler - Power Digit Sum</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -254,28 +274,6 @@ Deploy Changes surge --domain &lt;your-site&gt;.surge.sh If the same domain name
   </div>
   
   <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/maximum-perimeter-triangle/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/">HackerEarth - Mirror Image</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-18T11:36:52&#43;05:30">
-  Nov 18, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Parse input and build the tree by maintaining an index HashMap. Traverse tree and mirror tree simultaneously to find the mirror node.  /* Solution to HackerEarth: Mirror Image * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/practice-problems/algorithm/mirror-image-2/ */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { //Scanner  Scanner in = new Scanner(System.in); int N = in.nextInt(); int Q = in.nextInt(); Map&lt;Integer, Node&gt; index = new HashMap&lt;&gt;(); // initialize root node  Node root = new Node(1); index.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/" class="c-article__btn p-list-article__btn">Read more</a>
   
 </article>
 
