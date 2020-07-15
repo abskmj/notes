@@ -67,6 +67,30 @@
 
 <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/">Enable Destroy All API for a model in Loopback</a></h2>
+    <p class="c-article__meta">
+      Posted on
+<time datetime="2018-01-31T19:28:48&#43;05:30">
+  Jan 31, 2018
+</time>
+
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.
+Remote Method A corresponding remote method can be added to the model.js file to enable this API. This method also supports a filter to enable selective deletion.
+module.exports = function (Model) { Model.remoteMethod(&#39;destroyAll&#39;, { isStatic: true, description: &#39;Delete all matching records&#39;, accessType: &#39;WRITE&#39;, accepts: { arg: &#39;where&#39;, type: &#39;object&#39;, description: &#39;filter.
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler013/">HackerRank Contest - Project Euler - Large Sum</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -254,28 +278,6 @@ Deploy Changes surge --domain &lt;your-site&gt;.surge.sh If the same domain name
   </div>
   
   <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/angry-children/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/maximum-perimeter-triangle/">HackerRank - Maximum Perimeter Triangle</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2017-11-18T17:01:27&#43;05:30">
-  Nov 18, 2017
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    Solution  Iterate the sides in descending order Check if sides make a triangle by checking if sum of two sides is greater than third side .  /* Solution to HackerRank: Maximum Perimeter Triangle * URL: https://www.hackerrank.com/challenges/maximum-perimeter-triangle */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); int[] l = new int[N]; for(int i=0; i &lt; N; i++){ l[i] = in.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/maximum-perimeter-triangle/" class="c-article__btn p-list-article__btn">Read more</a>
   
 </article>
 

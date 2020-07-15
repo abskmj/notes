@@ -67,6 +67,30 @@
 
 <article class="c-article p-list-article">
   <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/github/actions/backup-repo/">Backup Repository with a Github Action Workflow</a></h2>
+    <p class="c-article__meta">
+      Posted on
+<time datetime="2020-07-15T18:10:09&#43;05:30">
+  Jul 15, 2020
+</time>
+
+    </p>
+  </header>
+  <div class="c-article__summary">
+    I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each repository on Github. Currently, I have a Github Action workflow configured to copy it on any git push or any branches are deleted.
+Github Action Workflow Create a .github/workflows/mirror.yml in the Github repository with the follow contents.
+name: Mirror to Gitlab on: [push, delete] jobs: gitlab: runs-on: ubuntu-latest steps: - uses: actions/checkout@v1 - uses: pixta-dev/repository-mirroring-action@v1 with: target_repo_url: git@gitlab.
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/github/actions/backup-repo/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+
+
+<article class="c-article p-list-article">
+  <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/">Setup a Public Samba Share</a></h2>
     <p class="c-article__meta">
       Posted on
@@ -264,30 +288,6 @@ The user can choose to override that default with one or more site config files 
   </div>
   
   <a href="https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-
-
-<article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/">Sources List for Debian Wheezy</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2020-04-05T18:26:32&#43;05:30">
-  Apr 5, 2020
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-     As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.
-   Open /etc/apt/sources.list
-  Comment existing sources
-  Add below sources
-  deb http://archive.debian.org/debian/ wheezy main non-free contrib deb-src http://archive.debian.org/debian/ wheezy main non-free contrib  Now you can run  apt-get update  If you get below error  There is no public key available for the following key IDs  Install below package  apt-get install debian-archive-keyring  Now you can rerun  apt-get update 
-  </div>
   
 </article>
 

@@ -3,8 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://abskmj.github.io/notes/tags/actions/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/backup/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://abskmj.github.io/notes/</loc>
-    <lastmod>2020-07-10T16:59:31+05:30</lastmod>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/git/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/github/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/gitlab/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/mirror/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/posts/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/workflow/</loc>
+    <lastmod>2020-07-15T18:10:09+05:30</lastmod>
   </url>
   
   <url>
@@ -14,11 +64,6 @@
   
   <url>
     <loc>https://abskmj.github.io/notes/tags/jessie/</loc>
-    <lastmod>2020-07-10T16:59:31+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/posts/</loc>
     <lastmod>2020-07-10T16:59:31+05:30</lastmod>
   </url>
   
@@ -38,27 +83,12 @@
   </url>
   
   <url>
-    <loc>https://abskmj.github.io/notes/tags/</loc>
-    <lastmod>2020-07-10T16:59:31+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://abskmj.github.io/notes/tags/wd-mycloud/</loc>
     <lastmod>2020-07-10T16:59:31+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://abskmj.github.io/notes/tags/actions/</loc>
-    <lastmod>2020-07-04T15:09:06+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://abskmj.github.io/notes/tags/continuos-delivery/</loc>
-    <lastmod>2020-07-04T15:09:06+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/github/</loc>
     <lastmod>2020-07-04T15:09:06+05:30</lastmod>
   </url>
   
@@ -74,11 +104,6 @@
   
   <url>
     <loc>https://abskmj.github.io/notes/tags/snapcraft/</loc>
-    <lastmod>2020-07-04T15:09:06+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/workflow/</loc>
     <lastmod>2020-07-04T15:09:06+05:30</lastmod>
   </url>
   
@@ -165,11 +190,6 @@
   <url>
     <loc>https://abskmj.github.io/notes/posts/docker/docker-args/</loc>
     <lastmod>2020-04-26T22:51:06+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/git/</loc>
-    <lastmod>2020-04-23T13:16:58+05:30</lastmod>
   </url>
   
   <url>

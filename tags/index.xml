@@ -7,10 +7,73 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2020 18:10:09 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Actions</title>
+      <link>https://abskmj.github.io/notes/tags/actions/</link>
+      <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/actions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Backup</title>
+      <link>https://abskmj.github.io/notes/tags/backup/</link>
+      <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/backup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://abskmj.github.io/notes/tags/git/</link>
+      <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://abskmj.github.io/notes/tags/github/</link>
+      <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://abskmj.github.io/notes/tags/gitlab/</link>
+      <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mirror</title>
+      <link>https://abskmj.github.io/notes/tags/mirror/</link>
+      <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/mirror/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workflow</title>
+      <link>https://abskmj.github.io/notes/tags/workflow/</link>
+      <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/workflow/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Debian</title>
@@ -58,29 +121,11 @@
     </item>
     
     <item>
-      <title>Actions</title>
-      <link>https://abskmj.github.io/notes/tags/actions/</link>
-      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
-      
-      <guid>https://abskmj.github.io/notes/tags/actions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Continuos Delivery</title>
       <link>https://abskmj.github.io/notes/tags/continuos-delivery/</link>
       <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/tags/continuos-delivery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github</title>
-      <link>https://abskmj.github.io/notes/tags/github/</link>
-      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
-      
-      <guid>https://abskmj.github.io/notes/tags/github/</guid>
       <description></description>
     </item>
     
@@ -99,15 +144,6 @@
       <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/tags/snapcraft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Workflow</title>
-      <link>https://abskmj.github.io/notes/tags/workflow/</link>
-      <pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate>
-      
-      <guid>https://abskmj.github.io/notes/tags/workflow/</guid>
       <description></description>
     </item>
     
@@ -216,15 +252,6 @@
       <pubDate>Sun, 26 Apr 2020 22:51:06 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://abskmj.github.io/notes/tags/git/</link>
-      <pubDate>Thu, 23 Apr 2020 13:16:58 +0530</pubDate>
-      
-      <guid>https://abskmj.github.io/notes/tags/git/</guid>
       <description></description>
     </item>
     
