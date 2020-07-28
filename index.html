@@ -24,7 +24,7 @@
   <meta property="og:type" content="website" />
   
   
-  <meta name="generator" content="Hugo 0.74.2" />
+  <meta name="generator" content="Hugo 0.74.3" />
   
   
 
@@ -63,6 +63,30 @@
 
 
   
+  <article class="c-article p-list-article">
+  <header>
+    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/">Enable Hibernate on Pop OS</a></h2>
+    <p class="c-article__meta">
+      Posted on
+<time datetime="2020-07-26T20:17:30&#43;05:30">
+  Jul 26, 2020
+</time>
+
+    </p>
+  </header>
+  <div class="c-article__summary">
+    Prerequisites Check if the kernel supports Hibernation cat /sys/power/state It should list disk as an option on the list
+Check if a Swap file or partition is available free -h If Swap is listed as 0, it means a swap is not available and needs to be created.
+Create a Swap file  Create a swap file.  sudo fallocate -l 6G /swapfile 6G can be updated with a recommended swap size for the machine which is listed under How much swap do I need?
+  </div>
+  
+  <a href="https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/" class="c-article__btn p-list-article__btn">Read more</a>
+  
+</article>
+
+
+  
+    
   <article class="c-article p-list-article">
   <header>
     <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/github/actions/backup-repo/">Backup Repository with a Github Action Workflow</a></h2>
@@ -264,28 +288,6 @@ The user can choose to override that default with one or more site config files 
   </div>
   
   <a href="https://abskmj.github.io/notes/posts/hugo/hugo-git-info/" class="c-article__btn p-list-article__btn">Read more</a>
-  
-</article>
-
-
-  
-    
-  <article class="c-article p-list-article">
-  <header>
-    <h2 class="c-title c-article__title"><a href="https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/">Install Debian Jessie on WD MyCloud (Gen1)</a></h2>
-    <p class="c-article__meta">
-      Posted on
-<time datetime="2020-04-15T14:33:04&#43;05:30">
-  Apr 15, 2020
-</time>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    De-attach WD Drive  You will have to open your WD MyCloud device and remove the HDD or drive inside it. Attach the drive to your computer. If you don&rsquo;t have a Linux based OS installed on your computer, you can boot your computer through a live USB. See how to create one at ubuntu.com  Create Partitions You can skip this section if you have not formatted the drive after connecting it to your computer and have the original partitions.
-  </div>
-  
-  <a href="https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/" class="c-article__btn p-list-article__btn">Read more</a>
   
 </article>
 

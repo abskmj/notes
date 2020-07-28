@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Wed, 15 Jul 2020 18:10:09 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 20:17:30 +0530</lastBuildDate>
     
 	<atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hibernate</title>
+      <link>https://abskmj.github.io/notes/tags/hibernate/</link>
+      <pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/hibernate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://abskmj.github.io/notes/tags/linux/</link>
+      <pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PopOS</title>
+      <link>https://abskmj.github.io/notes/tags/popos/</link>
+      <pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/popos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://abskmj.github.io/notes/tags/ubuntu/</link>
+      <pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Actions</title>
