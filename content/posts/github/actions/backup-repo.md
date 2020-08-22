@@ -44,4 +44,4 @@ Add a deploy key by navigating to `Repository > Settings > Deploy Keys > Expand 
 > **IMPORTANT** - Remember to check `Write access allowed` option while adding the key
 
 ## Github (Private Key)
-Add a secret by navigating to `Repository > Settings > Secrets > New Secret`. Fill the contents of the private key and name as `GITLAB_SSH_KEY`. Details at [docs.github.com](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
+Add a secret by navigating to `Repository > Settings > Repository > Secrets > New Secret`. Fill the contents of the private key and name as `GITLAB_SSH_KEY`. Details at [docs.github.com](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
