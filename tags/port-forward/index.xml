@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Port Forward on console.log(&#39;Hello World!&#39;)</title>
+    <link>https://abskmj.github.io/notes/tags/port-forward/</link>
+    <description>Recent content in Port Forward on console.log(&#39;Hello World!&#39;)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 abskmj</copyright>
+    <lastBuildDate>Sat, 29 Aug 2020 15:30:35 +0530</lastBuildDate>
+    
+	<atom:link href="https://abskmj.github.io/notes/tags/port-forward/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SSH Tunnels for Local Development</title>
+      <link>https://abskmj.github.io/notes/posts/ssh/ssh-tunnels/</link>
+      <pubDate>Sat, 29 Aug 2020 15:30:35 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/ssh/ssh-tunnels/</guid>
+      <description>Local Port Forwarding A service running on specific port of the server is accessible on a specific port of the local machine.
+Example +---------------------+ +-----------------------+ | | | | | +---------------+ | SSH Tunnel | +-----------------+ | | | | &amp;lt;-----------------------+ | | | | | mongodb:27017 | | | | localhost:27018 | | | | | +-----------------------&amp;gt; | | | | +---------------+ | 27017:27018 | +-----------------+ | | | | | +---------------------+ +-----------------------+ Server Local Let&amp;rsquo;s assume a MongoDB service is running on the server on port 27017 and is not accessible outside of the server.</description>
+    </item>
+    
+  </channel>
+</rss>
