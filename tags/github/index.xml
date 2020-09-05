@@ -18,7 +18,7 @@
       <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</guid>
-      <description>I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each repository on Github. Currently, I have a Github Action workflow configured to copy it on any git push or any branches are deleted.
+      <description>I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.
 Github Action Workflow Create a .github/workflows/mirror.yml in the Github repository with the follow contents.
 name: Mirror to Gitlab on: [push, delete] jobs: gitlab: runs-on: ubuntu-latest steps: - uses: actions/checkout@v1 - uses: pixta-dev/repository-mirroring-action@v1 with: target_repo_url: git@gitlab.</description>
     </item>
