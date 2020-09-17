@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on console.log(&#39;Hello World!&#39;)</title>
+    <title>Linux on Notes</title>
     <link>https://abskmj.github.io/notes/tags/linux/</link>
-    <description>Recent content in Linux on console.log(&#39;Hello World!&#39;)</description>
+    <description>Recent content in Linux on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Sun, 26 Jul 2020 20:17:30 +0530</lastBuildDate>
-    
-	<atom:link href="https://abskmj.github.io/notes/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 26 Jul 2020 20:17:30 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable Hibernate on Pop OS</title>
       <link>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</link>
       <pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</guid>
-      <description>Prerequisites Check if the kernel supports Hibernation cat /sys/power/state It should list disk as an option on the list
-Check if a Swap file or partition is available free -h If Swap is listed as 0, it means a swap is not available and needs to be created.
-Create a Swap file  Create a swap file.  sudo fallocate -l 6G /swapfile 6G can be updated with a recommended swap size for the machine which is listed under How much swap do I need?</description>
+      <description></description>
     </item>
     
   </channel>

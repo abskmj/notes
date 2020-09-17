@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cligen on console.log(&#39;Hello World!&#39;)</title>
+    <title>Cligen on Notes</title>
     <link>https://abskmj.github.io/notes/tags/cligen/</link>
-    <description>Recent content in Cligen on console.log(&#39;Hello World!&#39;)</description>
+    <description>Recent content in Cligen on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Sun, 16 Dec 2018 07:30:14 +0000</lastBuildDate>
-    
-	<atom:link href="https://abskmj.github.io/notes/tags/cligen/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 16 Dec 2018 07:30:14 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/cligen/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Implement a Javascript Client for Crypto Compare API </title>
       <link>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link>

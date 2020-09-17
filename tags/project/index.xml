@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project on console.log(&#39;Hello World!&#39;)</title>
+    <title>Project on Notes</title>
     <link>https://abskmj.github.io/notes/tags/project/</link>
-    <description>Recent content in Project on console.log(&#39;Hello World!&#39;)</description>
+    <description>Recent content in Project on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Wed, 17 Oct 2018 06:38:37 +0000</lastBuildDate>
-    
-	<atom:link href="https://abskmj.github.io/notes/tags/project/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 17 Oct 2018 06:38:37 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NPM Module - Complex JSON to Query String</title>
       <link>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</link>

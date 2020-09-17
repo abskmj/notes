@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oracle on console.log(&#39;Hello World!&#39;)</title>
+    <title>Oracle on Notes</title>
     <link>https://abskmj.github.io/notes/tags/oracle/</link>
-    <description>Recent content in Oracle on console.log(&#39;Hello World!&#39;)</description>
+    <description>Recent content in Oracle on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Fri, 01 May 2020 22:33:40 +0530</lastBuildDate>
-    
-	<atom:link href="https://abskmj.github.io/notes/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 01 May 2020 22:33:40 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL: Count rows in a table without COUNT()</title>
       <link>https://abskmj.github.io/notes/posts/sql/count-rows/</link>

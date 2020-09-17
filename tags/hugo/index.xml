@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on console.log(&#39;Hello World!&#39;)</title>
+    <title>Hugo on Notes</title>
     <link>https://abskmj.github.io/notes/tags/hugo/</link>
-    <description>Recent content in Hugo on console.log(&#39;Hello World!&#39;)</description>
+    <description>Recent content in Hugo on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Thu, 23 Apr 2020 13:16:58 +0530</lastBuildDate>
-    
-	<atom:link href="https://abskmj.github.io/notes/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 23 Apr 2020 13:16:58 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Info Variables on Hugo</title>
       <link>https://abskmj.github.io/notes/posts/hugo/hugo-git-info/</link>
