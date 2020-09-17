@@ -2,6 +2,7 @@
 title: "Enable Hibernate on Pop OS"
 date: 2020-07-26T20:17:30+05:30
 tags: ["PopOS","Hibernate","Ubuntu","Linux"]
+summary: " "
 ---
 
 # Prerequisites

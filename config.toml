@@ -1,41 +1,74 @@
 baseurl = "https://abskmj.github.io/notes/"
 languageCode = "en-us"
-Title = "console.log('Hello World!')"
-# Copyright notice. This is displayer in the footer.
-copyright = "&copy; 2017 abskmj"
-theme = "hugo_theme_pickles"
+theme = "terminal"
+paginate = 10
+enableGitInfo = true
+
 
 [params]
-  paginate = 10
-  # Social accounts. Link to these accounts are displayed in the header and
-  # footer
-  # twitter = "Your Twitter username"
-  # facebook = "Your Facebook username"
-  # instagram = "Your Instagram username"
-  # googleplus = "Your Google+ account URL" # https://plus.google.com/u/0/xxxxxx
-  github = "abskmj"
-  gitlab = "abskmj"
-  npm = "~abskmj"
-  # codepen = "Your CodePen username"
-  # dribbble = "Your Dribbble username"
-  # fivehundredpx = "Your 500px username" # 500px
-  # flickr = "Your Flickr username"
-  # pinterest = "Your Pinterest username"
-  # tumblr = "Your Tumblr username"
-  # vimeo = "Your Vimeo username"
-  # youtube = "Your YouTube username"
-  # linkedin = "Your LinkedIn username"
-  # Disqus shortname
-  # disqus = ""
-  # Google Analytics API key.
-  ga_api_key = "UA-82450306-3"
-  author = "abskmj"
-  # authorwebsite = "example.com"
-  avatar = "https://github.com/abskmj.png"
-  contact = "mailto:abskmj@gmail.com"
-  bio = "Works on Node.js, MongoDB, Docker, Kubernetes to develop & deploy new apps. Writes most of his code in JavaScript. Enjoys watching movies & listening to music."
-  # Short subtitle/tagline. This is displayed in the header.
-  # subtitle = "Short subtitle"
-  # Logo image. This is displayed ogp image.
-  # logo = "/path/to/logo"
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "green"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 2
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set theme to full screen width
+  fullWidthTheme = false
+
+  # center theme with default width
+  centerTheme = true
+
+  # set a custom favicon (default is a `themeColor` square)
   favicon = "https://github.com/abskmj.png"
+
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated = true
+  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  # updatedDatePrefix = "Updated"
+
+  # set all headings to their default size (depending on browser settings)
+  # it's set to `true` by default
+  # oneHeadingSize = false
+
+[params.twitter]
+  # set Twitter handles for Twitter cards
+  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+  # do not include @
+  creator = "abskmj"
+  site = ""
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Notes"
+    subtitle = "A simple, retro theme for Hugo"
+    owner = "abskmj"
+    keywords = ""
+    copyright = "&copy; 2017 abskmj"
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    missingContentMessage = "Page not found..."
+    missingBackButtonLabel = "Back to home page"
+
+    [languages.en.params.logo]
+      logoText = "Notes"
+      logoHomeLink = "/notes"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "twitter"
+        name = "Twitter"
+        url = "https://twitter.com/abskmj"
+      [[languages.en.menu.main]]
+        identifier = "github"
+        name = "Github"
+        url = "https://github.com/abskmj"

@@ -13,10 +13,7 @@ jobs:
        hugo version
     - name: Install hugo theme
       run: |
-        mkdir themes
-        cd themes
-        git clone -b release https://github.com/mismith0227/hugo_theme_pickles
-        cd ..
+        git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
     - name: Build
       run: HUGO_ENV=production hugo --cleanDestinationDir --verbose
     - name: Deploy

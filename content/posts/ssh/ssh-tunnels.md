@@ -2,6 +2,7 @@
 title: "SSH Tunnels for Local Development"
 date: 2020-08-29T15:30:35+05:30
 tags: ["SSH", "SSH Tunnel", "Port Forward", "Productivity"]
+summary: " "
 ---
 
 ## Local Port Forwarding
