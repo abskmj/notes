@@ -48,7 +48,7 @@ paginate = 10
   [languages.en]
     languageName = "English"
     title = "Notes"
-    subtitle = "A simple, retro theme for Hugo"
+    # subtitle = "A simple, retro theme for Hugo"
     owner = "abskmj"
     keywords = ""
     copyright = "&copy; 2017 abskmj"
