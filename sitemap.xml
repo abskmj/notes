@@ -3,17 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://abskmj.github.io/notes/</loc>
-    <lastmod>2020-08-29T15:30:35+05:30</lastmod>
+    <loc>https://abskmj.github.io/notes/tags/javascript/</loc>
+    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://abskmj.github.io/notes/tags/port-forward/</loc>
-    <lastmod>2020-08-29T15:30:35+05:30</lastmod>
+    <loc>https://abskmj.github.io/notes/</loc>
+    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://abskmj.github.io/notes/posts/</loc>
+    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/</loc>
+    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/tampermonkey/</loc>
+    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/posts/tampermonkey/vue/</loc>
+    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/vue.js/</loc>
+    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/port-forward/</loc>
     <lastmod>2020-08-29T15:30:35+05:30</lastmod>
   </url>
   
@@ -34,11 +59,6 @@
   
   <url>
     <loc>https://abskmj.github.io/notes/posts/ssh/ssh-tunnels/</loc>
-    <lastmod>2020-08-29T15:30:35+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/</loc>
     <lastmod>2020-08-29T15:30:35+05:30</lastmod>
   </url>
   
@@ -439,11 +459,6 @@
   
   <url>
     <loc>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</loc>
-    <lastmod>2018-12-16T07:30:14+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/javascript/</loc>
     <lastmod>2018-12-16T07:30:14+00:00</lastmod>
   </url>
   
