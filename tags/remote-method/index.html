@@ -166,8 +166,7 @@
         <div class="post-content">
           
           
-          Loopback models can be extended by adding custom methods to them. A method can be:
-Model Method: the method is available on Model itself. Instance Method: the method is available on an instance of the model.  Model JS file // Model.js module.exports = function(Model) { // Model Method  Model.method = function() { &hellip; } // Instance Method  Model.prototype.method = function() { &hellip; } } // Model method var Model = app.
+          Loopback models can be extended by adding custom methods to them.
           
           
         </div>
@@ -210,9 +209,7 @@ Model Method: the method is available on Model itself. Instance Method: the meth
         <div class="post-content">
           
           
-          Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.
-Remote Method A corresponding remote method can be added to the model.js file to enable this API. This method also supports a filter to enable selective deletion.
-module.exports = function (Model) { Model.remoteMethod('destroyAll', { isStatic: true, description: 'Delete all matching records', accessType: 'WRITE', accepts: { arg: 'where', type: 'object', description: 'filter.
+          Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.
           
           
         </div>

@@ -169,7 +169,6 @@
           
           
           Express Middleware Logging request and response headers for tracing purpose
-app.use((req, res, nxt) =&gt; { const requestHeaders = req.headers console.log('Request Headers:', requestHeaders) // Request Headers: {  // 'user-agent': 'PostmanRuntime/7.24.1',  // accept: '<em>/</em>',  // 'cache-control': 'no-cache',  // 'postman-token': '74416f71-0d09-453f-b714-3737dfd9f6b4',  // host: 'localhost:3000',  // 'accept-encoding': 'gzip, deflate, br',  // connection: 'keep-alive'  // }  res.on('finish', () =&gt; { const responseHeaders = res.getHeaders() console.log('Response Headers:', responseHeaders) // Response Headers: [Object: null prototype] {  // 'x-powered-by': 'Express',  // 'content-type': 'text/html; charset=utf-8',  // 'content-length': '12',  // etag: 'W/&quot;c-Lve95gjOVATpfV8EL5X4nxwjKHE&quot;'  // }  }) nxt() })  More details on response finish event and others at nodejs.
           
           
         </div>

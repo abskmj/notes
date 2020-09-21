@@ -6,9 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.
-nano /etc/samba/smb.conf Contents of smb.conf
-[global] workgroup = WORKGROUP server string = Samba Server %v netbios name = WDMyCloud security = user map to guest = bad user dns proxy = no [Public] path = /data/shares/Public force group = users create mask = 0660 directory mask = 0771 browsable =yes writable = yes guest ok = yes Restart Samba Service The samba service has to restarted each time to use the new configuration." />
+<meta name="description" content="Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/" />
@@ -43,9 +41,7 @@ nano /etc/samba/smb.conf Contents of smb.conf
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Setup a Public Samba Share :: Notes">
-<meta property="og:description" content="Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.
-nano /etc/samba/smb.conf Contents of smb.conf
-[global] workgroup = WORKGROUP server string = Samba Server %v netbios name = WDMyCloud security = user map to guest = bad user dns proxy = no [Public] path = /data/shares/Public force group = users create mask = 0660 directory mask = 0771 browsable =yes writable = yes guest ok = yes Restart Samba Service The samba service has to restarted each time to use the new configuration." />
+<meta property="og:description" content="Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials." />
 <meta property="og:url" content="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/" />
 <meta property="og:site_name" content="Setup a Public Samba Share" />
 

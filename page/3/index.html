@@ -148,6 +148,47 @@
     
       <div class="post on-list">
         <h1 class="post-title">
+          <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/">HackerRank Contest - Project Euler - Multiples of 3 and 5</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2019-01-07
+          </span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://abskmj.github.io/notes/tags/hackerrank/">HackerRank</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/solution/">Solution</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/java/">Java</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+          
+          Solution import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.math.</em>; import java.
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/">Read more →</a>
+        </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title">
           <a href="https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/">Model Relations in Mongoose</a>
         </h1>
         <div class="post-meta">
@@ -176,9 +217,7 @@
         <div class="post-content">
           
           
-          Model Relations Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of the same or another model.
-A relation between models are generally of two types:
-BelongsTo: A document in source model is connected with a document in destination model by putting the id of destination document in the source document. Has Many / Has One: A document in source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).
+          Model Relations Relations are logical links which define how models are connected with each other.
           
           
         </div>
@@ -227,8 +266,7 @@ BelongsTo: A document in source model is connected with a document in destinatio
         <div class="post-content">
           
           
-          Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available here.
-Javascript Client I’m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I’m using an NPM module called Cligen to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.
+          Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies.
           
           
         </div>
@@ -269,8 +307,7 @@ Javascript Client I’m writing a javascript based client for few commonly used 
         <div class="post-content">
           
           
-          @abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.
-Example const query = require('@abskmj/query'); // query to get a list of 10 people between age 17 and 66, sorted by their age  let filters = { where: { age: { $gt: 17, $lt: 66 }, }, options: { limit: 10, sort: { age: -1 } } } const queryString = query.
+          @abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string.
           
           
         </div>
@@ -311,7 +348,7 @@ Example const query = require('@abskmj/query'); // query to get a list of 10 peo
         <div class="post-content">
           
           
-          Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: <a href="https://www.hackerrank.com/challenges/divisible-sum-pairs">https://www.hackerrank.com/challenges/divisible-sum-pairs</a> */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the divisibleSumPairs function below. static int divisibleSumPairs(int n, int k, int[] ar) { int count = 0; for(int i=0; i &lt; n; i++){ for(int j=i+1; j &lt; n; j++){ if((ar[i]+ar[j])%k == 0){ count++; } } } return count; } private static final Scanner scanner = new Scanner(System.
+          Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: https://www.
           
           
         </div>
@@ -352,7 +389,7 @@ Example const query = require('@abskmj/query'); // query to get a list of 10 peo
         <div class="post-content">
           
           
-          Solution /* Solution to HackerRank: The Time in Words * URL: <a href="https://www.hackerrank.com/challenges/the-time-in-words">https://www.hackerrank.com/challenges/the-time-in-words</a> */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the timeInWords function below.  static String timeInWords(int h, int m) { String[] words = {&quot;zero&quot;, &quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot;, &quot;six&quot;, &quot;seven&quot;, &quot;eight&quot;, &quot;nine&quot;, &quot;ten&quot;, &quot;eleven&quot;, &quot;twelve&quot;, &quot;thirteen&quot;, &quot;fourteen&quot;, &quot;fifteen&quot;, &quot;sixteen&quot;, &quot;seventeen&quot;, &quot;eighteen&quot;, &quot;nineteen&quot;, &quot;twenty&quot;}; if (m == 0){ return words[h] + &quot; o' clock&quot;; } else if (m == 15){ return &quot;quarter past &quot; + words[h]; } else if (m == 30){ return &quot;half past &quot; + words[h]; } else if (m == 45){ return &quot;quarter to &quot; + words[h+1]; } else if (m == 1){ return &quot;one minute past &quot; + words[h]; } else if (m == 59){ return &quot;one minute to &quot; + words[h+1]; } else if (m &lt; 21){ return words[m] + &quot; minutes past &quot; + words[h]; } else if (m &gt; 39){ return words[60-m] + &quot; minutes to &quot; + words[h+1]; } else if (m &gt; 30){ return &quot;twenty &quot; + words[(60-m)%20] + &quot; minutes to &quot; + words[h+1]; } else{ return &quot;twenty &quot; + words[m%20] + &quot; minutes past &quot; + words[h]; } } private static final Scanner scanner = new Scanner(System.
+          Solution /* Solution to HackerRank: The Time in Words * URL: https://www.
           
           
         </div>
@@ -381,7 +418,7 @@ Example const query = require('@abskmj/query'); // query to get a list of 10 peo
             
             #<a href="https://abskmj.github.io/notes/tags/angular/">Angular</a>&nbsp;
             
-            #<a href="https://abskmj.github.io/notes/tags/node.js/">Node.js</a>&nbsp;
+            #<a href="https://abskmj.github.io/notes/tags/nodejs/">NodeJS</a>&nbsp;
             
             #<a href="https://abskmj.github.io/notes/tags/npm/">NPM</a>&nbsp;
             
@@ -397,7 +434,7 @@ Example const query = require('@abskmj/query'); // query to get a list of 10 peo
         <div class="post-content">
           
           
-          Update NodeJS version  All of the blank VMs on cloud9 have nvm pre installed. List all the available versions from the official site.  nvm ls-remote  Choose to install the latest version  nvm install v10.6.0  Choose to use the latest version  nvm use v10.6.0  Check the version in use  node &ndash;version Angular  Install latest Angular CLI package  npm install -g @angular/cli  Create a new project named my-project (you can use any name you need)  ng new my-project cd my-project  Change start script in package.
+          Update NodeJS version  All of the blank VMs on cloud9 have nvm pre installed.
           
           
         </div>
@@ -439,8 +476,6 @@ Example const query = require('@abskmj/query'); // query to get a list of 10 peo
           
           
           Glitch is a online workspace that support javascript for development with live previews.
-A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.
-Rather, a separate git repository can be set using the current project as working directory.
           
           
         </div>
@@ -485,6 +520,8 @@ Rather, a separate git repository can be set using the current project as workin
         <div class="post-content">
           
           
+          I have recently installed LineageOS custom ROM on my OnePlus2 device to keep on trying new android versions as they come.
+          
           
         </div>
 
@@ -524,6 +561,8 @@ Rather, a separate git repository can be set using the current project as workin
         <div class="post-content">
           
           
+          Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file.
+          
           
         </div>
 
@@ -531,55 +570,6 @@ Rather, a separate git repository can be set using the current project as workin
         <div>
           <a class="read-more button"
             href="/notes/posts/tutorials/maven/maven-proxy/">Read more →</a>
-        </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title">
-          <a href="https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/">Deploy a NodeJS application using Git</a>
-        </h1>
-        <div class="post-meta">
-          <span class="post-date">
-            2018-05-09
-          </span>
-          
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://abskmj.github.io/notes/tags/tutorial/">Tutorial</a>&nbsp;
-            
-            #<a href="https://abskmj.github.io/notes/tags/hugo/">Hugo</a>&nbsp;
-            
-            #<a href="https://abskmj.github.io/notes/tags/git/">Git</a>&nbsp;
-            
-            #<a href="https://abskmj.github.io/notes/tags/deployment/">Deployment</a>&nbsp;
-            
-            #<a href="https://abskmj.github.io/notes/tags/git-hook/">Git Hook</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-        <div class="post-content">
-          
-          
-          Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
-git init &ndash;bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
-#!/bin/sh git &ndash;work-tree=/{{path}}/project.source &ndash;git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
-chmod 755 project.git/hooks/post-receive Add a remote to local repo
-git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server.
-          
-          
-        </div>
-
-        
-        <div>
-          <a class="read-more button"
-            href="/notes/posts/tutorials/git/deploy-nodejs-git/">Read more →</a>
         </div>
         
       </div>

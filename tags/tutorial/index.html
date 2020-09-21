@@ -170,10 +170,7 @@
         <div class="post-content">
           
           
-          Install ES Lint modules npm install &ndash;save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.js applications. They also publish a version for React applications as eslint-config-airbnb.
-npm install &ndash;save-dev eslint-config-airbnb-base Config File Create a .eslintrc file with following contents to Airbnb rules for the Node.js Application.
-{ &quot;extends&quot;: &quot;eslint-config-airbnb-base&quot; } NPM Scripts Create few npm scripts to integrate linting into development flow.
-{ &quot;scripts&quot;:{ &quot;start&quot;: &quot;node .&quot;, &quot;lint&quot;: &quot;eslint &ndash;fix .
+          Install ES Lint modules npm install &ndash;save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.
           
           
         </div>
@@ -217,7 +214,6 @@ npm install &ndash;save-dev eslint-config-airbnb-base Config File Create a .esli
           
           
           Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.
-Save the local changes in Stash git stash push -m {{ commit message}} // example git stash push -m {{ new logging module }} List all the change sets in Stash git stash list Apply a change set from Stash git stash apply {{ index }} //example git stash apply 1  Not specifying an index with automatically apply first index
           
           
         </div>
@@ -246,7 +242,7 @@ Save the local changes in Stash git stash push -m {{ commit message}} // example
             
             #<a href="https://abskmj.github.io/notes/tags/spotinst/">Spotinst</a>&nbsp;
             
-            #<a href="https://abskmj.github.io/notes/tags/node.js/">Node.js</a>&nbsp;
+            #<a href="https://abskmj.github.io/notes/tags/nodejs/">NodeJS</a>&nbsp;
             
             #<a href="https://abskmj.github.io/notes/tags/npm/">NPM</a>&nbsp;
             
@@ -262,8 +258,7 @@ Save the local changes in Stash git stash push -m {{ commit message}} // example
         <div class="post-content">
           
           
-          Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service). Serverless Framework is an NPM module which makes building serverless applications easy and open.
-Isolated Workspace The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects.
+          Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service).
           
           
         </div>
@@ -312,8 +307,7 @@ Isolated Workspace The steps listed below is different from the traditional step
         <div class="post-content">
           
           
-          Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available here.
-Javascript Client I’m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I’m using an NPM module called Cligen to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.
+          Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies.
           
           
         </div>
@@ -342,7 +336,7 @@ Javascript Client I’m writing a javascript based client for few commonly used 
             
             #<a href="https://abskmj.github.io/notes/tags/angular/">Angular</a>&nbsp;
             
-            #<a href="https://abskmj.github.io/notes/tags/node.js/">Node.js</a>&nbsp;
+            #<a href="https://abskmj.github.io/notes/tags/nodejs/">NodeJS</a>&nbsp;
             
             #<a href="https://abskmj.github.io/notes/tags/npm/">NPM</a>&nbsp;
             
@@ -358,7 +352,7 @@ Javascript Client I’m writing a javascript based client for few commonly used 
         <div class="post-content">
           
           
-          Update NodeJS version  All of the blank VMs on cloud9 have nvm pre installed. List all the available versions from the official site.  nvm ls-remote  Choose to install the latest version  nvm install v10.6.0  Choose to use the latest version  nvm use v10.6.0  Check the version in use  node &ndash;version Angular  Install latest Angular CLI package  npm install -g @angular/cli  Create a new project named my-project (you can use any name you need)  ng new my-project cd my-project  Change start script in package.
+          Update NodeJS version  All of the blank VMs on cloud9 have nvm pre installed.
           
           
         </div>
@@ -400,8 +394,6 @@ Javascript Client I’m writing a javascript based client for few commonly used 
           
           
           Glitch is a online workspace that support javascript for development with live previews.
-A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.
-Rather, a separate git repository can be set using the current project as working directory.
           
           
         </div>
@@ -441,6 +433,8 @@ Rather, a separate git repository can be set using the current project as workin
 
         <div class="post-content">
           
+          
+          Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file.
           
           
         </div>
@@ -485,11 +479,7 @@ Rather, a separate git repository can be set using the current project as workin
         <div class="post-content">
           
           
-          Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
-git init &ndash;bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
-#!/bin/sh git &ndash;work-tree=/{{path}}/project.source &ndash;git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
-chmod 755 project.git/hooks/post-receive Add a remote to local repo
-git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server.
+          Remote Repository on Deployment Server Create two folders named project.git and project.
           
           
         </div>
@@ -532,8 +522,7 @@ git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above step
         <div class="post-content">
           
           
-          Loopback models can be extended by adding custom methods to them. A method can be:
-Model Method: the method is available on Model itself. Instance Method: the method is available on an instance of the model.  Model JS file // Model.js module.exports = function(Model) { // Model Method  Model.method = function() { &hellip; } // Instance Method  Model.prototype.method = function() { &hellip; } } // Model method var Model = app.
+          Loopback models can be extended by adding custom methods to them.
           
           
         </div>
@@ -576,9 +565,7 @@ Model Method: the method is available on Model itself. Instance Method: the meth
         <div class="post-content">
           
           
-          Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.
-Remote Method A corresponding remote method can be added to the model.js file to enable this API. This method also supports a filter to enable selective deletion.
-module.exports = function (Model) { Model.remoteMethod('destroyAll', { isStatic: true, description: 'Delete all matching records', accessType: 'WRITE', accepts: { arg: 'where', type: 'object', description: 'filter.
+          Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.
           
           
         </div>
@@ -620,9 +607,6 @@ module.exports = function (Model) { Model.remoteMethod('destroyAll', { isStatic:
           
           
           Surge is static web publishing for Web Developers, right from the CLI.
-Install Surge CLI npm install -g surge Deploy with Surge Navigate to the public folder generated by Hugo CLI.
-surge The site, by default, will hosted on a sub domain of surge.sh.
-Deploy Changes surge &ndash;domain &lt;your-site&gt;.surge.sh If the same domain name is not provided, another random sub domain will be prompted by Surge CLI which has to changed to original for each deployment.
           
           
         </div>
@@ -651,7 +635,7 @@ Deploy Changes surge &ndash;domain &lt;your-site&gt;.surge.sh If the same domain
             
             #<a href="https://abskmj.github.io/notes/tags/google-analytics/">Google Analytics</a>&nbsp;
             
-            #<a href="https://abskmj.github.io/notes/tags/node.js/">Node.js</a>&nbsp;
+            #<a href="https://abskmj.github.io/notes/tags/nodejs/">NodeJS</a>&nbsp;
             
             #<a href="https://abskmj.github.io/notes/tags/npm/">NPM</a>&nbsp;
             
@@ -665,9 +649,7 @@ Deploy Changes surge &ndash;domain &lt;your-site&gt;.surge.sh If the same domain
         <div class="post-content">
           
           
-          Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.
-Measurement Protocol can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.
-API Hit Each invocation of an API can be tracked as a unique event.
+          Google analytics is a popular tool to track your website usage.
           
           
         </div>

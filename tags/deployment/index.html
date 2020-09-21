@@ -168,11 +168,7 @@
         <div class="post-content">
           
           
-          Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
-git init &ndash;bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
-#!/bin/sh git &ndash;work-tree=/{{path}}/project.source &ndash;git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
-chmod 755 project.git/hooks/post-receive Add a remote to local repo
-git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server.
+          Remote Repository on Deployment Server Create two folders named project.git and project.
           
           
         </div>

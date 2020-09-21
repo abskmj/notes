@@ -6,11 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
-git init --bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
-#!/bin/sh git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
-chmod 755 project.git/hooks/post-receive Add a remote to local repo
-git remote add dev git&#43;ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server." />
+<meta name="description" content="Remote Repository on Deployment Server Create two folders named project.git and project." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/" />
@@ -45,11 +41,7 @@ git remote add dev git&#43;ssh://{{user}}@{{server}}/{{path}}/project.git Above 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Deploy a NodeJS application using Git :: Notes">
-<meta property="og:description" content="Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
-git init --bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
-#!/bin/sh git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
-chmod 755 project.git/hooks/post-receive Add a remote to local repo
-git remote add dev git&#43;ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server." />
+<meta property="og:description" content="Remote Repository on Deployment Server Create two folders named project.git and project." />
 <meta property="og:url" content="https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/" />
 <meta property="og:site_name" content="Deploy a NodeJS application using Git" />
 

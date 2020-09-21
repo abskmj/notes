@@ -7,15 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 abskmj</copyright>
-    <lastBuildDate>Fri, 08 Mar 2019 03:09:10 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/mongoose/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Sep 2020 12:00:02 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/mongoose/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upload files to MongoDB GridFS with Express</title>
+      <link>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</link>
+      <pubDate>Mon, 21 Sep 2020 12:00:02 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</guid>
+      <description>Create express based APIs to upload and download files to and from MongoDB GridFS.</description>
+    </item>
+    
     <item>
       <title>Lean option and Hydrate method in Mongoose</title>
       <link>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</guid>
-      <description>Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary. Lean option can be set on such queries to return just the data directly from the database. This also improves the overall performance of the API.
- Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments.</description>
+      <description>Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary.</description>
     </item>
     
     <item>
@@ -24,9 +32,7 @@
       <pubDate>Mon, 24 Dec 2018 09:35:35 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/</guid>
-      <description>Model Relations Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of the same or another model.
-A relation between models are generally of two types:
- BelongsTo: A document in source model is connected with a document in destination model by putting the id of destination document in the source document. Has Many / Has One: A document in source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).</description>
+      <description>Model Relations Relations are logical links which define how models are connected with each other.</description>
     </item>
     
   </channel>

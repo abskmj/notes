@@ -148,6 +148,47 @@
     
       <div class="post on-list">
         <h1 class="post-title">
+          <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/hourrank-24/mutual-indivisibility/">HackerRank Contest - HourRank 24 - Mutual Indivisibility</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2017-11-08
+          </span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://abskmj.github.io/notes/tags/hackerrank/">HackerRank</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/solution/">Solution</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/java/">Java</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+          
+          Solution  Start iterating numbers from b to a because combination of larger numbers are more likely to be indivisible.
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/notes/posts/solutions/hackerrank/contests/hourrank-24/mutual-indivisibility/">Read more →</a>
+        </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title">
           <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler007/">HackerRank Contest - Project Euler - 10001st Prime</a>
         </h1>
         <div class="post-meta">
@@ -174,8 +215,7 @@
         <div class="post-content">
           
           
-          Solution  Iterate from 2 to the given number. Consider odd numbers only except 2. Check each iteration for prime number.  However, Test case 4 timed out for below solution.
-import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.math.</em>; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &lt; t; a0++){ int n = in.
+          Solution  Iterate from 2 to the given number. Consider odd numbers only except 2.
           
           
         </div>
@@ -216,7 +256,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Iterate from 1 to given number. Add each iteration to sum and square of it to another sum. Print absolute difference.  /* Solution to HackerRank: Sum Square Difference * URL: <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler006">https://www.hackerrank.com/contests/projecteuler/challenges/euler006</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &lt; t; a0++){ int n = in.
+          Solution  Iterate from 1 to given number. Add each iteration to sum and square of it to another sum.
           
           
         </div>
@@ -257,7 +297,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Iterate from the given number to zero. Check if current iteration is a palindrome by using reverse() of StringBuilder class. Check if current iteration is a product of two 3-digit numbers.  /* Solution to HackerRank: Largest Palindrome * URL: <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler004">https://www.hackerrank.com/contests/projecteuler/challenges/euler004</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.
+          Solution  Iterate from the given number to zero. Check if current iteration is a palindrome by using reverse() of StringBuilder class.
           
           
         </div>
@@ -298,7 +338,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Find all the factors of the given number by iterating from 1 to square root of the number. Sort all the factors in descending order and iterate to check if a factor is prime.  /* Solution to HackerRank: Largest Prime Factor * URL: <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler003">https://www.hackerrank.com/contests/projecteuler/challenges/euler003</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
+          Solution  Find all the factors of the given number by iterating from 1 to square root of the number.
           
           
         </div>
@@ -342,7 +382,6 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
           
           
           Solution #1 Test cases 2,3 timed out for below solution.
-import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.math.</em>; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &lt; t; a0++){ long n = in.nextLong(); int f1 = 0; int f2 = 1; long sum = 0; while(f2 &lt;= n){ // check if even  if(f2%2 == 0){ sum += f2; } // compute next in series  int f = f2 + f1; // set values for next iteration  f1 = f2; f2 = f; } System.
           
           
         </div>
@@ -383,7 +422,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Count characters of each group in given string. Groups: digit, lower-case, upper-case and special characters Add one of each group to the string if not already present i.e. count is 0. Add required number of characters in case length of the string is less than 6.  /* Solution to HackerRank: Strong Password * URL: <a href="https://www.hackerrank.com/contests/hourrank-24/challenges/strong-password">https://www.hackerrank.com/contests/hourrank-24/challenges/strong-password</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { static int minimumNumber(int n, String password) { int digitCount = 0; int lowerCount = 0; int upperCount = 0; int specialCount = 0; int addCount = 0; for(char c : password.
+          Solution  Count characters of each group in given string. Groups: digit, lower-case, upper-case and special characters Add one of each group to the string if not already present i.
           
           
         </div>
@@ -426,7 +465,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Graph is used to connect all astronauts to a country. Each cluster of graph represents a country. Each cluster is traversed to find the count of astronauts. Number of possible combinations are calculated based on sizes of these countries.  /* Solution to HackerRank: Journey to the Moon * URL: <a href="https://www.hackerrank.com/challenges/journey-to-the-moon">https://www.hackerrank.com/challenges/journey-to-the-moon</a> */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
+          Solution  Graph is used to connect all astronauts to a country.
           
           
         </div>
@@ -469,7 +508,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Minimum Cost  If the number of roads is zero or cost of building a road is more than cost of building a library, then building libraries in each of the cities will result in minimum cost. If the cost of building a library is less than cost of building a road, then building a single library and building roads to connected cities will result in minimum cost.  Clusters There can be few set of cities that are not connected to each other and are clusters.
+          Minimum Cost  If the number of roads is zero or cost of building a road is more than cost of building a library, then building libraries in each of the cities will result in minimum cost.
           
           
         </div>

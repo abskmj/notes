@@ -14,8 +14,7 @@
       <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</guid>
-      <description>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.
-Save the local changes in Stash git stash push -m {{ commit message}} // example git stash push -m {{ new logging module }} List all the change sets in Stash git stash list Apply a change set from Stash git stash apply {{ index }} //example git stash apply 1  Not specifying an index with automatically apply first index</description>
+      <description>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.</description>
     </item>
     
   </channel>

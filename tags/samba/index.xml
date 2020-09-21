@@ -14,9 +14,7 @@
       <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid>
-      <description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.
-nano /etc/samba/smb.conf Contents of smb.conf
-[global] workgroup = WORKGROUP server string = Samba Server %v netbios name = WDMyCloud security = user map to guest = bad user dns proxy = no [Public] path = /data/shares/Public force group = users create mask = 0660 directory mask = 0771 browsable =yes writable = yes guest ok = yes Restart Samba Service The samba service has to restarted each time to use the new configuration.</description>
+      <description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description>
     </item>
     
   </channel>

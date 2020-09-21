@@ -14,8 +14,7 @@
       <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</guid>
-      <description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.
-... &amp;lt;proxies&amp;gt; &amp;lt;!-- proxy | Specification for one proxy, to be used in connecting to the network. |--&amp;gt; &amp;lt;proxy&amp;gt; &amp;lt;id&amp;gt;optional&amp;lt;/id&amp;gt; &amp;lt;active&amp;gt;true&amp;lt;/active&amp;gt; &amp;lt;protocol&amp;gt;http&amp;lt;/protocol&amp;gt; &amp;lt;username&amp;gt;&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;&amp;lt;/password&amp;gt; &amp;lt;host&amp;gt;{{proxy_host_or_ip}}&amp;lt;/host&amp;gt; &amp;lt;port&amp;gt;8080&amp;lt;/port&amp;gt; &amp;lt;nonProxyHosts&amp;gt;local.net|some.host.com&amp;lt;/nonProxyHosts&amp;gt; &amp;lt;/proxy&amp;gt; &amp;lt;/proxies&amp;gt; ... </description>
+      <description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file.</description>
     </item>
     
   </channel>

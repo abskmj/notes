@@ -14,9 +14,7 @@
       <pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</guid>
-      <description>Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.
- Measurement Protocol can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.
- API Hit Each invocation of an API can be tracked as a unique event.</description>
+      <description>Google analytics is a popular tool to track your website usage.</description>
     </item>
     
   </channel>

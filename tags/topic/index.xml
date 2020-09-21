@@ -14,8 +14,7 @@
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</guid>
-      <description>Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary. Lean option can be set on such queries to return just the data directly from the database. This also improves the overall performance of the API.
- Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments.</description>
+      <description>Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary.</description>
     </item>
     
     <item>
@@ -24,9 +23,7 @@
       <pubDate>Mon, 24 Dec 2018 09:35:35 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/</guid>
-      <description>Model Relations Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of the same or another model.
-A relation between models are generally of two types:
- BelongsTo: A document in source model is connected with a document in destination model by putting the id of destination document in the source document. Has Many / Has One: A document in source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).</description>
+      <description>Model Relations Relations are logical links which define how models are connected with each other.</description>
     </item>
     
     <item>
@@ -35,8 +32,7 @@ A relation between models are generally of two types:
       <pubDate>Tue, 08 May 2018 10:41:21 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/topics/rest-api/authentication-jwt-rest-apis/</guid>
-      <description>Authentication vs Authorization  Authentication: identifying the user who is accessing the resource Authorization: checking if the user has permission to perform an action on the resource (e.g updating the resource)  JWT for Authentication JWT or JSON Web Token is a preferrable method for authenticating REST APIs because:
- A datastore is not required for its verification. It can be issued and verified by a specific application server which has access to the secret key.</description>
+      <description>Authentication vs Authorization  Authentication: identifying the user who is accessing the resource Authorization: checking if the user has permission to perform an action on the resource (e.</description>
     </item>
     
   </channel>

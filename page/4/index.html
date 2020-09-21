@@ -148,6 +148,51 @@
     
       <div class="post on-list">
         <h1 class="post-title">
+          <a href="https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/">Deploy a NodeJS application using Git</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2018-05-09
+          </span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://abskmj.github.io/notes/tags/tutorial/">Tutorial</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/hugo/">Hugo</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/git/">Git</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/deployment/">Deployment</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/git-hook/">Git Hook</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+          
+          Remote Repository on Deployment Server Create two folders named project.git and project.
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/notes/posts/tutorials/git/deploy-nodejs-git/">Read more →</a>
+        </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title">
           <a href="https://abskmj.github.io/notes/posts/topics/rest-api/authentication-jwt-rest-apis/">Authenticate REST APIs using JWT</a>
         </h1>
         <div class="post-meta">
@@ -178,8 +223,7 @@
         <div class="post-content">
           
           
-          Authentication vs Authorization  Authentication: identifying the user who is accessing the resource Authorization: checking if the user has permission to perform an action on the resource (e.g updating the resource)  JWT for Authentication JWT or JSON Web Token is a preferrable method for authenticating REST APIs because:
-A datastore is not required for its verification. It can be issued and verified by a specific application server which has access to the secret key.
+          Authentication vs Authorization  Authentication: identifying the user who is accessing the resource Authorization: checking if the user has permission to perform an action on the resource (e.
           
           
         </div>
@@ -222,8 +266,7 @@ A datastore is not required for its verification. It can be issued and verified 
         <div class="post-content">
           
           
-          Loopback models can be extended by adding custom methods to them. A method can be:
-Model Method: the method is available on Model itself. Instance Method: the method is available on an instance of the model.  Model JS file // Model.js module.exports = function(Model) { // Model Method  Model.method = function() { &hellip; } // Instance Method  Model.prototype.method = function() { &hellip; } } // Model method var Model = app.
+          Loopback models can be extended by adding custom methods to them.
           
           
         </div>
@@ -266,6 +309,8 @@ Model Method: the method is available on Model itself. Instance Method: the meth
         <div class="post-content">
           
           
+          Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR.
+          
           
         </div>
 
@@ -307,9 +352,7 @@ Model Method: the method is available on Model itself. Instance Method: the meth
         <div class="post-content">
           
           
-          Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.
-Remote Method A corresponding remote method can be added to the model.js file to enable this API. This method also supports a filter to enable selective deletion.
-module.exports = function (Model) { Model.remoteMethod('destroyAll', { isStatic: true, description: 'Delete all matching records', accessType: 'WRITE', accepts: { arg: 'where', type: 'object', description: 'filter.
+          Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.
           
           
         </div>
@@ -350,6 +393,8 @@ module.exports = function (Model) { Model.remoteMethod('destroyAll', { isStatic:
         <div class="post-content">
           
           
+          Solution  Use BigInteger to calculate the sum and print first 10 characters by converting to string.
+          
           
         </div>
 
@@ -389,7 +434,7 @@ module.exports = function (Model) { Model.remoteMethod('destroyAll', { isStatic:
         <div class="post-content">
           
           
-          Solution  2 to the power 1000 will be a huge number hence consider using BigInteger. Recursively calculate the sum of all the digits.  /* Solution to HackerRank: Power Digit Sum * URL: <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler016">https://www.hackerrank.com/contests/projecteuler/challenges/euler016</a> */ import java.io.*; import java.util.*; import java.math.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int T = in.nextInt(); for(int t=0; t&lt;T; t++){ int N = in.nextInt(); BigInteger base = new BigInteger(&quot;2&quot;); BigInteger pow = base.
+          Solution  2 to the power 1000 will be a huge number hence consider using BigInteger.
           
           
         </div>
@@ -431,9 +476,6 @@ module.exports = function (Model) { Model.remoteMethod('destroyAll', { isStatic:
           
           
           Surge is static web publishing for Web Developers, right from the CLI.
-Install Surge CLI npm install -g surge Deploy with Surge Navigate to the public folder generated by Hugo CLI.
-surge The site, by default, will hosted on a sub domain of surge.sh.
-Deploy Changes surge &ndash;domain &lt;your-site&gt;.surge.sh If the same domain name is not provided, another random sub domain will be prompted by Surge CLI which has to changed to original for each deployment.
           
           
         </div>
@@ -476,7 +518,7 @@ Deploy Changes surge &ndash;domain &lt;your-site&gt;.surge.sh If the same domain
         <div class="post-content">
           
           
-          Solution  Diameter of a binary tree is maximum of diameter of current node, its left and right child.  /* Solution to HackerEarth: Binary Tree * URL: <a href="https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/tutorial/">https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/tutorial/</a> */ import java.util.*; class TestClass { public static void main(String args[] ) throws Exception { Scanner in = new Scanner(System.in); int T = in.nextInt(); int X = in.nextInt(); Node root = new Node(X); for(int t=0; t &lt; T-1; t++){ String path = in.
+          Solution  Diameter of a binary tree is maximum of diameter of current node, its left and right child.
           
           
         </div>
@@ -517,6 +559,8 @@ Deploy Changes surge &ndash;domain &lt;your-site&gt;.surge.sh If the same domain
         <div class="post-content">
           
           
+          Solution /* Solution to HackerRank: Vowels in the Back * URL: https://www.
+          
           
         </div>
 
@@ -524,45 +568,6 @@ Deploy Changes surge &ndash;domain &lt;your-site&gt;.surge.sh If the same domain
         <div>
           <a class="read-more button"
             href="/notes/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/">Read more →</a>
-        </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title">
-          <a href="https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/">HackerRank Contest - Regular Expresso - Balanced Strings</a>
-        </h1>
-        <div class="post-meta">
-          <span class="post-date">
-            2017-11-19
-          </span>
-          
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://abskmj.github.io/notes/tags/hackerrank/">HackerRank</a>&nbsp;
-            
-            #<a href="https://abskmj.github.io/notes/tags/solution/">Solution</a>&nbsp;
-            
-            #<a href="https://abskmj.github.io/notes/tags/regular-expression/">Regular Expression</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-        <div class="post-content">
-          
-          
-          
-        </div>
-
-        
-        <div>
-          <a class="read-more button"
-            href="/notes/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/">Read more →</a>
         </div>
         
       </div>

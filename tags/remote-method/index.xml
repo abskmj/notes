@@ -14,8 +14,7 @@
       <pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</guid>
-      <description>Loopback models can be extended by adding custom methods to them. A method can be:
- Model Method: the method is available on Model itself. Instance Method: the method is available on an instance of the model.  Model JS file // Model.js module.exports = function(Model) { // Model Method  Model.method = function() { ... } // Instance Method  Model.prototype.method = function() { ... } } // Model method var Model = app.</description>
+      <description>Loopback models can be extended by adding custom methods to them.</description>
     </item>
     
     <item>
@@ -24,9 +23,7 @@
       <pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid>
-      <description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.
-Remote Method A corresponding remote method can be added to the model.js file to enable this API. This method also supports a filter to enable selective deletion.
-module.exports = function (Model) { Model.remoteMethod(&amp;#39;destroyAll&amp;#39;, { isStatic: true, description: &amp;#39;Delete all matching records&amp;#39;, accessType: &amp;#39;WRITE&amp;#39;, accepts: { arg: &amp;#39;where&amp;#39;, type: &amp;#39;object&amp;#39;, description: &amp;#39;filter.</description>
+      <description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.</description>
     </item>
     
   </channel>

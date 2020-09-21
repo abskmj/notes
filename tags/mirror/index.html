@@ -172,9 +172,7 @@
         <div class="post-content">
           
           
-          I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.
-Github Action Workflow Create a .github/workflows/mirror.yml in the Github repository with the follow contents.
-name: Mirror to Gitlab on: [push, delete] jobs: gitlab: runs-on: ubuntu-latest steps: - uses: actions/checkout@v1 - uses: pixta-dev/repository-mirroring-action@v1 with: target_repo_url: git@gitlab.
+          I always like to have a backup copy of all my important git repositories hosted on Github.
           
           
         </div>

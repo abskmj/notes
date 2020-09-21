@@ -3,23 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://abskmj.github.io/notes/tags/database/</loc>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/express/</loc>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/gridfs/</loc>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://abskmj.github.io/notes/tags/javascript/</loc>
-    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/mongodb/</loc>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/mongoose/</loc>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/multer/</loc>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/tags/nodejs/</loc>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://abskmj.github.io/notes/</loc>
-    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://abskmj.github.io/notes/posts/</loc>
-    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://abskmj.github.io/notes/tags/</loc>
-    <lastmod>2020-09-20T07:35:57+05:30</lastmod>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</loc>
+    <lastmod>2020-09-21T12:00:02+05:30</lastmod>
   </url>
   
   <url>
@@ -193,11 +233,6 @@
   </url>
   
   <url>
-    <loc>https://abskmj.github.io/notes/tags/express/</loc>
-    <lastmod>2020-05-10T13:03:19+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://abskmj.github.io/notes/posts/express/express-req-res-headers/</loc>
     <lastmod>2020-05-10T13:03:19+05:30</lastmod>
   </url>
@@ -313,11 +348,6 @@
   </url>
   
   <url>
-    <loc>https://abskmj.github.io/notes/tags/nodejs/</loc>
-    <lastmod>2019-07-01T20:15:18+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://abskmj.github.io/notes/tags/tutorial/</loc>
     <lastmod>2019-07-01T20:15:18+05:30</lastmod>
   </url>
@@ -363,11 +393,6 @@
   </url>
   
   <url>
-    <loc>https://abskmj.github.io/notes/tags/mongoose/</loc>
-    <lastmod>2019-03-08T03:09:10+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://abskmj.github.io/notes/tags/query/</loc>
     <lastmod>2019-03-08T03:09:10+00:00</lastmod>
   </url>
@@ -379,11 +404,6 @@
   
   <url>
     <loc>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</loc>
-    <lastmod>2019-01-08T09:56:04+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abskmj.github.io/notes/tags/node.js/</loc>
     <lastmod>2019-01-08T09:56:04+00:00</lastmod>
   </url>
   

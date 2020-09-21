@@ -14,8 +14,7 @@
       <pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</guid>
-      <description>Solution #1 Test cases 2,3 timed out for below solution.
-import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &amp;lt; t; a0++){ long n = in.nextLong(); int f1 = 0; int f2 = 1; long sum = 0; while(f2 &amp;lt;= n){ // check if even  if(f2%2 == 0){ sum += f2; } // compute next in series  int f = f2 + f1; // set values for next iteration  f1 = f2; f2 = f; } System.</description>
+      <description>Solution #1 Test cases 2,3 timed out for below solution.</description>
     </item>
     
   </channel>

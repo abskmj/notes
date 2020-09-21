@@ -138,6 +138,57 @@
     
       <div class="post on-list">
         <h1 class="post-title">
+          <a href="https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/">Upload files to MongoDB GridFS with Express</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2020-09-21
+          </span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://abskmj.github.io/notes/tags/express/">Express</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/mongodb/">MongoDB</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/gridfs/">GridFS</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/multer/">Multer</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/javascript/">JavaScript</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/nodejs/">NodeJS</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/database/">Database</a>&nbsp;
+            
+            #<a href="https://abskmj.github.io/notes/tags/mongoose/">Mongoose</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+          
+          Create express based APIs to upload and download files to and from MongoDB GridFS.
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/notes/posts/express/express-multer-mongoose-gridfile/">Read more →</a>
+        </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title">
           <a href="https://abskmj.github.io/notes/posts/express/express-req-res-headers/">Express middleware to log request / response headers</a>
         </h1>
         <div class="post-meta">
@@ -169,7 +220,6 @@
           
           
           Express Middleware Logging request and response headers for tracing purpose
-app.use((req, res, nxt) =&gt; { const requestHeaders = req.headers console.log('Request Headers:', requestHeaders) // Request Headers: {  // 'user-agent': 'PostmanRuntime/7.24.1',  // accept: '<em>/</em>',  // 'cache-control': 'no-cache',  // 'postman-token': '74416f71-0d09-453f-b714-3737dfd9f6b4',  // host: 'localhost:3000',  // 'accept-encoding': 'gzip, deflate, br',  // connection: 'keep-alive'  // }  res.on('finish', () =&gt; { const responseHeaders = res.getHeaders() console.log('Response Headers:', responseHeaders) // Response Headers: [Object: null prototype] {  // 'x-powered-by': 'Express',  // 'content-type': 'text/html; charset=utf-8',  // 'content-length': '12',  // etag: 'W/&quot;c-Lve95gjOVATpfV8EL5X4nxwjKHE&quot;'  // }  }) nxt() })  More details on response finish event and others at nodejs.
           
           
         </div>

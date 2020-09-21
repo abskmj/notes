@@ -14,8 +14,7 @@
       <pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</guid>
-      <description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.
-Example const query = require(&amp;#39;@abskmj/query&amp;#39;); // query to get a list of 10 people between age 17 and 66, sorted by their age  let filters = { where: { age: { $gt: 17, $lt: 66 }, }, options: { limit: 10, sort: { age: -1 } } } const queryString = query.</description>
+      <description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string.</description>
     </item>
     
     <item>
@@ -24,8 +23,7 @@ Example const query = require(&amp;#39;@abskmj/query&amp;#39;); // query to get 
       <pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/projects/bhaina-bot/</guid>
-      <description>Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR. You don&amp;rsquo;t have to install any extra application on your mobile to use this service.
-Give it a try on your messenger!</description>
+      <description>Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR.</description>
     </item>
     
   </channel>

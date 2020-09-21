@@ -14,7 +14,7 @@
       <pubDate>Sun, 19 Nov 2017 20:57:21 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</guid>
-      <description>Solution /* Solution to HackerRank: Vowels in the Back * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/vowels-in-the-back */ &amp;#34;[aeiouy][a-z]{9}$&amp;#34; </description>
+      <description>Solution /* Solution to HackerRank: Vowels in the Back * URL: https://www.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Sun, 19 Nov 2017 20:31:51 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</guid>
-      <description>Solution /* Solution to HackerRank: Winning Tic Tac Toe * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe */ &amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34; Case 1 (...\\1){2}) or (...\\1...\\1) will take care of X O - O X O - - X Case 2 (..\\1..\\1) will take care of X - O X O - X - O OR - X O O X - - X O OR - O X O - X - O X Case 3 (.</description>
+      <description>Solution /* Solution to HackerRank: Winning Tic Tac Toe * URL: https://www.</description>
     </item>
     
   </channel>

@@ -14,10 +14,7 @@
       <pubDate>Sun, 26 Apr 2020 22:51:06 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/docker/docker-args/</guid>
-      <description>ARG in Dockerfile  The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the --build-arg &amp;lt;varname&amp;gt;=&amp;lt;value&amp;gt; flag. More details at docs.docker.com
- Example Dockerfile
-FROM debian:stable-slim ARG HUGO_VERSION LABEL maintainer &amp;quot;abskmj@gmail.com&amp;quot; LABEL hugo.version ${HUGO_VERSION} Pass the argument value
-docker build -t hugo --build-arg HUGO_VERSION=0.69.0 . </description>
+      <description>ARG in Dockerfile  The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the --build-arg &amp;lt;varname&amp;gt;=&amp;lt;value&amp;gt; flag.</description>
     </item>
     
   </channel>

@@ -14,8 +14,7 @@
       <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</guid>
-      <description>Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service). Serverless Framework is an NPM module which makes building serverless applications easy and open.
-Isolated Workspace The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects.</description>
+      <description>Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service).</description>
     </item>
     
   </channel>

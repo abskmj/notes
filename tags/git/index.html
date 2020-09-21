@@ -172,9 +172,7 @@
         <div class="post-content">
           
           
-          I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.
-Github Action Workflow Create a .github/workflows/mirror.yml in the Github repository with the follow contents.
-name: Mirror to Gitlab on: [push, delete] jobs: gitlab: runs-on: ubuntu-latest steps: - uses: actions/checkout@v1 - uses: pixta-dev/repository-mirroring-action@v1 with: target_repo_url: git@gitlab.
+          I always like to have a backup copy of all my important git repositories hosted on Github.
           
           
         </div>
@@ -213,9 +211,7 @@ name: Mirror to Gitlab on: [push, delete] jobs: gitlab: runs-on: ubuntu-latest s
         <div class="post-content">
           
           
-          Enable Git Info Variables  Enable .GitInfo object for each page (if the Hugo site is versioned by Git). This will then update the Lastmod parameter for each page using the last git commit date for that content file.
-Terminal hugo &ndash;enableGitInfo Config File  Hugo uses the config.toml, config.yaml, or config.json (if found in the site root) as the default site config file.
-The user can choose to override that default with one or more site config files using the command line &ndash;config switch.
+          Enable Git Info Variables  Enable .GitInfo object for each page (if the Hugo site is versioned by Git).
           
           
         </div>
@@ -259,7 +255,6 @@ The user can choose to override that default with one or more site config files 
           
           
           Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.
-Save the local changes in Stash git stash push -m {{ commit message}} // example git stash push -m {{ new logging module }} List all the change sets in Stash git stash list Apply a change set from Stash git stash apply {{ index }} //example git stash apply 1  Not specifying an index with automatically apply first index
           
           
         </div>
@@ -301,8 +296,6 @@ Save the local changes in Stash git stash push -m {{ commit message}} // example
           
           
           Glitch is a online workspace that support javascript for development with live previews.
-A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.
-Rather, a separate git repository can be set using the current project as working directory.
           
           
         </div>
@@ -347,11 +340,7 @@ Rather, a separate git repository can be set using the current project as workin
         <div class="post-content">
           
           
-          Remote Repository on Deployment Server Create two folders named project.git and project.source. Create a bare git repo in project.git
-git init &ndash;bare Configure project.source as working folder for source code by adding below to project.git/hooks/post-receive
-#!/bin/sh git &ndash;work-tree=/{{path}}/project.source &ndash;git-dir=/{{path}}/project.git checkout -f Change file persion to 755 to make it executable.
-chmod 755 project.git/hooks/post-receive Add a remote to local repo
-git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git Above steps are generic to any kind of project as it simply transfers the code to the server.
+          Remote Repository on Deployment Server Create two folders named project.git and project.
           
           
         </div>

@@ -6,8 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Express Middleware Logging request and response headers for tracing purpose
-app.use((req, res, nxt) =&amp;gt; { const requestHeaders = req.headers console.log(&amp;#39;Request Headers:&amp;#39;, requestHeaders) // Request Headers: {  // &amp;#39;user-agent&amp;#39;: &amp;#39;PostmanRuntime/7.24.1&amp;#39;,  // accept: &amp;#39;*/*&amp;#39;,  // &amp;#39;cache-control&amp;#39;: &amp;#39;no-cache&amp;#39;,  // &amp;#39;postman-token&amp;#39;: &amp;#39;74416f71-0d09-453f-b714-3737dfd9f6b4&amp;#39;,  // host: &amp;#39;localhost:3000&amp;#39;,  // &amp;#39;accept-encoding&amp;#39;: &amp;#39;gzip, deflate, br&amp;#39;,  // connection: &amp;#39;keep-alive&amp;#39;  // }  res.on(&amp;#39;finish&amp;#39;, () =&amp;gt; { const responseHeaders = res.getHeaders() console.log(&amp;#39;Response Headers:&amp;#39;, responseHeaders) // Response Headers: [Object: null prototype] {  // &amp;#39;x-powered-by&amp;#39;: &amp;#39;Express&amp;#39;,  // &amp;#39;content-type&amp;#39;: &amp;#39;text/html; charset=utf-8&amp;#39;,  // &amp;#39;content-length&amp;#39;: &amp;#39;12&amp;#39;,  // etag: &amp;#39;W/&amp;#34;c-Lve95gjOVATpfV8EL5X4nxwjKHE&amp;#34;&amp;#39;  // }  }) nxt() })  More details on response finish event and others at nodejs." />
+<meta name="description" content="Express Middleware Logging request and response headers for tracing purpose" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://abskmj.github.io/notes/posts/express/express-req-res-headers/" />
@@ -42,8 +41,7 @@ app.use((req, res, nxt) =&amp;gt; { const requestHeaders = req.headers console.l
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Express middleware to log request / response headers :: Notes">
-<meta property="og:description" content="Express Middleware Logging request and response headers for tracing purpose
-app.use((req, res, nxt) =&amp;gt; { const requestHeaders = req.headers console.log(&amp;#39;Request Headers:&amp;#39;, requestHeaders) // Request Headers: {  // &amp;#39;user-agent&amp;#39;: &amp;#39;PostmanRuntime/7.24.1&amp;#39;,  // accept: &amp;#39;*/*&amp;#39;,  // &amp;#39;cache-control&amp;#39;: &amp;#39;no-cache&amp;#39;,  // &amp;#39;postman-token&amp;#39;: &amp;#39;74416f71-0d09-453f-b714-3737dfd9f6b4&amp;#39;,  // host: &amp;#39;localhost:3000&amp;#39;,  // &amp;#39;accept-encoding&amp;#39;: &amp;#39;gzip, deflate, br&amp;#39;,  // connection: &amp;#39;keep-alive&amp;#39;  // }  res.on(&amp;#39;finish&amp;#39;, () =&amp;gt; { const responseHeaders = res.getHeaders() console.log(&amp;#39;Response Headers:&amp;#39;, responseHeaders) // Response Headers: [Object: null prototype] {  // &amp;#39;x-powered-by&amp;#39;: &amp;#39;Express&amp;#39;,  // &amp;#39;content-type&amp;#39;: &amp;#39;text/html; charset=utf-8&amp;#39;,  // &amp;#39;content-length&amp;#39;: &amp;#39;12&amp;#39;,  // etag: &amp;#39;W/&amp;#34;c-Lve95gjOVATpfV8EL5X4nxwjKHE&amp;#34;&amp;#39;  // }  }) nxt() })  More details on response finish event and others at nodejs." />
+<meta property="og:description" content="Express Middleware Logging request and response headers for tracing purpose" />
 <meta property="og:url" content="https://abskmj.github.io/notes/posts/express/express-req-res-headers/" />
 <meta property="og:site_name" content="Express middleware to log request / response headers" />
 

@@ -164,7 +164,7 @@
         <div class="post-content">
           
           
-          Solution import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.math.</em>; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner scan = new Scanner(System.in); int T = scan.nextInt(); for(int j=0;j&lt;T;j++){ int N = scan.nextInt(); int K = scan.nextInt(); scan.nextLine(); char[] data = scan.nextLine().toCharArray(); int max = 0; for(int i=0;i&lt;N-K;i++){ int prod = getProduct(data,i,K); if(prod&gt;max){ max = prod; } } System.out.println(max); } } static int getProduct(char[] data, int start, int length){ int product = 1; for(int i=start;i&lt;start+length;i++){ product = product * Character.
+          Solution import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.math.</em>; import java.
           
           
         </div>
@@ -205,6 +205,8 @@
         <div class="post-content">
           
           
+          Solution import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.math.</em>; import java.
+          
           
         </div>
 
@@ -244,7 +246,7 @@
         <div class="post-content">
           
           
-          Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: <a href="https://www.hackerrank.com/challenges/divisible-sum-pairs">https://www.hackerrank.com/challenges/divisible-sum-pairs</a> */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the divisibleSumPairs function below. static int divisibleSumPairs(int n, int k, int[] ar) { int count = 0; for(int i=0; i &lt; n; i++){ for(int j=i+1; j &lt; n; j++){ if((ar[i]+ar[j])%k == 0){ count++; } } } return count; } private static final Scanner scanner = new Scanner(System.
+          Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: https://www.
           
           
         </div>
@@ -285,7 +287,7 @@
         <div class="post-content">
           
           
-          Solution /* Solution to HackerRank: The Time in Words * URL: <a href="https://www.hackerrank.com/challenges/the-time-in-words">https://www.hackerrank.com/challenges/the-time-in-words</a> */ import java.io.*; import java.math.*; import java.security.*; import java.text.*; import java.util.*; import java.util.concurrent.*; import java.util.regex.*; public class Solution { // Complete the timeInWords function below.  static String timeInWords(int h, int m) { String[] words = {&quot;zero&quot;, &quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot;, &quot;six&quot;, &quot;seven&quot;, &quot;eight&quot;, &quot;nine&quot;, &quot;ten&quot;, &quot;eleven&quot;, &quot;twelve&quot;, &quot;thirteen&quot;, &quot;fourteen&quot;, &quot;fifteen&quot;, &quot;sixteen&quot;, &quot;seventeen&quot;, &quot;eighteen&quot;, &quot;nineteen&quot;, &quot;twenty&quot;}; if (m == 0){ return words[h] + &quot; o' clock&quot;; } else if (m == 15){ return &quot;quarter past &quot; + words[h]; } else if (m == 30){ return &quot;half past &quot; + words[h]; } else if (m == 45){ return &quot;quarter to &quot; + words[h+1]; } else if (m == 1){ return &quot;one minute past &quot; + words[h]; } else if (m == 59){ return &quot;one minute to &quot; + words[h+1]; } else if (m &lt; 21){ return words[m] + &quot; minutes past &quot; + words[h]; } else if (m &gt; 39){ return words[60-m] + &quot; minutes to &quot; + words[h+1]; } else if (m &gt; 30){ return &quot;twenty &quot; + words[(60-m)%20] + &quot; minutes to &quot; + words[h+1]; } else{ return &quot;twenty &quot; + words[m%20] + &quot; minutes past &quot; + words[h]; } } private static final Scanner scanner = new Scanner(System.
+          Solution /* Solution to HackerRank: The Time in Words * URL: https://www.
           
           
         </div>
@@ -326,6 +328,8 @@
         <div class="post-content">
           
           
+          Solution  Use BigInteger to calculate the sum and print first 10 characters by converting to string.
+          
           
         </div>
 
@@ -365,7 +369,7 @@
         <div class="post-content">
           
           
-          Solution  2 to the power 1000 will be a huge number hence consider using BigInteger. Recursively calculate the sum of all the digits.  /* Solution to HackerRank: Power Digit Sum * URL: <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler016">https://www.hackerrank.com/contests/projecteuler/challenges/euler016</a> */ import java.io.*; import java.util.*; import java.math.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int T = in.nextInt(); for(int t=0; t&lt;T; t++){ int N = in.nextInt(); BigInteger base = new BigInteger(&quot;2&quot;); BigInteger pow = base.
+          Solution  2 to the power 1000 will be a huge number hence consider using BigInteger.
           
           
         </div>
@@ -405,6 +409,8 @@
 
         <div class="post-content">
           
+          
+          Solution /* Solution to HackerRank: Vowels in the Back * URL: https://www.
           
           
         </div>
@@ -484,7 +490,7 @@
         <div class="post-content">
           
           
-          Solution /* Solution to HackerRank: Winning Tic Tac Toe * URL: <a href="https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe">https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe</a> */ &quot;(X|O)((&hellip;\1){2}|..\1..\1|.\1.\1..$|\1\1(&hellip;)*$)&quot; Case 1 (&hellip;\1){2}) or (&hellip;\1&hellip;\1) will take care of X O - O X O - - X Case 2 (..\1..\1) will take care of X - O X O - X - O OR - X O O X - - X O OR - O X O - X - O X Case 3 (.
+          Solution /* Solution to HackerRank: Winning Tic Tac Toe * URL: https://www.
           
           
         </div>
@@ -525,7 +531,7 @@
         <div class="post-content">
           
           
-          Solution  Iterate through each city and check if it is already under range of previous tower. If not, find a tower within the range to switch on.  /* Solution to HackerRank: Goodland Electricity * URL: <a href="https://www.hackerrank.com/challenges/pylons">https://www.hackerrank.com/challenges/pylons</a> */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); int K = in.nextInt(); int[] cities = new int[N]; for(int i=0; i &lt; N; i++){ cities[i] = in.
+          Solution  Iterate through each city and check if it is already under range of previous tower.
           
           
         </div>
@@ -566,7 +572,7 @@
         <div class="post-content">
           
           
-          Solution  Sort the array of numbers Find the minimum difference between ith and (i+K-1)th element in each iteration.  /* Solution to HackerRank: Max Min * URL: <a href="https://www.hackerrank.com/challenges/angry-children">https://www.hackerrank.com/challenges/angry-children</a> */ import java.io.BufferedReader; import java.io.IOException; import java.io.InputStreamReader; import java.util.Arrays; public class Solution { public static void main(String[] args) throws NumberFormatException, IOException { BufferedReader in = new BufferedReader(new InputStreamReader(System.in)); int N = Integer.parseInt(in.readLine()); int K = Integer.parseInt(in.readLine()); int[] list = new int[N]; for(int i = 0; i &lt; N; i ++) list[i] = Integer.
+          Solution  Sort the array of numbers Find the minimum difference between ith and (i+K-1)th element in each iteration.
           
           
         </div>
@@ -607,7 +613,7 @@
         <div class="post-content">
           
           
-          Solution  Iterate the sides in descending order Check if sides make a triangle by checking if sum of two sides is greater than third side .  /* Solution to HackerRank: Maximum Perimeter Triangle * URL: <a href="https://www.hackerrank.com/challenges/maximum-perimeter-triangle">https://www.hackerrank.com/challenges/maximum-perimeter-triangle</a> */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int N = in.nextInt(); int[] l = new int[N]; for(int i=0; i &lt; N; i++){ l[i] = in.
+          Solution  Iterate the sides in descending order Check if sides make a triangle by checking if sum of two sides is greater than third side .
           
           
         </div>
@@ -648,7 +654,7 @@
         <div class="post-content">
           
           
-          Solution #1  Keep indexes of all numbers in a HashMap. Check if current maximum number is already at desired index i.e highest at index 0, second highest at index 1 and so on. If not, keep on swapping them till all the swaps are exhausted.  /* Solution to HackerRank: Largest Permutation * URL: <a href="https://www.hackerrank.com/challenges/largest-permutation">https://www.hackerrank.com/challenges/largest-permutation</a> */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
+          Solution #1  Keep indexes of all numbers in a HashMap.
           
           
         </div>
@@ -689,7 +695,7 @@
         <div class="post-content">
           
           
-          Solution  Iterate through each house in a sorted order. Check if current house is in range of last transmitter. If not, find a house to put transmitter on so that current house is in range.  /* Solution to HackerRank: Hackerland Radio Transmitters * URL: <a href="https://www.hackerrank.com/challenges/hackerland-radio-transmitters">https://www.hackerrank.com/challenges/hackerland-radio-transmitters</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
+          Solution  Iterate through each house in a sorted order. Check if current house is in range of last transmitter.
           
           
         </div>
@@ -730,7 +736,7 @@
         <div class="post-content">
           
           
-          Solution #1  Keep prices and corresponding index in a HashMap. Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices. Check that the indexes buying and selling are in correct order so that year of buying is less than year of selling.  /* Solution to HackerRank: Minimum Loss * URL: <a href="https://www.hackerrank.com/challenges/minimum-loss">https://www.hackerrank.com/challenges/minimum-loss</a> */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
+          Solution #1  Keep prices and corresponding index in a HashMap.
           
           
         </div>
@@ -771,7 +777,7 @@
         <div class="post-content">
           
           
-          Solution  Start iterating numbers from b to a because combination of larger numbers are more likely to be indivisible. Keep an array representing all numbers including a and b. Strike out multiples of current number from array in each iteration.  /* Solution to HackerRank: Mutual Indivisibility * URL: <a href="https://www.hackerrank.com/contests/hourrank-24/challenges/mutual-indivisibility">https://www.hackerrank.com/contests/hourrank-24/challenges/mutual-indivisibility</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
+          Solution  Start iterating numbers from b to a because combination of larger numbers are more likely to be indivisible.
           
           
         </div>
@@ -812,8 +818,7 @@
         <div class="post-content">
           
           
-          Solution  Iterate from 2 to the given number. Consider odd numbers only except 2. Check each iteration for prime number.  However, Test case 4 timed out for below solution.
-import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.math.</em>; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &lt; t; a0++){ int n = in.
+          Solution  Iterate from 2 to the given number. Consider odd numbers only except 2.
           
           
         </div>
@@ -854,7 +859,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Iterate from 1 to given number. Add each iteration to sum and square of it to another sum. Print absolute difference.  /* Solution to HackerRank: Sum Square Difference * URL: <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler006">https://www.hackerrank.com/contests/projecteuler/challenges/euler006</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &lt; t; a0++){ int n = in.
+          Solution  Iterate from 1 to given number. Add each iteration to sum and square of it to another sum.
           
           
         </div>
@@ -895,7 +900,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Iterate from the given number to zero. Check if current iteration is a palindrome by using reverse() of StringBuilder class. Check if current iteration is a product of two 3-digit numbers.  /* Solution to HackerRank: Largest Palindrome * URL: <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler004">https://www.hackerrank.com/contests/projecteuler/challenges/euler004</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.
+          Solution  Iterate from the given number to zero. Check if current iteration is a palindrome by using reverse() of StringBuilder class.
           
           
         </div>
@@ -936,7 +941,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Find all the factors of the given number by iterating from 1 to square root of the number. Sort all the factors in descending order and iterate to check if a factor is prime.  /* Solution to HackerRank: Largest Prime Factor * URL: <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler003">https://www.hackerrank.com/contests/projecteuler/challenges/euler003</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
+          Solution  Find all the factors of the given number by iterating from 1 to square root of the number.
           
           
         </div>
@@ -980,7 +985,6 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
           
           
           Solution #1 Test cases 2,3 timed out for below solution.
-import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.math.</em>; import java.util.regex.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.in); int t = in.nextInt(); for(int a0 = 0; a0 &lt; t; a0++){ long n = in.nextLong(); int f1 = 0; int f2 = 1; long sum = 0; while(f2 &lt;= n){ // check if even  if(f2%2 == 0){ sum += f2; } // compute next in series  int f = f2 + f1; // set values for next iteration  f1 = f2; f2 = f; } System.
           
           
         </div>
@@ -1021,7 +1025,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Count characters of each group in given string. Groups: digit, lower-case, upper-case and special characters Add one of each group to the string if not already present i.e. count is 0. Add required number of characters in case length of the string is less than 6.  /* Solution to HackerRank: Strong Password * URL: <a href="https://www.hackerrank.com/contests/hourrank-24/challenges/strong-password">https://www.hackerrank.com/contests/hourrank-24/challenges/strong-password</a> */ import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.util.regex.*; public class Solution { static int minimumNumber(int n, String password) { int digitCount = 0; int lowerCount = 0; int upperCount = 0; int specialCount = 0; int addCount = 0; for(char c : password.
+          Solution  Count characters of each group in given string. Groups: digit, lower-case, upper-case and special characters Add one of each group to the string if not already present i.
           
           
         </div>
@@ -1064,7 +1068,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Solution  Graph is used to connect all astronauts to a country. Each cluster of graph represents a country. Each cluster is traversed to find the count of astronauts. Number of possible combinations are calculated based on sizes of these countries.  /* Solution to HackerRank: Journey to the Moon * URL: <a href="https://www.hackerrank.com/challenges/journey-to-the-moon">https://www.hackerrank.com/challenges/journey-to-the-moon</a> */ import java.io.*; import java.util.*; public class Solution { public static void main(String[] args) { Scanner in = new Scanner(System.
+          Solution  Graph is used to connect all astronauts to a country.
           
           
         </div>
@@ -1107,7 +1111,7 @@ import java.io.<em>; import java.util.</em>; import java.text.<em>; import java.
         <div class="post-content">
           
           
-          Minimum Cost  If the number of roads is zero or cost of building a road is more than cost of building a library, then building libraries in each of the cities will result in minimum cost. If the cost of building a library is less than cost of building a road, then building a single library and building roads to connected cities will result in minimum cost.  Clusters There can be few set of cities that are not connected to each other and are clusters.
+          Minimum Cost  If the number of roads is zero or cost of building a road is more than cost of building a library, then building libraries in each of the cities will result in minimum cost.
           
           
         </div>

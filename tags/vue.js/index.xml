@@ -14,10 +14,7 @@
       <pubDate>Sun, 20 Sep 2020 07:35:57 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/tampermonkey/vue/</guid>
-      <description> Vue.js makes handling dynamic content easy in a TamperMonkey script.
- Include the script Configure the script to include the Vue.js bundle from a CDN.
-// @require https://cdn.jsdelivr.net/npm/vue Initialize a Vue.js App It is recommended to initialize the Vue.js app after the page is ready.
-window.addEventListener(&amp;#34;load&amp;#34;, (event) =&amp;gt; { // initialize app  const app = new Vue({ el: &amp;#39;#main-content&amp;#39;, data: {} methods: {}, template: `` }) }) </description>
+      <description>Vue.js makes handling dynamic content easy in a TamperMonkey script.</description>
     </item>
     
   </channel>

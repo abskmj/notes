@@ -14,10 +14,7 @@
       <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</guid>
-      <description>Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.js applications. They also publish a version for React applications as eslint-config-airbnb.
-npm install --save-dev eslint-config-airbnb-base Config File Create a .eslintrc file with following contents to Airbnb rules for the Node.js Application.
-{ &amp;#34;extends&amp;#34;: &amp;#34;eslint-config-airbnb-base&amp;#34; } NPM Scripts Create few npm scripts to integrate linting into development flow.
-{ &amp;#34;scripts&amp;#34;:{ &amp;#34;start&amp;#34;: &amp;#34;node .&amp;#34;, &amp;#34;lint&amp;#34;: &amp;#34;eslint --fix .</description>
+      <description>Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.</description>
     </item>
     
   </channel>

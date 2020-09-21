@@ -14,9 +14,7 @@
       <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid>
-      <description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.
-nano /etc/samba/smb.conf Contents of smb.conf
-[global] workgroup = WORKGROUP server string = Samba Server %v netbios name = WDMyCloud security = user map to guest = bad user dns proxy = no [Public] path = /data/shares/Public force group = users create mask = 0660 directory mask = 0771 browsable =yes writable = yes guest ok = yes Restart Samba Service The samba service has to restarted each time to use the new configuration.</description>
+      <description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description>
     </item>
     
     <item>
@@ -34,10 +32,7 @@ nano /etc/samba/smb.conf Contents of smb.conf
       <pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</guid>
-      <description>Alias See if there are any alias defined for ls on your terminal
-alias For me it was alias ls=&#39;ls $LS_OPTIONS&#39; and LS_OPTIONS environment variable had a value of --color=auto
-.bashrc Check the contents of your ~/.bashrc file. Generally, these aliases are defined here. Mine had these lines
-export LS_OPTIONS=&#39;--color=auto&#39; eval &amp;quot;`dircolors`&amp;quot; alias ls=&#39;ls $LS_OPTIONS&#39; alias ll=&#39;ls $LS_OPTIONS -l&#39; alias l=&#39;ls $LS_OPTIONS -lA&#39; Update export LS_OPTIONS=&#39;--color=auto&#39; to export LS_OPTIONS=&#39;--color=never&#39; and restart the terminal</description>
+      <description>Alias See if there are any alias defined for ls on your terminal</description>
     </item>
     
     <item>
@@ -46,7 +41,7 @@ export LS_OPTIONS=&#39;--color=auto&#39; eval &amp;quot;`dircolors`&amp;quot; al
       <pubDate>Wed, 15 Apr 2020 14:33:04 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</guid>
-      <description>De-attach WD Drive  You will have to open your WD MyCloud device and remove the HDD or drive inside it. Attach the drive to your computer. If you don&amp;rsquo;t have a Linux based OS installed on your computer, you can boot your computer through a live USB. See how to create one at ubuntu.com  Create Partitions You can skip this section if you have not formatted the drive after connecting it to your computer and have the original partitions.</description>
+      <description>De-attach WD Drive  You will have to open your WD MyCloud device and remove the HDD or drive inside it.</description>
     </item>
     
     <item>
@@ -55,11 +50,7 @@ export LS_OPTIONS=&#39;--color=auto&#39; eval &amp;quot;`dircolors`&amp;quot; al
       <pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate>
       
       <guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</guid>
-      <description> As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.
-   Open /etc/apt/sources.list
-  Comment existing sources
-  Add below sources
-  deb http://archive.debian.org/debian/ wheezy main non-free contrib deb-src http://archive.debian.org/debian/ wheezy main non-free contrib  Now you can run  apt-get update  If you get below error  There is no public key available for the following key IDs  Install below package  apt-get install debian-archive-keyring  Now you can rerun  apt-get update </description>
+      <description>As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.</description>
     </item>
     
   </channel>
