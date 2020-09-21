@@ -1,8 +1,7 @@
 baseurl = "https://abskmj.github.io/notes/"
 languageCode = "en-us"
 theme = "terminal"
-paginate = 10
-
+summaryLength = 10
 
 [params]
   # dir name of your main content (default is `content/posts`).

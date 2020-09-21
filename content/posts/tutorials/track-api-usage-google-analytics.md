@@ -1,7 +1,7 @@
 ---
 title: "Track API usage with Google Analytics"
 date: 2017-11-15T18:02:07+05:30
-tags: ["Google Analytics", "Node.js", "NPM" , "Tutorial"]
+tags: ["Google Analytics", "NodeJS", "NPM" , "Tutorial"]
 ---
 
 Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.

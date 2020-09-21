@@ -1,7 +1,7 @@
 ---
 title: "Deploy functions on Spotinst using Serverless Framework"
 date: 2019-01-08T09:56:04Z
-tags: ["Spotinst", "Node.js", "NPM" , "Tutorial", "Serverless"]
+tags: ["Spotinst", "NodeJS", "NPM" , "Tutorial", "Serverless"]
 ---
 
 [Spotinst](https://spotinst.com/products/spotinst-functions/) is one of the providers which support deploying serverless functions or FaaS (Function as a Service). [Serverless Framework](https://serverless.com/) is an NPM module which makes building serverless applications easy and open.

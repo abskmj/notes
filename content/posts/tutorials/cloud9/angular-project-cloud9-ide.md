@@ -1,7 +1,7 @@
 ---
 title: "Developing an Angular project on Cloud9 IDE"
 date: 2018-07-10T12:46:13Z
-tags: ["Angular", "Node.js", "NPM" , "Tutorial", "Cloud9 IDE"]
+tags: ["Angular", "NodeJS", "NPM" , "Tutorial", "Cloud9 IDE"]
 ---
 
 ## Update NodeJS version

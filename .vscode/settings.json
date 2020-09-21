@@ -1,5 +1,7 @@
 {
     "grammarly.userWords": [
-        "snapcraft"
+      "gridfile",
+      "multer",
+      "snapcraft"
     ]
 }
