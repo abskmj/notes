@@ -23,7 +23,7 @@
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://abskmj.github.io/notes/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="https://abskmj.github.io/notes/img/apple-touch-icon-192x192.png">
 
   <link rel="shortcut icon" href="https://github.com/abskmj.png">
 
@@ -40,10 +40,10 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Model Relations in Mongoose :: Notes">
+<meta property="og:title" content="Model Relations in Mongoose">
 <meta property="og:description" content="Model Relations Relations are logical links which define how models are connected with each other." />
 <meta property="og:url" content="https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/" />
-<meta property="og:site_name" content="Model Relations in Mongoose" />
+<meta property="og:site_name" content="Notes" />
 
   
     <meta property="og:image" content="https://github.com/abskmj.png">
@@ -168,8 +168,8 @@
 <p>Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of the same or another model.</p>
 <p>A relation between models are generally of two types:</p>
 <ul>
-<li><strong>BelongsTo</strong>: A document in source model is connected with a document in destination model by putting the id of destination document in the source document.</li>
-<li><strong>Has Many / Has One</strong>: A document in source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).</li>
+<li><strong>Belongs To</strong>: A document in the source model is connected with a document in the destination model by putting the id of the destination document in the source document.</li>
+<li><strong>Has Many / Has One</strong>: A document in the source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).</li>
 </ul>
 <h1 id="relation-belongs-to">Relation: Belongs To<a href="#relation-belongs-to" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <h2 id="example">Example<a href="#example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
@@ -197,7 +197,19 @@
 }
 </code></pre></div><h2 id="populate">Populate<a href="#populate" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Now the author of a blog post can be easily populated by:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">Post</span>.<span style="color:#a6e22e">find</span>({}).<span style="color:#a6e22e">populate</span>(<span style="color:#e6db74">&#39;author&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">Post</span>.<span style="color:#a6e22e">find</span>({}).<span style="color:#a6e22e">populate</span>(<span style="color:#e6db74">&#39;author&#39;</span>)
+
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">  {
+</span><span style="color:#75715e">    _id: 5f71af94e66f4728f68ffc06,
+</span><span style="color:#75715e">    name: &#39;Relation: Belongs To&#39;,
+</span><span style="color:#75715e">    author: {
+</span><span style="color:#75715e">      _id: 5f71af94e66f4728f68ffc05,
+</span><span style="color:#75715e">      name: &#39;abskmj&#39;,
+</span><span style="color:#75715e">      email: &#39;abskmj@email.com&#39;
+</span><span style="color:#75715e">    }
+</span><span style="color:#75715e">  }
+</span><span style="color:#75715e">*/</span>
 </code></pre></div><h1 id="relation-has-many--has-one">Relation: Has Many / Has One<a href="#relation-has-many--has-one" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <h2 id="example-1">Example<a href="#example-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <blockquote>
@@ -208,21 +220,43 @@
     <span style="color:#a6e22e">ref</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Post&#39;</span>,
     <span style="color:#a6e22e">localField</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;_id&#39;</span>,
     <span style="color:#a6e22e">foreignField</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;author&#39;</span>
-});
+})
 </code></pre></div><h2 id="populate-1">Populate<a href="#populate-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Now the author of a blog post can be easily populated by:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">find</span>({}).<span style="color:#a6e22e">populate</span>(<span style="color:#e6db74">&#39;posts&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">find</span>({}).<span style="color:#a6e22e">populate</span>(<span style="color:#e6db74">&#39;posts&#39;</span>)
+
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">  {
+</span><span style="color:#75715e">    _id: 5f71ce43687f2a2fb97fa462,
+</span><span style="color:#75715e">    name: &#39;abskmj&#39;,
+</span><span style="color:#75715e">    email: &#39;abskmj@email.com&#39;,
+</span><span style="color:#75715e">    posts: [
+</span><span style="color:#75715e">      {
+</span><span style="color:#75715e">        _id: 5f71ce43687f2a2fb97fa463,
+</span><span style="color:#75715e">        name: &#39;Relation: Belongs To&#39;,
+</span><span style="color:#75715e">        author: 5f71ce43687f2a2fb97fa462
+</span><span style="color:#75715e">      },
+</span><span style="color:#75715e">      {
+</span><span style="color:#75715e">        _id: 5f71ce43687f2a2fb97fa464,
+</span><span style="color:#75715e">        name: &#39;Relation: Has One&#39;,
+</span><span style="color:#75715e">        author: 5f71ce43687f2a2fb97fa462
+</span><span style="color:#75715e">      }
+</span><span style="color:#75715e">    ],
+</span><span style="color:#75715e">    id: &#39;5f71ce43687f2a2fb97fa462&#39;
+</span><span style="color:#75715e">  }
+</span><span style="color:#75715e">*/</span>
 </code></pre></div><h1 id="note">Note<a href="#note" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>Virtuals are not included in string version of the model instances by default. To include them, set the <code>virtuals</code> option to <code>true</code> on schema&rsquo;s <code>toObject</code> and <code>toJSON</code> options.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Schema</span>(<span style="color:#a6e22e">userSchema</span>, {
     <span style="color:#a6e22e">toObject</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">virtuals</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }, 
     <span style="color:#a6e22e">toJSON</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">virtuals</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> } 
-});
-</code></pre></div><h1 id="code-repository">Code Repository<a href="#code-repository" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<p>A working code repository is available at <a href="https://github.com/abskmj/example-model-relations">github</a>.</p>
+})
+</code></pre></div><blockquote>
+<p>A working codebase for reference is available at <a href="https://gist.github.com/abskmj/cb5bb57829c677fe38b724ad864eaa5b">gist.github.com</a></p>
+</blockquote>
 <h1 id="reference">Reference<a href="#reference" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <ul>
-<li><a href="https://mongoosejs.com/docs/populate.html#populate-virtuals">https://mongoosejs.com/docs/populate.html#populate-virtuals</a></li>
+<li>Populate Virtuals at <a href="https://mongoosejs.com/docs/populate.html#populate-virtuals">mongoosejs.com</a></li>
 </ul>
 
       </div></div>
@@ -295,6 +329,8 @@
 
 <script src="https://abskmj.github.io/notes/assets/main.js"></script>
 <script src="https://abskmj.github.io/notes/assets/prism.js"></script>
+
+
 
 
 
