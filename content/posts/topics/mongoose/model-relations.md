@@ -10,8 +10,8 @@ Relations are logical links which define how models are connected with each othe
 
 A relation between models are generally of two types:
 
-- **BelongsTo**: A document in source model is connected with a document in destination model by putting the id of destination document in the source document.
-- **Has Many / Has One**: A document in source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).
+- **Belongs To**: A document in the source model is connected with a document in the destination model by putting the id of the destination document in the source document.
+- **Has Many / Has One**: A document in the source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).
 
 
 # Relation: Belongs To
@@ -47,7 +47,19 @@ A relation between models are generally of two types:
 ## Populate
 Now the author of a blog post can be easily populated by:
 ```javascript
-Post.find({}).populate('author');
+Post.find({}).populate('author')
+
+/*
+  {
+    _id: 5f71af94e66f4728f68ffc06,
+    name: 'Relation: Belongs To',
+    author: {
+      _id: 5f71af94e66f4728f68ffc05,
+      name: 'abskmj',
+      email: 'abskmj@email.com'
+    }
+  }
+*/
 ```
 
 # Relation: Has Many / Has One
@@ -61,13 +73,34 @@ schema.virtual('posts', {
     ref: 'Post',
     localField: '_id',
     foreignField: 'author'
-});
+})
 ```
 
 ## Populate
 Now the author of a blog post can be easily populated by:
 ```javascript
-User.find({}).populate('posts');
+User.find({}).populate('posts')
+
+/*
+  {
+    _id: 5f71ce43687f2a2fb97fa462,
+    name: 'abskmj',
+    email: 'abskmj@email.com',
+    posts: [
+      {
+        _id: 5f71ce43687f2a2fb97fa463,
+        name: 'Relation: Belongs To',
+        author: 5f71ce43687f2a2fb97fa462
+      },
+      {
+        _id: 5f71ce43687f2a2fb97fa464,
+        name: 'Relation: Has One',
+        author: 5f71ce43687f2a2fb97fa462
+      }
+    ],
+    id: '5f71ce43687f2a2fb97fa462'
+  }
+*/
 ```
 
 # Note 
@@ -76,12 +109,11 @@ Virtuals are not included in string version of the model instances by default. T
 const User = new Schema(userSchema, {
     toObject: { virtuals: true }, 
     toJSON: { virtuals: true } 
-});
+})
 ```
 
 
-# Code Repository
-A working code repository is available at [github](https://github.com/abskmj/example-model-relations).
+> A working codebase for reference is available at [gist.github.com](https://gist.github.com/abskmj/cb5bb57829c677fe38b724ad864eaa5b)
 
 # Reference
-- https://mongoosejs.com/docs/populate.html#populate-virtuals
+- Populate Virtuals at [mongoosejs.com](https://mongoosejs.com/docs/populate.html#populate-virtuals)
