@@ -197,22 +197,22 @@
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">upload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">multer</span>({ <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;.&#39;</span>) })
 </code></pre></div><h1 id="upload-file-api">Upload File API<a href="#upload-file-api" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>API uses the multer middleware and GridFile model to upload files to GridFS.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#39;/v1/files&#39;</span>, <span style="color:#a6e22e">upload</span>.<span style="color:#a6e22e">any</span>(), <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">nxt</span>) =&gt; {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#39;/v1/files&#39;</span>, <span style="color:#a6e22e">upload</span>.<span style="color:#a6e22e">any</span>(), <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">nxt</span>) =&gt; {
   <span style="color:#66d9ef">try</span> {
     <span style="color:#75715e">// uploaded file are accessible as req.files
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">files</span>) {
-      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">promises</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">file</span>) =&gt; {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">promises</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">file</span>) =&gt; {
         <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fileStream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createReadStream</span>(<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">path</span>)
 
         <span style="color:#75715e">// upload file to gridfs
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gridFile</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">GridFile</span>({ <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">originalname</span> })
-        <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">gridFile</span>.<span style="color:#a6e22e">upload</span>(<span style="color:#a6e22e">fileStream</span>)
+        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">gridFile</span>.<span style="color:#a6e22e">upload</span>(<span style="color:#a6e22e">fileStream</span>)
 
         <span style="color:#75715e">// delete the file from local folder
 </span><span style="color:#75715e"></span>        <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">unlinkSync</span>(<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">path</span>)
       })
 
-      <span style="color:#a6e22e">await</span> Promise.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">promises</span>)
+      <span style="color:#66d9ef">await</span> Promise.<span style="color:#a6e22e">all</span>(<span style="color:#a6e22e">promises</span>)
     }
 
     <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">sendStatus</span>(<span style="color:#ae81ff">201</span>)
@@ -222,9 +222,9 @@
 })
 </code></pre></div><h1 id="list-files-api">List Files API<a href="#list-files-api" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>API returns information about uploaded files.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/v1/files&#39;</span>, <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">nxt</span>) =&gt; {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/v1/files&#39;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">nxt</span>) =&gt; {
   <span style="color:#66d9ef">try</span> {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">GridFile</span>.<span style="color:#a6e22e">find</span>({})
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">GridFile</span>.<span style="color:#a6e22e">find</span>({})
 
     <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">files</span>)
   } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
@@ -245,11 +245,11 @@
 ]
 </code></pre></div><h1 id="download-file-api">Download File API<a href="#download-file-api" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>API returns the file from the GridFS using its id.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/v1/files/:id/:name&#39;</span>, <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">nxt</span>) =&gt; {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/v1/files/:id/:name&#39;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">nxt</span>) =&gt; {
   <span style="color:#66d9ef">try</span> {
     <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">name</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>
 
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gridFile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">GridFile</span>.<span style="color:#a6e22e">findById</span>(<span style="color:#a6e22e">id</span>)
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gridFile</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">GridFile</span>.<span style="color:#a6e22e">findById</span>(<span style="color:#a6e22e">id</span>)
 
     <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">gridFile</span>) {
       <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">attachment</span>(<span style="color:#a6e22e">name</span>)
@@ -278,6 +278,13 @@
         <hr />
     </div>
     <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/">
+                <span class="button__icon">←</span>
+                <span class="button__text">PopOS 20.10 on ASUS ROG Zephyrus G14 Laptop</span>
+            </a>
+        </span>
         
         
         <span class="button next">

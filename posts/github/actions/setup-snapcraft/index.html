@@ -195,15 +195,15 @@
     - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
         <span style="color:#ae81ff">cd ..</span>
     - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Snapcraft</span>
-      <span style="color:#f92672">run</span>: <span style="color:#e6db74">|
+      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span><span style="color:#e6db74">        sudo snap install snapcraft --classic
 </span><span style="color:#e6db74">        echo &#34;$SNAP_TOKEN&#34; | snapcraft login --with -
 </span><span style="color:#e6db74">        snapcraft
-</span><span style="color:#e6db74">        snapcraft upload --release=stable *.snap
-</span><span style="color:#e6db74">      env:
-</span><span style="color:#e6db74">        SNAP_TOKEN: ${{secrets.SNAP_TOKEN}} 
-</span><span style="color:#e6db74">        SNAPCRAFT_BUILD_ENVIRONMENT: host
-</span></code></pre></div>
+</span><span style="color:#e6db74">        snapcraft upload --release=stable *.snap</span>        
+      <span style="color:#f92672">env</span>:
+        <span style="color:#f92672">SNAP_TOKEN</span>: <span style="color:#ae81ff">${{secrets.SNAP_TOKEN}} </span>
+        <span style="color:#f92672">SNAPCRAFT_BUILD_ENVIRONMENT</span>: <span style="color:#ae81ff">host</span>
+</code></pre></div>
       </div></div>
 
   
