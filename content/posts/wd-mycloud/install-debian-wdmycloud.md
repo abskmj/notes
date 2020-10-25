@@ -17,7 +17,7 @@ You can skip this section if you have not formatted the drive after connecting i
 apt-get install parted
 ```
 
-- Find your WD drive on your computer, look at the partition sizes and find the one that has simar size as your WD MyCloud. For me, it was `/dev/sdb` with a size around 1.8 TB.
+- Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was `/dev/sdb` with a size around 1.8 TB.
 
 ```bash
 fdisk -l
@@ -64,7 +64,7 @@ mkswap /dev/sdb3
 ```
 
 # Install Debian
-- Find your WD drive on your computer, look at the partition sizes and find the one that has simar size as your WD MyCloud. For me, it was `/dev/sdb` with a size of around 1.8 TB.
+- Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was `/dev/sdb` with a size of around 1.8 TB.
 
 ```bash
 fdisk -l
@@ -88,7 +88,7 @@ mount -t ext4 /dev/sdb4 /mnt
 cd /mnt
 ```
 
-- Download Clean Debian package and extract it
+- Download the Clean Debian package and extract it
 
 ```bash
 wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz

@@ -2,6 +2,8 @@
     "grammarly.userWords": [
       "gridfile",
       "multer",
+      "mycloud",
+      "sdb",
       "snapcraft"
     ]
 }
