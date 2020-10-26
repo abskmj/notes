@@ -10,7 +10,7 @@ tags: ['ASUS ROG Zephyrus G14', 'PopOS']
 
 - Download PopOS 20.10 with NVIDIA drivers ISO from [the official site](https://pop.system76.com/)
 - Create a live USB following [the guide](https://support.system76.com/articles/live-disk/)
-- Restart the laptop and press or hold  the `esc` key when the `Republic of Gamers` logo is seen on the screen
+- Restart the laptop and press or hold the `ESC` key when the `Republic of Gamers` logo is seen on the screen
 - Select second EFI partition to boot into PopOS from USB
 - Follow [the guide](https://support.system76.com/articles/install-pop/) to try the Demo Mode 
 
@@ -34,14 +34,26 @@ The steps below are to install PopOS keeping the Windows 10 system intact
 - Click on `Erase and Install`
 - Click on `Restart` when the installation is complete
 
-> After installation, the laptop will load PopOS by default from now on. To use Windows 10, press or hold the `esc` key when the `Republic of Gamers` logo is seen and select `Windows Boot Manager` ech time.
+> After installation, the laptop will load PopOS by default from now on. To use Windows 10, press or hold the `ESC` key when the `Republic of Gamers` logo is seen and select `Windows Boot Manager` each time.
 
-# Known Issues
-## Function Key combinations are not working [Solved]
-To fix this, install the `hid-asus-rog` debian package. Download `dkms-hid-asus-rog_0.5.2-4.1_all.deb` file from [OpenSuse Repository](https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/all/)
+# Setup after installation
 
-## Volume is either at 0% or 100% [Solved]
-To fix this, add below lines to `/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common` file, just before the `[Element PCM]` section. This will also make the `mute the microphone` button usable.
+## ASUS Packages
+Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes.
+- [hid-asus-rog](https://gitlab.com/asus-linux/hid-asus-rog)
+- [asus-rog-nb-wmi](https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi)
+- [asus-nb-ctrl](https://gitlab.com/asus-linux/asus-nb-ctrl)
+
+Add these packages using package manager
+```bash
+echo "deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /" | sudo tee /etc/apt/sources.list.d/asus.list
+wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
+apt-get update
+apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
+```
+
+## Volume Control
+Add below lines to `/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common` file, just before the `[Element PCM]` section. This will also make the `mute the microphone` button usable.
 
 ```
 [Element Master]
@@ -49,15 +61,16 @@ switch = mute
 volume = ignore
 ```
 
-## No fingerprint login
-No solution yet
-
-## System times are different in Windows and PopOS [Solved]
-To fix, update the below `timedatectl` configuration in PopOS. Details are available at [support.system76.com](https://support.system76.com/articles/dual-booting/)
+## System Time in Windows & PopOS
+Update the below `timedatectl` configuration in PopOS. Details are available at [support.system76.com](https://support.system76.com/articles/dual-booting/)
 
 ```
 timedatectl set-local-rtc 1 --adjust-system-clock
 ```
+
+# Known Issues
+- No fingerprint login
+- No display in external monitor using the USB-C port (external display using HDMI port works)
 
 # Test Laptop
 The above steps are tested on the below laptop model.

@@ -4,6 +4,7 @@
       "multer",
       "mycloud",
       "sdb",
-      "snapcraft"
+      "snapcraft",
+      "timedatectl"
     ]
 }
