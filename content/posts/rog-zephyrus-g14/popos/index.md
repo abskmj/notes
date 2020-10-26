@@ -1,12 +1,13 @@
 ---
 title: "PopOS 20.10 on ASUS ROG Zephyrus G14 Laptop"
 date: 2020-10-24T10:34:30Z
-tags: ['ASUS ROG Zephyrus G14', 'PopOS']
+tags: ['ASUS ROG Zephyrus G14', 'PopOS', 'Ubuntu']
 ---
 
+Install Pop 20.10 next to Windows 10 in a multi-boot setup. Similar steps can be followed to install Ubuntu 20.10.
 
 # Demo Mode on Live USB
-> Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled.
+> Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled
 
 - Download PopOS 20.10 with NVIDIA drivers ISO from [the official site](https://pop.system76.com/)
 - Create a live USB following [the guide](https://support.system76.com/articles/live-disk/)
@@ -39,7 +40,7 @@ The steps below are to install PopOS keeping the Windows 10 system intact
 # Setup after installation
 
 ## ASUS Packages
-Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes.
+Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A coomplete list is available at [gitlab.com](https://gitlab.com/asus-linux/asus-nb-ctrl#implemented)
 - [hid-asus-rog](https://gitlab.com/asus-linux/hid-asus-rog)
 - [asus-rog-nb-wmi](https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi)
 - [asus-nb-ctrl](https://gitlab.com/asus-linux/asus-nb-ctrl)
@@ -69,6 +70,11 @@ Update the below `timedatectl` configuration in PopOS. Details are available at 
 ```
 timedatectl set-local-rtc 1 --adjust-system-clock
 ```
+
+## Text on screen too small
+Out of the box, the text on the screen is too small to read. Enable `Fractional Scaling` in `Settings > Displays` to 125% or 150% for a comfortable reading.
+
+![Display Fractional Scaling](displays-fractional-scaling.png)
 
 # Known Issues
 - No fingerprint login
