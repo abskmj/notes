@@ -40,7 +40,7 @@ The steps below are to install PopOS keeping the Windows 10 system intact
 # Setup after installation
 
 ## ASUS Packages
-Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A coomplete list is available at [gitlab.com](https://gitlab.com/asus-linux/asus-nb-ctrl#implemented)
+Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at [gitlab.com](https://gitlab.com/asus-linux/asus-nb-ctrl#implemented).
 - [hid-asus-rog](https://gitlab.com/asus-linux/hid-asus-rog)
 - [asus-rog-nb-wmi](https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi)
 - [asus-nb-ctrl](https://gitlab.com/asus-linux/asus-nb-ctrl)
