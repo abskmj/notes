@@ -61,6 +61,8 @@ switch = mute
 volume = ignore
 ```
 
+![Pulse Audio Configuration](pulseaudio-config.png)
+
 ## System Time in Windows & PopOS
 Update the below `timedatectl` configuration in PopOS. Details are available at [support.system76.com](https://support.system76.com/articles/dual-booting/)
 
