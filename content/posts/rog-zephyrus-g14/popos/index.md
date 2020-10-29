@@ -83,7 +83,7 @@ Out of the box, the text on the screen is too small to read. Enable `Fractional 
 # Test Laptop
 The above steps are tested on the below laptop model.
 
-ASUS ROG Zephyrus G14 GA401IH-HE012T
+[ASUS ROG Zephyrus G14 GA401IH-HE012T](https://amzn.to/35NWlNN)
 - AMD Ryzen 5 4600HS
 - NVIDIA GeForce GTX 1650 4GB GDDR6 VRAM
 - 8GB DDR4 3200MHz SDRAM
