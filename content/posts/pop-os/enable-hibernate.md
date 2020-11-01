@@ -43,8 +43,17 @@ echo '/swapfile none swap defaults 0 0' | sudo tee -a /etc/fstab
 
 # Configure Hibernation
 
+List the swap
+```bash
+cat /proc/swaps
+```
+
+- Swap file is generally listed as `/swapfile`
+- Swap partition is listed as `/dev/sdxx`
+
+
 ## Swap UUID
-Get the UUID for the swap file
+Get the UUID for the swap
 ```bash
 findmnt -no UUID -T /swapfile
 ```
@@ -65,13 +74,26 @@ It looks something like below
 ```
 
 ## Update Kernel Options
+For a Swap File
 ```bash
 sudo kernelstub -a “resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999”
 ```
 
+For a Swap Partition, `resume_offset` option is not needed
+```bash
+sudo kernelstub -a “resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”
+```
+
 Add below line to `/etc/initramfs-tools/conf.d/resume`. Create the file if not present
+
+For a Swap File
 ```
 resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
+```
+
+For a Swap Partition
+```
+resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
 Update the configurations
