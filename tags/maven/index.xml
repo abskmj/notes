@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Maven on Notes</title><link>https://abskmj.github.io/notes/tags/maven/</link><description>Recent content in Maven on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 18 May 2018 10:54:22 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/maven/index.xml" rel="self" type="application/rss+xml"/><item><title>Set Proxy for Maven</title><link>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</link><pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</guid><description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Maven on Notes</title><link>https://abskmj.github.io/notes/tags/maven/</link><description>Recent content in Maven on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 18 May 2018 10:54:22 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/maven/index.xml" rel="self" type="application/rss+xml"/><item><title>Set Proxy for Maven</title><link>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</link><pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</guid><description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file.</description><content>&lt;p>Proxy settings can be changed in &lt;code>{{maven_installation_folder}}/conf/settings.xml&lt;/code>. Un-comment and change the values in &lt;code>proxies&lt;/code> section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-xml" data-lang="xml">...
+&lt;span style="color:#f92672">&amp;lt;proxies&amp;gt;&lt;/span>
+&lt;span style="color:#75715e">&amp;lt;!-- proxy
+&lt;/span>&lt;span style="color:#75715e"> | Specification for one proxy, to be used in connecting to the network.
+&lt;/span>&lt;span style="color:#75715e"> |--&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;proxy&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;id&amp;gt;&lt;/span>optional&lt;span style="color:#f92672">&amp;lt;/id&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;active&amp;gt;&lt;/span>true&lt;span style="color:#f92672">&amp;lt;/active&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;protocol&amp;gt;&lt;/span>http&lt;span style="color:#f92672">&amp;lt;/protocol&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;username&amp;gt;&amp;lt;/username&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;password&amp;gt;&amp;lt;/password&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;host&amp;gt;&lt;/span>{{proxy_host_or_ip}}&lt;span style="color:#f92672">&amp;lt;/host&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;port&amp;gt;&lt;/span>8080&lt;span style="color:#f92672">&amp;lt;/port&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;nonProxyHosts&amp;gt;&lt;/span>local.net|some.host.com&lt;span style="color:#f92672">&amp;lt;/nonProxyHosts&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;/proxy&amp;gt;&lt;/span>
+&lt;span style="color:#f92672">&amp;lt;/proxies&amp;gt;&lt;/span>
+...
+&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

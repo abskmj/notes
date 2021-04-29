@@ -1,1 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Angular on Notes</title><link>https://abskmj.github.io/notes/tags/angular/</link><description>Recent content in Angular on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Tue, 10 Jul 2018 12:46:13 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/angular/index.xml" rel="self" type="application/rss+xml"/><item><title>Developing an Angular project on Cloud9 IDE</title><link>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</link><pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid><description>Update NodeJS version All of the blank VMs on cloud9 have nvm pre installed.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Angular on Notes</title><link>https://abskmj.github.io/notes/tags/angular/</link><description>Recent content in Angular on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Tue, 10 Jul 2018 12:46:13 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/angular/index.xml" rel="self" type="application/rss+xml"/><item><title>Developing an Angular project on Cloud9 IDE</title><link>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</link><pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid><description>Update NodeJS version All of the blank VMs on cloud9 have nvm pre installed.</description><content>&lt;h2 id="update-nodejs-version">Update NodeJS version&lt;/h2>
+&lt;ul>
+&lt;li>All of the blank VMs on cloud9 have &lt;a href="https://github.com/creationix/nvm">nvm&lt;/a> pre installed.&lt;/li>
+&lt;li>List all the available versions from &lt;a href="https://nodejs.org">the official site&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm ls-remote
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Choose to install the latest version&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm install v10.6.0
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Choose to use the latest version&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm use v10.6.0
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Check the version in use&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">node --version
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="angular">Angular&lt;/h2>
+&lt;ul>
+&lt;li>Install latest &lt;a href="https://cli.angular.io/">Angular CLI&lt;/a> package&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -g @angular/cli
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Create a new project named &lt;code>my-project&lt;/code> (you can use any name you need)&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ng new my-project
+cd my-project
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Change &lt;code>start&lt;/code> script in &lt;code>package.json&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
+&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ng serve --host $IP --port $PORT --public-host $C9_HOSTNAME&amp;#34;&lt;/span>,
+&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+}
+&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>On IDE menu, click on &lt;code>Preview &amp;gt; Preview Running Application&lt;/code> to get the preview URL.&lt;/li>
+&lt;/ul>
+&lt;h2 id="downside">Downside&lt;/h2>
+&lt;p>Everything works perfectly expect that the live reload, sometimes, is slower than usual.&lt;/p></content></item></channel></rss>

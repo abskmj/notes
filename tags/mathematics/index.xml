@@ -1,1 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mathematics on Notes</title><link>https://abskmj.github.io/notes/tags/mathematics/</link><description>Recent content in Mathematics on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 04 Nov 2017 20:36:33 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/mathematics/index.xml" rel="self" type="application/rss+xml"/><item><title>HackerRank Contest - Project Euler - Even Fibonacci Numbers</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</link><pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</guid><description>Solution #1 Test cases 2,3 timed out for below solution.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mathematics on Notes</title><link>https://abskmj.github.io/notes/tags/mathematics/</link><description>Recent content in Mathematics on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 04 Nov 2017 20:36:33 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/mathematics/index.xml" rel="self" type="application/rss+xml"/><item><title>HackerRank Contest - Project Euler - Even Fibonacci Numbers</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</link><pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</guid><description>Solution #1 Test cases 2,3 timed out for below solution.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
+&lt;p>Test cases 2,3 timed out for below solution.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.util.regex.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Solution&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+Scanner in &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;span style="color:#66d9ef">int&lt;/span> t &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;span style="color:#66d9ef">for&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> a0 &lt;span style="color:#f92672">=&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span> a0 &lt;span style="color:#f92672">&amp;lt;&lt;/span> t&lt;span style="color:#f92672">;&lt;/span> a0&lt;span style="color:#f92672">++){&lt;/span>
+&lt;span style="color:#66d9ef">long&lt;/span> n &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextLong&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;span style="color:#66d9ef">int&lt;/span> f1 &lt;span style="color:#f92672">=&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#66d9ef">int&lt;/span> f2 &lt;span style="color:#f92672">=&lt;/span> 1&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#66d9ef">long&lt;/span> sum &lt;span style="color:#f92672">=&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#66d9ef">while&lt;/span>&lt;span style="color:#f92672">(&lt;/span>f2 &lt;span style="color:#f92672">&amp;lt;=&lt;/span> n&lt;span style="color:#f92672">){&lt;/span>
+&lt;span style="color:#75715e">// check if even
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>f2&lt;span style="color:#f92672">%&lt;/span>2 &lt;span style="color:#f92672">==&lt;/span> 0&lt;span style="color:#f92672">){&lt;/span>
+sum &lt;span style="color:#f92672">+=&lt;/span> f2&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+&lt;span style="color:#75715e">// compute next in series
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> f &lt;span style="color:#f92672">=&lt;/span> f2 &lt;span style="color:#f92672">+&lt;/span> f1&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#75715e">// set values for next iteration
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> f1 &lt;span style="color:#f92672">=&lt;/span> f2&lt;span style="color:#f92672">;&lt;/span>
+f2 &lt;span style="color:#f92672">=&lt;/span> f&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>sum&lt;span style="color:#f92672">);&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="solution-2">Solution #2&lt;/h1>
+&lt;ul>
+&lt;li>Every 3rd number in the fibonacci series is even. This is based on the fact that sum of a odd and an even number is always odd and sum of 2 odd numbers is always even.&lt;/li>
+&lt;li>This fact results in a formula &lt;code>F(n) = 4(n-1) + F(n-2)&lt;/code>, where F(n) represents the even numbered fibonacci series.&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code>0 1 1 2 3 5 8 13 21 34 55 89
+^ ^ ^
+0 1 2 3 4 5 6 7 8 9 10 11 ===&amp;gt; f(n), fibonacci series
+0 1 2 3 ===&amp;gt; F(n) = f(3n), even numbered fibonacci series
+F(2)
+= f(6)
+= f(5) + f(4)
+= f(4) + f(3) + f(4)
+= 2f(4) + f(3) =&amp;gt; f(n) = 2f(n-2) + f(n-3) =&amp;gt; f(3) = 2f(1) + f(0) ===&amp;gt; eq1
+= 2f(3) + 2f(2) + f(3)
+= 3f(3) + 2f(1) + 2f(0)
+using values from eq1
+= 3f(3) + f(3) + f(0)
+= 4f(3) + f(0)
+= 4F(1) + F(0) =&amp;gt; F(n) = 4F(n-1) + 4F(n-2)
+&lt;/code>&lt;/pre>&lt;p>Using the above formula&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Even Fibonacci Numbers
+&lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler002
+&lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">import&lt;/span> java.util.regex.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Solution&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+Scanner in &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;span style="color:#66d9ef">int&lt;/span> t &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;span style="color:#66d9ef">for&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> a0 &lt;span style="color:#f92672">=&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span> a0 &lt;span style="color:#f92672">&amp;lt;&lt;/span> t&lt;span style="color:#f92672">;&lt;/span> a0&lt;span style="color:#f92672">++){&lt;/span>
+&lt;span style="color:#66d9ef">long&lt;/span> n &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextLong&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;span style="color:#66d9ef">long&lt;/span> f1 &lt;span style="color:#f92672">=&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#66d9ef">long&lt;/span> f2 &lt;span style="color:#f92672">=&lt;/span> 2&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#66d9ef">long&lt;/span> sum &lt;span style="color:#f92672">=&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#66d9ef">while&lt;/span>&lt;span style="color:#f92672">(&lt;/span>f2 &lt;span style="color:#f92672">&amp;lt;=&lt;/span> n&lt;span style="color:#f92672">){&lt;/span>
+sum &lt;span style="color:#f92672">+=&lt;/span> f2&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#75715e">// compute next even number in series
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">long&lt;/span> f &lt;span style="color:#f92672">=&lt;/span> 4&lt;span style="color:#f92672">*&lt;/span>f2 &lt;span style="color:#f92672">+&lt;/span> f1&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#75715e">// set values for next iteration
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> f1 &lt;span style="color:#f92672">=&lt;/span> f2&lt;span style="color:#f92672">;&lt;/span>
+f2 &lt;span style="color:#f92672">=&lt;/span> f&lt;span style="color:#f92672">;&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>sum&lt;span style="color:#f92672">);&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+&lt;span style="color:#f92672">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

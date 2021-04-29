@@ -1,1 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Project on Notes</title><link>https://abskmj.github.io/notes/tags/project/</link><description>Recent content in Project on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Wed, 17 Oct 2018 06:38:37 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>NPM Module - Complex JSON to Query String</title><link>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</link><pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</guid><description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string.</description></item><item><title>Status of Indian Railway PNR on Facebook Messenger</title><link>https://abskmj.github.io/notes/posts/projects/bhaina-bot/</link><pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/bhaina-bot/</guid><description>Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Project on Notes</title><link>https://abskmj.github.io/notes/tags/project/</link><description>Recent content in Project on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Wed, 17 Oct 2018 06:38:37 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>NPM Module - Complex JSON to Query String</title><link>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</link><pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</guid><description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string.</description><content>&lt;h1 id="abskmjqueryhttpswwwnpmjscompackageabskmjquery">&lt;a href="https://www.npmjs.com/package/@abskmj/query">@abskmj/query&lt;/a>&lt;/h1>
+&lt;p>It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;@abskmj/query&amp;#39;&lt;/span>);
+&lt;span style="color:#75715e">// query to get a list of 10 people between age 17 and 66, sorted by their age
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">filters&lt;/span> &lt;span style="color:#f92672">=&lt;/span> {
+&lt;span style="color:#a6e22e">where&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">$gt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">17&lt;/span>, &lt;span style="color:#a6e22e">$lt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">66&lt;/span> },
+},
+&lt;span style="color:#a6e22e">options&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;span style="color:#a6e22e">limit&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>,
+&lt;span style="color:#a6e22e">sort&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span> }
+}
+}
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">queryString&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">filters&lt;/span>);
+&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
+&lt;span style="color:#75715e">/*
+&lt;/span>&lt;span style="color:#75715e">console:
+&lt;/span>&lt;span style="color:#75715e">where[age][$gt]=17&amp;amp;where[age][$lt]=66&amp;amp;options[limit]=10&amp;amp;options[sort][age]=-1
+&lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">json&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">parse&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
+&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">JSON&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">json&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>));
+&lt;span style="color:#75715e">/*
+&lt;/span>&lt;span style="color:#75715e">console:
+&lt;/span>&lt;span style="color:#75715e">{
+&lt;/span>&lt;span style="color:#75715e"> &amp;#34;where&amp;#34;: {
+&lt;/span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: {
+&lt;/span>&lt;span style="color:#75715e"> &amp;#34;$gt&amp;#34;: 17,
+&lt;/span>&lt;span style="color:#75715e"> &amp;#34;$lt&amp;#34;: 66
+&lt;/span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;span style="color:#75715e"> },
+&lt;/span>&lt;span style="color:#75715e"> &amp;#34;options&amp;#34;: {
+&lt;/span>&lt;span style="color:#75715e"> &amp;#34;limit&amp;#34;: 10,
+&lt;/span>&lt;span style="color:#75715e"> &amp;#34;sort&amp;#34;: {
+&lt;/span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: -1
+&lt;/span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;span style="color:#75715e">}
+&lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="motivation">Motivation&lt;/h1>
+&lt;p>I have been working on lots of MEVN/MEAN stack applications lately. I thought it would a great idea to write the mongoose queries in the front-end code rather than creating multiple APIs for different queries. It saves lots of effort on the backend code.&lt;/p></content></item><item><title>Status of Indian Railway PNR on Facebook Messenger</title><link>https://abskmj.github.io/notes/posts/projects/bhaina-bot/</link><pubDate>Sat, 24 Feb 2018 19:33:50 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/bhaina-bot/</guid><description>Bhaina Bot Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR.</description><content>&lt;h1 id="bhaina-bot">Bhaina Bot&lt;/h1>
+&lt;p>Bhaina is a facebook messenger based chat bot that helps you with current status of any Indian Railway PNR. You don&amp;rsquo;t have to install any extra application on your mobile to use this service.&lt;/p>
+&lt;p>&lt;a href="https://m.me/BhainaBot?ref=start">Give it a try on your messenger!&lt;/a>&lt;/p></content></item></channel></rss>

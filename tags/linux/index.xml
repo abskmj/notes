@@ -1,1 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Notes</title><link>https://abskmj.github.io/notes/tags/linux/</link><description>Recent content in Linux on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sun, 26 Jul 2020 20:17:30 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Enable Hibernate on Pop OS</title><link>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</link><pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Notes</title><link>https://abskmj.github.io/notes/tags/linux/</link><description>Recent content in Linux on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sun, 26 Jul 2020 20:17:30 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Enable Hibernate on Pop OS</title><link>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</link><pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</guid><description/><content>&lt;h1 id="prerequisites">Prerequisites&lt;/h1>
+&lt;h2 id="check-if-the-kernel-supports-hibernation">Check if the kernel supports Hibernation&lt;/h2>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cat /sys/power/state
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>It should list &lt;code>disk&lt;/code> as an option on the list&lt;/p>
+&lt;h2 id="check-if-a-swap-file-or-partition-is-available">Check if a Swap file or partition is available&lt;/h2>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">free -h
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If &lt;code>Swap&lt;/code> is listed as 0, it means a swap is not available and needs to be created.&lt;/p>
+&lt;h1 id="create-a-swap-file">Create a Swap file&lt;/h1>
+&lt;ul>
+&lt;li>Create a swap file.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo fallocate -l 6G /swapfile
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>6G&lt;/code> can be updated with a recommended swap size for the machine which is listed under &lt;code>How much swap do I need?&lt;/code> section at &lt;a href="https://help.ubuntu.com/community/SwapFaq">help.ubuntu.com&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Permissions&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo chmod &lt;span style="color:#ae81ff">600&lt;/span> /swapfile
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Format as swap&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo mkswap /swapfile
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Activate the swap&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo swapon /swapfile
+echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&amp;#39;&lt;/span> | sudo tee -a /etc/fstab
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-hibernation">Configure Hibernation&lt;/h1>
+&lt;p>List the swap&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cat /proc/swaps
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Swap file is generally listed as &lt;code>/swapfile&lt;/code>&lt;/li>
+&lt;li>Swap partition is listed as &lt;code>/dev/sdxx&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="swap-uuid">Swap UUID&lt;/h2>
+&lt;p>Get the UUID for the swap&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">findmnt -no UUID -T /swapfile
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
+&lt;pre>&lt;code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+&lt;/code>&lt;/pre>&lt;h2 id="swap-offset">Swap offset&lt;/h2>
+&lt;p>This is only needed when a swap file is available. Get the offset&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo filefrag -v /swapfile | awk &lt;span style="color:#e6db74">&amp;#39;{ if($1==&amp;#34;0:&amp;#34;){print $4} }&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
+&lt;pre>&lt;code>9999999..
+&lt;/code>&lt;/pre>&lt;h2 id="update-kernel-options">Update Kernel Options&lt;/h2>
+&lt;p>For a Swap File&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset&lt;span style="color:#f92672">=&lt;/span>9999999”
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For a Swap Partition, &lt;code>resume_offset&lt;/code> option is not needed&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add below line to &lt;code>/etc/initramfs-tools/conf.d/resume&lt;/code>. Create the file if not present&lt;/p>
+&lt;p>For a Swap File&lt;/p>
+&lt;pre>&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
+&lt;/code>&lt;/pre>&lt;p>For a Swap Partition&lt;/p>
+&lt;pre>&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+&lt;/code>&lt;/pre>&lt;p>Update the configurations&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo update-initramfs -u
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="test-hibernation">Test Hibernation&lt;/h1>
+&lt;p>Remember to save your work before trying this out&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo systemctl hibernate
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="references">References&lt;/h1>
+&lt;ul>
+&lt;li>SwapFaq at &lt;a href="https://help.ubuntu.com/community/SwapFaq">help.ubuntu.com&lt;/a>&lt;/li>
+&lt;li>Guide to hibernate? &lt;a href="https://pop-planet.info/forums/threads/guide-to-hibernate-answer-is-a-guide.426/">pop-planet.info&lt;/a>&lt;/li>
+&lt;/ul></content></item></channel></rss>

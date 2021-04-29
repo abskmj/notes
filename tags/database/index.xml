@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Database on Notes</title><link>https://abskmj.github.io/notes/tags/database/</link><description>Recent content in Database on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 21 Sep 2020 12:00:02 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/database/index.xml" rel="self" type="application/rss+xml"/><item><title>Upload files to MongoDB GridFS with Express</title><link>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</link><pubDate>Mon, 21 Sep 2020 12:00:02 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</guid><description>Create express based APIs to upload and download files to and from MongoDB GridFS.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Database on Notes</title><link>https://abskmj.github.io/notes/tags/database/</link><description>Recent content in Database on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 21 Sep 2020 12:00:02 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/database/index.xml" rel="self" type="application/rss+xml"/><item><title>Upload files to MongoDB GridFS with Express</title><link>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</link><pubDate>Mon, 21 Sep 2020 12:00:02 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</guid><description>Create express based APIs to upload and download files to and from MongoDB GridFS.</description><content>&lt;p>Create express based APIs to upload and download files to and from MongoDB GridFS.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://docs.mongodb.com/manual/reference/glossary/#term-gridfs">GridFS&lt;/a> is a specification for storing and retrieving files that exceed the BSON-document size limit of 16 MB.&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="install-dependencies">Install Dependencies&lt;/h1>
+&lt;ul>
+&lt;li>&lt;code>express&lt;/code> to create the APIs&lt;/li>
+&lt;li>&lt;code>multer&lt;/code> to handle multi-part file uploads&lt;/li>
+&lt;li>&lt;code>mongoose&lt;/code> to manage connections to MongoDB&lt;/li>
+&lt;li>&lt;code>gridfile&lt;/code> to manage interactions with GridFS&lt;/li>
+&lt;/ul>
+&lt;h1 id="gridfile-mongoose-model">GridFile Mongoose Model&lt;/h1>
+&lt;p>&lt;a href="https://github.com/abskmj/gridfile">GridFile&lt;/a> is a reusable Mongoose Schema for MongoDB GridFS.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// gridfile.model.js
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;mongoose&amp;#39;&lt;/span>)
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">schema&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;gridfile&amp;#39;&lt;/span>)
+&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">model&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;GridFile&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">schema&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="multer-middleware">Multer Middleware&lt;/h1>
+&lt;p>&lt;a href="https://www.npmjs.com/package/multer">Multer&lt;/a> will parse &lt;code>multipart/form-data&lt;/code> request and the uploaded files will be accessible as &lt;code>req.files&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;multer&amp;#39;&lt;/span>)
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">upload&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span>({ &lt;span style="color:#a6e22e">dest&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>.&lt;span style="color:#a6e22e">join&lt;/span>(&lt;span style="color:#a6e22e">__dirname&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;.&amp;#39;&lt;/span>) })
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="upload-file-api">Upload File API&lt;/h1>
+&lt;p>API uses the multer middleware and GridFile model to upload files to GridFS.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">post&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">upload&lt;/span>.&lt;span style="color:#a6e22e">any&lt;/span>(), &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;span style="color:#75715e">// uploaded file are accessible as req.files
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">files&lt;/span>) {
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">promises&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">files&lt;/span>.&lt;span style="color:#a6e22e">map&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">file&lt;/span>) =&amp;gt; {
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">fileStream&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span>.&lt;span style="color:#a6e22e">createReadStream&lt;/span>(&lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">path&lt;/span>)
+&lt;span style="color:#75715e">// upload file to gridfs
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>({ &lt;span style="color:#a6e22e">filename&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">originalname&lt;/span> })
+&lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span>.&lt;span style="color:#a6e22e">upload&lt;/span>(&lt;span style="color:#a6e22e">fileStream&lt;/span>)
+&lt;span style="color:#75715e">// delete the file from local folder
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span>.&lt;span style="color:#a6e22e">unlinkSync&lt;/span>(&lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">path&lt;/span>)
+})
+&lt;span style="color:#66d9ef">await&lt;/span> Promise.&lt;span style="color:#a6e22e">all&lt;/span>(&lt;span style="color:#a6e22e">promises&lt;/span>)
+}
+&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">sendStatus&lt;/span>(&lt;span style="color:#ae81ff">201&lt;/span>)
+} &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
+&lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
+}
+})
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="list-files-api">List Files API&lt;/h1>
+&lt;p>API returns information about uploaded files.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">files&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({})
+&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">files&lt;/span>)
+} &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
+&lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
+}
+})
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample response&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">[
+{
+&lt;span style="color:#f92672">&amp;#34;aliases&amp;#34;&lt;/span>: [],
+&lt;span style="color:#f92672">&amp;#34;_id&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;5f6850023516552ad21d0007&amp;#34;&lt;/span>,
+&lt;span style="color:#f92672">&amp;#34;length&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">7945&lt;/span>,
+&lt;span style="color:#f92672">&amp;#34;chunkSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">261120&lt;/span>,
+&lt;span style="color:#f92672">&amp;#34;uploadDate&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;2020-09-21T07:02:26.389Z&amp;#34;&lt;/span>,
+&lt;span style="color:#f92672">&amp;#34;filename&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;attachment.pdf&amp;#34;&lt;/span>,
+&lt;span style="color:#f92672">&amp;#34;md5&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fa7d7e650b2cec68f302b31ba28235d8&amp;#34;&lt;/span>
+}
+]
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="download-file-api">Download File API&lt;/h1>
+&lt;p>API returns the file from the GridFS using its id.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files/:id/:name&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;span style="color:#66d9ef">const&lt;/span> { &lt;span style="color:#a6e22e">id&lt;/span>, &lt;span style="color:#a6e22e">name&lt;/span> } &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">params&lt;/span>
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>.&lt;span style="color:#a6e22e">findById&lt;/span>(&lt;span style="color:#a6e22e">id&lt;/span>)
+&lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">gridFile&lt;/span>) {
+&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">attachment&lt;/span>(&lt;span style="color:#a6e22e">name&lt;/span>)
+&lt;span style="color:#a6e22e">gridFile&lt;/span>.&lt;span style="color:#a6e22e">downloadStream&lt;/span>(&lt;span style="color:#a6e22e">res&lt;/span>)
+} &lt;span style="color:#66d9ef">else&lt;/span> {
+&lt;span style="color:#75715e">// file not found
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">status&lt;/span>(&lt;span style="color:#ae81ff">404&lt;/span>).&lt;span style="color:#a6e22e">json&lt;/span>({ &lt;span style="color:#a6e22e">error&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;file not found&amp;#39;&lt;/span> })
+}
+} &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
+&lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
+}
+})
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample Request URL&lt;/p>
+&lt;pre>&lt;code>/v1/files/5f6850023516552ad21d0007/attachment.pdf
+&lt;/code>&lt;/pre>&lt;blockquote>
+&lt;p>A working codebase for reference is available at &lt;a href="https://gist.github.com/abskmj/655dbc3191e108d6a5a55e28446bc1e9">gist.github.com&lt;/a>&lt;/p>
+&lt;/blockquote></content></item></channel></rss>

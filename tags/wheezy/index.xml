@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wheezy on Notes</title><link>https://abskmj.github.io/notes/tags/wheezy/</link><description>Recent content in Wheezy on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sun, 05 Apr 2020 18:26:32 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/wheezy/index.xml" rel="self" type="application/rss+xml"/><item><title>Sources List for Debian Wheezy</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</link><pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</guid><description>As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wheezy on Notes</title><link>https://abskmj.github.io/notes/tags/wheezy/</link><description>Recent content in Wheezy on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sun, 05 Apr 2020 18:26:32 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/wheezy/index.xml" rel="self" type="application/rss+xml"/><item><title>Sources List for Debian Wheezy</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</link><pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</guid><description>As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.</description><content>&lt;blockquote>
+&lt;p>As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Open &lt;code>/etc/apt/sources.list&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Comment existing sources&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add below sources&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">deb http://archive.debian.org/debian/ wheezy main non-free contrib
+deb-src http://archive.debian.org/debian/ wheezy main non-free contrib
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Now you can run&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>If you get below error&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">There is no public key available &lt;span style="color:#66d9ef">for&lt;/span> the following key IDs
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Install below package&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install debian-archive-keyring
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Now you can rerun&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
+&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

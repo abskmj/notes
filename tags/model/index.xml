@@ -1,1 +1,148 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Model on Notes</title><link>https://abskmj.github.io/notes/tags/model/</link><description>Recent content in Model on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 08 Mar 2019 03:09:10 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/model/index.xml" rel="self" type="application/rss+xml"/><item><title>Lean option and Hydrate method in Mongoose</title><link>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</link><pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</guid><description>Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary.</description></item><item><title>Model Relations in Mongoose</title><link>https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/</link><pubDate>Mon, 24 Dec 2018 09:35:35 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/</guid><description>Model Relations Relations are logical links which define how models are connected with each other.</description></item><item><title>Custom Model Methods in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</link><pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</guid><description>Loopback models can be extended by adding custom methods to them.</description></item><item><title>Enable Destroy All API for a model in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link><pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid><description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Model on Notes</title><link>https://abskmj.github.io/notes/tags/model/</link><description>Recent content in Model on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 08 Mar 2019 03:09:10 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/model/index.xml" rel="self" type="application/rss+xml"/><item><title>Lean option and Hydrate method in Mongoose</title><link>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</link><pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</guid><description>Lean and Hydrate in Mongoose Lean option on Query Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary.</description><content>&lt;h1 id="lean-and-hydrate-in-mongoose">Lean and Hydrate in Mongoose&lt;/h1>
+&lt;h1 id="lean-option-on-query">Lean option on Query&lt;/h1>
+&lt;p>Typically, when returning data from the database as an API response, the virtuals/methods available on a mongoose document are unnecessary. &lt;a href="https://mongoosejs.com/docs/api.html#query_Query-lean">Lean option&lt;/a> can be set on such queries to return just the data directly from the database. This also improves the overall performance of the API.&lt;/p>
+&lt;blockquote>
+&lt;p>Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments. They have no save method, getters/setters or other Mongoose magic applied.&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>) =&amp;gt; {
+&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">users&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({ &lt;span style="color:#a6e22e">status&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;active&amp;#39;&lt;/span> }).&lt;span style="color:#a6e22e">limit&lt;/span>(&lt;span style="color:#ae81ff">10&lt;/span>).&lt;span style="color:#a6e22e">lean&lt;/span>();
+&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">users&lt;/span>);
+});
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="hydrate-method-on-model">Hydrate method on Model&lt;/h1>
+&lt;p>Hydrating is opposite of lean option. &lt;a href="https://mongoosejs.com/docs/api.html#model_Model.hydrate">Hydrate method&lt;/a> can be used to initialize a mongoose document from a plain javascript object to get access to its virtuals/methods.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">user&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">findOne&lt;/span>().&lt;span style="color:#a6e22e">lean&lt;/span>();
+&lt;span style="color:#66d9ef">let&lt;/span> document &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">hydrate&lt;/span>(&lt;span style="color:#a6e22e">user&lt;/span>);
+&lt;span style="color:#a6e22e">assert&lt;/span>(document &lt;span style="color:#66d9ef">instanceof&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">Document&lt;/span>); &lt;span style="color:#75715e">// true
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="code-repository">Code Repository&lt;/h1>
+&lt;p>A working code repository is available at &lt;a href="https://github.com/abskmj/example-mongoose-lean-hydrate">github&lt;/a>. Get started in your local environment&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/abskmj/example-mongoose-lean-hydrate.git
+cd example-mongoose-lean-hydrate
+npm install
+npm test
+&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Model Relations in Mongoose</title><link>https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/</link><pubDate>Mon, 24 Dec 2018 09:35:35 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/topics/mongoose/model-relations/</guid><description>Model Relations Relations are logical links which define how models are connected with each other.</description><content>&lt;h1 id="model-relations">Model Relations&lt;/h1>
+&lt;p>Relations are logical links which define how models are connected with each other. A document of a model can be connected to one or more documents of the same or another model.&lt;/p>
+&lt;p>A relation between models are generally of two types:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Belongs To&lt;/strong>: A document in the source model is connected with a document in the destination model by putting the id of the destination document in the source document.&lt;/li>
+&lt;li>&lt;strong>Has Many / Has One&lt;/strong>: A document in the source model is connected with one or many documents in destination models by putting the id of the source document in destination document(s).&lt;/li>
+&lt;/ul>
+&lt;h1 id="relation-belongs-to">Relation: Belongs To&lt;/h1>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;blockquote>
+&lt;p>A blog post belongs to a user&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="user-schema">User Schema&lt;/h3>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
+&lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> String,
+&lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="blog-post-schema">Blog Post Schema&lt;/h3>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
+&lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> String,
+&lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
+},
+&lt;span style="color:#a6e22e">author&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">Schema&lt;/span>.&lt;span style="color:#a6e22e">Types&lt;/span>.&lt;span style="color:#a6e22e">ObjectId&lt;/span>,
+&lt;span style="color:#a6e22e">ref&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;User&amp;#39;&lt;/span>,
+&lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="populate">Populate&lt;/h2>
+&lt;p>Now the author of a blog post can be easily populated by:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">Post&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>)
+&lt;span style="color:#75715e">/*
+&lt;/span>&lt;span style="color:#75715e"> {
+&lt;/span>&lt;span style="color:#75715e"> _id: 5f71af94e66f4728f68ffc06,
+&lt;/span>&lt;span style="color:#75715e"> name: &amp;#39;Relation: Belongs To&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e"> author: {
+&lt;/span>&lt;span style="color:#75715e"> _id: 5f71af94e66f4728f68ffc05,
+&lt;/span>&lt;span style="color:#75715e"> name: &amp;#39;abskmj&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e"> email: &amp;#39;abskmj@email.com&amp;#39;
+&lt;/span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="relation-has-many--has-one">Relation: Has Many / Has One&lt;/h1>
+&lt;h2 id="example-1">Example&lt;/h2>
+&lt;blockquote>
+&lt;p>A user has many blog posts&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="user-schema-1">User Schema&lt;/h3>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">schema&lt;/span>.&lt;span style="color:#a6e22e">virtual&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>, {
+&lt;span style="color:#a6e22e">ref&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Post&amp;#39;&lt;/span>,
+&lt;span style="color:#a6e22e">localField&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;_id&amp;#39;&lt;/span>,
+&lt;span style="color:#a6e22e">foreignField&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>
+})
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="populate-1">Populate&lt;/h2>
+&lt;p>Now the author of a blog post can be easily populated by:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>)
+&lt;span style="color:#75715e">/*
+&lt;/span>&lt;span style="color:#75715e"> {
+&lt;/span>&lt;span style="color:#75715e"> _id: 5f71ce43687f2a2fb97fa462,
+&lt;/span>&lt;span style="color:#75715e"> name: &amp;#39;abskmj&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e"> email: &amp;#39;abskmj@email.com&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e"> posts: [
+&lt;/span>&lt;span style="color:#75715e"> {
+&lt;/span>&lt;span style="color:#75715e"> _id: 5f71ce43687f2a2fb97fa463,
+&lt;/span>&lt;span style="color:#75715e"> name: &amp;#39;Relation: Belongs To&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e"> author: 5f71ce43687f2a2fb97fa462
+&lt;/span>&lt;span style="color:#75715e"> },
+&lt;/span>&lt;span style="color:#75715e"> {
+&lt;/span>&lt;span style="color:#75715e"> _id: 5f71ce43687f2a2fb97fa464,
+&lt;/span>&lt;span style="color:#75715e"> name: &amp;#39;Relation: Has One&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e"> author: 5f71ce43687f2a2fb97fa462
+&lt;/span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;span style="color:#75715e"> ],
+&lt;/span>&lt;span style="color:#75715e"> id: &amp;#39;5f71ce43687f2a2fb97fa462&amp;#39;
+&lt;/span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="note">Note&lt;/h1>
+&lt;p>Virtuals are not included in string version of the model instances by default. To include them, set the &lt;code>virtuals&lt;/code> option to &lt;code>true&lt;/code> on schema&amp;rsquo;s &lt;code>toObject&lt;/code> and &lt;code>toJSON&lt;/code> options.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Schema&lt;/span>(&lt;span style="color:#a6e22e">userSchema&lt;/span>, {
+&lt;span style="color:#a6e22e">toObject&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">virtuals&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> },
+&lt;span style="color:#a6e22e">toJSON&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">virtuals&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> }
+})
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>A working codebase for reference is available at &lt;a href="https://gist.github.com/abskmj/cb5bb57829c677fe38b724ad864eaa5b">gist.github.com&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="reference">Reference&lt;/h1>
+&lt;ul>
+&lt;li>Populate Virtuals at &lt;a href="https://mongoosejs.com/docs/populate.html#populate-virtuals">mongoosejs.com&lt;/a>&lt;/li>
+&lt;/ul></content></item><item><title>Custom Model Methods in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</link><pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</guid><description>Loopback models can be extended by adding custom methods to them.</description><content>&lt;p>Loopback models can be extended by adding custom methods to them. A method can be:&lt;/p>
+&lt;ul>
+&lt;li>Model Method: the method is available on Model itself.&lt;/li>
+&lt;li>Instance Method: the method is available on an instance of the model.&lt;/li>
+&lt;/ul>
+&lt;h1 id="model-js-file">Model JS file&lt;/h1>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model.js
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>(&lt;span style="color:#a6e22e">Model&lt;/span>) {
+&lt;span style="color:#75715e">// Model Method
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
+...
+}
+&lt;span style="color:#75715e">// Instance Method
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">prototype&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
+...
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model method
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">models&lt;/span>.&lt;span style="color:#a6e22e">Model&lt;/span>;
+&lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
+&lt;span style="color:#75715e">// Instance Method
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">instance&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>();
+&lt;span style="color:#a6e22e">instance&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
+&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Enable Destroy All API for a model in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link><pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid><description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.</description><content>&lt;p>Destroy All API (&lt;code>Model.destroyAll()&lt;/code>) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.&lt;/p>
+&lt;h1 id="remote-method">Remote Method&lt;/h1>
+&lt;p>A corresponding remote method can be added to the &lt;code>model.js&lt;/code> file to enable this API. This method also supports a filter to enable selective deletion.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">Model&lt;/span>) {
+&lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">remoteMethod&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;destroyAll&amp;#39;&lt;/span>, {
+&lt;span style="color:#a6e22e">isStatic&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Delete all matching records&amp;#39;&lt;/span>,
+&lt;span style="color:#a6e22e">accessType&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;WRITE&amp;#39;&lt;/span>,
+&lt;span style="color:#a6e22e">accepts&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">arg&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;where&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;object&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;filter.where object&amp;#39;&lt;/span> },
+&lt;span style="color:#a6e22e">http&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">verb&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;del&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/&amp;#39;&lt;/span> }
+});
+};
+&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

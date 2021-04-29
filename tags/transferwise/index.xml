@@ -1,1 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Transferwise on Notes</title><link>https://abskmj.github.io/notes/tags/transferwise/</link><description>Recent content in Transferwise on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Wed, 28 Oct 2020 11:50:27 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/transferwise/index.xml" rel="self" type="application/rss+xml"/><item><title>Receive International Payments for freelance work in India</title><link>https://abskmj.github.io/notes/posts/freelance/payments/</link><pubDate>Wed, 28 Oct 2020 11:50:27 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/freelance/payments/</guid><description>Payment methods to receive payments from foreign clients in a bank account in India.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Transferwise on Notes</title><link>https://abskmj.github.io/notes/tags/transferwise/</link><description>Recent content in Transferwise on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Wed, 28 Oct 2020 11:50:27 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/transferwise/index.xml" rel="self" type="application/rss+xml"/><item><title>Receive International Payments for freelance work in India</title><link>https://abskmj.github.io/notes/posts/freelance/payments/</link><pubDate>Wed, 28 Oct 2020 11:50:27 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/freelance/payments/</guid><description>Payment methods to receive payments from foreign clients in a bank account in India.</description><content>&lt;p>Payment methods to receive payments from foreign clients in a bank account in India.&lt;/p>
+&lt;blockquote>
+&lt;p>Please note that the information provided below is from personal experience and may not same as what is listed on the website of the methods. This would help to decide which method is better in different scenarios.&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>Transferwise&lt;/th>
+&lt;th>Payoneer&lt;/th>
+&lt;th>Paypal&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>How is fund deposited?&lt;/td>
+&lt;td>Deposited &lt;code>directly&lt;/code> to an Indian Bank Acount&lt;/td>
+&lt;td>Deposited to the Payoneer account and auto-withdrawn daily to an Indian Bank Account&lt;/td>
+&lt;td>Deposited to the Paypal account and auto-withdrawn daily to an Indian Bank Account&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>How much time is taken to get the fund in the bank account?&lt;/td>
+&lt;td>Within a day, sometimes within &lt;code>few hours&lt;/code>&lt;/td>
+&lt;td>1 to 2 Days&lt;/td>
+&lt;td>2 to 15 days (There were instances where the fund was put on hold for verification and took around 15 days to get deposited)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>How much transaction fee is charged?&lt;/td>
+&lt;td>Dynamic fee based on the amount to be transferred but the &lt;code>fee is shown upfront&lt;/code> and &lt;code>lowest&lt;/code> compared to other methods &lt;a href="https://transferwise.com/help/articles/2522717/fees-for-sending-money">Details&lt;/a>&lt;/td>
+&lt;td>&lt;code>Upto 2%&lt;/code> as currency conversion fee when withdrawing to a bank &lt;a href="https://www.payoneer.com/about/fees/">Details&lt;/a>&lt;/td>
+&lt;td>&lt;code>4.40%&lt;/code> + Fixed Fee when receiving the payment and &lt;code>4%&lt;/code> as currency conversion fee when withdrawing to a bank &lt;a href="https://www.paypal.com/in/webapps/mpp/merchant-fees">Details&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>How is the exchange rate to INR?&lt;/td>
+&lt;td>&lt;code>Best&lt;/code> (Mid-market rate)&lt;/td>
+&lt;td>&lt;code>Better&lt;/code> compared to Paypal as conversion fee is lower&lt;/td>
+&lt;td>&lt;code>Bad&lt;/code> as conversion fee is higher&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>How much of a hassle is it for the client?&lt;/td>
+&lt;td>&lt;code>High&lt;/code> as they have to create an account with Transferwise and add a payee. Clients with a low-value project &lt;code>might not agree&lt;/code> to this.&lt;/td>
+&lt;td>&lt;code>Low&lt;/code> if they have a Payoneer Account&lt;/td>
+&lt;td>&lt;code>Low&lt;/code> if they have a Paypal account&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Can a client pay without signing up for an account?&lt;/td>
+&lt;td>No&lt;/td>
+&lt;td>&lt;code>Yes&lt;/code>, a client can send the funds as a bank transfer to Payoneer local receiving accounts &lt;a href="https://www.payoneer.com/solutions/global-payment-service/">Details&lt;/a>&lt;/td>
+&lt;td>No&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>What information to share with the client?&lt;/td>
+&lt;td>Full Name, Postal Address with Pincode, Bank Account with IFSC&lt;/td>
+&lt;td>Payoneer Email Address&lt;/td>
+&lt;td>Paypal Email Address&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Which is recommended?&lt;/td>
+&lt;td>&lt;code>Highly recommended&lt;/code> for best conversion rate and upfront fees. Few clients would cover the fees while making the payment.&lt;/td>
+&lt;td>Recommended for business transaction for better conversion rates than Paypal&lt;/td>
+&lt;td>Recommended when no other method is feasible&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Sign Up&lt;/td>
+&lt;td>Only the client needs an account, &lt;a href="https://transferwise.prf.hn/l/K9elZnL">Create an Account&lt;/a>&lt;/td>
+&lt;td>&lt;a href="http://share.payoneer.com/nav/v5CqoAaBZxefM8qZvxOiFR8Nvw9o8VEUczhFfTrw9vEEKkcEsWmbic15QF5gMDmYcBqw_L4hrrdl4ujHnavZmQ2">Create an Account&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.paypal.com/in/webapps/mpp/account-selection?refBy=9HPdLB1oQk1603865477380">Create an Account&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></content></item></channel></rss>

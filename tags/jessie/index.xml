@@ -1,1 +1,173 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jessie on Notes</title><link>https://abskmj.github.io/notes/tags/jessie/</link><description>Recent content in Jessie on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/jessie/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description></item><item><title>Turn off the color with ls command</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</link><pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</guid><description>Alias See if there are any alias defined for ls on your terminal</description></item><item><title>Install Debian Jessie on WD MyCloud (Gen1)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</link><pubDate>Wed, 15 Apr 2020 14:33:04 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</guid><description>De-attach WD Drive You will have to open your WD MyCloud device and remove the HDD or drive inside it.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jessie on Notes</title><link>https://abskmj.github.io/notes/tags/jessie/</link><description>Recent content in Jessie on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/jessie/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description><content>&lt;h1 id="install-samba">Install Samba&lt;/h1>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install samba
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-samba">Configure Samba&lt;/h1>
+&lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nano /etc/samba/smb.conf
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Contents of &lt;code>smb.conf&lt;/code>&lt;/p>
+&lt;pre>&lt;code>[global]
+workgroup = WORKGROUP
+server string = Samba Server %v
+netbios name = WDMyCloud
+security = user
+map to guest = bad user
+dns proxy = no
+[Public]
+path = /data/shares/Public
+force group = users
+create mask = 0660
+directory mask = 0771
+browsable =yes
+writable = yes
+guest ok = yes
+&lt;/code>&lt;/pre>&lt;h1 id="restart-samba-service">Restart Samba Service&lt;/h1>
+&lt;p>The samba service has to restarted each time to use the new configuration.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">/etc/init.d/samba restart
+&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Turn off the color with ls command</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</link><pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</guid><description>Alias See if there are any alias defined for ls on your terminal</description><content>&lt;h1 id="alias">Alias&lt;/h1>
+&lt;p>See if there are any alias defined for &lt;code>ls&lt;/code> on your terminal&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">alias
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For me it was &lt;code>alias ls='ls $LS_OPTIONS'&lt;/code> and &lt;code>LS_OPTIONS&lt;/code> environment variable had a value of &lt;code>--color=auto&lt;/code>&lt;/p>
+&lt;h1 id="bashrc">.bashrc&lt;/h1>
+&lt;p>Check the contents of your &lt;code>~/.bashrc&lt;/code> file. Generally, these aliases are defined here. Mine had these lines&lt;/p>
+&lt;pre>&lt;code>export LS_OPTIONS='--color=auto'
+eval &amp;quot;`dircolors`&amp;quot;
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+alias l='ls $LS_OPTIONS -lA'
+&lt;/code>&lt;/pre>&lt;p>Update &lt;code>export LS_OPTIONS='--color=auto'&lt;/code> to &lt;code>export LS_OPTIONS='--color=never'&lt;/code> and restart the terminal&lt;/p>
+&lt;pre>&lt;code>export LS_OPTIONS='--color=never'
+eval &amp;quot;`dircolors`&amp;quot;
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+alias l='ls $LS_OPTIONS -lA'
+&lt;/code>&lt;/pre>&lt;p>Also, take note of the other two helpful aliases.&lt;/p></content></item><item><title>Install Debian Jessie on WD MyCloud (Gen1)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</link><pubDate>Wed, 15 Apr 2020 14:33:04 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</guid><description>De-attach WD Drive You will have to open your WD MyCloud device and remove the HDD or drive inside it.</description><content>&lt;h1 id="de-attach-wd-drive">De-attach WD Drive&lt;/h1>
+&lt;ul>
+&lt;li>You will have to open your WD MyCloud device and remove the HDD or drive inside it.&lt;/li>
+&lt;li>Attach the drive to your computer.&lt;/li>
+&lt;li>If you don&amp;rsquo;t have a Linux based OS installed on your computer, you can boot your computer through a live USB. See how to create one at &lt;a href="https://ubuntu.com/tutorials/tutorial-create-a-usb-stick-on-windows#1-overview">ubuntu.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="create-partitions">Create Partitions&lt;/h1>
+&lt;p>You can skip this section if you have not formatted the drive after connecting it to your computer and have the original partitions.&lt;/p>
+&lt;ul>
+&lt;li>Install need software&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install parted
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size around 1.8 TB.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Run the utility on your WD drive&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">parted /dev/sdb
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Print all partitions on the drive&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">print
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Remove all the partitions. For me, there was only one partition&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">remove &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Recreate all needed partitions&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mklabel gpt
+mkpart primary 528M 2576M
+mkpart primary 2576M 4624M
+mkpart primary 16M 528M
+mkpart primary 4828M 100%
+mkpart primary 4624M 4724M
+mkpart primary 4724M 4824M
+mkpart primary 4824M 4826M
+mkpart primary 4826M 4828M
+set &lt;span style="color:#ae81ff">1&lt;/span> raid on
+set &lt;span style="color:#ae81ff">2&lt;/span> raid on
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Quit the utility&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">quit
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Format data and swap partitions&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkfs -t ext4 /dev/sdb4
+mkswap /dev/sdb3
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="install-debian">Install Debian&lt;/h1>
+&lt;ul>
+&lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size of around 1.8 TB.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Install software for RAID devices&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install mdadm
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Mount RAID partitions&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mdadm --stop /dev/md*
+mdadm -A /dev/md0 /dev/sdb1 /dev/sdb2
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Mount data partitions&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mount -t ext4 /dev/sdb4 /mnt
+cd /mnt
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Download the Clean Debian package and extract it&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
+tar -xvfz clean-debian-jessie.tgz
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>If you are planning to install one of the original packages. You can download that package instead of Debian.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># v3.x&lt;/span>
+wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v03.04.01-230.tar.gz
+tar -xvfz original-v03.04.01-230.tar.gz
+&lt;span style="color:#75715e"># v4.x&lt;/span>
+wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v04.01.02-417.tar.gz
+tar -xvfz original-v04.01.02-417.tar.gz
+&lt;/code>&lt;/pre>&lt;/div>&lt;/blockquote>
+&lt;ul>
+&lt;li>Copy images to partitions&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb5
+dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb6
+dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>config.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb7
+dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>config.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb8
+dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>rootfs.img of&lt;span style="color:#f92672">=&lt;/span>/dev/md0
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="re-attach-wd-drive">Re-attach WD Drive&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>You can shut your computer down and remove the WD drive.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You don&amp;rsquo;t have to assemble the device completely right now, you can simply connect the plate to the drive and attach a LAN / power cord to it.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>It should start up and show a yellow light.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You should see a green light in a while, which means Debian has started properly.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You can now ssh into your MyCloud device.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh root@192.168.X.XXX &lt;span style="color:#75715e"># replace with your IP &lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>The default password for the root user is &lt;code>mycloud&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>DO WHATEVER YOU WANT WITH YOUR NEW LINUX BOX! : )&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>WARNING: Executing &lt;code>apt-get upgrade&lt;/code> sometimes bricks the device and should avoid it.&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="whats-next">What&amp;rsquo;s Next?&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/">Setup local timezone&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/">Setup a Public Samba Share&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>Original materials from fox-exe at &lt;a href="https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen1/">fox-exe.ru&lt;/a>&lt;/li>
+&lt;li>Re-uploaded packages at &lt;a href="https://github.com/abskmj/wd-mycloud-gen1/releases">github.com&lt;/a>&lt;/li>
+&lt;/ul></content></item></channel></rss>

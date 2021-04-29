@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Headers on Notes</title><link>https://abskmj.github.io/notes/tags/headers/</link><description>Recent content in Headers on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sun, 10 May 2020 13:03:19 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/headers/index.xml" rel="self" type="application/rss+xml"/><item><title>Express middleware to log request / response headers</title><link>https://abskmj.github.io/notes/posts/express/express-req-res-headers/</link><pubDate>Sun, 10 May 2020 13:03:19 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/express/express-req-res-headers/</guid><description>Express Middleware Logging request and response headers for tracing purpose</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Headers on Notes</title><link>https://abskmj.github.io/notes/tags/headers/</link><description>Recent content in Headers on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sun, 10 May 2020 13:03:19 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/headers/index.xml" rel="self" type="application/rss+xml"/><item><title>Express middleware to log request / response headers</title><link>https://abskmj.github.io/notes/posts/express/express-req-res-headers/</link><pubDate>Sun, 10 May 2020 13:03:19 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/express/express-req-res-headers/</guid><description>Express Middleware Logging request and response headers for tracing purpose</description><content>&lt;h1 id="express-middleware">Express Middleware&lt;/h1>
+&lt;p>Logging request and response headers for tracing purpose&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>((&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">requestHeaders&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>
+&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Request Headers:&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">requestHeaders&lt;/span>)
+&lt;span style="color:#75715e">// Request Headers: {
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// &amp;#39;user-agent&amp;#39;: &amp;#39;PostmanRuntime/7.24.1&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// accept: &amp;#39;*/*&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// &amp;#39;cache-control&amp;#39;: &amp;#39;no-cache&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// &amp;#39;postman-token&amp;#39;: &amp;#39;74416f71-0d09-453f-b714-3737dfd9f6b4&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// host: &amp;#39;localhost:3000&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// &amp;#39;accept-encoding&amp;#39;: &amp;#39;gzip, deflate, br&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// connection: &amp;#39;keep-alive&amp;#39;
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// }
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">on&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;finish&amp;#39;&lt;/span>, () =&amp;gt; {
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">responseHeaders&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">getHeaders&lt;/span>()
+&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Response Headers:&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">responseHeaders&lt;/span>)
+&lt;span style="color:#75715e">// Response Headers: [Object: null prototype] {
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// &amp;#39;x-powered-by&amp;#39;: &amp;#39;Express&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// &amp;#39;content-type&amp;#39;: &amp;#39;text/html; charset=utf-8&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// &amp;#39;content-length&amp;#39;: &amp;#39;12&amp;#39;,
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// etag: &amp;#39;W/&amp;#34;c-Lve95gjOVATpfV8EL5X4nxwjKHE&amp;#34;&amp;#39;
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// }
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> })
+&lt;span style="color:#a6e22e">nxt&lt;/span>()
+})
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>More details on response &lt;code>finish&lt;/code> event and others at &lt;a href="https://nodejs.org/api/http.html#http_event_finish">nodejs.org&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>There is a codebase for reference at &lt;a href="https://gist.github.com/abskmj/cef6d790d1b8778ce37eafc178b550ce">gist.github.com&lt;/a>&lt;/p>
+&lt;/blockquote></content></item></channel></rss>
