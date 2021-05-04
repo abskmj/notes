@@ -5,6 +5,8 @@
       "mycloud",
       "sdb",
       "snapcraft",
-      "timedatectl"
+      "timedatectl",
+      "yml",
+      "nyc"
     ]
 }
