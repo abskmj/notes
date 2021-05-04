@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Snap on Notes</title><link>https://abskmj.github.io/notes/tags/snap/</link><description>Recent content in Snap on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 04 Jul 2020 15:09:06 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/snap/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup Snapcraft in a Github Action Workflow</title><link>https://abskmj.github.io/notes/posts/github/actions/setup-snapcraft/</link><pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/github/actions/setup-snapcraft/</guid><description>Installation snapcraft executable can be installed with the snap. Recent Ubuntu versions now have snap executable pre-installed.</description><content>&lt;h1 id="installation">Installation&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Snap on Notes</title><link>https://abskmj.github.io/notes/tags/snap/</link><description>Recent content in Snap on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 03 May 2021 15:12:01 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/snap/index.xml" rel="self" type="application/rss+xml"/><item><title>Publish test coverage on Coveralls.io</title><link>https://abskmj.github.io/notes/posts/github/actions/coveralls/</link><pubDate>Mon, 03 May 2021 15:12:01 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/github/actions/coveralls/</guid><description>Configure a NodeJS module to publish test coverage on Coveralls.io.</description><content>&lt;p>Configure a NodeJS module to publish test coverage on &lt;a href="https://coveralls.io/">Coveralls.io&lt;/a>.&lt;/p>
+&lt;h1 id="steps">Steps&lt;/h1>
+&lt;ul>
+&lt;li>Install NPM modules&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code>npm install --save-dev nyc
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>Update NPM scripts in the &lt;code>package.json&lt;/code> file&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">...
+&lt;span style="color:#e6db74">&amp;#34;scripts&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;span style="color:#e6db74">&amp;#34;test&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;nyc --reporter=lcov --reporter=text mocha test.js&amp;#34;&lt;/span>,
+}
+...
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Update the &lt;code>.gitignore&lt;/code> file&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code>.nyc_output
+coverage
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>Add a Github action at &lt;code>.github/workflows/tests.yml&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Run Tests&lt;/span>
+&lt;span style="color:#f92672">on&lt;/span>: [ &lt;span style="color:#ae81ff">push, pull_request] &lt;/span>
+&lt;span style="color:#f92672">jobs&lt;/span>:
+&lt;span style="color:#f92672">test&lt;/span>:
+&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-latest&lt;/span>
+&lt;span style="color:#f92672">steps&lt;/span>:
+- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@v2&lt;/span>
+- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/setup-node@v1&lt;/span>
+- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm install-ci-test&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Coveralls&lt;/span>
+&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">coverallsapp/github-action@master&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">github-token&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Setup Snapcraft in a Github Action Workflow</title><link>https://abskmj.github.io/notes/posts/github/actions/setup-snapcraft/</link><pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/github/actions/setup-snapcraft/</guid><description>Installation snapcraft executable can be installed with the snap. Recent Ubuntu versions now have snap executable pre-installed.</description><content>&lt;h1 id="installation">Installation&lt;/h1>
 &lt;p>&lt;code>snapcraft&lt;/code> executable can be installed with the snap. Recent Ubuntu versions now have &lt;code>snap&lt;/code> executable pre-installed.&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo snap install snapcraft --classic
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="login-token">Login Token&lt;/h1>
