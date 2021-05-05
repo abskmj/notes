@@ -1,10 +1,10 @@
 ---
-title: "Publish test coverage on Coveralls.io"
+title: "Publish test coverage on Coveralls.io with a Github Action Workflow"
 date: 2021-05-03T15:12:01+05:30
-tags: ['Github', 'Actions', 'Workflow', 'Continuos Delivery', 'Snap', 'Snapcraft']
+tags: ['Github', 'Actions', 'Workflow', 'Continuos Delivery', 'Coveralls.io', 'Tests']
 ---
 
-Configure a NodeJS module to publish test coverage on [Coveralls.io](https://coveralls.io/).
+Configure a NodeJS module to publish test coverage on [Coveralls.io](https://coveralls.io/) with a Github Action workflow.
 
 # Steps
 
@@ -14,12 +14,12 @@ npm install --save-dev nyc
 ```
 
 - Update NPM scripts in the `package.json` file
-```javascript
-...
-"scripts": {
+```json
+{
+  "scripts": {
     "test": "nyc --reporter=lcov --reporter=text mocha test.js",
+  }
 }
-...
 ```
 
 - Update the `.gitignore` file
