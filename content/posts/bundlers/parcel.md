@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Parcel.js"
-date: 2021-05-05T22:51:06+05:30
+date: 2021-05-05T18:00:08+05:30
 tags: ['ParcelJS', 'Javascript', 'Bundler']
 ---
 
