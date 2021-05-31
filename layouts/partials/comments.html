@@ -4,13 +4,9 @@
     <hr>
   </div>
   <div class="pagination__buttons">
-    <span class="button">
-      <a id="sponsor-link" href="https://wise.prf.hn/l/rwNWqOE" target="_blank">
-        <span id="sponsor-text" style="white-space: normal;">
-          Wise is a cheaper, faster way to send money abroad. Join over 10 million people who get the real exchange rate
-          with Wise. They’re up to 8x cheaper than banks.
-        </span>
-      </a>
+    <span class="button" id="sponsor-text" style="white-space: normal;">
+      Wise is a cheaper, faster way to send money abroad. Join over 10 million people who get the real exchange rate
+      with Wise. They’re up to 8x cheaper than banks.
     </span>
   </div>
 </div>
@@ -22,8 +18,12 @@
       .then(json => {
         const sponsor = json[Math.floor(Math.random() * json.length)]
 
-        document.getElementById("sponsor-link").setAttribute('href', sponsor.link)
-        document.getElementById("sponsor-text").textContent = sponsor.text
+        const span = document.getElementById("sponsor-text")
+
+        span.onclick = function () {
+          getOutboundLink(sponsor.link)
+        }
+        span.textContent = sponsor.text
       });
   })
 </script>
