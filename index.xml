@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>https://abskmj.github.io/notes/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 31 May 2021 10:35:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Start a test MySQL database using Docker</title><link>https://abskmj.github.io/notes/posts/docker/mysql-test-server/</link><pubDate>Mon, 31 May 2021 10:35:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/docker/mysql-test-server/</guid><description/><content>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>https://abskmj.github.io/notes/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Tue, 01 Jun 2021 10:35:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Working with TradingView Lightweight Charts</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</link><pubDate>Tue, 01 Jun 2021 10:35:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</guid><description/><content>&lt;blockquote>
+&lt;p>&lt;a href="https://tradingview.com/lightweight-charts/">&lt;strong>TradingView Lightweight Charts&lt;/strong>&lt;/a> Top performance in a tiny package. Free, open-source and feature-rich. At just 40 kilobytes, the dream of lightweight interactive charts is now a reality. HTML5 Canvas technology ensures that (unlike pictures) this chart will always look perfect on any device.&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="sample-integrations">Sample Integrations&lt;/h1>
+&lt;h2 id="1-real-time-updating-chart-with-cryptocompare-websockets">1. Real-time updating chart with Cryptocompare Websockets&lt;/h2>
+&lt;ul>
+&lt;li>Uses Trading View Lightweight charts library&lt;/li>
+&lt;li>Integrates with Crypto Compare APIs&lt;/li>
+&lt;li>Integrates with Crypto Compare web sockets and updates the chart in real-time&lt;/li>
+&lt;li>Shows prices for a single pair&lt;/li>
+&lt;/ul>
+&lt;div style="
+margin: 40px 0;
+padding: 40px 0;
+border-top: 1px solid #78e2a0;
+border-bottom: 1px solid #78e2a0;
+text-align: center;
+">
+&lt;iframe src="//tradingviewcharts.gitlab.io/lightweight-cryptocompare-parcel/" marginwidth="0" marginheight="0" style="
+width: 100%;
+min-height: 400px;
+border: none;
+margin-bottom: 20px;
+">
+&lt;/iframe>
+&lt;a href="//tradingviewcharts.gitlab.io/lightweight-cryptocompare-parcel/" target="_blank">View in another tab&lt;/a>
+&lt;p>
+A sample integration of Trading view Lightweight Chart library with crypto compare APIs / web sockets for real-time updates. Uses parcel as the bundler.
+&lt;/p>
+&lt;/div>
+&lt;h1 id="looking-for-a-developer">Looking for a Developer?&lt;/h1>
+&lt;p>Connect with me on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a>&lt;/p></content></item><item><title>Start a test MySQL database using Docker</title><link>https://abskmj.github.io/notes/posts/docker/mysql-test-server/</link><pubDate>Mon, 31 May 2021 10:35:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/docker/mysql-test-server/</guid><description/><content>&lt;blockquote>
 &lt;p>Uses the official &lt;a href="https://hub.docker.com/_/mysql">docker images&lt;/a> from MySQL team&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="steps">Steps&lt;/h1>
