@@ -13,6 +13,7 @@ summary: " "
 - Integrates with Crypto Compare APIs
 - Integrates with Crypto Compare web sockets and updates the chart in real-time
 - Shows prices for a single pair
+- Plots an area chart
 
 {{< iframe 
     src="//tradingviewcharts.gitlab.io/lightweight-cryptocompare-parcel/"
@@ -23,10 +24,16 @@ summary: " "
 - Uses TradingView Lightweight Charts library
 - Integrates with [Bitstamp OHLC API](https://www.bitstamp.net/api/#ohlc_data)
 - Shows prices for a single pair
+- Plots both candle stick and bar charts
 
 {{< iframe 
     src="//tradingviewcharts.gitlab.io/lightweight-bitstamp-parcel/"
-    desc="A sample integration of TradingView Lightweight Chart library with Bitstamp OHLC API to showcase candlestick chart. Uses Parcel as the bundler."
+    desc="Candlestick Chart - A sample integration of TradingView Lightweight Chart library with Bitstamp OHLC API to showcase candlestick chart. Uses Parcel as the bundler."
+>}}
+
+{{< iframe 
+    src="//tradingviewcharts.gitlab.io/lightweight-bitstamp-parcel/?t=bars"
+    desc="Bar Chart - A sample integration of TradingView Lightweight Chart library with Bitstamp OHLC API to showcase candlestick chart. Uses Parcel as the bundler."
 >}}
 
 # Looking for a Developer?
