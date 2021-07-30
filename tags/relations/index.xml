@@ -11,14 +11,14 @@
 &lt;p>A blog post belongs to a user&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="user-schema">User Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
 &lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
 &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> String,
 &lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
 }
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="blog-post-schema">Blog Post Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
 &lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
 &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> String,
 &lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
@@ -31,7 +31,7 @@
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="populate">Populate&lt;/h2>
 &lt;p>Now the author of a blog post can be easily populated by:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">Post&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">Post&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>)
 &lt;span style="color:#75715e">/*
 &lt;/span>&lt;span style="color:#75715e"> {
 &lt;/span>&lt;span style="color:#75715e"> _id: 5f71af94e66f4728f68ffc06,
@@ -49,14 +49,14 @@
 &lt;p>A user has many blog posts&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="user-schema-1">User Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">schema&lt;/span>.&lt;span style="color:#a6e22e">virtual&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>, {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">schema&lt;/span>.&lt;span style="color:#a6e22e">virtual&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>, {
 &lt;span style="color:#a6e22e">ref&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Post&amp;#39;&lt;/span>,
 &lt;span style="color:#a6e22e">localField&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;_id&amp;#39;&lt;/span>,
 &lt;span style="color:#a6e22e">foreignField&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>
 })
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="populate-1">Populate&lt;/h2>
 &lt;p>Now the author of a blog post can be easily populated by:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>)
 &lt;span style="color:#75715e">/*
 &lt;/span>&lt;span style="color:#75715e"> {
 &lt;/span>&lt;span style="color:#75715e"> _id: 5f71ce43687f2a2fb97fa462,
@@ -79,7 +79,7 @@
 &lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="note">Note&lt;/h1>
 &lt;p>Virtuals are not included in string version of the model instances by default. To include them, set the &lt;code>virtuals&lt;/code> option to &lt;code>true&lt;/code> on schema&amp;rsquo;s &lt;code>toObject&lt;/code> and &lt;code>toJSON&lt;/code> options.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Schema&lt;/span>(&lt;span style="color:#a6e22e">userSchema&lt;/span>, {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Schema&lt;/span>(&lt;span style="color:#a6e22e">userSchema&lt;/span>, {
 &lt;span style="color:#a6e22e">toObject&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">virtuals&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> },
 &lt;span style="color:#a6e22e">toJSON&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">virtuals&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> }
 })

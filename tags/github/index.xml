@@ -7,7 +7,7 @@
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Update NPM scripts in the &lt;code>package.json&lt;/code> file&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
 &lt;span style="color:#f92672">&amp;#34;test&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;nyc --reporter=lcov --reporter=text mocha test.js&amp;#34;&lt;/span>,
 }
@@ -20,7 +20,7 @@ coverage
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add a Github action at &lt;code>.github/workflows/tests.yml&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Run Tests&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Run Tests&lt;/span>
 &lt;span style="color:#f92672">on&lt;/span>: [ &lt;span style="color:#ae81ff">push, pull_request] &lt;/span>
 &lt;span style="color:#f92672">jobs&lt;/span>:
 &lt;span style="color:#f92672">test&lt;/span>:
@@ -36,7 +36,7 @@ coverage
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Backup Repository with a Github Action Workflow</title><link>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</link><pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</guid><description>I always like to have a backup copy of all my important git repositories hosted on Github.</description><content>&lt;p>I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.&lt;/p>
 &lt;h1 id="github-action-workflow">Github Action Workflow&lt;/h1>
 &lt;p>Create a &lt;code>.github/workflows/mirror.yml&lt;/code> in the Github repository with the follow contents.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Mirror to Gitlab&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Mirror to Gitlab&lt;/span>
 &lt;span style="color:#f92672">on&lt;/span>: [&lt;span style="color:#ae81ff">push, delete]&lt;/span>
 &lt;span style="color:#f92672">jobs&lt;/span>:
 &lt;span style="color:#f92672">gitlab&lt;/span>:
@@ -51,7 +51,7 @@ coverage
 &lt;span style="color:#ae81ff">${{ secrets.GITLAB_SSH_KEY }}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="credentials">Credentials&lt;/h1>
 &lt;p>Create an RSA key pair to allow the Github action runner to write to the Gitlab repository.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b &lt;span style="color:#ae81ff">2048&lt;/span> -C &lt;span style="color:#e6db74">&amp;#34;&amp;lt;comment&amp;gt;&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b &lt;span style="color:#ae81ff">2048&lt;/span> -C &lt;span style="color:#e6db74">&amp;#34;&amp;lt;comment&amp;gt;&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Executing the command will create two files, one with a &lt;code>.pub&lt;/code> extension which is the public key and one with no extension which is the private key.&lt;/p>
 &lt;p>Since I like to use a different set of key pair for each repository, I&lt;/p>
 &lt;h2 id="gitlab-public-key">Gitlab (Public Key)&lt;/h2>
@@ -62,21 +62,21 @@ coverage
 &lt;h2 id="github-private-key">Github (Private Key)&lt;/h2>
 &lt;p>Add a secret by navigating to &lt;code>Repository &amp;gt; Settings &amp;gt; Repository &amp;gt; Secrets &amp;gt; New Secret&lt;/code>. Fill the contents of the private key and name as &lt;code>GITLAB_SSH_KEY&lt;/code>. Details at &lt;a href="https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets">docs.github.com&lt;/a>.&lt;/p></content></item><item><title>Setup Snapcraft in a Github Action Workflow</title><link>https://abskmj.github.io/notes/posts/github/actions/setup-snapcraft/</link><pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/github/actions/setup-snapcraft/</guid><description>Installation snapcraft executable can be installed with the snap. Recent Ubuntu versions now have snap executable pre-installed.</description><content>&lt;h1 id="installation">Installation&lt;/h1>
 &lt;p>&lt;code>snapcraft&lt;/code> executable can be installed with the snap. Recent Ubuntu versions now have &lt;code>snap&lt;/code> executable pre-installed.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo snap install snapcraft --classic
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo snap install snapcraft --classic
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="login-token">Login Token&lt;/h1>
 &lt;p>A login token is used by &lt;code>snapcraft&lt;/code> to interact with published snaps on Snapcraft Store. In this setup, it is used to push a new version of the snap to the store.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">echo &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$SNAP_TOKEN&lt;span style="color:#e6db74">&amp;#34;&lt;/span> | snapcraft login --with -
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">echo &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$SNAP_TOKEN&lt;span style="color:#e6db74">&amp;#34;&lt;/span> | snapcraft login --with -
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>A login token can be generated by executing the below command in your local terminal where you are already logged in. It will generate a file named &lt;code>snap.login&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">snapcraft export-login --snaps &amp;lt;snap_name&amp;gt; snap.login
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">snapcraft export-login --snaps &amp;lt;snap_name&amp;gt; snap.login
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Create a secret &lt;code>SNAP_TOKEN&lt;/code> on Github with the contents of this file. Set below the environment variable to use the secret. Steps on creating a secret at &lt;a href="https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets">docs.github.com&lt;/a>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">env&lt;/span>:
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">env&lt;/span>:
 &lt;span style="color:#f92672">SNAP_TOKEN&lt;/span>: &lt;span style="color:#ae81ff">${{secrets.SNAP_TOKEN}} &lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="build-environment">Build Environment&lt;/h1>
 &lt;p>By default, &lt;code>snapcraft&lt;/code> uses a virtual machine driven by multipass to build the snap. But, there is no need to use a virtual machine on Github. Set below environment variable to build without a virtual machine. Details at &lt;a href="https://snapcraft.io/docs/t/the-snapcraft-build-environment-environment-variable/9110">snapcraft.io&lt;/a>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">env&lt;/span>:
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">env&lt;/span>:
 &lt;span style="color:#f92672">SNAPCRAFT_BUILD_ENVIRONMENT&lt;/span>: &lt;span style="color:#ae81ff">host&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="sample">Sample&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build&lt;/span>
 &lt;span style="color:#f92672">on&lt;/span>:
 &lt;span style="color:#f92672">push&lt;/span>:
 &lt;span style="color:#f92672">branches&lt;/span>: [ &lt;span style="color:#ae81ff">master ]&lt;/span>

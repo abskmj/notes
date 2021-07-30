@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HackerRank on Notes</title><link>https://abskmj.github.io/notes/tags/hackerrank/</link><description>Recent content in HackerRank on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 07 Jan 2019 12:50:58 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/hackerrank/index.xml" rel="self" type="application/rss+xml"/><item><title>HackerRank Contest - Project Euler - Largest product in a series</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/</link><pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/</guid><description>Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
@@ -32,7 +32,7 @@ product &lt;span style="color:#f92672">=&lt;/span> product &lt;span style="color
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank Contest - Project Euler - Multiples of 3 and 5</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/</link><pubDate>Mon, 07 Jan 2019 12:45:33 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/</guid><description>Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
@@ -95,7 +95,7 @@ scanner.close();
 }
 }
 &lt;/code>&lt;/pre></content></item><item><title>HackerRank - The Time in Words</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/</link><pubDate>Mon, 10 Sep 2018 07:16:41 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/</guid><description>Solution /* Solution to HackerRank: The Time in Words * URL: https://www.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: The Time in Words
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: The Time in Words
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/the-time-in-words
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -150,7 +150,7 @@ scanner&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">
 &lt;ul>
 &lt;li>Use &lt;code>BigInteger&lt;/code> to calculate the sum and print first 10 characters by converting to string.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Large Sum
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Large Sum
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler013
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -172,7 +172,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>2 to the power 1000 will be a huge number hence consider using &lt;code>BigInteger&lt;/code>.&lt;/li>
 &lt;li>Recursively calculate the sum of all the digits.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Power Digit Sum
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Power Digit Sum
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler016
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -203,12 +203,12 @@ BigInteger r&lt;span style="color:#f92672">[]&lt;/span> &lt;span style="color:#f
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank Contest - Regular Expresso - Vowels in the Back</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</link><pubDate>Sun, 19 Nov 2017 20:57:21 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</guid><description>Solution /* Solution to HackerRank: Vowels in the Back * URL: https://www.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Vowels in the Back
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Vowels in the Back
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/vowels-in-the-back
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#e6db74">&amp;#34;[aeiouy][a-z]{9}$&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank Contest - Regular Expresso - Balanced Strings</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</link><pubDate>Sun, 19 Nov 2017 20:52:09 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</guid><description>Solution /* Solution to HackerRank: Balanced Strings * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings */ &amp;#34;^(ab|ba)+$&amp;#34; possible strings: ababab abba babaab but not: a bab abbaaba</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Balanced Strings
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Balanced Strings
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#e6db74">&amp;#34;^(ab|ba)+$&amp;#34;&lt;/span>
@@ -221,7 +221,7 @@ a
 bab
 abbaaba
 &lt;/code>&lt;/pre></content></item><item><title>HackerRank Contest - Regular Expresso - Winning Tic Tac Toe</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</link><pubDate>Sun, 19 Nov 2017 20:31:51 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</guid><description>Solution /* Solution to HackerRank: Winning Tic Tac Toe * URL: https://www.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Winning Tic Tac Toe
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Winning Tic Tac Toe
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#e6db74">&amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34;&lt;/span>
@@ -278,7 +278,7 @@ X X -
 &lt;li>Iterate through each city and check if it is already under range of previous tower.&lt;/li>
 &lt;li>If not, find a tower within the range to switch on.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Goodland Electricity
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Goodland Electricity
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/pylons
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -334,7 +334,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Sort the array of numbers&lt;/li>
 &lt;li>Find the minimum difference between ith and (i+K-1)th element in each iteration.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Max Min
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Max Min
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/angry-children
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.BufferedReader&lt;span style="color:#f92672">;&lt;/span>
@@ -364,7 +364,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Iterate the sides in descending order&lt;/li>
 &lt;li>Check if &lt;a href="https://www.wikihow.com/Determine-if-Three-Side-Lengths-Are-a-Triangle">sides make a triangle&lt;/a> by checking if sum of two sides is greater than third side .&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Maximum Perimeter Triangle
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Maximum Perimeter Triangle
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/maximum-perimeter-triangle
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -399,7 +399,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Check if current maximum number is already at desired index i.e highest at index 0, second highest at index 1 and so on.&lt;/li>
 &lt;li>If not, keep on swapping them till all the swaps are exhausted.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Permutation
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Permutation
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/largest-permutation
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -445,7 +445,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Swap them in order of decreasing value till all the swaps are exhausted.&lt;/li>
 &lt;/ul>
 &lt;p>Test cases 13 to 15 timed out for this solution.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Solution&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
 &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
@@ -486,7 +486,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Check if current house is in range of last transmitter.&lt;/li>
 &lt;li>If not, find a house to put transmitter on so that current house is in range.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Hackerland Radio Transmitters
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Hackerland Radio Transmitters
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/hackerland-radio-transmitters
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -537,7 +537,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices.&lt;/li>
 &lt;li>Check that the indexes buying and selling are in correct order so that year of buying is less than year of selling.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Minimum Loss
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Minimum Loss
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/minimum-loss
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -567,7 +567,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Compare each possible combination to determine the minimum difference.&lt;/li>
 &lt;/ul>
 &lt;p>Test cases 11 to 15 timed out for below solution.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Solution&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
 &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
@@ -594,7 +594,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Keep an array representing all numbers including a and b.&lt;/li>
 &lt;li>Strike out multiples of current number from array in each iteration.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Mutual Indivisibility
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Mutual Indivisibility
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/mutual-indivisibility
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -653,7 +653,7 @@ in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">close
 &lt;li>Check each iteration for prime number.&lt;/li>
 &lt;/ul>
 &lt;p>However, Test case 4 timed out for below solution.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
@@ -690,7 +690,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Caching if a number is prime in a &lt;code>HashMap&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: 10001st Prime
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: 10001st Prime
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler007
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -743,7 +743,7 @@ primes&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">p
 &lt;li>Add each iteration to sum and square of it to another sum.&lt;/li>
 &lt;li>Print absolute difference.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Sum Square Difference
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Sum Square Difference
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler006
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -773,7 +773,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Check if current iteration is a palindrome by using &lt;code>reverse()&lt;/code> of &lt;code>StringBuilder&lt;/code> class.&lt;/li>
 &lt;li>Check if current iteration is a product of two 3-digit numbers.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Palindrome
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Palindrome
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler004
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -816,7 +816,7 @@ String forward &lt;span style="color:#f92672">=&lt;/span> Integer&lt;span style=
 &lt;li>Find all the factors of the given number by iterating from 1 to square root of the number.&lt;/li>
 &lt;li>Sort all the factors in descending order and iterate to check if a factor is prime.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Prime Factor
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Prime Factor
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler003
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -865,7 +865,7 @@ factors&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank Contest - Project Euler - Even Fibonacci Numbers</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</link><pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</guid><description>Solution #1 Test cases 2,3 timed out for below solution.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
 &lt;p>Test cases 2,3 timed out for below solution.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
@@ -915,7 +915,7 @@ using values from eq1
 = 4f(3) + f(0)
 = 4F(1) + F(0) =&amp;gt; F(n) = 4F(n-1) + 4F(n-2)
 &lt;/code>&lt;/pre>&lt;p>Using the above formula&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Even Fibonacci Numbers
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Even Fibonacci Numbers
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler002
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -950,7 +950,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Add one of each group to the string if not already present i.e. count is 0.&lt;/li>
 &lt;li>Add required number of characters in case length of the string is less than 6.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Strong Password
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Strong Password
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/strong-password
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -1022,7 +1022,7 @@ in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">close
 &lt;li>Each cluster is traversed to find the count of astronauts.&lt;/li>
 &lt;li>Number of possible combinations are calculated based on sizes of these countries.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Journey to the Moon
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Journey to the Moon
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/journey-to-the-moon
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -1102,7 +1102,7 @@ count &lt;span style="color:#f92672">+=&lt;/span> dfs&lt;span style="color:#f926
 &lt;li>DFS (Depth First Search) algorithm is used to traverse all cities in each cluster.&lt;/li>
 &lt;li>Number of roads in each cluster is one less than the number of cities traversed.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Roads and Libraries
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Roads and Libraries
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/torque-and-development
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>

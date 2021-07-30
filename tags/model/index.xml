@@ -4,18 +4,18 @@
 &lt;blockquote>
 &lt;p>Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments. They have no save method, getters/setters or other Mongoose magic applied.&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>) =&amp;gt; {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>) =&amp;gt; {
 &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">users&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({ &lt;span style="color:#a6e22e">status&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;active&amp;#39;&lt;/span> }).&lt;span style="color:#a6e22e">limit&lt;/span>(&lt;span style="color:#ae81ff">10&lt;/span>).&lt;span style="color:#a6e22e">lean&lt;/span>();
 &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">users&lt;/span>);
 });
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="hydrate-method-on-model">Hydrate method on Model&lt;/h1>
 &lt;p>Hydrating is opposite of lean option. &lt;a href="https://mongoosejs.com/docs/api.html#model_Model.hydrate">Hydrate method&lt;/a> can be used to initialize a mongoose document from a plain javascript object to get access to its virtuals/methods.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">user&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">findOne&lt;/span>().&lt;span style="color:#a6e22e">lean&lt;/span>();
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">user&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">findOne&lt;/span>().&lt;span style="color:#a6e22e">lean&lt;/span>();
 &lt;span style="color:#66d9ef">let&lt;/span> document &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">hydrate&lt;/span>(&lt;span style="color:#a6e22e">user&lt;/span>);
 &lt;span style="color:#a6e22e">assert&lt;/span>(document &lt;span style="color:#66d9ef">instanceof&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">Document&lt;/span>); &lt;span style="color:#75715e">// true
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="code-repository">Code Repository&lt;/h1>
 &lt;p>A working code repository is available at &lt;a href="https://github.com/abskmj/example-mongoose-lean-hydrate">github&lt;/a>. Get started in your local environment&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/abskmj/example-mongoose-lean-hydrate.git
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/abskmj/example-mongoose-lean-hydrate.git
 cd example-mongoose-lean-hydrate
 npm install
 npm test
@@ -32,14 +32,14 @@ npm test
 &lt;p>A blog post belongs to a user&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="user-schema">User Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
 &lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
 &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> String,
 &lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
 }
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="blog-post-schema">Blog Post Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
 &lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
 &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> String,
 &lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
@@ -52,7 +52,7 @@ npm test
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="populate">Populate&lt;/h2>
 &lt;p>Now the author of a blog post can be easily populated by:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">Post&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">Post&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>)
 &lt;span style="color:#75715e">/*
 &lt;/span>&lt;span style="color:#75715e"> {
 &lt;/span>&lt;span style="color:#75715e"> _id: 5f71af94e66f4728f68ffc06,
@@ -70,14 +70,14 @@ npm test
 &lt;p>A user has many blog posts&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="user-schema-1">User Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">schema&lt;/span>.&lt;span style="color:#a6e22e">virtual&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>, {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">schema&lt;/span>.&lt;span style="color:#a6e22e">virtual&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>, {
 &lt;span style="color:#a6e22e">ref&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Post&amp;#39;&lt;/span>,
 &lt;span style="color:#a6e22e">localField&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;_id&amp;#39;&lt;/span>,
 &lt;span style="color:#a6e22e">foreignField&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>
 })
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="populate-1">Populate&lt;/h2>
 &lt;p>Now the author of a blog post can be easily populated by:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>)
 &lt;span style="color:#75715e">/*
 &lt;/span>&lt;span style="color:#75715e"> {
 &lt;/span>&lt;span style="color:#75715e"> _id: 5f71ce43687f2a2fb97fa462,
@@ -100,7 +100,7 @@ npm test
 &lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="note">Note&lt;/h1>
 &lt;p>Virtuals are not included in string version of the model instances by default. To include them, set the &lt;code>virtuals&lt;/code> option to &lt;code>true&lt;/code> on schema&amp;rsquo;s &lt;code>toObject&lt;/code> and &lt;code>toJSON&lt;/code> options.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Schema&lt;/span>(&lt;span style="color:#a6e22e">userSchema&lt;/span>, {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Schema&lt;/span>(&lt;span style="color:#a6e22e">userSchema&lt;/span>, {
 &lt;span style="color:#a6e22e">toObject&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">virtuals&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> },
 &lt;span style="color:#a6e22e">toJSON&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">virtuals&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> }
 })
@@ -116,7 +116,7 @@ npm test
 &lt;li>Instance Method: the method is available on an instance of the model.&lt;/li>
 &lt;/ul>
 &lt;h1 id="model-js-file">Model JS file&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model.js
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model.js
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>(&lt;span style="color:#a6e22e">Model&lt;/span>) {
 &lt;span style="color:#75715e">// Model Method
 &lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
@@ -127,7 +127,7 @@ npm test
 ...
 }
 }
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model method
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model method
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">models&lt;/span>.&lt;span style="color:#a6e22e">Model&lt;/span>;
 &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
 &lt;span style="color:#75715e">// Instance Method
@@ -136,7 +136,7 @@ npm test
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Enable Destroy All API for a model in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link><pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid><description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.</description><content>&lt;p>Destroy All API (&lt;code>Model.destroyAll()&lt;/code>) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.&lt;/p>
 &lt;h1 id="remote-method">Remote Method&lt;/h1>
 &lt;p>A corresponding remote method can be added to the &lt;code>model.js&lt;/code> file to enable this API. This method also supports a filter to enable selective deletion.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">Model&lt;/span>) {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">Model&lt;/span>) {
 &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">remoteMethod&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;destroyAll&amp;#39;&lt;/span>, {
 &lt;span style="color:#a6e22e">isStatic&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>,
 &lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Delete all matching records&amp;#39;&lt;/span>,

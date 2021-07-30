@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD MyCloud on Notes</title><link>https://abskmj.github.io/notes/tags/wd-mycloud/</link><description>Recent content in WD MyCloud on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/wd-mycloud/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description><content>&lt;h1 id="install-samba">Install Samba&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install samba
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install samba
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-samba">Configure Samba&lt;/h1>
 &lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nano /etc/samba/smb.conf
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nano /etc/samba/smb.conf
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Contents of &lt;code>smb.conf&lt;/code>&lt;/p>
 &lt;pre>&lt;code>[global]
 workgroup = WORKGROUP
@@ -21,18 +21,18 @@ writable = yes
 guest ok = yes
 &lt;/code>&lt;/pre>&lt;h1 id="restart-samba-service">Restart Samba Service&lt;/h1>
 &lt;p>The samba service has to restarted each time to use the new configuration.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">/etc/init.d/samba restart
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">/etc/init.d/samba restart
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Change Timezone in Debian</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/</link><pubDate>Sun, 17 May 2020 13:44:55 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/</guid><description>Using timedatectl Current Timezone $ timedatectl Set Timezone $ timedatectl set-timezone Asia/Kolkata List Timezones $ timedatectl list-timezones $ timedatectl list-timezones | grep -i kolkata</description><content>&lt;h1 id="using-timedatectl">Using timedatectl&lt;/h1>
 &lt;h2 id="current-timezone">Current Timezone&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="set-timezone">Set Timezone&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl set-timezone Asia/Kolkata
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl set-timezone Asia/Kolkata
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="list-timezones">List Timezones&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl list-timezones
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl list-timezones
 $ timedatectl list-timezones | grep -i kolkata
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Turn off the color with ls command</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</link><pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</guid><description>Alias See if there are any alias defined for ls on your terminal</description><content>&lt;h1 id="alias">Alias&lt;/h1>
 &lt;p>See if there are any alias defined for &lt;code>ls&lt;/code> on your terminal&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">alias
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">alias
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>For me it was &lt;code>alias ls='ls $LS_OPTIONS'&lt;/code> and &lt;code>LS_OPTIONS&lt;/code> environment variable had a value of &lt;code>--color=auto&lt;/code>&lt;/p>
 &lt;h1 id="bashrc">.bashrc&lt;/h1>
 &lt;p>Check the contents of your &lt;code>~/.bashrc&lt;/code> file. Generally, these aliases are defined here. Mine had these lines&lt;/p>
@@ -58,27 +58,27 @@ alias l='ls $LS_OPTIONS -lA'
 &lt;ul>
 &lt;li>Install need software&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install parted
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install parted
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size around 1.8 TB.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Run the utility on your WD drive&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">parted /dev/sdb
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">parted /dev/sdb
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Print all partitions on the drive&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">print
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">print
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Remove all the partitions. For me, there was only one partition&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">remove &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">remove &lt;span style="color:#ae81ff">1&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Recreate all needed partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mklabel gpt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mklabel gpt
 mkpart primary 528M 2576M
 mkpart primary 2576M 4624M
 mkpart primary 16M 528M
@@ -92,39 +92,39 @@ set &lt;span style="color:#ae81ff">2&lt;/span> raid on
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Quit the utility&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">quit
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">quit
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Format data and swap partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkfs -t ext4 /dev/sdb4
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkfs -t ext4 /dev/sdb4
 mkswap /dev/sdb3
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="install-debian">Install Debian&lt;/h1>
 &lt;ul>
 &lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size of around 1.8 TB.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Install software for RAID devices&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install mdadm
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install mdadm
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Mount RAID partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mdadm --stop /dev/md*
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mdadm --stop /dev/md*
 mdadm -A /dev/md0 /dev/sdb1 /dev/sdb2
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Mount data partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mount -t ext4 /dev/sdb4 /mnt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mount -t ext4 /dev/sdb4 /mnt
 cd /mnt
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Download the Clean Debian package and extract it&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
 tar -xvfz clean-debian-jessie.tgz
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>If you are planning to install one of the original packages. You can download that package instead of Debian.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># v3.x&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># v3.x&lt;/span>
 wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v03.04.01-230.tar.gz
 tar -xvfz original-v03.04.01-230.tar.gz
 &lt;span style="color:#75715e"># v4.x&lt;/span>
@@ -134,7 +134,7 @@ tar -xvfz original-v04.01.02-417.tar.gz
 &lt;ul>
 &lt;li>Copy images to partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb5
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb5
 dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb6
 dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>config.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb7
 dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>config.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb8
@@ -157,7 +157,7 @@ dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&l
 &lt;p>You can now ssh into your MyCloud device.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh root@192.168.X.XXX &lt;span style="color:#75715e"># replace with your IP &lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh root@192.168.X.XXX &lt;span style="color:#75715e"># replace with your IP &lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
 &lt;p>The default password for the root user is &lt;code>mycloud&lt;/code>.&lt;/p>
@@ -192,22 +192,22 @@ dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&l
 &lt;p>Add below sources&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">deb http://archive.debian.org/debian/ wheezy main non-free contrib
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">deb http://archive.debian.org/debian/ wheezy main non-free contrib
 deb-src http://archive.debian.org/debian/ wheezy main non-free contrib
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Now you can run&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>If you get below error&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">There is no public key available &lt;span style="color:#66d9ef">for&lt;/span> the following key IDs
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">There is no public key available &lt;span style="color:#66d9ef">for&lt;/span> the following key IDs
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Install below package&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install debian-archive-keyring
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install debian-archive-keyring
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Now you can rerun&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
 &lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

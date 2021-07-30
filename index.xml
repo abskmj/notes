@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>https://abskmj.github.io/notes/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Tue, 08 Jun 2021 17:30:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>TradingView Charts for PancakeSwap Tokens</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</link><pubDate>Tue, 08 Jun 2021 17:30:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</guid><description/><content>&lt;blockquote>
-&lt;p>&lt;a href="https://pancakeswap.finance/">&lt;strong>PancakeSwap&lt;/strong>&lt;/a> Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on Binance Smart Chain (BSC) with the best farms in DeFi and a lottery for CAKE.&lt;/p>
+&lt;p>&lt;a href="https://pancakeswap.finance/">&lt;strong>PancakeSwap&lt;/strong>&lt;/a> Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on Binance Smart Chain (BSC) with the best farms in Defi and a lottery for CAKE.&lt;/p>
+&lt;/blockquote>
+&lt;p>This showcases couple of OHLC Charts for Pancakeswap Tokens implemented using the &lt;a href="https://www.tradingview.com/lightweight-charts/">TradingView Lightweight Charts&lt;/a> and &lt;a href="https://bitquery.io/">Bitquery.io&lt;/a> APIs.&lt;/p>
+&lt;p>&lt;a href="https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts">TradingView Techincal Analysis Charts&lt;/a> can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them.&lt;/p>
+&lt;p>I run a gig on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a> to help with such integrations and customizations.&lt;/p>
+&lt;blockquote>
+&lt;p>If you are new to Fiverr, you can use &lt;a href="http://www.fiverr.com/s2/730602a4fa">my referral link&lt;/a> to signup and get 20% off on your first order.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="ohlc-chart-with-bitquery-graphql-api">OHLC Chart with Bitquery GraphQL API&lt;/h1>
 &lt;ul>
@@ -28,7 +34,7 @@ CAKE/WBNB - A sample integration of TradingView Lightweight Chart library with B
 &lt;/p>
 &lt;/div>
 &lt;h1 id="chart-for-another-token">Chart for another Token&lt;/h1>
-&lt;p>By default, plots a chart for PancakeSwap (CAKE) token. Setting &lt;code>?token=&amp;lt;token_address&amp;gt;&lt;/code> URL parameter plots for another token by its address. Below is a sample for UniSwap (UNI) token.&lt;/p>
+&lt;p>By default, plots a chart for PancakeSwap (CAKE) token. Setting &lt;code>?token=&amp;lt;token_address&amp;gt;&lt;/code> URL parameter plots for another by its address. Below is a sample for UniSwap (UNI) token.&lt;/p>
 &lt;div style="
 margin: 40px 0;
 padding: 40px 0;
@@ -150,13 +156,13 @@ Bar Chart - A sample integration of TradingView Lightweight Chart library with B
 &lt;ul>
 &lt;li>Start the database server&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; -p 3306:3306 -d mysql:latest
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; -p 3306:3306 -d mysql:latest
 &lt;span style="color:#75715e"># example&lt;/span>
 docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>change-me-later -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>test -p 3306:3306 -d mysql:latest
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Options&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker run
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker run
 --rm &lt;span style="color:#75715e"># remove container when exits&lt;/span>
 --name&lt;span style="color:#f92672">=&lt;/span>mysql &lt;span style="color:#75715e"># name of the container&lt;/span>
 -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; &lt;span style="color:#75715e"># set the database password&lt;/span>
@@ -167,18 +173,18 @@ docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_R
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>View the logs&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker logs mysql
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker logs mysql
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Stop the database server&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker stop mysql
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker stop mysql
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Upgrade to WSL2</title><link>https://abskmj.github.io/notes/posts/wsl/upgrade-wsl2/</link><pubDate>Wed, 19 May 2021 21:30:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wsl/upgrade-wsl2/</guid><description>Upgrade an existing version 1 WSL distro to version 2.</description><content>&lt;p>Upgrade an existing version 1 WSL distro to version 2.&lt;/p>
 &lt;h1 id="steps">Steps&lt;/h1>
 &lt;ul>
 &lt;li>Open a power shell or cmd terminal&lt;/li>
 &lt;li>List distros&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --list --verbose
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --list --verbose
 &lt;span style="color:#75715e"># output&lt;/span>
 NAME STATE VERSION
 * Ubuntu Running &lt;span style="color:#ae81ff">1&lt;/span>
@@ -188,13 +194,13 @@ NAME STATE VERSION
 &lt;blockquote>
 &lt;p>Upgrade can take up to 15 minutes&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --set-version &amp;lt;distro-name&amp;gt; &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --set-version &amp;lt;distro-name&amp;gt; &lt;span style="color:#ae81ff">2&lt;/span>
 &lt;span style="color:#75715e"># example&lt;/span>
 wsl --set-version Ubuntu &lt;span style="color:#ae81ff">2&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Check if the upgrade was successful&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --list --verbose
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --list --verbose
 &lt;span style="color:#75715e"># output&lt;/span>
 NAME STATE VERSION
 * Ubuntu Running &lt;span style="color:#ae81ff">2&lt;/span>
@@ -206,7 +212,7 @@ NAME STATE VERSION
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add NPM scripts&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
 &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;parcel index.html&amp;#34;&lt;/span>,
 &lt;span style="color:#f92672">&amp;#34;build&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;parcel build index.html&amp;#34;&lt;/span>
@@ -224,7 +230,7 @@ NAME STATE VERSION
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add NPM scripts&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
 &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;parcel serve index.html&amp;#34;&lt;/span>,
 &lt;span style="color:#f92672">&amp;#34;build&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;parcel build index.html&amp;#34;&lt;/span>
@@ -238,7 +244,7 @@ NAME STATE VERSION
 &lt;ul>
 &lt;li>Set the public url&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
 &lt;span style="color:#f92672">&amp;#34;build&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;parcel build index.html --public-url ./&amp;#34;&lt;/span>
 }
@@ -252,7 +258,7 @@ NAME STATE VERSION
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Update NPM scripts in the &lt;code>package.json&lt;/code> file&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
 &lt;span style="color:#f92672">&amp;#34;test&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;nyc --reporter=lcov --reporter=text mocha test.js&amp;#34;&lt;/span>,
 }
@@ -265,7 +271,7 @@ coverage
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add a Github action at &lt;code>.github/workflows/tests.yml&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Run Tests&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Run Tests&lt;/span>
 &lt;span style="color:#f92672">on&lt;/span>: [ &lt;span style="color:#ae81ff">push, pull_request] &lt;/span>
 &lt;span style="color:#f92672">jobs&lt;/span>:
 &lt;span style="color:#f92672">test&lt;/span>:
@@ -279,7 +285,7 @@ coverage
 &lt;span style="color:#f92672">with&lt;/span>:
 &lt;span style="color:#f92672">github-token&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>TamperMonkey Script to hide Facebook Sponsored Posts</title><link>https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/</link><pubDate>Thu, 29 Apr 2021 08:42:07 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/</guid><description>This TamperMonkey script hides sponsored posts on the Facebook feed.</description><content>&lt;p>This TamperMonkey script hides sponsored posts on the Facebook feed.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// ==UserScript==
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// ==UserScript==
 &lt;/span>&lt;span style="color:#75715e">// @name Hide Sponsored Posts on Facebook
 &lt;/span>&lt;span style="color:#75715e">// @namespace http://tampermonkey.net/
 &lt;/span>&lt;span style="color:#75715e">// @version 1.0
@@ -467,7 +473,7 @@ document.&lt;span style="color:#a6e22e">querySelectorAll&lt;/span>(&lt;span styl
 &lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl">asus-nb-ctrl&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>Add these packages using package manager&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">echo &lt;span style="color:#e6db74">&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span> | sudo tee /etc/apt/sources.list.d/asus.list
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">echo &lt;span style="color:#e6db74">&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span> | sudo tee /etc/apt/sources.list.d/asus.list
 wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
 apt-get update
 apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
@@ -516,18 +522,18 @@ volume = ignore
 &lt;/ul>
 &lt;h1 id="gridfile-mongoose-model">GridFile Mongoose Model&lt;/h1>
 &lt;p>&lt;a href="https://github.com/abskmj/gridfile">GridFile&lt;/a> is a reusable Mongoose Schema for MongoDB GridFS.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// gridfile.model.js
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// gridfile.model.js
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>
 &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;mongoose&amp;#39;&lt;/span>)
 &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">schema&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;gridfile&amp;#39;&lt;/span>)
 &lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">model&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;GridFile&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">schema&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="multer-middleware">Multer Middleware&lt;/h1>
 &lt;p>&lt;a href="https://www.npmjs.com/package/multer">Multer&lt;/a> will parse &lt;code>multipart/form-data&lt;/code> request and the uploaded files will be accessible as &lt;code>req.files&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;multer&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;multer&amp;#39;&lt;/span>)
 &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">upload&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span>({ &lt;span style="color:#a6e22e">dest&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>.&lt;span style="color:#a6e22e">join&lt;/span>(&lt;span style="color:#ae81ff">__&lt;/span>&lt;span style="color:#a6e22e">dirname&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;.&amp;#39;&lt;/span>) })
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="upload-file-api">Upload File API&lt;/h1>
 &lt;p>API uses the multer middleware and GridFile model to upload files to GridFS.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">post&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">upload&lt;/span>.&lt;span style="color:#a6e22e">any&lt;/span>(), &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">post&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">upload&lt;/span>.&lt;span style="color:#a6e22e">any&lt;/span>(), &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
 &lt;span style="color:#66d9ef">try&lt;/span> {
 &lt;span style="color:#75715e">// uploaded file are accessible as req.files
 &lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">files&lt;/span>) {
@@ -548,7 +554,7 @@ volume = ignore
 })
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="list-files-api">List Files API&lt;/h1>
 &lt;p>API returns information about uploaded files.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
 &lt;span style="color:#66d9ef">try&lt;/span> {
 &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">files&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({})
 &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">files&lt;/span>)
@@ -557,7 +563,7 @@ volume = ignore
 }
 })
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample response&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">[
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">[
 {
 &lt;span style="color:#f92672">&amp;#34;aliases&amp;#34;&lt;/span>: [],
 &lt;span style="color:#f92672">&amp;#34;_id&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;5f6850023516552ad21d0007&amp;#34;&lt;/span>,
@@ -570,7 +576,7 @@ volume = ignore
 ]
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="download-file-api">Download File API&lt;/h1>
 &lt;p>API returns the file from the GridFS using its id.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files/:id/:name&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files/:id/:name&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
 &lt;span style="color:#66d9ef">try&lt;/span> {
 &lt;span style="color:#66d9ef">const&lt;/span> { &lt;span style="color:#a6e22e">id&lt;/span>, &lt;span style="color:#a6e22e">name&lt;/span> } &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">params&lt;/span>
 &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>.&lt;span style="color:#a6e22e">findById&lt;/span>(&lt;span style="color:#a6e22e">id&lt;/span>)
@@ -597,7 +603,7 @@ volume = ignore
 &lt;pre>&lt;code>// @require https://cdn.jsdelivr.net/npm/vue
 &lt;/code>&lt;/pre>&lt;h1 id="initialize-a-vuejs-app">Initialize a Vue.js App&lt;/h1>
 &lt;p>It is recommended to initialize the Vue.js app after the page is ready.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">window.&lt;span style="color:#a6e22e">addEventListener&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;load&amp;#34;&lt;/span>, (&lt;span style="color:#a6e22e">event&lt;/span>) =&amp;gt; {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">window.&lt;span style="color:#a6e22e">addEventListener&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;load&amp;#34;&lt;/span>, (&lt;span style="color:#a6e22e">event&lt;/span>) =&amp;gt; {
 &lt;span style="color:#75715e">// initialize app
 &lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Vue&lt;/span>({
 &lt;span style="color:#a6e22e">el&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;#main-content&amp;#39;&lt;/span>,
@@ -621,7 +627,7 @@ volume = ignore
 Server Local
 &lt;/code>&lt;/pre>&lt;p>Let&amp;rsquo;s assume a MongoDB service is running on the server on port &lt;code>27017&lt;/code> and is not accessible outside of the server. There is an application running the local machine and needs to connect to the MongoDB service running on the server.&lt;/p>
 &lt;p>With the below SSH tunnel, the MongoDB service is available on port &lt;code>27018&lt;/code> of the local machine and accessible at &lt;code>mongodb://127.0.0.1:27018/dev&lt;/code> for the application&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh -L localhost:27018:localhost:27017 -N root@10.17.15.53
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh -L localhost:27018:localhost:27017 -N root@10.17.15.53
 &lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>-L
 Specifies that the given port on the local (client) host is to be forwarded to the given host andport on the remote side.
 -N
@@ -630,62 +636,62 @@ Do not execute a remote command.
 bind address of local machine : port of local machine : bind address of server : port of server
 &lt;/code>&lt;/pre></content></item><item><title>Enable Hibernate on Pop OS</title><link>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</link><pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</guid><description/><content>&lt;h1 id="prerequisites">Prerequisites&lt;/h1>
 &lt;h2 id="check-if-the-kernel-supports-hibernation">Check if the kernel supports Hibernation&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cat /sys/power/state
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cat /sys/power/state
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>It should list &lt;code>disk&lt;/code> as an option on the list&lt;/p>
 &lt;h2 id="check-if-a-swap-file-or-partition-is-available">Check if a Swap file or partition is available&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">free -h
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">free -h
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>If &lt;code>Swap&lt;/code> is listed as 0, it means a swap is not available and needs to be created.&lt;/p>
 &lt;h1 id="create-a-swap-file">Create a Swap file&lt;/h1>
 &lt;ul>
 &lt;li>Create a swap file.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo fallocate -l 6G /swapfile
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo fallocate -l 6G /swapfile
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>6G&lt;/code> can be updated with a recommended swap size for the machine which is listed under &lt;code>How much swap do I need?&lt;/code> section at &lt;a href="https://help.ubuntu.com/community/SwapFaq">help.ubuntu.com&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Permissions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo chmod &lt;span style="color:#ae81ff">600&lt;/span> /swapfile
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo chmod &lt;span style="color:#ae81ff">600&lt;/span> /swapfile
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Format as swap&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo mkswap /swapfile
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo mkswap /swapfile
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Activate the swap&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo swapon /swapfile
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo swapon /swapfile
 echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&amp;#39;&lt;/span> | sudo tee -a /etc/fstab
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-hibernation">Configure Hibernation&lt;/h1>
 &lt;p>List the swap&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cat /proc/swaps
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cat /proc/swaps
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Swap file is generally listed as &lt;code>/swapfile&lt;/code>&lt;/li>
 &lt;li>Swap partition is listed as &lt;code>/dev/sdxx&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="swap-uuid">Swap UUID&lt;/h2>
 &lt;p>Get the UUID for the swap&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">findmnt -no UUID -T /swapfile
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">findmnt -no UUID -T /swapfile
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
 &lt;pre>&lt;code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 &lt;/code>&lt;/pre>&lt;h2 id="swap-offset">Swap offset&lt;/h2>
 &lt;p>This is only needed when a swap file is available. Get the offset&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo filefrag -v /swapfile | awk &lt;span style="color:#e6db74">&amp;#39;{ if($1==&amp;#34;0:&amp;#34;){print $4} }&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo filefrag -v /swapfile | awk &lt;span style="color:#e6db74">&amp;#39;{ if($1==&amp;#34;0:&amp;#34;){print $4} }&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
 &lt;pre>&lt;code>9999999..
 &lt;/code>&lt;/pre>&lt;h2 id="update-kernel-options">Update Kernel Options&lt;/h2>
 &lt;p>For a Swap File&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset&lt;span style="color:#f92672">=&lt;/span>9999999”
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset&lt;span style="color:#f92672">=&lt;/span>9999999”
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>For a Swap Partition, &lt;code>resume_offset&lt;/code> option is not needed&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Add below line to &lt;code>/etc/initramfs-tools/conf.d/resume&lt;/code>. Create the file if not present&lt;/p>
 &lt;p>For a Swap File&lt;/p>
 &lt;pre>&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
 &lt;/code>&lt;/pre>&lt;p>For a Swap Partition&lt;/p>
 &lt;pre>&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 &lt;/code>&lt;/pre>&lt;p>Update the configurations&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo update-initramfs -u
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo update-initramfs -u
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="test-hibernation">Test Hibernation&lt;/h1>
 &lt;p>Remember to save your work before trying this out&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo systemctl hibernate
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo systemctl hibernate
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="references">References&lt;/h1>
 &lt;ul>
 &lt;li>SwapFaq at &lt;a href="https://help.ubuntu.com/community/SwapFaq">help.ubuntu.com&lt;/a>&lt;/li>
@@ -693,7 +699,7 @@ echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&am
 &lt;/ul></content></item><item><title>Backup Repository with a Github Action Workflow</title><link>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</link><pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</guid><description>I always like to have a backup copy of all my important git repositories hosted on Github.</description><content>&lt;p>I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.&lt;/p>
 &lt;h1 id="github-action-workflow">Github Action Workflow&lt;/h1>
 &lt;p>Create a &lt;code>.github/workflows/mirror.yml&lt;/code> in the Github repository with the follow contents.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Mirror to Gitlab&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Mirror to Gitlab&lt;/span>
 &lt;span style="color:#f92672">on&lt;/span>: [&lt;span style="color:#ae81ff">push, delete]&lt;/span>
 &lt;span style="color:#f92672">jobs&lt;/span>:
 &lt;span style="color:#f92672">gitlab&lt;/span>:
@@ -708,7 +714,7 @@ echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&am
 &lt;span style="color:#ae81ff">${{ secrets.GITLAB_SSH_KEY }}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="credentials">Credentials&lt;/h1>
 &lt;p>Create an RSA key pair to allow the Github action runner to write to the Gitlab repository.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b &lt;span style="color:#ae81ff">2048&lt;/span> -C &lt;span style="color:#e6db74">&amp;#34;&amp;lt;comment&amp;gt;&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b &lt;span style="color:#ae81ff">2048&lt;/span> -C &lt;span style="color:#e6db74">&amp;#34;&amp;lt;comment&amp;gt;&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Executing the command will create two files, one with a &lt;code>.pub&lt;/code> extension which is the public key and one with no extension which is the private key.&lt;/p>
 &lt;p>Since I like to use a different set of key pair for each repository, I&lt;/p>
 &lt;h2 id="gitlab-public-key">Gitlab (Public Key)&lt;/h2>
@@ -718,10 +724,10 @@ echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&am
 &lt;/blockquote>
 &lt;h2 id="github-private-key">Github (Private Key)&lt;/h2>
 &lt;p>Add a secret by navigating to &lt;code>Repository &amp;gt; Settings &amp;gt; Repository &amp;gt; Secrets &amp;gt; New Secret&lt;/code>. Fill the contents of the private key and name as &lt;code>GITLAB_SSH_KEY&lt;/code>. Details at &lt;a href="https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets">docs.github.com&lt;/a>.&lt;/p></content></item><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description><content>&lt;h1 id="install-samba">Install Samba&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install samba
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install samba
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-samba">Configure Samba&lt;/h1>
 &lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nano /etc/samba/smb.conf
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nano /etc/samba/smb.conf
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Contents of &lt;code>smb.conf&lt;/code>&lt;/p>
 &lt;pre>&lt;code>[global]
 workgroup = WORKGROUP
@@ -740,24 +746,24 @@ writable = yes
 guest ok = yes
 &lt;/code>&lt;/pre>&lt;h1 id="restart-samba-service">Restart Samba Service&lt;/h1>
 &lt;p>The samba service has to restarted each time to use the new configuration.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">/etc/init.d/samba restart
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">/etc/init.d/samba restart
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Setup Snapcraft in a Github Action Workflow</title><link>https://abskmj.github.io/notes/posts/github/actions/setup-snapcraft/</link><pubDate>Sat, 04 Jul 2020 15:09:06 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/github/actions/setup-snapcraft/</guid><description>Installation snapcraft executable can be installed with the snap. Recent Ubuntu versions now have snap executable pre-installed.</description><content>&lt;h1 id="installation">Installation&lt;/h1>
 &lt;p>&lt;code>snapcraft&lt;/code> executable can be installed with the snap. Recent Ubuntu versions now have &lt;code>snap&lt;/code> executable pre-installed.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo snap install snapcraft --classic
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo snap install snapcraft --classic
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="login-token">Login Token&lt;/h1>
 &lt;p>A login token is used by &lt;code>snapcraft&lt;/code> to interact with published snaps on Snapcraft Store. In this setup, it is used to push a new version of the snap to the store.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">echo &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$SNAP_TOKEN&lt;span style="color:#e6db74">&amp;#34;&lt;/span> | snapcraft login --with -
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">echo &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$SNAP_TOKEN&lt;span style="color:#e6db74">&amp;#34;&lt;/span> | snapcraft login --with -
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>A login token can be generated by executing the below command in your local terminal where you are already logged in. It will generate a file named &lt;code>snap.login&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">snapcraft export-login --snaps &amp;lt;snap_name&amp;gt; snap.login
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">snapcraft export-login --snaps &amp;lt;snap_name&amp;gt; snap.login
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Create a secret &lt;code>SNAP_TOKEN&lt;/code> on Github with the contents of this file. Set below the environment variable to use the secret. Steps on creating a secret at &lt;a href="https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets">docs.github.com&lt;/a>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">env&lt;/span>:
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">env&lt;/span>:
 &lt;span style="color:#f92672">SNAP_TOKEN&lt;/span>: &lt;span style="color:#ae81ff">${{secrets.SNAP_TOKEN}} &lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="build-environment">Build Environment&lt;/h1>
 &lt;p>By default, &lt;code>snapcraft&lt;/code> uses a virtual machine driven by multipass to build the snap. But, there is no need to use a virtual machine on Github. Set below environment variable to build without a virtual machine. Details at &lt;a href="https://snapcraft.io/docs/t/the-snapcraft-build-environment-environment-variable/9110">snapcraft.io&lt;/a>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">env&lt;/span>:
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">env&lt;/span>:
 &lt;span style="color:#f92672">SNAPCRAFT_BUILD_ENVIRONMENT&lt;/span>: &lt;span style="color:#ae81ff">host&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="sample">Sample&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build&lt;/span>
 &lt;span style="color:#f92672">on&lt;/span>:
 &lt;span style="color:#f92672">push&lt;/span>:
 &lt;span style="color:#f92672">branches&lt;/span>: [ &lt;span style="color:#ae81ff">master ]&lt;/span>
@@ -778,15 +784,15 @@ guest ok = yes
 &lt;span style="color:#f92672">SNAPCRAFT_BUILD_ENVIRONMENT&lt;/span>: &lt;span style="color:#ae81ff">host&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Change Timezone in Debian</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/</link><pubDate>Sun, 17 May 2020 13:44:55 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/</guid><description>Using timedatectl Current Timezone $ timedatectl Set Timezone $ timedatectl set-timezone Asia/Kolkata List Timezones $ timedatectl list-timezones $ timedatectl list-timezones | grep -i kolkata</description><content>&lt;h1 id="using-timedatectl">Using timedatectl&lt;/h1>
 &lt;h2 id="current-timezone">Current Timezone&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="set-timezone">Set Timezone&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl set-timezone Asia/Kolkata
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl set-timezone Asia/Kolkata
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="list-timezones">List Timezones&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl list-timezones
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ timedatectl list-timezones
 $ timedatectl list-timezones | grep -i kolkata
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Express middleware to log request / response headers</title><link>https://abskmj.github.io/notes/posts/express/express-req-res-headers/</link><pubDate>Sun, 10 May 2020 13:03:19 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/express/express-req-res-headers/</guid><description>Express Middleware Logging request and response headers for tracing purpose</description><content>&lt;h1 id="express-middleware">Express Middleware&lt;/h1>
 &lt;p>Logging request and response headers for tracing purpose&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>((&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>((&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
 &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">requestHeaders&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>
 &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Request Headers:&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">requestHeaders&lt;/span>)
 &lt;span style="color:#75715e">// Request Headers: {
@@ -821,14 +827,14 @@ $ timedatectl list-timezones | grep -i kolkata
 &lt;li>Add a dummy column to all rows with value as 1.&lt;/li>
 &lt;li>Print the sum of this dummy column to count the rows.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sql" data-lang="sql">&lt;span style="color:#66d9ef">SELECT&lt;/span> &lt;span style="color:#66d9ef">SUM&lt;/span>(&lt;span style="color:#66d9ef">ROW_COUNT&lt;/span>) &lt;span style="color:#66d9ef">AS&lt;/span> &lt;span style="color:#66d9ef">COUNT&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sql" data-lang="sql">&lt;span style="color:#66d9ef">SELECT&lt;/span> &lt;span style="color:#66d9ef">SUM&lt;/span>(&lt;span style="color:#66d9ef">ROW_COUNT&lt;/span>) &lt;span style="color:#66d9ef">AS&lt;/span> &lt;span style="color:#66d9ef">COUNT&lt;/span>
 &lt;span style="color:#66d9ef">FROM&lt;/span> (
 &lt;span style="color:#66d9ef">SELECT&lt;/span> NAME, &lt;span style="color:#ae81ff">1&lt;/span> &lt;span style="color:#66d9ef">AS&lt;/span> &lt;span style="color:#66d9ef">ROW_COUNT&lt;/span>
 &lt;span style="color:#66d9ef">FROM&lt;/span> EMPLOYEE
 );
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Turn off the color with ls command</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</link><pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</guid><description>Alias See if there are any alias defined for ls on your terminal</description><content>&lt;h1 id="alias">Alias&lt;/h1>
 &lt;p>See if there are any alias defined for &lt;code>ls&lt;/code> on your terminal&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">alias
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">alias
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>For me it was &lt;code>alias ls='ls $LS_OPTIONS'&lt;/code> and &lt;code>LS_OPTIONS&lt;/code> environment variable had a value of &lt;code>--color=auto&lt;/code>&lt;/p>
 &lt;h1 id="bashrc">.bashrc&lt;/h1>
 &lt;p>Check the contents of your &lt;code>~/.bashrc&lt;/code> file. Generally, these aliases are defined here. Mine had these lines&lt;/p>
@@ -854,25 +860,25 @@ ARG HUGO_VERSION
 LABEL maintainer &amp;quot;abskmj@gmail.com&amp;quot;
 LABEL hugo.version ${HUGO_VERSION}
 &lt;/code>&lt;/pre>&lt;p>Pass the argument value&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker build -t hugo --build-arg HUGO_VERSION&lt;span style="color:#f92672">=&lt;/span>0.69.0 .
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker build -t hugo --build-arg HUGO_VERSION&lt;span style="color:#f92672">=&lt;/span>0.69.0 .
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Git Info Variables on Hugo</title><link>https://abskmj.github.io/notes/posts/hugo/hugo-git-info/</link><pubDate>Thu, 23 Apr 2020 13:16:58 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/hugo/hugo-git-info/</guid><description>Enable Git Info Variables Enable .GitInfo object for each page (if the Hugo site is versioned by Git).</description><content>&lt;h1 id="enable-git-info-variables">Enable Git Info Variables&lt;/h1>
 &lt;blockquote>
 &lt;p>Enable &lt;code>.GitInfo&lt;/code> object for each page (if the Hugo site is versioned by Git). This will then update the &lt;code>Lastmod&lt;/code> parameter for each page using the last git commit date for that content file.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="terminal">Terminal&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">hugo --enableGitInfo
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">hugo --enableGitInfo
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config-file">Config File&lt;/h2>
 &lt;blockquote>
 &lt;p>Hugo uses the &lt;code>config.toml&lt;/code>, &lt;code>config.yaml&lt;/code>, or &lt;code>config.json&lt;/code> (if found in the site root) as the default site config file.&lt;/p>
 &lt;p>The user can choose to override that default with one or more site config files using the command line &lt;code>--config&lt;/code> switch.&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">enableGitInfo&lt;/span> = &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">enableGitInfo&lt;/span> = &lt;span style="color:#66d9ef">true&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="dates-on-hugo-pages">Dates on Hugo Pages&lt;/h1>
 &lt;p>Once Git Info variables are enabled, Hugo updates only the &lt;code>LastMod&lt;/code> parameter for each page which is not used in most of the themes. However, Front Matter configuration can be set in the config file to show the dates from git info.&lt;/p>
 &lt;blockquote>
 &lt;p>Dates are important in Hugo, and you can configure how Hugo assigns dates to your content pages. You do this by adding a frontmatter section to your &lt;code>config.toml&lt;/code>.&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[&lt;span style="color:#a6e22e">frontmatter&lt;/span>]
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[&lt;span style="color:#a6e22e">frontmatter&lt;/span>]
 &lt;span style="color:#a6e22e">date&lt;/span> = [&lt;span style="color:#e6db74">&amp;#34;:git&amp;#34;&lt;/span> ,&lt;span style="color:#e6db74">&amp;#34;date&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;publishDate&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;lastmod&amp;#34;&lt;/span>]
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Install Debian Jessie on WD MyCloud (Gen1)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</link><pubDate>Wed, 15 Apr 2020 14:33:04 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</guid><description>De-attach WD Drive You will have to open your WD MyCloud device and remove the HDD or drive inside it.</description><content>&lt;h1 id="de-attach-wd-drive">De-attach WD Drive&lt;/h1>
 &lt;ul>
@@ -885,27 +891,27 @@ LABEL hugo.version ${HUGO_VERSION}
 &lt;ul>
 &lt;li>Install need software&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install parted
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install parted
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size around 1.8 TB.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Run the utility on your WD drive&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">parted /dev/sdb
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">parted /dev/sdb
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Print all partitions on the drive&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">print
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">print
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Remove all the partitions. For me, there was only one partition&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">remove &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">remove &lt;span style="color:#ae81ff">1&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Recreate all needed partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mklabel gpt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mklabel gpt
 mkpart primary 528M 2576M
 mkpart primary 2576M 4624M
 mkpart primary 16M 528M
@@ -919,39 +925,39 @@ set &lt;span style="color:#ae81ff">2&lt;/span> raid on
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Quit the utility&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">quit
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">quit
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Format data and swap partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkfs -t ext4 /dev/sdb4
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkfs -t ext4 /dev/sdb4
 mkswap /dev/sdb3
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="install-debian">Install Debian&lt;/h1>
 &lt;ul>
 &lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size of around 1.8 TB.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">fdisk -l
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Install software for RAID devices&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install mdadm
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install mdadm
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Mount RAID partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mdadm --stop /dev/md*
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mdadm --stop /dev/md*
 mdadm -A /dev/md0 /dev/sdb1 /dev/sdb2
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Mount data partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mount -t ext4 /dev/sdb4 /mnt
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mount -t ext4 /dev/sdb4 /mnt
 cd /mnt
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Download the Clean Debian package and extract it&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
 tar -xvfz clean-debian-jessie.tgz
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>If you are planning to install one of the original packages. You can download that package instead of Debian.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># v3.x&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># v3.x&lt;/span>
 wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v03.04.01-230.tar.gz
 tar -xvfz original-v03.04.01-230.tar.gz
 &lt;span style="color:#75715e"># v4.x&lt;/span>
@@ -961,7 +967,7 @@ tar -xvfz original-v04.01.02-417.tar.gz
 &lt;ul>
 &lt;li>Copy images to partitions&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb5
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb5
 dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb6
 dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>config.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb7
 dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>config.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb8
@@ -984,7 +990,7 @@ dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&l
 &lt;p>You can now ssh into your MyCloud device.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh root@192.168.X.XXX &lt;span style="color:#75715e"># replace with your IP &lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh root@192.168.X.XXX &lt;span style="color:#75715e"># replace with your IP &lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
 &lt;p>The default password for the root user is &lt;code>mycloud&lt;/code>.&lt;/p>
@@ -1019,37 +1025,37 @@ dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&l
 &lt;p>Add below sources&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">deb http://archive.debian.org/debian/ wheezy main non-free contrib
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">deb http://archive.debian.org/debian/ wheezy main non-free contrib
 deb-src http://archive.debian.org/debian/ wheezy main non-free contrib
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Now you can run&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>If you get below error&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">There is no public key available &lt;span style="color:#66d9ef">for&lt;/span> the following key IDs
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">There is no public key available &lt;span style="color:#66d9ef">for&lt;/span> the following key IDs
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Install below package&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install debian-archive-keyring
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get install debian-archive-keyring
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Now you can rerun&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">apt-get update
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Configure ES Lint with Airbnb rules for a Node.js Application</title><link>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</link><pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</guid><description>Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.</description><content>&lt;h2 id="install-es-lint-modules">Install ES Lint modules&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install --save-dev eslint-plugin-import eslint
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install --save-dev eslint-plugin-import eslint
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-airbnb-config">Install Airbnb config&lt;/h2>
 &lt;p>Use the base version for Node.js applications. They also publish a version for React applications as &lt;code>eslint-config-airbnb&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install --save-dev eslint-config-airbnb-base
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install --save-dev eslint-config-airbnb-base
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config-file">Config File&lt;/h2>
 &lt;p>Create a &lt;code>.eslintrc&lt;/code> file with following contents to Airbnb rules for the Node.js Application.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#f92672">&amp;#34;extends&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint-config-airbnb-base&amp;#34;&lt;/span>
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="npm-scripts">NPM Scripts&lt;/h2>
 &lt;p>Create few npm scripts to integrate linting into development flow.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>:{
 &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;node .&amp;#34;&lt;/span>,
 &lt;span style="color:#f92672">&amp;#34;lint&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint --fix .&amp;#34;&lt;/span>,
@@ -1059,20 +1065,20 @@ deb-src http://archive.debian.org/debian/ wheezy main non-free contrib
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vs-code">VS Code&lt;/h2>
 &lt;p>There is an extension on VS Code for ES Lint, available at &lt;a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&lt;/a>&lt;/p></content></item><item><title>Working with Git Stash</title><link>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</link><pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</guid><description>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.</description><content>&lt;p>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p>
 &lt;h2 id="save-the-local-changes-in-stash">Save the local changes in Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git stash push -m &lt;span style="color:#f92672">{{&lt;/span> commit message&lt;span style="color:#f92672">}}&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git stash push -m &lt;span style="color:#f92672">{{&lt;/span> commit message&lt;span style="color:#f92672">}}&lt;/span>
 // example
 git stash push -m &lt;span style="color:#f92672">{{&lt;/span> new logging module &lt;span style="color:#f92672">}}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="list-all-the-change-sets-in-stash">List all the change sets in Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git stash list
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git stash list
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="apply-a-change-set-from-stash">Apply a change set from Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git stash apply &lt;span style="color:#f92672">{{&lt;/span> index &lt;span style="color:#f92672">}}&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git stash apply &lt;span style="color:#f92672">{{&lt;/span> index &lt;span style="color:#f92672">}}&lt;/span>
 //example
 git stash apply &lt;span style="color:#ae81ff">1&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>Not specifying an index with automatically apply first index&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="delete-a-change-set-without-applying-from-stash">Delete a change set without applying from Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git stash drop &lt;span style="color:#f92672">{{&lt;/span> index &lt;span style="color:#f92672">}}&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git stash drop &lt;span style="color:#f92672">{{&lt;/span> index &lt;span style="color:#f92672">}}&lt;/span>
 // example
 git stash drop &lt;span style="color:#ae81ff">1&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
@@ -1083,18 +1089,18 @@ git stash drop &lt;span style="color:#ae81ff">1&lt;/span>
 &lt;blockquote>
 &lt;p>Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments. They have no save method, getters/setters or other Mongoose magic applied.&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>) =&amp;gt; {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>) =&amp;gt; {
 &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">users&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({ &lt;span style="color:#a6e22e">status&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;active&amp;#39;&lt;/span> }).&lt;span style="color:#a6e22e">limit&lt;/span>(&lt;span style="color:#ae81ff">10&lt;/span>).&lt;span style="color:#a6e22e">lean&lt;/span>();
 &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">users&lt;/span>);
 });
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="hydrate-method-on-model">Hydrate method on Model&lt;/h1>
 &lt;p>Hydrating is opposite of lean option. &lt;a href="https://mongoosejs.com/docs/api.html#model_Model.hydrate">Hydrate method&lt;/a> can be used to initialize a mongoose document from a plain javascript object to get access to its virtuals/methods.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">user&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">findOne&lt;/span>().&lt;span style="color:#a6e22e">lean&lt;/span>();
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">user&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">findOne&lt;/span>().&lt;span style="color:#a6e22e">lean&lt;/span>();
 &lt;span style="color:#66d9ef">let&lt;/span> document &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">hydrate&lt;/span>(&lt;span style="color:#a6e22e">user&lt;/span>);
 &lt;span style="color:#a6e22e">assert&lt;/span>(document &lt;span style="color:#66d9ef">instanceof&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">Document&lt;/span>); &lt;span style="color:#75715e">// true
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="code-repository">Code Repository&lt;/h1>
 &lt;p>A working code repository is available at &lt;a href="https://github.com/abskmj/example-mongoose-lean-hydrate">github&lt;/a>. Get started in your local environment&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/abskmj/example-mongoose-lean-hydrate.git
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/abskmj/example-mongoose-lean-hydrate.git
 cd example-mongoose-lean-hydrate
 npm install
 npm test
@@ -1109,7 +1115,7 @@ npm test
 &lt;pre>&lt;code>npm install --save-dev serverless-spotinst-functions
 &lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
 &lt;span style="color:#75715e">#&lt;/span>
 &lt;span style="color:#75715e"># This file is the main config file for your service.&lt;/span>
 &lt;span style="color:#75715e"># It&amp;#39;s very minimal at this point and uses default values.&lt;/span>
@@ -1191,7 +1197,7 @@ node_modules
 .serverlessrc
 .spotinst
 &lt;/code>&lt;/pre></content></item><item><title>HackerRank Contest - Project Euler - Largest product in a series</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/</link><pubDate>Mon, 07 Jan 2019 12:50:58 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler008/</guid><description>Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
@@ -1224,7 +1230,7 @@ product &lt;span style="color:#f92672">=&lt;/span> product &lt;span style="color
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank Contest - Project Euler - Multiples of 3 and 5</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/</link><pubDate>Mon, 07 Jan 2019 12:45:33 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler001/</guid><description>Solution import java.io.*; import java.util.*; import java.text.*; import java.math.*; import java.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
@@ -1255,14 +1261,14 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;p>A blog post belongs to a user&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="user-schema">User Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
 &lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
 &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> String,
 &lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
 }
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="blog-post-schema">Blog Post Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">{
 &lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
 &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> String,
 &lt;span style="color:#a6e22e">required&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>
@@ -1275,7 +1281,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="populate">Populate&lt;/h2>
 &lt;p>Now the author of a blog post can be easily populated by:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">Post&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">Post&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>)
 &lt;span style="color:#75715e">/*
 &lt;/span>&lt;span style="color:#75715e"> {
 &lt;/span>&lt;span style="color:#75715e"> _id: 5f71af94e66f4728f68ffc06,
@@ -1293,14 +1299,14 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;p>A user has many blog posts&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="user-schema-1">User Schema&lt;/h3>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">schema&lt;/span>.&lt;span style="color:#a6e22e">virtual&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>, {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">schema&lt;/span>.&lt;span style="color:#a6e22e">virtual&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>, {
 &lt;span style="color:#a6e22e">ref&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Post&amp;#39;&lt;/span>,
 &lt;span style="color:#a6e22e">localField&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;_id&amp;#39;&lt;/span>,
 &lt;span style="color:#a6e22e">foreignField&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;author&amp;#39;&lt;/span>
 })
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="populate-1">Populate&lt;/h2>
 &lt;p>Now the author of a blog post can be easily populated by:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({}).&lt;span style="color:#a6e22e">populate&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;posts&amp;#39;&lt;/span>)
 &lt;span style="color:#75715e">/*
 &lt;/span>&lt;span style="color:#75715e"> {
 &lt;/span>&lt;span style="color:#75715e"> _id: 5f71ce43687f2a2fb97fa462,
@@ -1323,7 +1329,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="note">Note&lt;/h1>
 &lt;p>Virtuals are not included in string version of the model instances by default. To include them, set the &lt;code>virtuals&lt;/code> option to &lt;code>true&lt;/code> on schema&amp;rsquo;s &lt;code>toObject&lt;/code> and &lt;code>toJSON&lt;/code> options.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Schema&lt;/span>(&lt;span style="color:#a6e22e">userSchema&lt;/span>, {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Schema&lt;/span>(&lt;span style="color:#a6e22e">userSchema&lt;/span>, {
 &lt;span style="color:#a6e22e">toObject&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">virtuals&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> },
 &lt;span style="color:#a6e22e">toJSON&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">virtuals&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span> }
 })
@@ -1344,7 +1350,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Historical Minute OHLCV&lt;/li>
 &lt;/ul>
 &lt;h2 id="specjson">spec.json&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#f92672">&amp;#34;baseUrl&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;https://min-api.cryptocompare.com/data&amp;#34;&lt;/span>,
 &lt;span style="color:#f92672">&amp;#34;operations&amp;#34;&lt;/span>: {
 &lt;span style="color:#f92672">&amp;#34;price&amp;#34;&lt;/span>: {
@@ -1397,7 +1403,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="nodejs">NodeJS&lt;/h1>
 &lt;h2 id="installing-cligen-module">Installing Cligen Module&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -save github:@abskmj/cligen
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -save github:@abskmj/cligen
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="generating-and-using-the-client">Generating and Using the client&lt;/h2>
 &lt;pre>&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require('@abskmj/cligen');
 const spec = require('./spec.json');
@@ -1496,7 +1502,7 @@ console.log(error);
 &lt;/code>&lt;/pre></content></item><item><title>NPM Module - Complex JSON to Query String</title><link>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</link><pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</guid><description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string.</description><content>&lt;h1 id="abskmjqueryhttpswwwnpmjscompackageabskmjquery">&lt;a href="https://www.npmjs.com/package/@abskmj/query">@abskmj/query&lt;/a>&lt;/h1>
 &lt;p>It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;@abskmj/query&amp;#39;&lt;/span>);
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;@abskmj/query&amp;#39;&lt;/span>);
 &lt;span style="color:#75715e">// query to get a list of 10 people between age 17 and 66, sorted by their age
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>
 &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">filters&lt;/span> &lt;span style="color:#f92672">=&lt;/span> {
@@ -1579,7 +1585,7 @@ scanner.close();
 }
 }
 &lt;/code>&lt;/pre></content></item><item><title>HackerRank - The Time in Words</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/</link><pubDate>Mon, 10 Sep 2018 07:16:41 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/the-time-in-words/</guid><description>Solution /* Solution to HackerRank: The Time in Words * URL: https://www.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: The Time in Words
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: The Time in Words
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/the-time-in-words
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -1635,33 +1641,33 @@ scanner&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">
 &lt;li>All of the blank VMs on cloud9 have &lt;a href="https://github.com/creationix/nvm">nvm&lt;/a> pre installed.&lt;/li>
 &lt;li>List all the available versions from &lt;a href="https://nodejs.org">the official site&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm ls-remote
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm ls-remote
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Choose to install the latest version&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm install v10.6.0
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm install v10.6.0
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Choose to use the latest version&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm use v10.6.0
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm use v10.6.0
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Check the version in use&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">node --version
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">node --version
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="angular">Angular&lt;/h2>
 &lt;ul>
 &lt;li>Install latest &lt;a href="https://cli.angular.io/">Angular CLI&lt;/a> package&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -g @angular/cli
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -g @angular/cli
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Create a new project named &lt;code>my-project&lt;/code> (you can use any name you need)&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ng new my-project
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ng new my-project
 cd my-project
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Change &lt;code>start&lt;/code> script in &lt;code>package.json&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
 &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
 &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
 &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
@@ -1681,42 +1687,42 @@ cd my-project
 &lt;ul>
 &lt;li>Create a folder for this new git repository.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkdir .git-remote
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkdir .git-remote
 cd .git-remote
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Initialize an bare git repository.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git init --bare
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git init --bare
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Add the remote repository&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git remote add orgin &lt;span style="color:#f92672">{{&lt;/span>remote_git_url&lt;span style="color:#f92672">}}&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git remote add orgin &lt;span style="color:#f92672">{{&lt;/span>remote_git_url&lt;span style="color:#f92672">}}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="using-new-git-repository">Using new Git Repository&lt;/h2>
 &lt;ul>
 &lt;li>All the git comands can be used by point the git directory to the new repository.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> &lt;span style="color:#f92672">{{&lt;/span>git_options&lt;span style="color:#f92672">}}&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> &lt;span style="color:#f92672">{{&lt;/span>git_options&lt;span style="color:#f92672">}}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Commits:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> commit -am &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> commit -am &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Push/Pull:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> push origin master
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> push origin master
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="adding-an-alias">Adding an Alias&lt;/h2>
 &lt;ul>
 &lt;li>An alias can be added to glitch console by creating a &lt;code>.bash_profile&lt;/code> file in project root and adding:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">alias rgit&lt;span style="color:#f92672">=&lt;/span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">alias rgit&lt;span style="color:#f92672">=&lt;/span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Alias can be used:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">rgit commit -m &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">rgit commit -m &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Fix TWRP E3004 Error on OnePlus2</title><link>https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/</link><pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/</guid><description>I have recently installed LineageOS custom ROM on my OnePlus2 device to keep on trying new android versions as they come.</description><content>&lt;p>I have recently installed &lt;a href="https://www.lineageos.org/">LineageOS&lt;/a> custom ROM on my OnePlus2 device to keep on trying new android versions as they come. While installing/updating the OS, I was getting below error on &lt;a href="https://twrp.me/">TWRP&lt;/a> recovery screen.&lt;/p>
 &lt;pre>&lt;code>script aborted: E3004: This package is for device: OnePlus2,oneplus2; this device is .
 &lt;/code>&lt;/pre>&lt;p>To fix this, I updated to the lastest version of &lt;a href="https://dl.twrp.me/oneplus2/">TWRP for OnePlus2&lt;/a>.&lt;/p></content></item><item><title>Set Proxy for Maven</title><link>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</link><pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</guid><description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file.</description><content>&lt;p>Proxy settings can be changed in &lt;code>{{maven_installation_folder}}/conf/settings.xml&lt;/code>. Un-comment and change the values in &lt;code>proxies&lt;/code> section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-xml" data-lang="xml">...
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-xml" data-lang="xml">...
 &lt;span style="color:#f92672">&amp;lt;proxies&amp;gt;&lt;/span>
 &lt;span style="color:#75715e">&amp;lt;!-- proxy
 &lt;/span>&lt;span style="color:#75715e"> | Specification for one proxy, to be used in connecting to the network.
@@ -1780,7 +1786,7 @@ pm2 restart node_app
 &lt;li>Instance Method: the method is available on an instance of the model.&lt;/li>
 &lt;/ul>
 &lt;h1 id="model-js-file">Model JS file&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model.js
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model.js
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>(&lt;span style="color:#a6e22e">Model&lt;/span>) {
 &lt;span style="color:#75715e">// Model Method
 &lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
@@ -1791,7 +1797,7 @@ pm2 restart node_app
 ...
 }
 }
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model method
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model method
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">models&lt;/span>.&lt;span style="color:#a6e22e">Model&lt;/span>;
 &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
 &lt;span style="color:#75715e">// Instance Method
@@ -1802,7 +1808,7 @@ pm2 restart node_app
 &lt;p>&lt;a href="https://m.me/BhainaBot?ref=start">Give it a try on your messenger!&lt;/a>&lt;/p></content></item><item><title>Enable Destroy All API for a model in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link><pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid><description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.</description><content>&lt;p>Destroy All API (&lt;code>Model.destroyAll()&lt;/code>) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.&lt;/p>
 &lt;h1 id="remote-method">Remote Method&lt;/h1>
 &lt;p>A corresponding remote method can be added to the &lt;code>model.js&lt;/code> file to enable this API. This method also supports a filter to enable selective deletion.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">Model&lt;/span>) {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">Model&lt;/span>) {
 &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">remoteMethod&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;destroyAll&amp;#39;&lt;/span>, {
 &lt;span style="color:#a6e22e">isStatic&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>,
 &lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Delete all matching records&amp;#39;&lt;/span>,
@@ -1815,7 +1821,7 @@ pm2 restart node_app
 &lt;ul>
 &lt;li>Use &lt;code>BigInteger&lt;/code> to calculate the sum and print first 10 characters by converting to string.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Large Sum
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Large Sum
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler013
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -1837,7 +1843,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>2 to the power 1000 will be a huge number hence consider using &lt;code>BigInteger&lt;/code>.&lt;/li>
 &lt;li>Recursively calculate the sum of all the digits.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Power Digit Sum
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Power Digit Sum
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler016
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -1897,7 +1903,7 @@ surge --domain &amp;lt;your-site.your-domain.com&amp;gt; ./public
 &lt;ul>
 &lt;li>Diameter of a binary tree is maximum of diameter of current node, its left and right child.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerEarth: Binary Tree
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerEarth: Binary Tree
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/tutorial/
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
@@ -1982,12 +1988,12 @@ add&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank Contest - Regular Expresso - Vowels in the Back</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</link><pubDate>Sun, 19 Nov 2017 20:57:21 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</guid><description>Solution /* Solution to HackerRank: Vowels in the Back * URL: https://www.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Vowels in the Back
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Vowels in the Back
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/vowels-in-the-back
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#e6db74">&amp;#34;[aeiouy][a-z]{9}$&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank Contest - Regular Expresso - Balanced Strings</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</link><pubDate>Sun, 19 Nov 2017 20:52:09 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</guid><description>Solution /* Solution to HackerRank: Balanced Strings * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings */ &amp;#34;^(ab|ba)+$&amp;#34; possible strings: ababab abba babaab but not: a bab abbaaba</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Balanced Strings
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Balanced Strings
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#e6db74">&amp;#34;^(ab|ba)+$&amp;#34;&lt;/span>
@@ -2000,7 +2006,7 @@ a
 bab
 abbaaba
 &lt;/code>&lt;/pre></content></item><item><title>HackerRank Contest - Regular Expresso - Winning Tic Tac Toe</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</link><pubDate>Sun, 19 Nov 2017 20:31:51 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</guid><description>Solution /* Solution to HackerRank: Winning Tic Tac Toe * URL: https://www.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Winning Tic Tac Toe
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Winning Tic Tac Toe
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#e6db74">&amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34;&lt;/span>
@@ -2057,7 +2063,7 @@ X X -
 &lt;li>Iterate through each city and check if it is already under range of previous tower.&lt;/li>
 &lt;li>If not, find a tower within the range to switch on.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Goodland Electricity
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Goodland Electricity
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/pylons
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2113,7 +2119,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Sort the array of numbers&lt;/li>
 &lt;li>Find the minimum difference between ith and (i+K-1)th element in each iteration.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Max Min
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Max Min
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/angry-children
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.BufferedReader&lt;span style="color:#f92672">;&lt;/span>
@@ -2143,7 +2149,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Iterate the sides in descending order&lt;/li>
 &lt;li>Check if &lt;a href="https://www.wikihow.com/Determine-if-Three-Side-Lengths-Are-a-Triangle">sides make a triangle&lt;/a> by checking if sum of two sides is greater than third side .&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Maximum Perimeter Triangle
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Maximum Perimeter Triangle
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/maximum-perimeter-triangle
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2177,7 +2183,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Parse input and build the tree by maintaining an index &lt;code>HashMap&lt;/code>.&lt;/li>
 &lt;li>Traverse tree and mirror tree simultaneously to find the mirror node.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerEarth: Mirror Image
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerEarth: Mirror Image
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/practice-problems/algorithm/mirror-image-2/
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2265,7 +2271,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
 &lt;pre>&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
 &lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;a href="https://en.wikipedia.org/wiki/X-Forwarded-For">&lt;code>x-forwarded-for&lt;/code>&lt;/a> header is generally used by proxies to pass originating client&amp;rsquo;s IP.&lt;/li>
 &lt;li>IP value should be hashed to avoid collecting sensitive user or client information.&lt;/li>
@@ -2279,7 +2285,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="sample-request">Sample Request&lt;/h2>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// nodejs
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// nodejs
 &lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
 &lt;span style="color:#a6e22e">request&lt;/span>({
 &lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
@@ -2300,7 +2306,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Check if current maximum number is already at desired index i.e highest at index 0, second highest at index 1 and so on.&lt;/li>
 &lt;li>If not, keep on swapping them till all the swaps are exhausted.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Permutation
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Permutation
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/largest-permutation
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2346,7 +2352,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Swap them in order of decreasing value till all the swaps are exhausted.&lt;/li>
 &lt;/ul>
 &lt;p>Test cases 13 to 15 timed out for this solution.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Solution&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
 &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
@@ -2387,7 +2393,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Check if current house is in range of last transmitter.&lt;/li>
 &lt;li>If not, find a house to put transmitter on so that current house is in range.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Hackerland Radio Transmitters
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Hackerland Radio Transmitters
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/hackerland-radio-transmitters
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2438,7 +2444,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices.&lt;/li>
 &lt;li>Check that the indexes buying and selling are in correct order so that year of buying is less than year of selling.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Minimum Loss
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Minimum Loss
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/minimum-loss
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2468,7 +2474,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Compare each possible combination to determine the minimum difference.&lt;/li>
 &lt;/ul>
 &lt;p>Test cases 11 to 15 timed out for below solution.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Solution&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
 &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
@@ -2495,7 +2501,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Keep an array representing all numbers including a and b.&lt;/li>
 &lt;li>Strike out multiples of current number from array in each iteration.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Mutual Indivisibility
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Mutual Indivisibility
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/mutual-indivisibility
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2554,7 +2560,7 @@ in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">close
 &lt;li>Check each iteration for prime number.&lt;/li>
 &lt;/ul>
 &lt;p>However, Test case 4 timed out for below solution.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2591,7 +2597,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Caching if a number is prime in a &lt;code>HashMap&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: 10001st Prime
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: 10001st Prime
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler007
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2644,7 +2650,7 @@ primes&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">p
 &lt;li>Add each iteration to sum and square of it to another sum.&lt;/li>
 &lt;li>Print absolute difference.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Sum Square Difference
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Sum Square Difference
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler006
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2674,7 +2680,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Check if current iteration is a palindrome by using &lt;code>reverse()&lt;/code> of &lt;code>StringBuilder&lt;/code> class.&lt;/li>
 &lt;li>Check if current iteration is a product of two 3-digit numbers.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Palindrome
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Palindrome
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler004
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2717,7 +2723,7 @@ String forward &lt;span style="color:#f92672">=&lt;/span> Integer&lt;span style=
 &lt;li>Find all the factors of the given number by iterating from 1 to square root of the number.&lt;/li>
 &lt;li>Sort all the factors in descending order and iterate to check if a factor is prime.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Prime Factor
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Largest Prime Factor
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler003
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2766,7 +2772,7 @@ factors&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank Contest - Project Euler - Even Fibonacci Numbers</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</link><pubDate>Sat, 04 Nov 2017 20:36:33 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/projecteuler/euler002/</guid><description>Solution #1 Test cases 2,3 timed out for below solution.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
 &lt;p>Test cases 2,3 timed out for below solution.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.text.*&lt;span style="color:#f92672">;&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.math.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2816,7 +2822,7 @@ using values from eq1
 = 4f(3) + f(0)
 = 4F(1) + F(0) =&amp;gt; F(n) = 4F(n-1) + 4F(n-2)
 &lt;/code>&lt;/pre>&lt;p>Using the above formula&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Even Fibonacci Numbers
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Even Fibonacci Numbers
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/projecteuler/challenges/euler002
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2851,7 +2857,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Add one of each group to the string if not already present i.e. count is 0.&lt;/li>
 &lt;li>Add required number of characters in case length of the string is less than 6.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Strong Password
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Strong Password
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/hourrank-24/challenges/strong-password
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -2923,7 +2929,7 @@ in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">close
 &lt;li>Each cluster is traversed to find the count of astronauts.&lt;/li>
 &lt;li>Number of possible combinations are calculated based on sizes of these countries.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Journey to the Moon
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Journey to the Moon
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/journey-to-the-moon
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
@@ -3003,7 +3009,7 @@ count &lt;span style="color:#f92672">+=&lt;/span> dfs&lt;span style="color:#f926
 &lt;li>DFS (Depth First Search) algorithm is used to traverse all cities in each cluster.&lt;/li>
 &lt;li>Number of roads in each cluster is one less than the number of cities traversed.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Roads and Libraries
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerRank: Roads and Libraries
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/challenges/torque-and-development
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#f92672">import&lt;/span> java.io.*&lt;span style="color:#f92672">;&lt;/span>
