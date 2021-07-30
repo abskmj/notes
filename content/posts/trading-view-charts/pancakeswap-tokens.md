@@ -5,7 +5,15 @@ tags: ["TradingView", "Charts", "PancakeSwap"]
 summary: " "
 ---
 
->  [**PancakeSwap**](https://pancakeswap.finance/) Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on Binance Smart Chain (BSC) with the best farms in DeFi and a lottery for CAKE.
+>  [**PancakeSwap**](https://pancakeswap.finance/) Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on Binance Smart Chain (BSC) with the best farms in Defi and a lottery for CAKE.
+
+This showcases couple of OHLC Charts for Pancakeswap Tokens implemented using the [TradingView Lightweight Charts](https://www.tradingview.com/lightweight-charts/) and [Bitquery.io](https://bitquery.io/) APIs.
+
+[TradingView Techincal Analysis Charts](https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts) can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them.
+
+I run a gig on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL) to help with such integrations and customizations.
+
+> If you are new to Fiverr, you can use [my referral link](http://www.fiverr.com/s2/730602a4fa) to signup and get 20% off on your first order. 
 
 
 # OHLC Chart with Bitquery GraphQL API
@@ -20,7 +28,7 @@ summary: " "
 >}}
 
 # Chart for another Token
-By default, plots a chart for PancakeSwap (CAKE) token. Setting `?token=<token_address>` URL parameter plots for another token by its address. Below is a sample for UniSwap (UNI) token.
+By default, plots a chart for PancakeSwap (CAKE) token. Setting `?token=<token_address>` URL parameter plots for another by its address. Below is a sample for UniSwap (UNI) token.
 
 {{< iframe 
     src="//tradingviewcharts.gitlab.io/lightweight-bitquery-parcel/?token=0xbf5140a22578168fd562dccf235e5d43a02ce9b1"
