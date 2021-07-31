@@ -17,8 +17,8 @@
 &lt;h1 id="before-you-buy">Before you buy&lt;/h1>
 &lt;p>There are a couple of prerequisites that you need to take care of before you can use it.&lt;/p>
 &lt;ul>
-&lt;li>Access to a copy of TradingView Technical Analysis Charts&lt;/li>
-&lt;li>An API Key from Bitquery.io&lt;/li>
+&lt;li>Access to a copy of &lt;a href="https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts">TradingView Technical Analysis Charts&lt;/a>&lt;/li>
+&lt;li>An API Key from &lt;a href="https://bitquery.io/">Bitquery.io&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h1 id="important-notes">Important Notes&lt;/h1>
 &lt;ul>
@@ -27,7 +27,7 @@
 &lt;p>&lt;a href="https://pancakeswap.finance/">&lt;strong>PancakeSwap&lt;/strong>&lt;/a> Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on Binance Smart Chain (BSC) with the best farms in Defi and a lottery for CAKE.&lt;/p>
 &lt;/blockquote>
 &lt;p>This showcases couple of OHLC Charts for Pancakeswap Tokens implemented using the &lt;a href="https://www.tradingview.com/lightweight-charts/">TradingView Lightweight Charts&lt;/a> and &lt;a href="https://bitquery.io/">Bitquery.io&lt;/a> APIs.&lt;/p>
-&lt;p>&lt;a href="https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts">TradingView Techincal Analysis Charts&lt;/a> can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them.&lt;/p>
+&lt;p>&lt;a href="https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts">TradingView Techincal Analysis Charts&lt;/a> can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them. &lt;a href="https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/">Source code&lt;/a> of one of my starter project is available.&lt;/p>
 &lt;p>I run a gig on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a> to help with such integrations and customizations.&lt;/p>
 &lt;blockquote>
 &lt;p>If you are new to Fiverr, you can use &lt;a href="http://www.fiverr.com/s2/730602a4fa">my referral link&lt;/a> to signup and get 20% off on your first order.&lt;/p>

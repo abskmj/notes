@@ -17,8 +17,8 @@
 &lt;h1 id="before-you-buy">Before you buy&lt;/h1>
 &lt;p>There are a couple of prerequisites that you need to take care of before you can use it.&lt;/p>
 &lt;ul>
-&lt;li>Access to a copy of TradingView Technical Analysis Charts&lt;/li>
-&lt;li>An API Key from Bitquery.io&lt;/li>
+&lt;li>Access to a copy of &lt;a href="https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts">TradingView Technical Analysis Charts&lt;/a>&lt;/li>
+&lt;li>An API Key from &lt;a href="https://bitquery.io/">Bitquery.io&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h1 id="important-notes">Important Notes&lt;/h1>
 &lt;ul>
