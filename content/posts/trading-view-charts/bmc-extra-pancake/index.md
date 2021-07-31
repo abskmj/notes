@@ -24,8 +24,8 @@ You can view the chart by starting a local server and opening it in your browser
 
 # Before you buy
 There are a couple of prerequisites that you need to take care of before you can use it.
-- Access to a copy of TradingView Technical Analysis Charts
-- An API Key from Bitquery.io
+- Access to a copy of [TradingView Technical Analysis Charts](https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts)
+- An API Key from [Bitquery.io](https://bitquery.io/)
 
 # Important Notes
 - The chart is not integrated with a WebSocket or a live feed as Bitquery.io doesn't provide one. Hence, the chart will not update automatically, and you will have to refresh it manually to see the latest data.

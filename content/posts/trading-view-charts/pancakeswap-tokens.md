@@ -9,7 +9,7 @@ summary: " "
 
 This showcases couple of OHLC Charts for Pancakeswap Tokens implemented using the [TradingView Lightweight Charts](https://www.tradingview.com/lightweight-charts/) and [Bitquery.io](https://bitquery.io/) APIs.
 
-[TradingView Techincal Analysis Charts](https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts) can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them.
+[TradingView Techincal Analysis Charts](https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts) can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them. [Source code]({{< ref "bmc-extra-pancake/index.md" >}}) of one of my starter project is available.
 
 I run a gig on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL) to help with such integrations and customizations.
 
