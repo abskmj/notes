@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Charts on Notes</title><link>https://abskmj.github.io/notes/tags/charts/</link><description>Recent content in Charts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Tue, 08 Jun 2021 17:30:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/charts/index.xml" rel="self" type="application/rss+xml"/><item><title>TradingView Charts for PancakeSwap Tokens</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</link><pubDate>Tue, 08 Jun 2021 17:30:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</guid><description/><content>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Charts on Notes</title><link>https://abskmj.github.io/notes/tags/charts/</link><description>Recent content in Charts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/charts/index.xml" rel="self" type="application/rss+xml"/><item><title>Source Code: TradingView Charts for Pancakeswap Tokens</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/</link><pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/</guid><description>This is an informational post for my extra available at BuyMeACoffee.</description><content>&lt;blockquote>
+&lt;p>This is an informational post for my extra available at &lt;a href="https://www.buymeacoffee.com/abskmj/e/39007">BuyMeACoffee.com&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="what-will-you-get">What will you get?&lt;/h1>
+&lt;p>You will get a zip file with the source code for an OHLC Chart for PancakeSwap Tokens.&lt;/p>
+&lt;p>&lt;img src="chart.png" alt="TradingView Chart">&lt;/p>
+&lt;ul>
+&lt;li>It uses TradingView Techincal Analysis Charts as the charting library and Bitquery.io APIs as the data provider.&lt;/li>
+&lt;li>Code is in HTML and Javascript.&lt;/li>
+&lt;li>Prices in the charts are in BUSD.&lt;/li>
+&lt;li>Supports both Pancakeswap v1 and v2 tokens&lt;/li>
+&lt;li>Supports 1m,5m,15m,30m,1h,4h,12d,1d,7d timeframes&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="timeframes.png" alt="TradingView Chart">&lt;/p>
+&lt;h1 id="how-to-use-it">How to use it?&lt;/h1>
+&lt;p>You can view the chart by starting a local server and opening it in your browser. You can also host it with any HTTP server like Nginx and Apache on a remote server. These are static files and don&amp;rsquo;t need a server component other than to host them.&lt;/p>
+&lt;h1 id="before-you-buy">Before you buy&lt;/h1>
+&lt;p>There are a couple of prerequisites that you need to take care of before you can use it.&lt;/p>
+&lt;ul>
+&lt;li>Access to a copy of TradingView Technical Analysis Charts&lt;/li>
+&lt;li>An API Key from Bitquery.io&lt;/li>
+&lt;/ul>
+&lt;h1 id="important-notes">Important Notes&lt;/h1>
+&lt;ul>
+&lt;li>The chart is not integrated with a WebSocket or a live feed as Bitquery.io doesn&amp;rsquo;t provide one. Hence, the chart will not update automatically, and you will have to refresh it manually to see the latest data.&lt;/li>
+&lt;/ul></content></item><item><title>TradingView Charts for PancakeSwap Tokens</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</link><pubDate>Tue, 08 Jun 2021 17:30:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</guid><description/><content>&lt;blockquote>
 &lt;p>&lt;a href="https://pancakeswap.finance/">&lt;strong>PancakeSwap&lt;/strong>&lt;/a> Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on Binance Smart Chain (BSC) with the best farms in Defi and a lottery for CAKE.&lt;/p>
 &lt;/blockquote>
 &lt;p>This showcases couple of OHLC Charts for Pancakeswap Tokens implemented using the &lt;a href="https://www.tradingview.com/lightweight-charts/">TradingView Lightweight Charts&lt;/a> and &lt;a href="https://bitquery.io/">Bitquery.io&lt;/a> APIs.&lt;/p>
