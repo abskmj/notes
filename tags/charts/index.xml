@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Charts on Notes</title><link>https://abskmj.github.io/notes/tags/charts/</link><description>Recent content in Charts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/charts/index.xml" rel="self" type="application/rss+xml"/><item><title>Source Code: TradingView Charts for Pancakeswap Tokens</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/</link><pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/</guid><description>This is an informational post for my extra available at BuyMeACoffee.</description><content>&lt;blockquote>
-&lt;p>This is an informational post for my extra available at &lt;a href="https://www.buymeacoffee.com/abskmj/e/39007">BuyMeACoffee.com&lt;/a>&lt;/p>
+&lt;p>This is an informational post for my extra available at &lt;a href="https://www.buymeacoffee.com/abskmj/e/39007">BuyMeACoffee.com&lt;/a>. Connect me on &lt;a href="https://discordapp.com/users/220585271983472650">Discord&lt;/a> for any queries or feedback.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="what-will-you-get">What will you get?&lt;/h1>
 &lt;p>You will get a zip file with the source code for an OHLC Chart for PancakeSwap Tokens.&lt;/p>
@@ -28,7 +28,7 @@
 &lt;/blockquote>
 &lt;p>This showcases couple of OHLC Charts for Pancakeswap Tokens implemented using the &lt;a href="https://www.tradingview.com/lightweight-charts/">TradingView Lightweight Charts&lt;/a> and &lt;a href="https://bitquery.io/">Bitquery.io&lt;/a> APIs.&lt;/p>
 &lt;p>&lt;a href="https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts">TradingView Techincal Analysis Charts&lt;/a> can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them. &lt;a href="https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/">Source code&lt;/a> of one of my starter project is available.&lt;/p>
-&lt;p>I run a gig on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a> to help with such integrations and customizations.&lt;/p>
+&lt;p>I run a gig on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a> to help with such integrations and customizations. You can also connect with me on &lt;a href="https://discordapp.com/users/220585271983472650">Discord&lt;/a>.&lt;/p>
 &lt;blockquote>
 &lt;p>If you are new to Fiverr, you can use &lt;a href="http://www.fiverr.com/s2/730602a4fa">my referral link&lt;/a> to signup and get 20% off on your first order.&lt;/p>
 &lt;/blockquote>
@@ -80,7 +80,7 @@ UNI/WBNB - A sample integration of TradingView Lightweight Chart library with Bi
 &lt;/p>
 &lt;/div>
 &lt;h1 id="looking-for-a-developer">Looking for a Developer?&lt;/h1>
-&lt;p>Connect with me on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a>&lt;/p></content></item><item><title>Working with TradingView Lightweight Charts</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</link><pubDate>Tue, 01 Jun 2021 10:35:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</guid><description/><content>&lt;blockquote>
+&lt;p>Connect with me on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a> or &lt;a href="https://discordapp.com/users/220585271983472650">Discord&lt;/a>&lt;/p></content></item><item><title>Working with TradingView Lightweight Charts</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</link><pubDate>Tue, 01 Jun 2021 10:35:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</guid><description/><content>&lt;blockquote>
 &lt;p>&lt;a href="https://tradingview.com/lightweight-charts/">&lt;strong>TradingView Lightweight Charts&lt;/strong>&lt;/a> Top performance in a tiny package. Free, open-source and feature-rich. At just 40 kilobytes, the dream of lightweight interactive charts is now a reality. HTML5 Canvas technology ensures that (unlike pictures) this chart will always look perfect on any device.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="sample-integrations">Sample Integrations&lt;/h1>
