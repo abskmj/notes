@@ -11,7 +11,7 @@ This showcases couple of OHLC Charts for Pancakeswap Tokens implemented using th
 
 [TradingView Techincal Analysis Charts](https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts) can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them. [Source code]({{< ref "bmc-extra-pancake/index.md" >}}) of one of my starter project is available.
 
-I run a gig on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL) to help with such integrations and customizations.
+I run a gig on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL) to help with such integrations and customizations. You can also connect with me on [Discord](https://discordapp.com/users/220585271983472650).
 
 > If you are new to Fiverr, you can use [my referral link](http://www.fiverr.com/s2/730602a4fa) to signup and get 20% off on your first order. 
 
@@ -36,4 +36,4 @@ By default, plots a chart for PancakeSwap (CAKE) token. Setting `?token=<token_a
 >}}
 
 # Looking for a Developer?
-Connect with me on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL)
+Connect with me on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL) or [Discord](https://discordapp.com/users/220585271983472650)
