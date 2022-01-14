@@ -74,6 +74,11 @@ fdisk -l
 ```bash
 apt-get install mdadm
 ```
+- Create RAID
+```
+mdadm --create /dev/md0 -n 2 -l 1 /dev/sdb1 /dev/sdb2
+```
+
 - Mount RAID partitions
 
 ```bash
