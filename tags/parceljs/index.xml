@@ -2,7 +2,7 @@
 &lt;ul>
 &lt;li>Install NPM module&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm install --save-dev parcel-bundler
+&lt;pre tabindex="0">&lt;code>npm install --save-dev parcel-bundler
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add NPM scripts&lt;/li>
 &lt;/ul>
@@ -15,12 +15,12 @@
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Start the development server&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm start
+&lt;pre tabindex="0">&lt;code>npm start
 &lt;/code>&lt;/pre>&lt;h1 id="steps-for-v2">Steps for v2&lt;/h1>
 &lt;ul>
 &lt;li>Install NPM module&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm install --save-dev parcel@next
+&lt;pre tabindex="0">&lt;code>npm install --save-dev parcel@next
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add NPM scripts&lt;/li>
 &lt;/ul>
@@ -33,7 +33,7 @@
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Start the development server&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm start
+&lt;pre tabindex="0">&lt;code>npm start
 &lt;/code>&lt;/pre>&lt;h1 id="bonus">Bonus&lt;/h1>
 &lt;ul>
 &lt;li>Set the public url&lt;/li>

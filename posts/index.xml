@@ -233,7 +233,7 @@ NAME STATE VERSION
 &lt;ul>
 &lt;li>Install NPM module&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm install --save-dev parcel-bundler
+&lt;pre tabindex="0">&lt;code>npm install --save-dev parcel-bundler
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add NPM scripts&lt;/li>
 &lt;/ul>
@@ -246,12 +246,12 @@ NAME STATE VERSION
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Start the development server&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm start
+&lt;pre tabindex="0">&lt;code>npm start
 &lt;/code>&lt;/pre>&lt;h1 id="steps-for-v2">Steps for v2&lt;/h1>
 &lt;ul>
 &lt;li>Install NPM module&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm install --save-dev parcel@next
+&lt;pre tabindex="0">&lt;code>npm install --save-dev parcel@next
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add NPM scripts&lt;/li>
 &lt;/ul>
@@ -264,7 +264,7 @@ NAME STATE VERSION
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Start the development server&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm start
+&lt;pre tabindex="0">&lt;code>npm start
 &lt;/code>&lt;/pre>&lt;h1 id="bonus">Bonus&lt;/h1>
 &lt;ul>
 &lt;li>Set the public url&lt;/li>
@@ -279,7 +279,7 @@ NAME STATE VERSION
 &lt;ul>
 &lt;li>Install NPM modules&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm install --save-dev nyc
+&lt;pre tabindex="0">&lt;code>npm install --save-dev nyc
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Update NPM scripts in the &lt;code>package.json&lt;/code> file&lt;/li>
 &lt;/ul>
@@ -291,7 +291,7 @@ NAME STATE VERSION
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Update the &lt;code>.gitignore&lt;/code> file&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>.nyc_output
+&lt;pre tabindex="0">&lt;code>.nyc_output
 coverage
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add a Github action at &lt;code>.github/workflows/tests.yml&lt;/code>&lt;/li>
@@ -504,13 +504,13 @@ apt-get update
 apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="volume-control">Volume Control&lt;/h2>
 &lt;p>Add below lines to &lt;code>/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common&lt;/code> file, just before the &lt;code>[Element PCM]&lt;/code> section. This will also make the &lt;code>mute the microphone&lt;/code> button usable.&lt;/p>
-&lt;pre>&lt;code>[Element Master]
+&lt;pre tabindex="0">&lt;code>[Element Master]
 switch = mute
 volume = ignore
 &lt;/code>&lt;/pre>&lt;p>&lt;img src="pulseaudio-config.png" alt="Pulse Audio Configuration">&lt;/p>
 &lt;h2 id="system-time-in-windows--popos">System Time in Windows &amp;amp; PopOS&lt;/h2>
 &lt;p>Update the below &lt;code>timedatectl&lt;/code> configuration in PopOS. Details are available at &lt;a href="https://support.system76.com/articles/dual-booting/">support.system76.com&lt;/a>&lt;/p>
-&lt;pre>&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
+&lt;pre tabindex="0">&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
 &lt;/code>&lt;/pre>&lt;h2 id="text-on-screen-too-small">Text on screen too small&lt;/h2>
 &lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for a comfortable reading.&lt;/p>
 &lt;p>&lt;img src="displays-fractional-scaling.png" alt="Display Fractional Scaling">&lt;/p>
@@ -555,7 +555,7 @@ volume = ignore
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="multer-middleware">Multer Middleware&lt;/h1>
 &lt;p>&lt;a href="https://www.npmjs.com/package/multer">Multer&lt;/a> will parse &lt;code>multipart/form-data&lt;/code> request and the uploaded files will be accessible as &lt;code>req.files&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;multer&amp;#39;&lt;/span>)
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">upload&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span>({ &lt;span style="color:#a6e22e">dest&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>.&lt;span style="color:#a6e22e">join&lt;/span>(&lt;span style="color:#ae81ff">__&lt;/span>&lt;span style="color:#a6e22e">dirname&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;.&amp;#39;&lt;/span>) })
+&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">upload&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span>({ &lt;span style="color:#a6e22e">dest&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>.&lt;span style="color:#a6e22e">join&lt;/span>(&lt;span style="color:#a6e22e">__dirname&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;.&amp;#39;&lt;/span>) })
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="upload-file-api">Upload File API&lt;/h1>
 &lt;p>API uses the multer middleware and GridFile model to upload files to GridFS.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">post&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">upload&lt;/span>.&lt;span style="color:#a6e22e">any&lt;/span>(), &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
@@ -617,7 +617,7 @@ volume = ignore
 }
 })
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample Request URL&lt;/p>
-&lt;pre>&lt;code>/v1/files/5f6850023516552ad21d0007/attachment.pdf
+&lt;pre tabindex="0">&lt;code>/v1/files/5f6850023516552ad21d0007/attachment.pdf
 &lt;/code>&lt;/pre>&lt;blockquote>
 &lt;p>A working codebase for reference is available at &lt;a href="https://gist.github.com/abskmj/655dbc3191e108d6a5a55e28446bc1e9">gist.github.com&lt;/a>&lt;/p>
 &lt;/blockquote></content></item><item><title>Use Vue.js in a TamperMonkey Script</title><link>https://abskmj.github.io/notes/posts/tampermonkey/vue/</link><pubDate>Sun, 20 Sep 2020 07:35:57 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tampermonkey/vue/</guid><description>Vue.js makes handling dynamic content easy in a TamperMonkey script.</description><content>&lt;blockquote>
@@ -625,7 +625,7 @@ volume = ignore
 &lt;/blockquote>
 &lt;h1 id="include-the-script">Include the script&lt;/h1>
 &lt;p>Configure the script to include the Vue.js bundle from a CDN.&lt;/p>
-&lt;pre>&lt;code>// @require https://cdn.jsdelivr.net/npm/vue
+&lt;pre tabindex="0">&lt;code>// @require https://cdn.jsdelivr.net/npm/vue
 &lt;/code>&lt;/pre>&lt;h1 id="initialize-a-vuejs-app">Initialize a Vue.js App&lt;/h1>
 &lt;p>It is recommended to initialize the Vue.js app after the page is ready.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">window.&lt;span style="color:#a6e22e">addEventListener&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;load&amp;#34;&lt;/span>, (&lt;span style="color:#a6e22e">event&lt;/span>) =&amp;gt; {
@@ -640,7 +640,7 @@ volume = ignore
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>SSH Tunnels for Local Development</title><link>https://abskmj.github.io/notes/posts/ssh/ssh-tunnels/</link><pubDate>Sat, 29 Aug 2020 15:30:35 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/ssh/ssh-tunnels/</guid><description/><content>&lt;h2 id="local-port-forwarding">Local Port Forwarding&lt;/h2>
 &lt;p>A service running on specific port of the server is accessible on a specific port of the local machine.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;pre>&lt;code>+---------------------+ +-----------------------+
+&lt;pre tabindex="0">&lt;code>+---------------------+ +-----------------------+
 | | | |
 | +---------------+ | SSH Tunnel | +-----------------+ |
 | | | &amp;lt;-----------------------+ | | |
@@ -653,11 +653,11 @@ Server Local
 &lt;/code>&lt;/pre>&lt;p>Let&amp;rsquo;s assume a MongoDB service is running on the server on port &lt;code>27017&lt;/code> and is not accessible outside of the server. There is an application running the local machine and needs to connect to the MongoDB service running on the server.&lt;/p>
 &lt;p>With the below SSH tunnel, the MongoDB service is available on port &lt;code>27018&lt;/code> of the local machine and accessible at &lt;code>mongodb://127.0.0.1:27018/dev&lt;/code> for the application&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh -L localhost:27018:localhost:27017 -N root@10.17.15.53
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>-L
+&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>-L
 Specifies that the given port on the local (client) host is to be forwarded to the given host andport on the remote side.
 -N
 Do not execute a remote command.
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>localhost:27018:localhost:27017
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>localhost:27018:localhost:27017
 bind address of local machine : port of local machine : bind address of server : port of server
 &lt;/code>&lt;/pre></content></item><item><title>Enable Hibernate on Pop OS</title><link>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</link><pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</guid><description/><content>&lt;h1 id="prerequisites">Prerequisites&lt;/h1>
 &lt;h2 id="check-if-the-kernel-supports-hibernation">Check if the kernel supports Hibernation&lt;/h2>
@@ -696,12 +696,12 @@ echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&am
 &lt;p>Get the UUID for the swap&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">findmnt -no UUID -T /swapfile
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
-&lt;pre>&lt;code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+&lt;pre tabindex="0">&lt;code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 &lt;/code>&lt;/pre>&lt;h2 id="swap-offset">Swap offset&lt;/h2>
 &lt;p>This is only needed when a swap file is available. Get the offset&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo filefrag -v /swapfile | awk &lt;span style="color:#e6db74">&amp;#39;{ if($1==&amp;#34;0:&amp;#34;){print $4} }&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
-&lt;pre>&lt;code>9999999..
+&lt;pre tabindex="0">&lt;code>9999999..
 &lt;/code>&lt;/pre>&lt;h2 id="update-kernel-options">Update Kernel Options&lt;/h2>
 &lt;p>For a Swap File&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset&lt;span style="color:#f92672">=&lt;/span>9999999”
@@ -709,9 +709,9 @@ echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&am
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Add below line to &lt;code>/etc/initramfs-tools/conf.d/resume&lt;/code>. Create the file if not present&lt;/p>
 &lt;p>For a Swap File&lt;/p>
-&lt;pre>&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
+&lt;pre tabindex="0">&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
 &lt;/code>&lt;/pre>&lt;p>For a Swap Partition&lt;/p>
-&lt;pre>&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+&lt;pre tabindex="0">&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 &lt;/code>&lt;/pre>&lt;p>Update the configurations&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo update-initramfs -u
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="test-hibernation">Test Hibernation&lt;/h1>
@@ -754,7 +754,7 @@ echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&am
 &lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nano /etc/samba/smb.conf
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Contents of &lt;code>smb.conf&lt;/code>&lt;/p>
-&lt;pre>&lt;code>[global]
+&lt;pre tabindex="0">&lt;code>[global]
 workgroup = WORKGROUP
 server string = Samba Server %v
 netbios name = WDMyCloud
@@ -863,13 +863,13 @@ $ timedatectl list-timezones | grep -i kolkata
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>For me it was &lt;code>alias ls='ls $LS_OPTIONS'&lt;/code> and &lt;code>LS_OPTIONS&lt;/code> environment variable had a value of &lt;code>--color=auto&lt;/code>&lt;/p>
 &lt;h1 id="bashrc">.bashrc&lt;/h1>
 &lt;p>Check the contents of your &lt;code>~/.bashrc&lt;/code> file. Generally, these aliases are defined here. Mine had these lines&lt;/p>
-&lt;pre>&lt;code>export LS_OPTIONS='--color=auto'
+&lt;pre tabindex="0">&lt;code>export LS_OPTIONS='--color=auto'
 eval &amp;quot;`dircolors`&amp;quot;
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
 &lt;/code>&lt;/pre>&lt;p>Update &lt;code>export LS_OPTIONS='--color=auto'&lt;/code> to &lt;code>export LS_OPTIONS='--color=never'&lt;/code> and restart the terminal&lt;/p>
-&lt;pre>&lt;code>export LS_OPTIONS='--color=never'
+&lt;pre tabindex="0">&lt;code>export LS_OPTIONS='--color=never'
 eval &amp;quot;`dircolors`&amp;quot;
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
@@ -880,7 +880,7 @@ alias l='ls $LS_OPTIONS -lA'
 &lt;/blockquote>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;p>Dockerfile&lt;/p>
-&lt;pre>&lt;code>FROM debian:stable-slim
+&lt;pre tabindex="0">&lt;code>FROM debian:stable-slim
 ARG HUGO_VERSION
 LABEL maintainer &amp;quot;abskmj@gmail.com&amp;quot;
 LABEL hugo.version ${HUGO_VERSION}
@@ -1135,9 +1135,9 @@ npm test
 &lt;h1 id="serverless-framework">Serverless Framework&lt;/h1>
 &lt;h2 id="installation">Installation&lt;/h2>
 &lt;p>Install the framework globally&lt;/p>
-&lt;pre>&lt;code>npm install -g serverless
+&lt;pre tabindex="0">&lt;code>npm install -g serverless
 &lt;/code>&lt;/pre>&lt;p>Install the Spotinst functions plugin locally.&lt;/p>
-&lt;pre>&lt;code>npm install --save-dev serverless-spotinst-functions
+&lt;pre tabindex="0">&lt;code>npm install --save-dev serverless-spotinst-functions
 &lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
@@ -1193,7 +1193,7 @@ npm test
 - &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
 &lt;p>Save the spotinst credentials for serverless framework.&lt;/p>
-&lt;pre>&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
+&lt;pre tabindex="0">&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>&lt;code>HOME=./&lt;/code> sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of &lt;code>~/.spotinst/credentials&lt;/code>.&lt;/li>
 &lt;li>Spotinst Account ID can be found at &lt;a href="https://console.spotinst.com/#/settings/account/general">https://console.spotinst.com/#/settings/account/general&lt;/a>&lt;/li>
@@ -1201,7 +1201,7 @@ npm test
 &lt;/ul>
 &lt;h2 id="deployment">Deployment&lt;/h2>
 &lt;p>Add a &lt;code>deploy&lt;/code> script to &lt;code>package.json&lt;/code> file.&lt;/p>
-&lt;pre>&lt;code>{
+&lt;pre tabindex="0">&lt;code>{
 ...
 &amp;quot;scripts&amp;quot;: {
 ...
@@ -1210,10 +1210,10 @@ npm test
 ...
 }
 &lt;/code>&lt;/pre>&lt;p>Run the script to deploy.&lt;/p>
-&lt;pre>&lt;code>npm run deploy
+&lt;pre tabindex="0">&lt;code>npm run deploy
 &lt;/code>&lt;/pre>&lt;h2 id="version-control">Version Control&lt;/h2>
 &lt;p>Some of the serverless directories or files should not be tracked as part of the version control. These can be added to a &lt;code>.gitignore&lt;/code> file.&lt;/p>
-&lt;pre>&lt;code># package directories
+&lt;pre tabindex="0">&lt;code># package directories
 node_modules
 # serverless directories
 .aws
@@ -1430,7 +1430,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;h2 id="installing-cligen-module">Installing Cligen Module&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -save github:@abskmj/cligen
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="generating-and-using-the-client">Generating and Using the client&lt;/h2>
-&lt;pre>&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require('@abskmj/cligen');
+&lt;pre tabindex="0">&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require('@abskmj/cligen');
 const spec = require('./spec.json');
 const client = cligen.getClient(spec);
 // supports callback
@@ -1566,7 +1566,7 @@ console.log(error);
 &lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="motivation">Motivation&lt;/h1>
 &lt;p>I have been working on lots of MEVN/MEAN stack applications lately. I thought it would a great idea to write the mongoose queries in the front-end code rather than creating multiple APIs for different queries. It saves lots of effort on the backend code.&lt;/p></content></item><item><title>HackerRank - Divisible Sum Pairs</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</link><pubDate>Mon, 10 Sep 2018 08:14:46 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</guid><description>Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: https://www.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;pre>&lt;code>/* Solution to HackerRank: Divisible Sum Pairs
+&lt;pre tabindex="0">&lt;code>/* Solution to HackerRank: Divisible Sum Pairs
 * URL: https://www.hackerrank.com/challenges/divisible-sum-pairs
 */
 import java.io.*;
@@ -1745,7 +1745,7 @@ cd .git-remote
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">rgit commit -m &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Fix TWRP E3004 Error on OnePlus2</title><link>https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/</link><pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/</guid><description>I have recently installed LineageOS custom ROM on my OnePlus2 device to keep on trying new android versions as they come.</description><content>&lt;p>I have recently installed &lt;a href="https://www.lineageos.org/">LineageOS&lt;/a> custom ROM on my OnePlus2 device to keep on trying new android versions as they come. While installing/updating the OS, I was getting below error on &lt;a href="https://twrp.me/">TWRP&lt;/a> recovery screen.&lt;/p>
-&lt;pre>&lt;code>script aborted: E3004: This package is for device: OnePlus2,oneplus2; this device is .
+&lt;pre tabindex="0">&lt;code>script aborted: E3004: This package is for device: OnePlus2,oneplus2; this device is .
 &lt;/code>&lt;/pre>&lt;p>To fix this, I updated to the lastest version of &lt;a href="https://dl.twrp.me/oneplus2/">TWRP for OnePlus2&lt;/a>.&lt;/p></content></item><item><title>Set Proxy for Maven</title><link>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</link><pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</guid><description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file.</description><content>&lt;p>Proxy settings can be changed in &lt;code>{{maven_installation_folder}}/conf/settings.xml&lt;/code>. Un-comment and change the values in &lt;code>proxies&lt;/code> section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-xml" data-lang="xml">...
 &lt;span style="color:#f92672">&amp;lt;proxies&amp;gt;&lt;/span>
@@ -1766,19 +1766,19 @@ cd .git-remote
 ...
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Deploy a NodeJS application using Git</title><link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link><pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid><description>Remote Repository on Deployment Server Create two folders named project.git and project.</description><content>&lt;h1 id="remote-repository-on-deployment-server">Remote Repository on Deployment Server&lt;/h1>
 &lt;p>Create two folders named &lt;code>project.git&lt;/code> and &lt;code>project.source&lt;/code>. Create a bare git repo in &lt;code>project.git&lt;/code>&lt;/p>
-&lt;pre>&lt;code>git init --bare
+&lt;pre tabindex="0">&lt;code>git init --bare
 &lt;/code>&lt;/pre>&lt;p>Configure &lt;code>project.source&lt;/code> as working folder for source code by adding below to &lt;code>project.git/hooks/post-receive&lt;/code>&lt;/p>
-&lt;pre>&lt;code>#!/bin/sh
+&lt;pre tabindex="0">&lt;code>#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
 &lt;/code>&lt;/pre>&lt;p>Change file persion to &lt;code>755&lt;/code> to make it executable.&lt;/p>
-&lt;pre>&lt;code>chmod 755 project.git/hooks/post-receive
+&lt;pre tabindex="0">&lt;code>chmod 755 project.git/hooks/post-receive
 &lt;/code>&lt;/pre>&lt;p>Add a remote to local repo&lt;/p>
-&lt;pre>&lt;code>git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
+&lt;pre tabindex="0">&lt;code>git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
 &lt;/code>&lt;/pre>&lt;p>Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p>
-&lt;pre>&lt;code>git push dev master
+&lt;pre tabindex="0">&lt;code>git push dev master
 &lt;/code>&lt;/pre>&lt;h1 id="deployment-using-hooks">Deployment using Hooks&lt;/h1>
 &lt;p>Steps to install dependencies, build, test, deploy can be added to the &lt;code>post-receive&lt;/code> hook script which will be executed every time the source code is pushed.&lt;/p>
-&lt;pre>&lt;code>#!/bin/sh
+&lt;pre tabindex="0">&lt;code>#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
 # Steps to build and deploy nodejs application
 cd /{{path}}/project.source
@@ -1902,28 +1902,28 @@ BigInteger r&lt;span style="color:#f92672">[]&lt;/span> &lt;span style="color:#f
 &lt;p>&lt;a href="https://surge.sh/">Surge&lt;/a> is static web publishing for Web Developers, right from the CLI.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="install-surge-cli">Install Surge CLI&lt;/h1>
-&lt;pre>&lt;code>npm install -g surge
+&lt;pre tabindex="0">&lt;code>npm install -g surge
 &lt;/code>&lt;/pre>&lt;h1 id="deploy-with-surge">Deploy with Surge&lt;/h1>
 &lt;p>Navigate to the &lt;code>public&lt;/code> folder generated by &lt;a href="https://gohugo.io/">Hugo&lt;/a> CLI.&lt;/p>
-&lt;pre>&lt;code>surge
+&lt;pre tabindex="0">&lt;code>surge
 &lt;/code>&lt;/pre>&lt;p>The site, by default, will hosted on a sub domain of &lt;code>surge.sh&lt;/code>.&lt;/p>
 &lt;h1 id="deploy-changes">Deploy Changes&lt;/h1>
-&lt;pre>&lt;code>surge --domain &amp;lt;your-site&amp;gt;.surge.sh
+&lt;pre tabindex="0">&lt;code>surge --domain &amp;lt;your-site&amp;gt;.surge.sh
 &lt;/code>&lt;/pre>&lt;p>If the same domain name is not provided, another random sub domain will be prompted by Surge CLI which has to changed to original for each deployment.&lt;/p>
 &lt;h1 id="custom-domain">Custom Domain&lt;/h1>
 &lt;p>A &lt;code>CNAME&lt;/code> record has be added to your domain or sub domain and by setting the hostname to:&lt;/p>
-&lt;pre>&lt;code>na-west1.surge.sh
+&lt;pre tabindex="0">&lt;code>na-west1.surge.sh
 &lt;/code>&lt;/pre>&lt;p>Site can now be deployed on the new custom domain.&lt;/p>
-&lt;pre>&lt;code>surge --domain &amp;lt;your-site.your-domain.com&amp;gt;
+&lt;pre tabindex="0">&lt;code>surge --domain &amp;lt;your-site.your-domain.com&amp;gt;
 &lt;/code>&lt;/pre>&lt;h1 id="script">Script&lt;/h1>
 &lt;p>All these steps can be added to a script for easy deployment. A script named &lt;code>deploy.sh&lt;/code> can be created in the root folder of Hugo project with below contents.&lt;/p>
 &lt;p>This script will build the Hugo site and deploy it on the given domain.&lt;/p>
-&lt;pre>&lt;code>hugo
+&lt;pre tabindex="0">&lt;code>hugo
 surge --domain &amp;lt;your-site.your-domain.com&amp;gt; ./public
 &lt;/code>&lt;/pre>&lt;p>Appropriate permissions has be set to make it executable.&lt;/p>
-&lt;pre>&lt;code>sudo chmod 755 ./deploy.sh
+&lt;pre tabindex="0">&lt;code>sudo chmod 755 ./deploy.sh
 &lt;/code>&lt;/pre>&lt;p>Easy Deploy&lt;/p>
-&lt;pre>&lt;code>./deploy.sh
+&lt;pre tabindex="0">&lt;code>./deploy.sh
 &lt;/code>&lt;/pre></content></item><item><title>HackerEarth - Binary Tree</title><link>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</link><pubDate>Mon, 20 Nov 2017 20:04:29 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/tutorial/</guid><description>Solution Diameter of a binary tree is maximum of diameter of current node, its left and right child.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
 &lt;ul>
 &lt;li>Diameter of a binary tree is maximum of diameter of current node, its left and right child.&lt;/li>
@@ -2022,7 +2022,7 @@ add&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">
 &lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#e6db74">&amp;#34;^(ab|ba)+$&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>possible strings:
+&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>possible strings:
 ababab
 abba
 babaab
@@ -2036,13 +2036,13 @@ abbaaba
 &lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
 &lt;span style="color:#e6db74">&amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="case-1">Case 1&lt;/h3>
-&lt;pre>&lt;code>(...\\1){2}) or (...\\1...\\1)
+&lt;pre tabindex="0">&lt;code>(...\\1){2}) or (...\\1...\\1)
 will take care of
 X O -
 O X O
 - - X
 &lt;/code>&lt;/pre>&lt;h3 id="case-2">Case 2&lt;/h3>
-&lt;pre>&lt;code>(..\\1..\\1)
+&lt;pre tabindex="0">&lt;code>(..\\1..\\1)
 will take care of
 X - O
 X O -
@@ -2056,7 +2056,7 @@ OR
 O - X
 - O X
 &lt;/code>&lt;/pre>&lt;h3 id="case-3">Case 3&lt;/h3>
-&lt;pre>&lt;code>(.\\1.\\1..$)
+&lt;pre tabindex="0">&lt;code>(.\\1.\\1..$)
 will take care of
 O - X
 - X O
@@ -2066,7 +2066,7 @@ O X -
 X O X
 - O X
 &lt;/code>&lt;/pre>&lt;h3 id="case-4">Case 4&lt;/h3>
-&lt;pre>&lt;code>(\\1\\1(...)*$)
+&lt;pre tabindex="0">&lt;code>(\\1\\1(...)*$)
 will take care of
 X X X
 O - O
@@ -2287,14 +2287,14 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;/blockquote>
 &lt;h1 id="api-hit">API Hit&lt;/h1>
 &lt;p>Each invocation of an API can be tracked as a unique event. Optionally, the response time in millisecond can be included as well.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;t=event // Event hit type
+&lt;pre tabindex="0">&lt;code>&amp;amp;t=event // Event hit type
 &amp;amp;ec=api // Event category: api
 &amp;amp;ea=invoke // Event action: invoke
 &amp;amp;el=registration // Event label: name of the API
 &amp;amp;ev=300 // Event value: (optional) response time in milliseconds
 &lt;/code>&lt;/pre>&lt;h2 id="user-session">User Session&lt;/h2>
 &lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
+&lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
 &lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -2304,7 +2304,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;h2 id="user-analytics">User Analytics&lt;/h2>
 &lt;p>Most of this data is captured by processing user&amp;rsquo;s IP address and browser&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/User_agent">user agent&lt;/a>. In this case, user&amp;rsquo;s IP and UA is not passed to Google Analytics rather the server&amp;rsquo;s IP is passed. All the analytics will have details of the servers only.&lt;/p>
 &lt;p>To fix this, &lt;code>uip&lt;/code> &amp;amp; &lt;code>ua&lt;/code> fields can be used to set user information.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
+&lt;pre tabindex="0">&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
 &amp;amp;ua=Opera/9.80 // User agent override.
 &lt;/code>&lt;/pre>&lt;blockquote>
 &lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>
@@ -2831,7 +2831,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Every 3rd number in the fibonacci series is even. This is based on the fact that sum of a odd and an even number is always odd and sum of 2 odd numbers is always even.&lt;/li>
 &lt;li>This fact results in a formula &lt;code>F(n) = 4(n-1) + F(n-2)&lt;/code>, where F(n) represents the even numbered fibonacci series.&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>0 1 1 2 3 5 8 13 21 34 55 89
+&lt;pre tabindex="0">&lt;code>0 1 1 2 3 5 8 13 21 34 55 89
 ^ ^ ^
 0 1 2 3 4 5 6 7 8 9 10 11 ===&amp;gt; f(n), fibonacci series
 0 1 2 3 ===&amp;gt; F(n) = f(3n), even numbered fibonacci series

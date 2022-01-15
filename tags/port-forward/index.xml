@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Port Forward on Notes</title><link>https://abskmj.github.io/notes/tags/port-forward/</link><description>Recent content in Port Forward on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 29 Aug 2020 15:30:35 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/port-forward/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH Tunnels for Local Development</title><link>https://abskmj.github.io/notes/posts/ssh/ssh-tunnels/</link><pubDate>Sat, 29 Aug 2020 15:30:35 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/ssh/ssh-tunnels/</guid><description/><content>&lt;h2 id="local-port-forwarding">Local Port Forwarding&lt;/h2>
 &lt;p>A service running on specific port of the server is accessible on a specific port of the local machine.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;pre>&lt;code>+---------------------+ +-----------------------+
+&lt;pre tabindex="0">&lt;code>+---------------------+ +-----------------------+
 | | | |
 | +---------------+ | SSH Tunnel | +-----------------+ |
 | | | &amp;lt;-----------------------+ | | |
@@ -14,10 +14,10 @@ Server Local
 &lt;/code>&lt;/pre>&lt;p>Let&amp;rsquo;s assume a MongoDB service is running on the server on port &lt;code>27017&lt;/code> and is not accessible outside of the server. There is an application running the local machine and needs to connect to the MongoDB service running on the server.&lt;/p>
 &lt;p>With the below SSH tunnel, the MongoDB service is available on port &lt;code>27018&lt;/code> of the local machine and accessible at &lt;code>mongodb://127.0.0.1:27018/dev&lt;/code> for the application&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ssh -L localhost:27018:localhost:27017 -N root@10.17.15.53
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>-L
+&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>-L
 Specifies that the given port on the local (client) host is to be forwarded to the given host andport on the remote side.
 -N
 Do not execute a remote command.
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>localhost:27018:localhost:27017
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>localhost:27018:localhost:27017
 bind address of local machine : port of local machine : bind address of server : port of server
 &lt;/code>&lt;/pre></content></item></channel></rss>

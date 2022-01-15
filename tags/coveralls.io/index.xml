@@ -3,7 +3,7 @@
 &lt;ul>
 &lt;li>Install NPM modules&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>npm install --save-dev nyc
+&lt;pre tabindex="0">&lt;code>npm install --save-dev nyc
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Update NPM scripts in the &lt;code>package.json&lt;/code> file&lt;/li>
 &lt;/ul>
@@ -15,7 +15,7 @@
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Update the &lt;code>.gitignore&lt;/code> file&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>.nyc_output
+&lt;pre tabindex="0">&lt;code>.nyc_output
 coverage
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>Add a Github action at &lt;code>.github/workflows/tests.yml&lt;/code>&lt;/li>

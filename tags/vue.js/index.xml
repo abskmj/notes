@@ -3,7 +3,7 @@
 &lt;/blockquote>
 &lt;h1 id="include-the-script">Include the script&lt;/h1>
 &lt;p>Configure the script to include the Vue.js bundle from a CDN.&lt;/p>
-&lt;pre>&lt;code>// @require https://cdn.jsdelivr.net/npm/vue
+&lt;pre tabindex="0">&lt;code>// @require https://cdn.jsdelivr.net/npm/vue
 &lt;/code>&lt;/pre>&lt;h1 id="initialize-a-vuejs-app">Initialize a Vue.js App&lt;/h1>
 &lt;p>It is recommended to initialize the Vue.js app after the page is ready.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">window.&lt;span style="color:#a6e22e">addEventListener&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;load&amp;#34;&lt;/span>, (&lt;span style="color:#a6e22e">event&lt;/span>) =&amp;gt; {

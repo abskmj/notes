@@ -4,7 +4,7 @@
 &lt;/blockquote>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;p>Dockerfile&lt;/p>
-&lt;pre>&lt;code>FROM debian:stable-slim
+&lt;pre tabindex="0">&lt;code>FROM debian:stable-slim
 ARG HUGO_VERSION
 LABEL maintainer &amp;quot;abskmj@gmail.com&amp;quot;
 LABEL hugo.version ${HUGO_VERSION}

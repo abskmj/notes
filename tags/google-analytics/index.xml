@@ -4,14 +4,14 @@
 &lt;/blockquote>
 &lt;h1 id="api-hit">API Hit&lt;/h1>
 &lt;p>Each invocation of an API can be tracked as a unique event. Optionally, the response time in millisecond can be included as well.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;t=event // Event hit type
+&lt;pre tabindex="0">&lt;code>&amp;amp;t=event // Event hit type
 &amp;amp;ec=api // Event category: api
 &amp;amp;ea=invoke // Event action: invoke
 &amp;amp;el=registration // Event label: name of the API
 &amp;amp;ev=300 // Event value: (optional) response time in milliseconds
 &lt;/code>&lt;/pre>&lt;h2 id="user-session">User Session&lt;/h2>
 &lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
+&lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
 &lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -21,7 +21,7 @@
 &lt;h2 id="user-analytics">User Analytics&lt;/h2>
 &lt;p>Most of this data is captured by processing user&amp;rsquo;s IP address and browser&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/User_agent">user agent&lt;/a>. In this case, user&amp;rsquo;s IP and UA is not passed to Google Analytics rather the server&amp;rsquo;s IP is passed. All the analytics will have details of the servers only.&lt;/p>
 &lt;p>To fix this, &lt;code>uip&lt;/code> &amp;amp; &lt;code>ua&lt;/code> fields can be used to set user information.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
+&lt;pre tabindex="0">&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
 &amp;amp;ua=Opera/9.80 // User agent override.
 &lt;/code>&lt;/pre>&lt;blockquote>
 &lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>

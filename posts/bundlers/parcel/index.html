@@ -26,7 +26,7 @@
 <meta property="article:published_time" content="2021-05-05 18:00:08 +0530 +0530">
 <meta name=google-site-verification content="f4QUPyqBnCYP57-SME_dv0q-Di8xwBAOMIhlBGeVWJY">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMVNGMLVMF"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-CMVNGMLVMF');var getOutboundLink=function(a){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){window.open(a)}})}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-CMVNGMLVMF')</script>
 </head>
 <body class=green>
 <div class="container center headings--one-size">
@@ -73,7 +73,7 @@ Notes
 <ul>
 <li>Install NPM module</li>
 </ul>
-<pre><code>npm install --save-dev parcel-bundler
+<pre tabindex=0><code>npm install --save-dev parcel-bundler
 </code></pre><ul>
 <li>Add NPM scripts</li>
 </ul>
@@ -86,12 +86,12 @@ Notes
 </code></pre></div><ul>
 <li>Start the development server</li>
 </ul>
-<pre><code>npm start
+<pre tabindex=0><code>npm start
 </code></pre><h1 id=steps-for-v2>Steps for v2<a href=#steps-for-v2 class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <ul>
 <li>Install NPM module</li>
 </ul>
-<pre><code>npm install --save-dev parcel@next
+<pre tabindex=0><code>npm install --save-dev parcel@next
 </code></pre><ul>
 <li>Add NPM scripts</li>
 </ul>
@@ -104,7 +104,7 @@ Notes
 </code></pre></div><ul>
 <li>Start the development server</li>
 </ul>
-<pre><code>npm start
+<pre tabindex=0><code>npm start
 </code></pre><h1 id=bonus>Bonus<a href=#bonus class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <ul>
 <li>Set the public url</li>
@@ -142,13 +142,15 @@ Notes
 <hr>
 </div>
 <div class=pagination__buttons>
+<a id=sponsor-link href=https://wise.prf.hn/l/rwNWqOE target=_blank>
 <span class=button id=sponsor-text style=white-space:normal>
 Wise is a cheaper, faster way to send money abroad. Join over 10 million people who get the real exchange rate
 with Wise. They’re up to 8x cheaper than banks.
 </span>
+</a>
 </div>
 </div>
-<script>document.addEventListener('DOMContentLoaded',function(){fetch("/notes/sponsors.json").then(a=>a.json()).then(a=>{const b=a[Math.floor(Math.random()*a.length)],c=document.getElementById("sponsor-text");c.onclick=function(){getOutboundLink(b.link)},c.textContent=b.text})})</script>
+<script>document.addEventListener('DOMContentLoaded',function(){fetch("/notes/sponsors.json").then(a=>a.json()).then(b=>{const a=b[Math.floor(Math.random()*b.length)],c=document.getElementById("sponsor-link");c.setAttribute('href',a.link),c.onclick=function(){gtag('event','sponsor',{event_category:'link',event_label:a.name})},document.getElementById("sponsor-text").textContent=a.text})})</script>
 <div class=pagination>
 <div class=pagination__title>
 <span class=pagination__title-h>Discuss Post</span>

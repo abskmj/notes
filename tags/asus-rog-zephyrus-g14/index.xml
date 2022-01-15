@@ -106,13 +106,13 @@ apt-get update
 apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="volume-control">Volume Control&lt;/h2>
 &lt;p>Add below lines to &lt;code>/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common&lt;/code> file, just before the &lt;code>[Element PCM]&lt;/code> section. This will also make the &lt;code>mute the microphone&lt;/code> button usable.&lt;/p>
-&lt;pre>&lt;code>[Element Master]
+&lt;pre tabindex="0">&lt;code>[Element Master]
 switch = mute
 volume = ignore
 &lt;/code>&lt;/pre>&lt;p>&lt;img src="pulseaudio-config.png" alt="Pulse Audio Configuration">&lt;/p>
 &lt;h2 id="system-time-in-windows--popos">System Time in Windows &amp;amp; PopOS&lt;/h2>
 &lt;p>Update the below &lt;code>timedatectl&lt;/code> configuration in PopOS. Details are available at &lt;a href="https://support.system76.com/articles/dual-booting/">support.system76.com&lt;/a>&lt;/p>
-&lt;pre>&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
+&lt;pre tabindex="0">&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
 &lt;/code>&lt;/pre>&lt;h2 id="text-on-screen-too-small">Text on screen too small&lt;/h2>
 &lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for a comfortable reading.&lt;/p>
 &lt;p>&lt;img src="displays-fractional-scaling.png" alt="Display Fractional Scaling">&lt;/p>

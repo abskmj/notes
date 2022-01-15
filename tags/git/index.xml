@@ -105,19 +105,19 @@ cd .git-remote
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">rgit commit -m &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Deploy a NodeJS application using Git</title><link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link><pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid><description>Remote Repository on Deployment Server Create two folders named project.git and project.</description><content>&lt;h1 id="remote-repository-on-deployment-server">Remote Repository on Deployment Server&lt;/h1>
 &lt;p>Create two folders named &lt;code>project.git&lt;/code> and &lt;code>project.source&lt;/code>. Create a bare git repo in &lt;code>project.git&lt;/code>&lt;/p>
-&lt;pre>&lt;code>git init --bare
+&lt;pre tabindex="0">&lt;code>git init --bare
 &lt;/code>&lt;/pre>&lt;p>Configure &lt;code>project.source&lt;/code> as working folder for source code by adding below to &lt;code>project.git/hooks/post-receive&lt;/code>&lt;/p>
-&lt;pre>&lt;code>#!/bin/sh
+&lt;pre tabindex="0">&lt;code>#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
 &lt;/code>&lt;/pre>&lt;p>Change file persion to &lt;code>755&lt;/code> to make it executable.&lt;/p>
-&lt;pre>&lt;code>chmod 755 project.git/hooks/post-receive
+&lt;pre tabindex="0">&lt;code>chmod 755 project.git/hooks/post-receive
 &lt;/code>&lt;/pre>&lt;p>Add a remote to local repo&lt;/p>
-&lt;pre>&lt;code>git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
+&lt;pre tabindex="0">&lt;code>git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
 &lt;/code>&lt;/pre>&lt;p>Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p>
-&lt;pre>&lt;code>git push dev master
+&lt;pre tabindex="0">&lt;code>git push dev master
 &lt;/code>&lt;/pre>&lt;h1 id="deployment-using-hooks">Deployment using Hooks&lt;/h1>
 &lt;p>Steps to install dependencies, build, test, deploy can be added to the &lt;code>post-receive&lt;/code> hook script which will be executed every time the source code is pushed.&lt;/p>
-&lt;pre>&lt;code>#!/bin/sh
+&lt;pre tabindex="0">&lt;code>#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
 # Steps to build and deploy nodejs application
 cd /{{path}}/project.source

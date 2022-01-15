@@ -51,7 +51,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;span style="color:#f92672">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Divisible Sum Pairs</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</link><pubDate>Mon, 10 Sep 2018 08:14:46 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</guid><description>Solution /* Solution to HackerRank: Divisible Sum Pairs * URL: https://www.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
-&lt;pre>&lt;code>/* Solution to HackerRank: Divisible Sum Pairs
+&lt;pre tabindex="0">&lt;code>/* Solution to HackerRank: Divisible Sum Pairs
 * URL: https://www.hackerrank.com/challenges/divisible-sum-pairs
 */
 import java.io.*;
@@ -994,7 +994,7 @@ System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">o
 &lt;li>Every 3rd number in the fibonacci series is even. This is based on the fact that sum of a odd and an even number is always odd and sum of 2 odd numbers is always even.&lt;/li>
 &lt;li>This fact results in a formula &lt;code>F(n) = 4(n-1) + F(n-2)&lt;/code>, where F(n) represents the even numbered fibonacci series.&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>0 1 1 2 3 5 8 13 21 34 55 89
+&lt;pre tabindex="0">&lt;code>0 1 1 2 3 5 8 13 21 34 55 89
 ^ ^ ^
 0 1 2 3 4 5 6 7 8 9 10 11 ===&amp;gt; f(n), fibonacci series
 0 1 2 3 ===&amp;gt; F(n) = f(3n), even numbered fibonacci series

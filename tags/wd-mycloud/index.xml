@@ -4,7 +4,7 @@
 &lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nano /etc/samba/smb.conf
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Contents of &lt;code>smb.conf&lt;/code>&lt;/p>
-&lt;pre>&lt;code>[global]
+&lt;pre tabindex="0">&lt;code>[global]
 workgroup = WORKGROUP
 server string = Samba Server %v
 netbios name = WDMyCloud
@@ -36,13 +36,13 @@ $ timedatectl list-timezones | grep -i kolkata
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>For me it was &lt;code>alias ls='ls $LS_OPTIONS'&lt;/code> and &lt;code>LS_OPTIONS&lt;/code> environment variable had a value of &lt;code>--color=auto&lt;/code>&lt;/p>
 &lt;h1 id="bashrc">.bashrc&lt;/h1>
 &lt;p>Check the contents of your &lt;code>~/.bashrc&lt;/code> file. Generally, these aliases are defined here. Mine had these lines&lt;/p>
-&lt;pre>&lt;code>export LS_OPTIONS='--color=auto'
+&lt;pre tabindex="0">&lt;code>export LS_OPTIONS='--color=auto'
 eval &amp;quot;`dircolors`&amp;quot;
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
 &lt;/code>&lt;/pre>&lt;p>Update &lt;code>export LS_OPTIONS='--color=auto'&lt;/code> to &lt;code>export LS_OPTIONS='--color=never'&lt;/code> and restart the terminal&lt;/p>
-&lt;pre>&lt;code>export LS_OPTIONS='--color=never'
+&lt;pre tabindex="0">&lt;code>export LS_OPTIONS='--color=never'
 eval &amp;quot;`dircolors`&amp;quot;
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'

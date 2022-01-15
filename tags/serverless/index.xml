@@ -4,9 +4,9 @@
 &lt;h1 id="serverless-framework">Serverless Framework&lt;/h1>
 &lt;h2 id="installation">Installation&lt;/h2>
 &lt;p>Install the framework globally&lt;/p>
-&lt;pre>&lt;code>npm install -g serverless
+&lt;pre tabindex="0">&lt;code>npm install -g serverless
 &lt;/code>&lt;/pre>&lt;p>Install the Spotinst functions plugin locally.&lt;/p>
-&lt;pre>&lt;code>npm install --save-dev serverless-spotinst-functions
+&lt;pre tabindex="0">&lt;code>npm install --save-dev serverless-spotinst-functions
 &lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
@@ -62,7 +62,7 @@
 - &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
 &lt;p>Save the spotinst credentials for serverless framework.&lt;/p>
-&lt;pre>&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
+&lt;pre tabindex="0">&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>&lt;code>HOME=./&lt;/code> sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of &lt;code>~/.spotinst/credentials&lt;/code>.&lt;/li>
 &lt;li>Spotinst Account ID can be found at &lt;a href="https://console.spotinst.com/#/settings/account/general">https://console.spotinst.com/#/settings/account/general&lt;/a>&lt;/li>
@@ -70,7 +70,7 @@
 &lt;/ul>
 &lt;h2 id="deployment">Deployment&lt;/h2>
 &lt;p>Add a &lt;code>deploy&lt;/code> script to &lt;code>package.json&lt;/code> file.&lt;/p>
-&lt;pre>&lt;code>{
+&lt;pre tabindex="0">&lt;code>{
 ...
 &amp;quot;scripts&amp;quot;: {
 ...
@@ -79,10 +79,10 @@
 ...
 }
 &lt;/code>&lt;/pre>&lt;p>Run the script to deploy.&lt;/p>
-&lt;pre>&lt;code>npm run deploy
+&lt;pre tabindex="0">&lt;code>npm run deploy
 &lt;/code>&lt;/pre>&lt;h2 id="version-control">Version Control&lt;/h2>
 &lt;p>Some of the serverless directories or files should not be tracked as part of the version control. These can be added to a &lt;code>.gitignore&lt;/code> file.&lt;/p>
-&lt;pre>&lt;code># package directories
+&lt;pre tabindex="0">&lt;code># package directories
 node_modules
 # serverless directories
 .aws

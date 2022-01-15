@@ -4,7 +4,7 @@
 &lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nano /etc/samba/smb.conf
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Contents of &lt;code>smb.conf&lt;/code>&lt;/p>
-&lt;pre>&lt;code>[global]
+&lt;pre tabindex="0">&lt;code>[global]
 workgroup = WORKGROUP
 server string = Samba Server %v
 netbios name = WDMyCloud

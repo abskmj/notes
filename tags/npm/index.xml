@@ -4,9 +4,9 @@
 &lt;h1 id="serverless-framework">Serverless Framework&lt;/h1>
 &lt;h2 id="installation">Installation&lt;/h2>
 &lt;p>Install the framework globally&lt;/p>
-&lt;pre>&lt;code>npm install -g serverless
+&lt;pre tabindex="0">&lt;code>npm install -g serverless
 &lt;/code>&lt;/pre>&lt;p>Install the Spotinst functions plugin locally.&lt;/p>
-&lt;pre>&lt;code>npm install --save-dev serverless-spotinst-functions
+&lt;pre tabindex="0">&lt;code>npm install --save-dev serverless-spotinst-functions
 &lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
@@ -62,7 +62,7 @@
 - &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
 &lt;p>Save the spotinst credentials for serverless framework.&lt;/p>
-&lt;pre>&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
+&lt;pre tabindex="0">&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>&lt;code>HOME=./&lt;/code> sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of &lt;code>~/.spotinst/credentials&lt;/code>.&lt;/li>
 &lt;li>Spotinst Account ID can be found at &lt;a href="https://console.spotinst.com/#/settings/account/general">https://console.spotinst.com/#/settings/account/general&lt;/a>&lt;/li>
@@ -70,7 +70,7 @@
 &lt;/ul>
 &lt;h2 id="deployment">Deployment&lt;/h2>
 &lt;p>Add a &lt;code>deploy&lt;/code> script to &lt;code>package.json&lt;/code> file.&lt;/p>
-&lt;pre>&lt;code>{
+&lt;pre tabindex="0">&lt;code>{
 ...
 &amp;quot;scripts&amp;quot;: {
 ...
@@ -79,10 +79,10 @@
 ...
 }
 &lt;/code>&lt;/pre>&lt;p>Run the script to deploy.&lt;/p>
-&lt;pre>&lt;code>npm run deploy
+&lt;pre tabindex="0">&lt;code>npm run deploy
 &lt;/code>&lt;/pre>&lt;h2 id="version-control">Version Control&lt;/h2>
 &lt;p>Some of the serverless directories or files should not be tracked as part of the version control. These can be added to a &lt;code>.gitignore&lt;/code> file.&lt;/p>
-&lt;pre>&lt;code># package directories
+&lt;pre tabindex="0">&lt;code># package directories
 node_modules
 # serverless directories
 .aws
@@ -156,7 +156,7 @@ node_modules
 &lt;h2 id="installing-cligen-module">Installing Cligen Module&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -save github:@abskmj/cligen
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="generating-and-using-the-client">Generating and Using the client&lt;/h2>
-&lt;pre>&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require('@abskmj/cligen');
+&lt;pre tabindex="0">&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require('@abskmj/cligen');
 const spec = require('./spec.json');
 const client = cligen.getClient(spec);
 // supports callback
@@ -341,14 +341,14 @@ cd my-project
 &lt;/blockquote>
 &lt;h1 id="api-hit">API Hit&lt;/h1>
 &lt;p>Each invocation of an API can be tracked as a unique event. Optionally, the response time in millisecond can be included as well.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;t=event // Event hit type
+&lt;pre tabindex="0">&lt;code>&amp;amp;t=event // Event hit type
 &amp;amp;ec=api // Event category: api
 &amp;amp;ea=invoke // Event action: invoke
 &amp;amp;el=registration // Event label: name of the API
 &amp;amp;ev=300 // Event value: (optional) response time in milliseconds
 &lt;/code>&lt;/pre>&lt;h2 id="user-session">User Session&lt;/h2>
 &lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
+&lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
 &lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -358,7 +358,7 @@ cd my-project
 &lt;h2 id="user-analytics">User Analytics&lt;/h2>
 &lt;p>Most of this data is captured by processing user&amp;rsquo;s IP address and browser&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/User_agent">user agent&lt;/a>. In this case, user&amp;rsquo;s IP and UA is not passed to Google Analytics rather the server&amp;rsquo;s IP is passed. All the analytics will have details of the servers only.&lt;/p>
 &lt;p>To fix this, &lt;code>uip&lt;/code> &amp;amp; &lt;code>ua&lt;/code> fields can be used to set user information.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
+&lt;pre tabindex="0">&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
 &amp;amp;ua=Opera/9.80 // User agent override.
 &lt;/code>&lt;/pre>&lt;blockquote>
 &lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>

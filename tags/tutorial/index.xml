@@ -44,9 +44,9 @@ git stash drop &lt;span style="color:#ae81ff">1&lt;/span>
 &lt;h1 id="serverless-framework">Serverless Framework&lt;/h1>
 &lt;h2 id="installation">Installation&lt;/h2>
 &lt;p>Install the framework globally&lt;/p>
-&lt;pre>&lt;code>npm install -g serverless
+&lt;pre tabindex="0">&lt;code>npm install -g serverless
 &lt;/code>&lt;/pre>&lt;p>Install the Spotinst functions plugin locally.&lt;/p>
-&lt;pre>&lt;code>npm install --save-dev serverless-spotinst-functions
+&lt;pre tabindex="0">&lt;code>npm install --save-dev serverless-spotinst-functions
 &lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
@@ -102,7 +102,7 @@ git stash drop &lt;span style="color:#ae81ff">1&lt;/span>
 - &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
 &lt;p>Save the spotinst credentials for serverless framework.&lt;/p>
-&lt;pre>&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
+&lt;pre tabindex="0">&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>&lt;code>HOME=./&lt;/code> sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of &lt;code>~/.spotinst/credentials&lt;/code>.&lt;/li>
 &lt;li>Spotinst Account ID can be found at &lt;a href="https://console.spotinst.com/#/settings/account/general">https://console.spotinst.com/#/settings/account/general&lt;/a>&lt;/li>
@@ -110,7 +110,7 @@ git stash drop &lt;span style="color:#ae81ff">1&lt;/span>
 &lt;/ul>
 &lt;h2 id="deployment">Deployment&lt;/h2>
 &lt;p>Add a &lt;code>deploy&lt;/code> script to &lt;code>package.json&lt;/code> file.&lt;/p>
-&lt;pre>&lt;code>{
+&lt;pre tabindex="0">&lt;code>{
 ...
 &amp;quot;scripts&amp;quot;: {
 ...
@@ -119,10 +119,10 @@ git stash drop &lt;span style="color:#ae81ff">1&lt;/span>
 ...
 }
 &lt;/code>&lt;/pre>&lt;p>Run the script to deploy.&lt;/p>
-&lt;pre>&lt;code>npm run deploy
+&lt;pre tabindex="0">&lt;code>npm run deploy
 &lt;/code>&lt;/pre>&lt;h2 id="version-control">Version Control&lt;/h2>
 &lt;p>Some of the serverless directories or files should not be tracked as part of the version control. These can be added to a &lt;code>.gitignore&lt;/code> file.&lt;/p>
-&lt;pre>&lt;code># package directories
+&lt;pre tabindex="0">&lt;code># package directories
 node_modules
 # serverless directories
 .aws
@@ -196,7 +196,7 @@ node_modules
 &lt;h2 id="installing-cligen-module">Installing Cligen Module&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -save github:@abskmj/cligen
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="generating-and-using-the-client">Generating and Using the client&lt;/h2>
-&lt;pre>&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require('@abskmj/cligen');
+&lt;pre tabindex="0">&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require('@abskmj/cligen');
 const spec = require('./spec.json');
 const client = cligen.getClient(spec);
 // supports callback
@@ -393,19 +393,19 @@ cd .git-remote
 ...
 &lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Deploy a NodeJS application using Git</title><link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link><pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid><description>Remote Repository on Deployment Server Create two folders named project.git and project.</description><content>&lt;h1 id="remote-repository-on-deployment-server">Remote Repository on Deployment Server&lt;/h1>
 &lt;p>Create two folders named &lt;code>project.git&lt;/code> and &lt;code>project.source&lt;/code>. Create a bare git repo in &lt;code>project.git&lt;/code>&lt;/p>
-&lt;pre>&lt;code>git init --bare
+&lt;pre tabindex="0">&lt;code>git init --bare
 &lt;/code>&lt;/pre>&lt;p>Configure &lt;code>project.source&lt;/code> as working folder for source code by adding below to &lt;code>project.git/hooks/post-receive&lt;/code>&lt;/p>
-&lt;pre>&lt;code>#!/bin/sh
+&lt;pre tabindex="0">&lt;code>#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
 &lt;/code>&lt;/pre>&lt;p>Change file persion to &lt;code>755&lt;/code> to make it executable.&lt;/p>
-&lt;pre>&lt;code>chmod 755 project.git/hooks/post-receive
+&lt;pre tabindex="0">&lt;code>chmod 755 project.git/hooks/post-receive
 &lt;/code>&lt;/pre>&lt;p>Add a remote to local repo&lt;/p>
-&lt;pre>&lt;code>git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
+&lt;pre tabindex="0">&lt;code>git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
 &lt;/code>&lt;/pre>&lt;p>Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p>
-&lt;pre>&lt;code>git push dev master
+&lt;pre tabindex="0">&lt;code>git push dev master
 &lt;/code>&lt;/pre>&lt;h1 id="deployment-using-hooks">Deployment using Hooks&lt;/h1>
 &lt;p>Steps to install dependencies, build, test, deploy can be added to the &lt;code>post-receive&lt;/code> hook script which will be executed every time the source code is pushed.&lt;/p>
-&lt;pre>&lt;code>#!/bin/sh
+&lt;pre tabindex="0">&lt;code>#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
 # Steps to build and deploy nodejs application
 cd /{{path}}/project.source
@@ -451,42 +451,42 @@ pm2 restart node_app
 &lt;p>&lt;a href="https://surge.sh/">Surge&lt;/a> is static web publishing for Web Developers, right from the CLI.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="install-surge-cli">Install Surge CLI&lt;/h1>
-&lt;pre>&lt;code>npm install -g surge
+&lt;pre tabindex="0">&lt;code>npm install -g surge
 &lt;/code>&lt;/pre>&lt;h1 id="deploy-with-surge">Deploy with Surge&lt;/h1>
 &lt;p>Navigate to the &lt;code>public&lt;/code> folder generated by &lt;a href="https://gohugo.io/">Hugo&lt;/a> CLI.&lt;/p>
-&lt;pre>&lt;code>surge
+&lt;pre tabindex="0">&lt;code>surge
 &lt;/code>&lt;/pre>&lt;p>The site, by default, will hosted on a sub domain of &lt;code>surge.sh&lt;/code>.&lt;/p>
 &lt;h1 id="deploy-changes">Deploy Changes&lt;/h1>
-&lt;pre>&lt;code>surge --domain &amp;lt;your-site&amp;gt;.surge.sh
+&lt;pre tabindex="0">&lt;code>surge --domain &amp;lt;your-site&amp;gt;.surge.sh
 &lt;/code>&lt;/pre>&lt;p>If the same domain name is not provided, another random sub domain will be prompted by Surge CLI which has to changed to original for each deployment.&lt;/p>
 &lt;h1 id="custom-domain">Custom Domain&lt;/h1>
 &lt;p>A &lt;code>CNAME&lt;/code> record has be added to your domain or sub domain and by setting the hostname to:&lt;/p>
-&lt;pre>&lt;code>na-west1.surge.sh
+&lt;pre tabindex="0">&lt;code>na-west1.surge.sh
 &lt;/code>&lt;/pre>&lt;p>Site can now be deployed on the new custom domain.&lt;/p>
-&lt;pre>&lt;code>surge --domain &amp;lt;your-site.your-domain.com&amp;gt;
+&lt;pre tabindex="0">&lt;code>surge --domain &amp;lt;your-site.your-domain.com&amp;gt;
 &lt;/code>&lt;/pre>&lt;h1 id="script">Script&lt;/h1>
 &lt;p>All these steps can be added to a script for easy deployment. A script named &lt;code>deploy.sh&lt;/code> can be created in the root folder of Hugo project with below contents.&lt;/p>
 &lt;p>This script will build the Hugo site and deploy it on the given domain.&lt;/p>
-&lt;pre>&lt;code>hugo
+&lt;pre tabindex="0">&lt;code>hugo
 surge --domain &amp;lt;your-site.your-domain.com&amp;gt; ./public
 &lt;/code>&lt;/pre>&lt;p>Appropriate permissions has be set to make it executable.&lt;/p>
-&lt;pre>&lt;code>sudo chmod 755 ./deploy.sh
+&lt;pre tabindex="0">&lt;code>sudo chmod 755 ./deploy.sh
 &lt;/code>&lt;/pre>&lt;p>Easy Deploy&lt;/p>
-&lt;pre>&lt;code>./deploy.sh
+&lt;pre tabindex="0">&lt;code>./deploy.sh
 &lt;/code>&lt;/pre></content></item><item><title>Track API usage with Google Analytics</title><link>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</link><pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</guid><description>Google analytics is a popular tool to track your website usage.</description><content>&lt;p>Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a href="https://developers.google.com/analytics/devguides/collection/protocol/">Measurement Protocol&lt;/a> can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="api-hit">API Hit&lt;/h1>
 &lt;p>Each invocation of an API can be tracked as a unique event. Optionally, the response time in millisecond can be included as well.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;t=event // Event hit type
+&lt;pre tabindex="0">&lt;code>&amp;amp;t=event // Event hit type
 &amp;amp;ec=api // Event category: api
 &amp;amp;ea=invoke // Event action: invoke
 &amp;amp;el=registration // Event label: name of the API
 &amp;amp;ev=300 // Event value: (optional) response time in milliseconds
 &lt;/code>&lt;/pre>&lt;h2 id="user-session">User Session&lt;/h2>
 &lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
+&lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
 &lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -496,7 +496,7 @@ surge --domain &amp;lt;your-site.your-domain.com&amp;gt; ./public
 &lt;h2 id="user-analytics">User Analytics&lt;/h2>
 &lt;p>Most of this data is captured by processing user&amp;rsquo;s IP address and browser&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/User_agent">user agent&lt;/a>. In this case, user&amp;rsquo;s IP and UA is not passed to Google Analytics rather the server&amp;rsquo;s IP is passed. All the analytics will have details of the servers only.&lt;/p>
 &lt;p>To fix this, &lt;code>uip&lt;/code> &amp;amp; &lt;code>ua&lt;/code> fields can be used to set user information.&lt;/p>
-&lt;pre>&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
+&lt;pre tabindex="0">&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
 &amp;amp;ua=Opera/9.80 // User agent override.
 &lt;/code>&lt;/pre>&lt;blockquote>
 &lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>

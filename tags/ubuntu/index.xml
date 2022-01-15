@@ -106,13 +106,13 @@ apt-get update
 apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="volume-control">Volume Control&lt;/h2>
 &lt;p>Add below lines to &lt;code>/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common&lt;/code> file, just before the &lt;code>[Element PCM]&lt;/code> section. This will also make the &lt;code>mute the microphone&lt;/code> button usable.&lt;/p>
-&lt;pre>&lt;code>[Element Master]
+&lt;pre tabindex="0">&lt;code>[Element Master]
 switch = mute
 volume = ignore
 &lt;/code>&lt;/pre>&lt;p>&lt;img src="pulseaudio-config.png" alt="Pulse Audio Configuration">&lt;/p>
 &lt;h2 id="system-time-in-windows--popos">System Time in Windows &amp;amp; PopOS&lt;/h2>
 &lt;p>Update the below &lt;code>timedatectl&lt;/code> configuration in PopOS. Details are available at &lt;a href="https://support.system76.com/articles/dual-booting/">support.system76.com&lt;/a>&lt;/p>
-&lt;pre>&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
+&lt;pre tabindex="0">&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
 &lt;/code>&lt;/pre>&lt;h2 id="text-on-screen-too-small">Text on screen too small&lt;/h2>
 &lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for a comfortable reading.&lt;/p>
 &lt;p>&lt;img src="displays-fractional-scaling.png" alt="Display Fractional Scaling">&lt;/p>
@@ -173,12 +173,12 @@ echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&am
 &lt;p>Get the UUID for the swap&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">findmnt -no UUID -T /swapfile
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
-&lt;pre>&lt;code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+&lt;pre tabindex="0">&lt;code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 &lt;/code>&lt;/pre>&lt;h2 id="swap-offset">Swap offset&lt;/h2>
 &lt;p>This is only needed when a swap file is available. Get the offset&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo filefrag -v /swapfile | awk &lt;span style="color:#e6db74">&amp;#39;{ if($1==&amp;#34;0:&amp;#34;){print $4} }&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
-&lt;pre>&lt;code>9999999..
+&lt;pre tabindex="0">&lt;code>9999999..
 &lt;/code>&lt;/pre>&lt;h2 id="update-kernel-options">Update Kernel Options&lt;/h2>
 &lt;p>For a Swap File&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset&lt;span style="color:#f92672">=&lt;/span>9999999”
@@ -186,9 +186,9 @@ echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&am
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Add below line to &lt;code>/etc/initramfs-tools/conf.d/resume&lt;/code>. Create the file if not present&lt;/p>
 &lt;p>For a Swap File&lt;/p>
-&lt;pre>&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
+&lt;pre tabindex="0">&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
 &lt;/code>&lt;/pre>&lt;p>For a Swap Partition&lt;/p>
-&lt;pre>&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+&lt;pre tabindex="0">&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 &lt;/code>&lt;/pre>&lt;p>Update the configurations&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo update-initramfs -u
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="test-hibernation">Test Hibernation&lt;/h1>
