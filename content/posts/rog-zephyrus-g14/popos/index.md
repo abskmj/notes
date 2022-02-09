@@ -6,6 +6,14 @@ tags: ['ASUS ROG Zephyrus G14', 'PopOS', 'Ubuntu']
 
 Install Pop 20.10 next to Windows 10 in a multi-boot setup. Similar steps can be followed to install Ubuntu 20.10.
 
+# Update - PopOS 21.10
+If you are doing a fresh installation of the PopOS. I would recommend using their 21.10 version as most of the features will work out of the box without needing to install adding packages as documented.
+
+Still doesn't work:
+- Fingerprint login
+- Microphone mute & ROG button on the top of the keyboard
+- Function keys to control fan speed
+
 # Demo Mode on Live USB
 > Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled
 
@@ -16,7 +24,7 @@ Install Pop 20.10 next to Windows 10 in a multi-boot setup. Similar steps can be
 - Follow [the guide](https://support.system76.com/articles/install-pop/) to try the Demo Mode 
 
 # Install on SSD
-The steps below are to install PopOS keeping the Windows 10 system intact
+The steps below are to install PopOS and keep the Windows 10 system intact
 
 - Click `Custom (Advanced)` to make a new partition on SSD for PopOS
 - Click on `Modify Partitions`
