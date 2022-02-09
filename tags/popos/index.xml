@@ -1,21 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PopOS on Notes</title><link>https://abskmj.github.io/notes/tags/popos/</link><description>Recent content in PopOS on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 04 Jun 2021 16:10:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/popos/index.xml" rel="self" type="application/rss+xml"/><item><title>PopOS 21.04 Beta on ASUS ROG Zephyrus G14 Laptop</title><link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos-21.04/</link><pubDate>Fri, 04 Jun 2021 16:10:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos-21.04/</guid><description>Install PopOS 21.04 is currently available for beta release testing.</description><content>&lt;h1 id="install">Install&lt;/h1>
-&lt;ul>
-&lt;li>PopOS 21.04 is currently available for beta release testing. Download the ISO image at &lt;a href="https://github.com/pop-os/beta">github.com&lt;/a>&lt;/li>
-&lt;li>Steps listed on &lt;a href="https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/">the other note&lt;/a> for PopOS 20.10 works for this version as well.&lt;/li>
-&lt;/ul>
-&lt;h1 id="out-of-the-box">Out of the box&lt;/h1>
-&lt;h1 id="works">Works&lt;/h1>
-&lt;ul>
-&lt;li>Volume buttons expect the button which mutes the microphone&lt;/li>
-&lt;li>Most of the function keys, including which control the brightness of the keyboard backlight&lt;/li>
-&lt;li>NVIDIA Graphics&lt;/li>
-&lt;/ul>
-&lt;h1 id="still-doesnt">(Still) doesn&amp;rsquo;t&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PopOS on Notes</title><link>https://abskmj.github.io/notes/tags/popos/</link><description>Recent content in PopOS on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 24 Oct 2020 10:34:30 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/popos/index.xml" rel="self" type="application/rss+xml"/><item><title>PopOS 20.10 on ASUS ROG Zephyrus G14 Laptop</title><link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</link><pubDate>Sat, 24 Oct 2020 10:34:30 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</guid><description>Install Pop 20.10 next to Windows 10 in a multi-boot setup.</description><content>&lt;p>Install Pop 20.10 next to Windows 10 in a multi-boot setup. Similar steps can be followed to install Ubuntu 20.10.&lt;/p>
+&lt;h1 id="update---popos-2110">Update - PopOS 21.10&lt;/h1>
+&lt;p>If you are doing a fresh installation of the PopOS. I would recommend using their 21.10 version as most of the features will work out of the box without needing to install adding packages as documented.&lt;/p>
+&lt;p>Still doesn&amp;rsquo;t work:&lt;/p>
 &lt;ul>
 &lt;li>Fingerprint login&lt;/li>
 &lt;li>Microphone mute &amp;amp; ROG button on the top of the keyboard&lt;/li>
 &lt;li>Function keys to control fan speed&lt;/li>
-&lt;/ul></content></item><item><title>PopOS 20.10 on ASUS ROG Zephyrus G14 Laptop</title><link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</link><pubDate>Sat, 24 Oct 2020 10:34:30 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</guid><description>Install Pop 20.10 next to Windows 10 in a multi-boot setup.</description><content>&lt;p>Install Pop 20.10 next to Windows 10 in a multi-boot setup. Similar steps can be followed to install Ubuntu 20.10.&lt;/p>
+&lt;/ul>
 &lt;h1 id="demo-mode-on-live-usb">Demo Mode on Live USB&lt;/h1>
 &lt;blockquote>
 &lt;p>Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled&lt;/p>
@@ -28,7 +19,7 @@
 &lt;li>Follow &lt;a href="https://support.system76.com/articles/install-pop/">the guide&lt;/a> to try the Demo Mode&lt;/li>
 &lt;/ul>
 &lt;h1 id="install-on-ssd">Install on SSD&lt;/h1>
-&lt;p>The steps below are to install PopOS keeping the Windows 10 system intact&lt;/p>
+&lt;p>The steps below are to install PopOS and keep the Windows 10 system intact&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>Click &lt;code>Custom (Advanced)&lt;/code> to make a new partition on SSD for PopOS&lt;/p>
