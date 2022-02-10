@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PancakeSwap on Notes</title><link>https://abskmj.github.io/notes/tags/pancakeswap/</link><description>Recent content in PancakeSwap on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/pancakeswap/index.xml" rel="self" type="application/rss+xml"/><item><title>Source Code: TradingView Charts for Pancakeswap Tokens</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/</link><pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/</guid><description>This is an informational post for my extra available at BuyMeACoffee.</description><content>&lt;blockquote>
-&lt;p>This is an informational post for my extra available at &lt;a href="https://www.buymeacoffee.com/abskmj/e/39007">BuyMeACoffee.com&lt;/a>. Connect me on &lt;a href="https://discordapp.com/users/220585271983472650">Discord&lt;/a> for any queries or feedback.&lt;/p>
+&lt;p>This is an informational post for my extra available at &lt;a href="https://www.buymeacoffee.com/abskmj/e/39007">BuyMeACoffee.com&lt;/a>. Connect me on &lt;a href="mailto:abskmj@gmail.com">my email&lt;/a> for any queries or feedback.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="what-will-you-get">What will you get?&lt;/h1>
 &lt;p>You will get a zip file with the source code for an OHLC Chart for PancakeSwap Tokens.&lt;/p>
-&lt;p>&lt;img src="chart.png" alt="TradingView Chart">&lt;/p>
 &lt;ul>
 &lt;li>It uses TradingView Techincal Analysis Charts as the charting library and Bitquery.io APIs as the data provider.&lt;/li>
 &lt;li>Code is in HTML and Javascript.&lt;/li>
@@ -11,11 +10,32 @@
 &lt;li>Supports both Pancakeswap v1 and v2 tokens&lt;/li>
 &lt;li>Supports 1m,5m,15m,30m,1h,4h,12d,1d,7d timeframes&lt;/li>
 &lt;/ul>
+&lt;div style="
+margin: 40px 0;
+padding: 40px 0;
+border-top: 1px solid #78e2a0;
+border-bottom: 1px solid #78e2a0;
+text-align: center;
+">
+&lt;iframe src="//tradingviewcharts.gitlab.io/pancakeswap-bitquery/" marginwidth="0" marginheight="0" style="
+width: 100%;
+min-height: 400px;
+border: none;
+margin-bottom: 20px;
+">
+&lt;/iframe>
+&lt;a href="//tradingviewcharts.gitlab.io/pancakeswap-bitquery/" target="_blank">View in new tab&lt;/a>
+&lt;p>
+Live Preview - Chart for PancakeSwap Token (CAKE)
+&lt;/p>
+&lt;/div>
+&lt;h2 id="screenshots">Screenshots&lt;/h2>
+&lt;p>&lt;img src="chart.png" alt="TradingView Chart">&lt;/p>
 &lt;p>&lt;img src="timeframes.png" alt="TradingView Chart">&lt;/p>
 &lt;h1 id="how-to-use-it">How to use it?&lt;/h1>
 &lt;p>You can view the chart by starting a local server and opening it in your browser. You can also host it with any HTTP server like Nginx and Apache on a remote server. These are static files and don&amp;rsquo;t need a server component other than to host them.&lt;/p>
 &lt;h1 id="before-you-buy">Before you buy&lt;/h1>
-&lt;p>There are a couple of prerequisites that you need to take care of before you can use it.&lt;/p>
+&lt;p>There are a couple of prerequisites that you need to take care of.&lt;/p>
 &lt;ul>
 &lt;li>Access to a copy of &lt;a href="https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts">TradingView Technical Analysis Charts&lt;/a>&lt;/li>
 &lt;li>An API Key from &lt;a href="https://bitquery.io/">Bitquery.io&lt;/a>&lt;/li>
