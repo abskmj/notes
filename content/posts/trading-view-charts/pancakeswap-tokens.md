@@ -5,11 +5,20 @@ tags: ["TradingView", "Charts", "PancakeSwap"]
 summary: " "
 ---
 
+# Update - Live Preview
+I have added a live preview of the charts using the Technical charts from TradingView. [Source code]({{< ref "bmc-extra-pancake/index.md" >}}) of these charts is available.
+
+{{< iframe 
+    src="//tradingviewcharts.gitlab.io/pancakeswap-bitquery/"
+    desc="Live Preview - Chart for PancakeSwap Token (CAKE)"
+>}}
+
+
 >  [**PancakeSwap**](https://pancakeswap.finance/) Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on Binance Smart Chain (BSC) with the best farms in Defi and a lottery for CAKE.
 
-This showcases couple of OHLC Charts for Pancakeswap Tokens implemented using the [TradingView Lightweight Charts](https://www.tradingview.com/lightweight-charts/) and [Bitquery.io](https://bitquery.io/) APIs.
+This showcases a couple of OHLC Charts for Pancakeswap Tokens implemented using the [TradingView Lightweight Charts](https://www.tradingview.com/lightweight-charts/) and [Bitquery.io](https://bitquery.io/) APIs.
 
-[TradingView Techincal Analysis Charts](https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts) can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them. [Source code]({{< ref "bmc-extra-pancake/index.md" >}}) of one of my starter project is available.
+[TradingView Techincal Analysis Charts](https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts) can replace the Lightweight Charts. You would need to request access to the technical charts on their website to use them.
 
 I run a gig on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL) to help with such integrations and customizations. You can also connect with me on [Discord](https://discordapp.com/users/220585271983472650).
 

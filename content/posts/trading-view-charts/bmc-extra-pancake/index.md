@@ -4,7 +4,7 @@ date: 2021-07-31T00:00:00Z
 tags: ['BuyMeACoffee.com', 'Extra', 'TradingView', 'Charts', 'PancakeSwap' ]
 ---
 
-> This is an informational post for my extra available at [BuyMeACoffee.com](https://www.buymeacoffee.com/abskmj/e/39007). Connect me on [my email](mailto:abskmj@gmail.com) for any queries or feedback.
+This is an informational post for my extra available at [BuyMeACoffee.com](https://www.buymeacoffee.com/abskmj/e/39007). Connect me on my [email](mailto:abskmj@gmail.com) for any queries or feedback.
 
 # What will you get?
 You will get a zip file with the source code for an OHLC Chart for PancakeSwap Tokens.
