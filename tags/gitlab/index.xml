@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gitlab on Notes</title><link>https://abskmj.github.io/notes/tags/gitlab/</link><description>Recent content in Gitlab on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Wed, 09 Feb 2022 15:41:04 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/gitlab/index.xml" rel="self" type="application/rss+xml"/><item><title>Continuous Deployment pipeline for a Subgraph</title><link>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</link><pubDate>Wed, 09 Feb 2022 15:41:04 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</guid><description>Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.</description><content>&lt;p>Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gitlab on Notes</title><link>https://abskmj.github.io/notes/tags/gitlab/</link><description>Recent content in Gitlab on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 14 Feb 2022 11:21:45 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/gitlab/index.xml" rel="self" type="application/rss+xml"/><item><title>Manage Generic Packages on Gitlab</title><link>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</link><pubDate>Mon, 14 Feb 2022 11:21:45 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</guid><description>Generic packages on GitLab are a convenient way to manage project artifacts.</description><content>&lt;p>Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.&lt;/p>
+&lt;h1 id="uploaddownload-a-package">Upload/Download a Package&lt;/h1>
+&lt;ul>
+&lt;li>Upload&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>-u $user:$password &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>--upload-file ./$package_name.zip &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Download&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>-u $user:$password &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>--output /$package_name.zip &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="prerequisites">Prerequisites&lt;/h1>
+&lt;h2 id="deploy-token">Deploy Token&lt;/h2>
+&lt;ul>
+&lt;li>Navigate to the &lt;code>Settings &amp;gt; Repository &amp;gt; Deploy Tokens&lt;/code> section of the Gitlab repo to create a deploy token&lt;/li>
+&lt;li>Set the username and use it as &lt;code>$user&lt;/code>&lt;/li>
+&lt;li>Select scopes &lt;code>read_package_registry&lt;/code> and &lt;code>write_package_registry&lt;/code>&lt;/li>
+&lt;li>Create the token and use it as &lt;code>$password&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="project-id">Project ID&lt;/h2>
+&lt;ul>
+&lt;li>Navigate to repo home page&lt;/li>
+&lt;li>&lt;code>Project ID&lt;/code> is mentioned in the top header section, just below the repo name&lt;/li>
+&lt;li>Use the value as &lt;code>$project_id&lt;/code>&lt;/li>
+&lt;/ul></content></item><item><title>Continuous Deployment pipeline for a Subgraph</title><link>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</link><pubDate>Wed, 09 Feb 2022 15:41:04 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</guid><description>Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.</description><content>&lt;p>Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a href="https://thegraph.com/">The Graph&lt;/a> is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.&lt;/p>
 &lt;/blockquote>
