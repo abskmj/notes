@@ -7,6 +7,7 @@ tags: ['Gitlab', 'Packages']
 Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.
 
 # Upload/Download a Package
+These packages are accessible at the `Packages & Registries > Package Registry` section of the Gitlab project.
 
 - Upload
 
@@ -28,7 +29,7 @@ https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$p
 # Prerequisites
 
 ## Deploy Token
-- Navigate to the `Settings > Repository > Deploy Tokens` section of the Gitlab repo to create a deploy token
+- Navigate to the `Settings > Repository > Deploy Tokens` section of the Gitlab project to create a deploy token
 - Set the username and use it as `$user`
 - Select scopes `read_package_registry` and `write_package_registry`
 - Create the token and use it as `$password`
