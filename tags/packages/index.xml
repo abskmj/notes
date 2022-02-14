@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Packages on Notes</title><link>https://abskmj.github.io/notes/tags/packages/</link><description>Recent content in Packages on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 14 Feb 2022 11:21:45 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/packages/index.xml" rel="self" type="application/rss+xml"/><item><title>Manage Generic Packages on Gitlab</title><link>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</link><pubDate>Mon, 14 Feb 2022 11:21:45 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</guid><description>Generic packages on GitLab are a convenient way to manage project artifacts.</description><content>&lt;p>Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.&lt;/p>
 &lt;h1 id="uploaddownload-a-package">Upload/Download a Package&lt;/h1>
+&lt;p>These packages are accessible at the &lt;code>Packages &amp;amp; Registries &amp;gt; Package Registry&lt;/code> section of the Gitlab project.&lt;/p>
 &lt;ul>
 &lt;li>Upload&lt;/li>
 &lt;/ul>
@@ -17,7 +18,7 @@
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="prerequisites">Prerequisites&lt;/h1>
 &lt;h2 id="deploy-token">Deploy Token&lt;/h2>
 &lt;ul>
-&lt;li>Navigate to the &lt;code>Settings &amp;gt; Repository &amp;gt; Deploy Tokens&lt;/code> section of the Gitlab repo to create a deploy token&lt;/li>
+&lt;li>Navigate to the &lt;code>Settings &amp;gt; Repository &amp;gt; Deploy Tokens&lt;/code> section of the Gitlab project to create a deploy token&lt;/li>
 &lt;li>Set the username and use it as &lt;code>$user&lt;/code>&lt;/li>
 &lt;li>Select scopes &lt;code>read_package_registry&lt;/code> and &lt;code>write_package_registry&lt;/code>&lt;/li>
 &lt;li>Create the token and use it as &lt;code>$password&lt;/code>&lt;/li>

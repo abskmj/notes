@@ -70,6 +70,7 @@ Notes
 <div class=post-content><div>
 <p>Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.</p>
 <h1 id=uploaddownload-a-package>Upload/Download a Package<a href=#uploaddownload-a-package class=hanchor arialabel=Anchor>&#8983;</a> </h1>
+<p>These packages are accessible at the <code>Packages & Registries > Package Registry</code> section of the Gitlab project.</p>
 <ul>
 <li>Upload</li>
 </ul>
@@ -87,7 +88,7 @@ Notes
 </code></pre></div><h1 id=prerequisites>Prerequisites<a href=#prerequisites class=hanchor arialabel=Anchor>&#8983;</a> </h1>
 <h2 id=deploy-token>Deploy Token<a href=#deploy-token class=hanchor arialabel=Anchor>&#8983;</a> </h2>
 <ul>
-<li>Navigate to the <code>Settings > Repository > Deploy Tokens</code> section of the Gitlab repo to create a deploy token</li>
+<li>Navigate to the <code>Settings > Repository > Deploy Tokens</code> section of the Gitlab project to create a deploy token</li>
 <li>Set the username and use it as <code>$user</code></li>
 <li>Select scopes <code>read_package_registry</code> and <code>write_package_registry</code></li>
 <li>Create the token and use it as <code>$password</code></li>
