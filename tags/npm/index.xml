@@ -9,58 +9,63 @@
 &lt;pre tabindex="0">&lt;code>npm install --save-dev serverless-spotinst-functions
 &lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
-&lt;span style="color:#75715e">#&lt;/span>
-&lt;span style="color:#75715e"># This file is the main config file for your service.&lt;/span>
-&lt;span style="color:#75715e"># It&amp;#39;s very minimal at this point and uses default values.&lt;/span>
-&lt;span style="color:#75715e"># You can always add more config options for more control.&lt;/span>
-&lt;span style="color:#75715e"># We&amp;#39;ve included some commented out config examples here.&lt;/span>
-&lt;span style="color:#75715e"># Just uncomment any of them to get that config option.&lt;/span>
-&lt;span style="color:#75715e">#&lt;/span>
-&lt;span style="color:#75715e"># For full config options, check the docs:&lt;/span>
-&lt;span style="color:#75715e"># docs.serverless.com&lt;/span>
-&lt;span style="color:#75715e">#&lt;/span>
-&lt;span style="color:#75715e"># Happy Coding!&lt;/span>
-&lt;span style="color:#f92672">service: demo # NOTE&lt;/span>: &lt;span style="color:#ae81ff">update this with your service name&lt;/span>
-&lt;span style="color:#f92672">provider&lt;/span>:
-&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">spotinst&lt;/span>
-&lt;span style="color:#75715e">#stage: &amp;lt;Stage Name&amp;gt; #Optional. Defaults to &amp;#39;dev&amp;#39;, see https://help.spotinst.com/hc/en-us/articles/115005893409&lt;/span>
-&lt;span style="color:#f92672">spotinst&lt;/span>:
-&lt;span style="color:#f92672">environment&lt;/span>: &lt;span style="color:#ae81ff">env-c0XXbXeb&lt;/span> &lt;span style="color:#75715e">#&amp;lt;env-XXXX&amp;gt; Required.&lt;/span>
-&lt;span style="color:#75715e"># exclude serverless files that are needed to be deployed&lt;/span>
-&lt;span style="color:#f92672">package&lt;/span>:
-&lt;span style="color:#f92672">exclude&lt;/span>:
-- &lt;span style="color:#ae81ff">.aws/**&lt;/span>
-- &lt;span style="color:#ae81ff">.config/**&lt;/span>
-- &lt;span style="color:#ae81ff">.serverlessrc&lt;/span>
-- &lt;span style="color:#ae81ff">.spotinst/** &lt;/span>
-&lt;span style="color:#f92672">functions&lt;/span>:
-&lt;span style="color:#f92672">hello&lt;/span>:
-&lt;span style="color:#f92672">runtime&lt;/span>: &lt;span style="color:#ae81ff">nodejs8.3&lt;/span>
-&lt;span style="color:#f92672">handler&lt;/span>: &lt;span style="color:#ae81ff">handler.main&lt;/span>
-&lt;span style="color:#f92672">memory&lt;/span>: &lt;span style="color:#ae81ff">128&lt;/span>
-&lt;span style="color:#f92672">timeout&lt;/span>: &lt;span style="color:#ae81ff">30&lt;/span>
-&lt;span style="color:#f92672">access&lt;/span>: &lt;span style="color:#ae81ff">private&lt;/span>
-&lt;span style="color:#75715e"># iamRoleConfig:&lt;/span>
-&lt;span style="color:#75715e"># roleId: # role-id&lt;/span>
-&lt;span style="color:#75715e"># activeVersions:&lt;/span>
-&lt;span style="color:#75715e"># - &amp;#34;version&amp;#34;: &amp;#34;$LATEST&amp;#34;&lt;/span>
-&lt;span style="color:#75715e"># &amp;#34;percentage&amp;#34;: 100.0&lt;/span>
-&lt;span style="color:#75715e"># cors:&lt;/span>
-&lt;span style="color:#75715e"># enabled: # false by default&lt;/span>
-&lt;span style="color:#75715e"># origin: # &amp;#39;*&amp;#39; by default&lt;/span>
-&lt;span style="color:#75715e"># headers: # &amp;#39;Content-Type,Authorization&amp;#39; by default&lt;/span>
-&lt;span style="color:#75715e"># methods: # &amp;#39;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT&amp;#39; by default&lt;/span>
-&lt;span style="color:#75715e"># cron: # Setup scheduled trigger with cron expression&lt;/span>
-&lt;span style="color:#75715e"># active: true&lt;/span>
-&lt;span style="color:#75715e"># value: &amp;#39;* * * * *&amp;#39;&lt;/span>
-&lt;span style="color:#75715e"># environmentVariables:&lt;/span>
-&lt;span style="color:#75715e"># key: Value&lt;/span>
-&lt;span style="color:#75715e"># extend the framework using plugins listed here:&lt;/span>
-&lt;span style="color:#75715e"># https://github.com/serverless/plugins&lt;/span>
-&lt;span style="color:#f92672">plugins&lt;/span>:
-- &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># This file is the main config file for your service.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># It&amp;#39;s very minimal at this point and uses default values.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># You can always add more config options for more control.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># We&amp;#39;ve included some commented out config examples here.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Just uncomment any of them to get that config option.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># For full config options, check the docs:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># docs.serverless.com&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Happy Coding!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">service: demo # NOTE&lt;/span>: &lt;span style="color:#ae81ff">update this with your service name&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">provider&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">spotinst&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#stage: &amp;lt;Stage Name&amp;gt; #Optional. Defaults to &amp;#39;dev&amp;#39;, see https://help.spotinst.com/hc/en-us/articles/115005893409&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">spotinst&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">environment&lt;/span>: &lt;span style="color:#ae81ff">env-c0XXbXeb&lt;/span> &lt;span style="color:#75715e">#&amp;lt;env-XXXX&amp;gt; Required.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># exclude serverless files that are needed to be deployed&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">package&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">exclude&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.aws/**&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.config/**&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.serverlessrc&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.spotinst/** &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">functions&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">hello&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">runtime&lt;/span>: &lt;span style="color:#ae81ff">nodejs8.3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">handler&lt;/span>: &lt;span style="color:#ae81ff">handler.main&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">memory&lt;/span>: &lt;span style="color:#ae81ff">128&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">timeout&lt;/span>: &lt;span style="color:#ae81ff">30&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">access&lt;/span>: &lt;span style="color:#ae81ff">private&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># iamRoleConfig:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># roleId: # role-id&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># activeVersions:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># - &amp;#34;version&amp;#34;: &amp;#34;$LATEST&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># &amp;#34;percentage&amp;#34;: 100.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cors:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># enabled: # false by default&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># origin: # &amp;#39;*&amp;#39; by default&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># headers: # &amp;#39;Content-Type,Authorization&amp;#39; by default&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># methods: # &amp;#39;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT&amp;#39; by default&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cron: # Setup scheduled trigger with cron expression&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># active: true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># value: &amp;#39;* * * * *&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># environmentVariables:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># key: Value&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># extend the framework using plugins listed here:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># https://github.com/serverless/plugins&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">plugins&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
 &lt;p>Save the spotinst credentials for serverless framework.&lt;/p>
 &lt;pre tabindex="0">&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
 &lt;/code>&lt;/pre>&lt;ul>
@@ -72,9 +77,9 @@
 &lt;p>Add a &lt;code>deploy&lt;/code> script to &lt;code>package.json&lt;/code> file.&lt;/p>
 &lt;pre tabindex="0">&lt;code>{
 ...
-&amp;quot;scripts&amp;quot;: {
+&amp;#34;scripts&amp;#34;: {
 ...
-&amp;quot;deploy&amp;quot;: &amp;quot;HOME=./ serverless deploy&amp;quot;
+&amp;#34;deploy&amp;#34;: &amp;#34;HOME=./ serverless deploy&amp;#34;
 },
 ...
 }
@@ -101,66 +106,67 @@ node_modules
 &lt;li>Historical Minute OHLCV&lt;/li>
 &lt;/ul>
 &lt;h2 id="specjson">spec.json&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
-&lt;span style="color:#f92672">&amp;#34;baseUrl&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;https://min-api.cryptocompare.com/data&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;operations&amp;#34;&lt;/span>: {
-&lt;span style="color:#f92672">&amp;#34;price&amp;#34;&lt;/span>: {
-&lt;span style="color:#f92672">&amp;#34;uri&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/price&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;data&amp;#34;&lt;/span>: {
-&lt;span style="color:#f92672">&amp;#34;query&amp;#34;&lt;/span>: {
-&lt;span style="color:#f92672">&amp;#34;parameters&amp;#34;&lt;/span>: [
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tryConversion&amp;#34;&lt;/span> },
-{
-&lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fsym&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-},
-{
-&lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsyms&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-},
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;e&amp;#34;&lt;/span> },
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;extraParams&amp;#34;&lt;/span> },
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;sign&amp;#34;&lt;/span> }
-]
-}
-}
-},
-&lt;span style="color:#f92672">&amp;#34;histominute&amp;#34;&lt;/span>: {
-&lt;span style="color:#f92672">&amp;#34;uri&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/histominute&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;data&amp;#34;&lt;/span>: {
-&lt;span style="color:#f92672">&amp;#34;query&amp;#34;&lt;/span>: {
-&lt;span style="color:#f92672">&amp;#34;parameters&amp;#34;&lt;/span>: [
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tryConversion&amp;#34;&lt;/span> },
-{
-&lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fsym&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-},
-{
-&lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsym&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-},
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;e&amp;#34;&lt;/span> },
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;aggregate&amp;#34;&lt;/span> },
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;aggregatePredictableTimePeriods&amp;#34;&lt;/span> },
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;limit&amp;#34;&lt;/span> },
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;toTs&amp;#34;&lt;/span> },
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;extraParams&amp;#34;&lt;/span> },
-{ &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;sign&amp;#34;&lt;/span> }
-]
-}
-}
-}
-}
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="nodejs">NodeJS&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;baseUrl&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;https://min-api.cryptocompare.com/data&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;operations&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;price&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;uri&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/price&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;data&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;query&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;parameters&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tryConversion&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fsym&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsyms&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;e&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;extraParams&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;sign&amp;#34;&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;histominute&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;uri&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/histominute&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;data&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;query&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;parameters&amp;#34;&lt;/span>: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tryConversion&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fsym&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsym&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;e&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;aggregate&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;aggregatePredictableTimePeriods&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;limit&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;toTs&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;extraParams&amp;#34;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;sign&amp;#34;&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="nodejs">NodeJS&lt;/h1>
 &lt;h2 id="installing-cligen-module">Installing Cligen Module&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -save github:@abskmj/cligen
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="generating-and-using-the-client">Generating and Using the client&lt;/h2>
-&lt;pre tabindex="0">&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require('@abskmj/cligen');
-const spec = require('./spec.json');
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install -save github:@abskmj/cligen
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="generating-and-using-the-client">Generating and Using the client&lt;/h2>
+&lt;pre tabindex="0">&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require(&amp;#39;@abskmj/cligen&amp;#39;);
+const spec = require(&amp;#39;./spec.json&amp;#39;);
 const client = cligen.getClient(spec);
 // supports callback
-client.price({ fsym: 'BTC', tsyms: 'USDT' }, (error, response) =&amp;gt; {
+client.price({ fsym: &amp;#39;BTC&amp;#39;, tsyms: &amp;#39;USDT&amp;#39; }, (error, response) =&amp;gt; {
 if (error) {
 console.log(error);
 }
@@ -168,68 +174,68 @@ else {
 console.log(response);
 /*
 { headers:
-{ server: 'nginx/1.10.3',
-date: 'Sun, 16 Dec 2018 08:09:00 GMT',
-'content-type': 'application/json; charset=UTF-8',
-'transfer-encoding': 'chunked',
-connection: 'close',
-vary: 'Accept-Encoding',
-'access-control-allow-origin': '*',
-'access-control-allow-methods': 'GET, POST, OPTIONS',
-'access-control-allow-headers': 'Content-Type, Cookie, Set-Cookie',
-'access-control-allow-credentials': 'true',
-'cache-control': 'public, max-age=10',
-'cryptocompare-cache-hit': 'false' },
+{ server: &amp;#39;nginx/1.10.3&amp;#39;,
+date: &amp;#39;Sun, 16 Dec 2018 08:09:00 GMT&amp;#39;,
+&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+connection: &amp;#39;close&amp;#39;,
+vary: &amp;#39;Accept-Encoding&amp;#39;,
+&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
+&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
 data: { USDT: 3261.81 },
 status: 200,
 request:
-{ url: 'https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT',
-method: 'GET',
+{ url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
+method: &amp;#39;GET&amp;#39;,
 headers: {},
 body: undefined } }
 */
 }
 });
 // supports promise
-client.histominute({ fsym: 'BTC', tsym: 'USDT' })
+client.histominute({ fsym: &amp;#39;BTC&amp;#39;, tsym: &amp;#39;USDT&amp;#39; })
 .then((response) =&amp;gt; {
 console.log(response);
 /*
 { headers:
-{ server: 'nginx/1.4.6 (Ubuntu)',
-date: 'Sun, 16 Dec 2018 08:41:46 GMT',
-'content-type': 'application/json; charset=UTF-8',
-'transfer-encoding': 'chunked',
-connection: 'close',
-vary: 'Accept-Encoding',
-'access-control-allow-origin': '*',
-'access-control-allow-methods': 'GET, POST, OPTIONS',
-'access-control-allow-headers': 'Content-Type, Cookie, Set-Cookie',
-'access-control-allow-credentials': 'true',
-'cache-control': 'public, max-age=10',
-'cryptocompare-cache-hit': 'false' },
+{ server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
+date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
+&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+connection: &amp;#39;close&amp;#39;,
+vary: &amp;#39;Accept-Encoding&amp;#39;,
+&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
+&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
 data: { USDT: 3263.88 },
 status: 200,
 request:
-{ url: 'https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT',
-method: 'GET',
+{ url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
+method: &amp;#39;GET&amp;#39;,
 headers: {},
 body: undefined } }
 { headers:
-{ server: 'nginx/1.4.6 (Ubuntu)',
-date: 'Sun, 16 Dec 2018 08:41:46 GMT',
-'content-type': 'application/json; charset=UTF-8',
-'transfer-encoding': 'chunked',
-connection: 'close',
-vary: 'Accept-Encoding',
-'access-control-allow-origin': '*',
-'access-control-allow-methods': 'GET, POST, OPTIONS',
-'access-control-allow-headers': 'Content-Type, Cookie, Set-Cookie',
-'access-control-allow-credentials': 'true',
-'cache-control': 'public, max-age=40',
-'cryptocompare-cache-hit': 'true' },
+{ server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
+date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
+&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+connection: &amp;#39;close&amp;#39;,
+vary: &amp;#39;Accept-Encoding&amp;#39;,
+&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=40&amp;#39;,
+&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;true&amp;#39; },
 data:
-{ Response: 'Success',
+{ Response: &amp;#39;Success&amp;#39;,
 Type: 100,
 Aggregated: false,
 Data:
@@ -237,13 +243,13 @@ Data:
 TimeTo: 1544949660,
 TimeFrom: 1544863260,
 FirstValueInArray: true,
-ConversionType: { type: 'direct', conversionSymbol: '' },
+ConversionType: { type: &amp;#39;direct&amp;#39;, conversionSymbol: &amp;#39;&amp;#39; },
 RateLimit: {},
 HasWarning: false },
 status: 200,
 request:
-{ url: 'https://min-api.cryptocompare.com/data/histominute?fsym=BTC&amp;amp;tsym=USDT',
-method: 'GET',
+{ url: &amp;#39;https://min-api.cryptocompare.com/data/histominute?fsym=BTC&amp;amp;tsym=USDT&amp;#39;,
+method: &amp;#39;GET&amp;#39;,
 headers: {},
 body: undefined } }
 */
@@ -253,85 +259,97 @@ console.log(error);
 &lt;/code>&lt;/pre></content></item><item><title>NPM Module - Complex JSON to Query String</title><link>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</link><pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</guid><description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string.</description><content>&lt;h1 id="abskmjqueryhttpswwwnpmjscompackageabskmjquery">&lt;a href="https://www.npmjs.com/package/@abskmj/query">@abskmj/query&lt;/a>&lt;/h1>
 &lt;p>It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;@abskmj/query&amp;#39;&lt;/span>);
-&lt;span style="color:#75715e">// query to get a list of 10 people between age 17 and 66, sorted by their age
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>
-&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">filters&lt;/span> &lt;span style="color:#f92672">=&lt;/span> {
-&lt;span style="color:#a6e22e">where&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
-&lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">$gt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">17&lt;/span>, &lt;span style="color:#a6e22e">$lt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">66&lt;/span> },
-},
-&lt;span style="color:#a6e22e">options&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
-&lt;span style="color:#a6e22e">limit&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>,
-&lt;span style="color:#a6e22e">sort&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span> }
-}
-}
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">queryString&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">filters&lt;/span>);
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
-&lt;span style="color:#75715e">/*
-&lt;/span>&lt;span style="color:#75715e">console:
-&lt;/span>&lt;span style="color:#75715e">where[age][$gt]=17&amp;amp;where[age][$lt]=66&amp;amp;options[limit]=10&amp;amp;options[sort][age]=-1
-&lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">json&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">parse&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">JSON&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">json&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>));
-&lt;span style="color:#75715e">/*
-&lt;/span>&lt;span style="color:#75715e">console:
-&lt;/span>&lt;span style="color:#75715e">{
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;where&amp;#34;: {
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: {
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;$gt&amp;#34;: 17,
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;$lt&amp;#34;: 66
-&lt;/span>&lt;span style="color:#75715e"> }
-&lt;/span>&lt;span style="color:#75715e"> },
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;options&amp;#34;: {
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;limit&amp;#34;: 10,
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;sort&amp;#34;: {
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: -1
-&lt;/span>&lt;span style="color:#75715e"> }
-&lt;/span>&lt;span style="color:#75715e"> }
-&lt;/span>&lt;span style="color:#75715e">}
-&lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="motivation">Motivation&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;@abskmj/query&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// query to get a list of 10 people between age 17 and 66, sorted by their age
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">filters&lt;/span> &lt;span style="color:#f92672">=&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">where&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">$gt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">17&lt;/span>, &lt;span style="color:#a6e22e">$lt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">66&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">options&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">limit&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">sort&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">queryString&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">filters&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">console:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">where[age][$gt]=17&amp;amp;where[age][$lt]=66&amp;amp;options[limit]=10&amp;amp;options[sort][age]=-1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">json&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">parse&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">JSON&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">json&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">console:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">{
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;where&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;$gt&amp;#34;: 17,
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;$lt&amp;#34;: 66
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> },
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;options&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;limit&amp;#34;: 10,
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;sort&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: -1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">}
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="motivation">Motivation&lt;/h1>
 &lt;p>I have been working on lots of MEVN/MEAN stack applications lately. I thought it would a great idea to write the mongoose queries in the front-end code rather than creating multiple APIs for different queries. It saves lots of effort on the backend code.&lt;/p></content></item><item><title>Developing an Angular project on Cloud9 IDE</title><link>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</link><pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid><description>Update NodeJS version All of the blank VMs on cloud9 have nvm pre installed.</description><content>&lt;h2 id="update-nodejs-version">Update NodeJS version&lt;/h2>
 &lt;ul>
 &lt;li>All of the blank VMs on cloud9 have &lt;a href="https://github.com/creationix/nvm">nvm&lt;/a> pre installed.&lt;/li>
 &lt;li>List all the available versions from &lt;a href="https://nodejs.org">the official site&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm ls-remote
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm ls-remote
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Choose to install the latest version&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm install v10.6.0
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm install v10.6.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Choose to use the latest version&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm use v10.6.0
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm use v10.6.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Check the version in use&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">node --version
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="angular">Angular&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>node --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="angular">Angular&lt;/h2>
 &lt;ul>
 &lt;li>Install latest &lt;a href="https://cli.angular.io/">Angular CLI&lt;/a> package&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -g @angular/cli
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install -g @angular/cli
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Create a new project named &lt;code>my-project&lt;/code> (you can use any name you need)&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ng new my-project
-cd my-project
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ng new my-project
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd my-project
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Change &lt;code>start&lt;/code> script in &lt;code>package.json&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
-&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-&lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
-&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-&lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ng serve --host $IP --port $PORT --public-host $C9_HOSTNAME&amp;#34;&lt;/span>,
-&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-}
-&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ng serve --host $IP --port $PORT --public-host $C9_HOSTNAME&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>On IDE menu, click on &lt;code>Preview &amp;gt; Preview Running Application&lt;/code> to get the preview URL.&lt;/li>
 &lt;/ul>
 &lt;h2 id="downside">Downside&lt;/h2>
@@ -350,8 +368,8 @@ cd my-project
 &lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
 &lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
 &lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;a href="https://en.wikipedia.org/wiki/X-Forwarded-For">&lt;code>x-forwarded-for&lt;/code>&lt;/a> header is generally used by proxies to pass originating client&amp;rsquo;s IP.&lt;/li>
 &lt;li>IP value should be hashed to avoid collecting sensitive user or client information.&lt;/li>
 &lt;/ul>
@@ -364,19 +382,20 @@ cd my-project
 &lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="sample-request">Sample Request&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// nodejs
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
-&lt;span style="color:#a6e22e">request&lt;/span>({
-&lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">uri&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/collect&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">body&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">method&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;POST&amp;#39;&lt;/span>
-}, &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>, &lt;span style="color:#a6e22e">response&lt;/span>, &lt;span style="color:#a6e22e">body&lt;/span>) {
-&lt;span style="color:#66d9ef">if&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>){
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>);
-}
-&lt;span style="color:#66d9ef">else&lt;/span>{
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
-}
-});
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// nodejs
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">request&lt;/span>({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">uri&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/collect&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">body&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">method&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;POST&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}, &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>, &lt;span style="color:#a6e22e">response&lt;/span>, &lt;span style="color:#a6e22e">body&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

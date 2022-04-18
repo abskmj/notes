@@ -11,99 +11,107 @@
 &lt;/ul>
 &lt;h1 id="gridfile-mongoose-model">GridFile Mongoose Model&lt;/h1>
 &lt;p>&lt;a href="https://github.com/abskmj/gridfile">GridFile&lt;/a> is a reusable Mongoose Schema for MongoDB GridFS.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// gridfile.model.js
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;mongoose&amp;#39;&lt;/span>)
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">schema&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;gridfile&amp;#39;&lt;/span>)
-&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">model&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;GridFile&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">schema&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="multer-middleware">Multer Middleware&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// gridfile.model.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;mongoose&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">schema&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;gridfile&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">model&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;GridFile&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">schema&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="multer-middleware">Multer Middleware&lt;/h1>
 &lt;p>&lt;a href="https://www.npmjs.com/package/multer">Multer&lt;/a> will parse &lt;code>multipart/form-data&lt;/code> request and the uploaded files will be accessible as &lt;code>req.files&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;multer&amp;#39;&lt;/span>)
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">upload&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span>({ &lt;span style="color:#a6e22e">dest&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>.&lt;span style="color:#a6e22e">join&lt;/span>(&lt;span style="color:#a6e22e">__dirname&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;.&amp;#39;&lt;/span>) })
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="upload-file-api">Upload File API&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;multer&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">upload&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">multer&lt;/span>({ &lt;span style="color:#a6e22e">dest&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>.&lt;span style="color:#a6e22e">join&lt;/span>(&lt;span style="color:#a6e22e">__dirname&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;.&amp;#39;&lt;/span>) })
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="upload-file-api">Upload File API&lt;/h1>
 &lt;p>API uses the multer middleware and GridFile model to upload files to GridFS.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">post&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">upload&lt;/span>.&lt;span style="color:#a6e22e">any&lt;/span>(), &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
-&lt;span style="color:#66d9ef">try&lt;/span> {
-&lt;span style="color:#75715e">// uploaded file are accessible as req.files
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">files&lt;/span>) {
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">promises&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">files&lt;/span>.&lt;span style="color:#a6e22e">map&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">file&lt;/span>) =&amp;gt; {
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">fileStream&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span>.&lt;span style="color:#a6e22e">createReadStream&lt;/span>(&lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">path&lt;/span>)
-&lt;span style="color:#75715e">// upload file to gridfs
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>({ &lt;span style="color:#a6e22e">filename&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">originalname&lt;/span> })
-&lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span>.&lt;span style="color:#a6e22e">upload&lt;/span>(&lt;span style="color:#a6e22e">fileStream&lt;/span>)
-&lt;span style="color:#75715e">// delete the file from local folder
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span>.&lt;span style="color:#a6e22e">unlinkSync&lt;/span>(&lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">path&lt;/span>)
-})
-&lt;span style="color:#66d9ef">await&lt;/span> Promise.&lt;span style="color:#a6e22e">all&lt;/span>(&lt;span style="color:#a6e22e">promises&lt;/span>)
-}
-&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">sendStatus&lt;/span>(&lt;span style="color:#ae81ff">201&lt;/span>)
-} &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
-&lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
-}
-})
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="list-files-api">List Files API&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">post&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">upload&lt;/span>.&lt;span style="color:#a6e22e">any&lt;/span>(), &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// uploaded file are accessible as req.files
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">files&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">promises&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">files&lt;/span>.&lt;span style="color:#a6e22e">map&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">file&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">fileStream&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span>.&lt;span style="color:#a6e22e">createReadStream&lt;/span>(&lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">path&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// upload file to gridfs
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>({ &lt;span style="color:#a6e22e">filename&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">originalname&lt;/span> })
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span>.&lt;span style="color:#a6e22e">upload&lt;/span>(&lt;span style="color:#a6e22e">fileStream&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// delete the file from local folder
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span>.&lt;span style="color:#a6e22e">unlinkSync&lt;/span>(&lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">path&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> })
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">await&lt;/span> Promise.&lt;span style="color:#a6e22e">all&lt;/span>(&lt;span style="color:#a6e22e">promises&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">sendStatus&lt;/span>(&lt;span style="color:#ae81ff">201&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="list-files-api">List Files API&lt;/h1>
 &lt;p>API returns information about uploaded files.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
-&lt;span style="color:#66d9ef">try&lt;/span> {
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">files&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({})
-&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">files&lt;/span>)
-} &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
-&lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
-}
-})
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample response&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">[
-{
-&lt;span style="color:#f92672">&amp;#34;aliases&amp;#34;&lt;/span>: [],
-&lt;span style="color:#f92672">&amp;#34;_id&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;5f6850023516552ad21d0007&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;length&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">7945&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;chunkSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">261120&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;uploadDate&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;2020-09-21T07:02:26.389Z&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;filename&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;attachment.pdf&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;md5&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fa7d7e650b2cec68f302b31ba28235d8&amp;#34;&lt;/span>
-}
-]
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="download-file-api">Download File API&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">files&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">files&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample response&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>[
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;aliases&amp;#34;&lt;/span>: [],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;_id&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;5f6850023516552ad21d0007&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;length&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">7945&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;chunkSize&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">261120&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;uploadDate&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;2020-09-21T07:02:26.389Z&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;filename&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;attachment.pdf&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;md5&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fa7d7e650b2cec68f302b31ba28235d8&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="download-file-api">Download File API&lt;/h1>
 &lt;p>API returns the file from the GridFS using its id.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files/:id/:name&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
-&lt;span style="color:#66d9ef">try&lt;/span> {
-&lt;span style="color:#66d9ef">const&lt;/span> { &lt;span style="color:#a6e22e">id&lt;/span>, &lt;span style="color:#a6e22e">name&lt;/span> } &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">params&lt;/span>
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>.&lt;span style="color:#a6e22e">findById&lt;/span>(&lt;span style="color:#a6e22e">id&lt;/span>)
-&lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">gridFile&lt;/span>) {
-&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">attachment&lt;/span>(&lt;span style="color:#a6e22e">name&lt;/span>)
-&lt;span style="color:#a6e22e">gridFile&lt;/span>.&lt;span style="color:#a6e22e">downloadStream&lt;/span>(&lt;span style="color:#a6e22e">res&lt;/span>)
-} &lt;span style="color:#66d9ef">else&lt;/span> {
-&lt;span style="color:#75715e">// file not found
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">status&lt;/span>(&lt;span style="color:#ae81ff">404&lt;/span>).&lt;span style="color:#a6e22e">json&lt;/span>({ &lt;span style="color:#a6e22e">error&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;file not found&amp;#39;&lt;/span> })
-}
-} &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
-&lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
-}
-})
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample Request URL&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">get&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;/v1/files/:id/:name&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>, &lt;span style="color:#a6e22e">nxt&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> { &lt;span style="color:#a6e22e">id&lt;/span>, &lt;span style="color:#a6e22e">name&lt;/span> } &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">req&lt;/span>.&lt;span style="color:#a6e22e">params&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">gridFile&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">GridFile&lt;/span>.&lt;span style="color:#a6e22e">findById&lt;/span>(&lt;span style="color:#a6e22e">id&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">gridFile&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">attachment&lt;/span>(&lt;span style="color:#a6e22e">name&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">gridFile&lt;/span>.&lt;span style="color:#a6e22e">downloadStream&lt;/span>(&lt;span style="color:#a6e22e">res&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">else&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// file not found
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">status&lt;/span>(&lt;span style="color:#ae81ff">404&lt;/span>).&lt;span style="color:#a6e22e">json&lt;/span>({ &lt;span style="color:#a6e22e">error&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;file not found&amp;#39;&lt;/span> })
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">nxt&lt;/span>(&lt;span style="color:#a6e22e">err&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample Request URL&lt;/p>
 &lt;pre tabindex="0">&lt;code>/v1/files/5f6850023516552ad21d0007/attachment.pdf
 &lt;/code>&lt;/pre>&lt;blockquote>
 &lt;p>A working codebase for reference is available at &lt;a href="https://gist.github.com/abskmj/655dbc3191e108d6a5a55e28446bc1e9">gist.github.com&lt;/a>&lt;/p>
 &lt;/blockquote></content></item><item><title>Configure ES Lint with Airbnb rules for a Node.js Application</title><link>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</link><pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</guid><description>Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.</description><content>&lt;h2 id="install-es-lint-modules">Install ES Lint modules&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install --save-dev eslint-plugin-import eslint
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-airbnb-config">Install Airbnb config&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install --save-dev eslint-plugin-import eslint
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-airbnb-config">Install Airbnb config&lt;/h2>
 &lt;p>Use the base version for Node.js applications. They also publish a version for React applications as &lt;code>eslint-config-airbnb&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install --save-dev eslint-config-airbnb-base
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config-file">Config File&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install --save-dev eslint-config-airbnb-base
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config-file">Config File&lt;/h2>
 &lt;p>Create a &lt;code>.eslintrc&lt;/code> file with following contents to Airbnb rules for the Node.js Application.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
-&lt;span style="color:#f92672">&amp;#34;extends&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint-config-airbnb-base&amp;#34;&lt;/span>
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="npm-scripts">NPM Scripts&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;extends&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint-config-airbnb-base&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="npm-scripts">NPM Scripts&lt;/h2>
 &lt;p>Create few npm scripts to integrate linting into development flow.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
-&lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>:{
-&lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;node .&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;lint&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint --fix .&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;dev&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;nodemon --exec &amp;#39;npm run lint &amp;amp;&amp;amp; npm run start&amp;#39;&amp;#34;&lt;/span>
-}
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vs-code">VS Code&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>:{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;node .&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;lint&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint --fix .&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;dev&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;nodemon --exec &amp;#39;npm run lint &amp;amp;&amp;amp; npm run start&amp;#39;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vs-code">VS Code&lt;/h2>
 &lt;p>There is an extension on VS Code for ES Lint, available at &lt;a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&lt;/a>&lt;/p></content></item><item><title>Deploy functions on Spotinst using Serverless Framework</title><link>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</link><pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</guid><description>Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service).</description><content>&lt;p>&lt;a href="https://spotinst.com/products/spotinst-functions/">Spotinst&lt;/a> is one of the providers which support deploying serverless functions or FaaS (Function as a Service). &lt;a href="https://serverless.com/">Serverless Framework&lt;/a> is an NPM module which makes building serverless applications easy and open.&lt;/p>
 &lt;h1 id="isolated-workspace">Isolated Workspace&lt;/h1>
 &lt;p>The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects. This also allows me to use multiple Spotinst credentials for multiple serverless applications.&lt;/p>
@@ -115,58 +123,63 @@
 &lt;pre tabindex="0">&lt;code>npm install --save-dev serverless-spotinst-functions
 &lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
-&lt;span style="color:#75715e">#&lt;/span>
-&lt;span style="color:#75715e"># This file is the main config file for your service.&lt;/span>
-&lt;span style="color:#75715e"># It&amp;#39;s very minimal at this point and uses default values.&lt;/span>
-&lt;span style="color:#75715e"># You can always add more config options for more control.&lt;/span>
-&lt;span style="color:#75715e"># We&amp;#39;ve included some commented out config examples here.&lt;/span>
-&lt;span style="color:#75715e"># Just uncomment any of them to get that config option.&lt;/span>
-&lt;span style="color:#75715e">#&lt;/span>
-&lt;span style="color:#75715e"># For full config options, check the docs:&lt;/span>
-&lt;span style="color:#75715e"># docs.serverless.com&lt;/span>
-&lt;span style="color:#75715e">#&lt;/span>
-&lt;span style="color:#75715e"># Happy Coding!&lt;/span>
-&lt;span style="color:#f92672">service: demo # NOTE&lt;/span>: &lt;span style="color:#ae81ff">update this with your service name&lt;/span>
-&lt;span style="color:#f92672">provider&lt;/span>:
-&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">spotinst&lt;/span>
-&lt;span style="color:#75715e">#stage: &amp;lt;Stage Name&amp;gt; #Optional. Defaults to &amp;#39;dev&amp;#39;, see https://help.spotinst.com/hc/en-us/articles/115005893409&lt;/span>
-&lt;span style="color:#f92672">spotinst&lt;/span>:
-&lt;span style="color:#f92672">environment&lt;/span>: &lt;span style="color:#ae81ff">env-c0XXbXeb&lt;/span> &lt;span style="color:#75715e">#&amp;lt;env-XXXX&amp;gt; Required.&lt;/span>
-&lt;span style="color:#75715e"># exclude serverless files that are needed to be deployed&lt;/span>
-&lt;span style="color:#f92672">package&lt;/span>:
-&lt;span style="color:#f92672">exclude&lt;/span>:
-- &lt;span style="color:#ae81ff">.aws/**&lt;/span>
-- &lt;span style="color:#ae81ff">.config/**&lt;/span>
-- &lt;span style="color:#ae81ff">.serverlessrc&lt;/span>
-- &lt;span style="color:#ae81ff">.spotinst/** &lt;/span>
-&lt;span style="color:#f92672">functions&lt;/span>:
-&lt;span style="color:#f92672">hello&lt;/span>:
-&lt;span style="color:#f92672">runtime&lt;/span>: &lt;span style="color:#ae81ff">nodejs8.3&lt;/span>
-&lt;span style="color:#f92672">handler&lt;/span>: &lt;span style="color:#ae81ff">handler.main&lt;/span>
-&lt;span style="color:#f92672">memory&lt;/span>: &lt;span style="color:#ae81ff">128&lt;/span>
-&lt;span style="color:#f92672">timeout&lt;/span>: &lt;span style="color:#ae81ff">30&lt;/span>
-&lt;span style="color:#f92672">access&lt;/span>: &lt;span style="color:#ae81ff">private&lt;/span>
-&lt;span style="color:#75715e"># iamRoleConfig:&lt;/span>
-&lt;span style="color:#75715e"># roleId: # role-id&lt;/span>
-&lt;span style="color:#75715e"># activeVersions:&lt;/span>
-&lt;span style="color:#75715e"># - &amp;#34;version&amp;#34;: &amp;#34;$LATEST&amp;#34;&lt;/span>
-&lt;span style="color:#75715e"># &amp;#34;percentage&amp;#34;: 100.0&lt;/span>
-&lt;span style="color:#75715e"># cors:&lt;/span>
-&lt;span style="color:#75715e"># enabled: # false by default&lt;/span>
-&lt;span style="color:#75715e"># origin: # &amp;#39;*&amp;#39; by default&lt;/span>
-&lt;span style="color:#75715e"># headers: # &amp;#39;Content-Type,Authorization&amp;#39; by default&lt;/span>
-&lt;span style="color:#75715e"># methods: # &amp;#39;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT&amp;#39; by default&lt;/span>
-&lt;span style="color:#75715e"># cron: # Setup scheduled trigger with cron expression&lt;/span>
-&lt;span style="color:#75715e"># active: true&lt;/span>
-&lt;span style="color:#75715e"># value: &amp;#39;* * * * *&amp;#39;&lt;/span>
-&lt;span style="color:#75715e"># environmentVariables:&lt;/span>
-&lt;span style="color:#75715e"># key: Value&lt;/span>
-&lt;span style="color:#75715e"># extend the framework using plugins listed here:&lt;/span>
-&lt;span style="color:#75715e"># https://github.com/serverless/plugins&lt;/span>
-&lt;span style="color:#f92672">plugins&lt;/span>:
-- &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># This file is the main config file for your service.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># It&amp;#39;s very minimal at this point and uses default values.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># You can always add more config options for more control.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># We&amp;#39;ve included some commented out config examples here.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Just uncomment any of them to get that config option.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># For full config options, check the docs:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># docs.serverless.com&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Happy Coding!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">service: demo # NOTE&lt;/span>: &lt;span style="color:#ae81ff">update this with your service name&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">provider&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">spotinst&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#stage: &amp;lt;Stage Name&amp;gt; #Optional. Defaults to &amp;#39;dev&amp;#39;, see https://help.spotinst.com/hc/en-us/articles/115005893409&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">spotinst&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">environment&lt;/span>: &lt;span style="color:#ae81ff">env-c0XXbXeb&lt;/span> &lt;span style="color:#75715e">#&amp;lt;env-XXXX&amp;gt; Required.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># exclude serverless files that are needed to be deployed&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">package&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">exclude&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.aws/**&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.config/**&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.serverlessrc&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.spotinst/** &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">functions&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">hello&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">runtime&lt;/span>: &lt;span style="color:#ae81ff">nodejs8.3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">handler&lt;/span>: &lt;span style="color:#ae81ff">handler.main&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">memory&lt;/span>: &lt;span style="color:#ae81ff">128&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">timeout&lt;/span>: &lt;span style="color:#ae81ff">30&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">access&lt;/span>: &lt;span style="color:#ae81ff">private&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># iamRoleConfig:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># roleId: # role-id&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># activeVersions:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># - &amp;#34;version&amp;#34;: &amp;#34;$LATEST&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># &amp;#34;percentage&amp;#34;: 100.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cors:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># enabled: # false by default&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># origin: # &amp;#39;*&amp;#39; by default&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># headers: # &amp;#39;Content-Type,Authorization&amp;#39; by default&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># methods: # &amp;#39;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT&amp;#39; by default&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cron: # Setup scheduled trigger with cron expression&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># active: true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># value: &amp;#39;* * * * *&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># environmentVariables:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># key: Value&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># extend the framework using plugins listed here:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># https://github.com/serverless/plugins&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">plugins&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
 &lt;p>Save the spotinst credentials for serverless framework.&lt;/p>
 &lt;pre tabindex="0">&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
 &lt;/code>&lt;/pre>&lt;ul>
@@ -178,9 +191,9 @@
 &lt;p>Add a &lt;code>deploy&lt;/code> script to &lt;code>package.json&lt;/code> file.&lt;/p>
 &lt;pre tabindex="0">&lt;code>{
 ...
-&amp;quot;scripts&amp;quot;: {
+&amp;#34;scripts&amp;#34;: {
 ...
-&amp;quot;deploy&amp;quot;: &amp;quot;HOME=./ serverless deploy&amp;quot;
+&amp;#34;deploy&amp;#34;: &amp;#34;HOME=./ serverless deploy&amp;#34;
 },
 ...
 }
@@ -199,85 +212,97 @@ node_modules
 &lt;/code>&lt;/pre></content></item><item><title>NPM Module - Complex JSON to Query String</title><link>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</link><pubDate>Wed, 17 Oct 2018 06:38:37 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</guid><description>@abskmj/query It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string.</description><content>&lt;h1 id="abskmjqueryhttpswwwnpmjscompackageabskmjquery">&lt;a href="https://www.npmjs.com/package/@abskmj/query">@abskmj/query&lt;/a>&lt;/h1>
 &lt;p>It is an NPM module that converts complex JSON with arrays and nested objects into URL parameters or query string. It can also parse such query string back to JSON.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;@abskmj/query&amp;#39;&lt;/span>);
-&lt;span style="color:#75715e">// query to get a list of 10 people between age 17 and 66, sorted by their age
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>
-&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">filters&lt;/span> &lt;span style="color:#f92672">=&lt;/span> {
-&lt;span style="color:#a6e22e">where&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
-&lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">$gt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">17&lt;/span>, &lt;span style="color:#a6e22e">$lt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">66&lt;/span> },
-},
-&lt;span style="color:#a6e22e">options&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
-&lt;span style="color:#a6e22e">limit&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>,
-&lt;span style="color:#a6e22e">sort&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span> }
-}
-}
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">queryString&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">filters&lt;/span>);
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
-&lt;span style="color:#75715e">/*
-&lt;/span>&lt;span style="color:#75715e">console:
-&lt;/span>&lt;span style="color:#75715e">where[age][$gt]=17&amp;amp;where[age][$lt]=66&amp;amp;options[limit]=10&amp;amp;options[sort][age]=-1
-&lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">json&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">parse&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">JSON&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">json&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>));
-&lt;span style="color:#75715e">/*
-&lt;/span>&lt;span style="color:#75715e">console:
-&lt;/span>&lt;span style="color:#75715e">{
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;where&amp;#34;: {
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: {
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;$gt&amp;#34;: 17,
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;$lt&amp;#34;: 66
-&lt;/span>&lt;span style="color:#75715e"> }
-&lt;/span>&lt;span style="color:#75715e"> },
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;options&amp;#34;: {
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;limit&amp;#34;: 10,
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;sort&amp;#34;: {
-&lt;/span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: -1
-&lt;/span>&lt;span style="color:#75715e"> }
-&lt;/span>&lt;span style="color:#75715e"> }
-&lt;/span>&lt;span style="color:#75715e">}
-&lt;/span>&lt;span style="color:#75715e">*/&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="motivation">Motivation&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;@abskmj/query&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// query to get a list of 10 people between age 17 and 66, sorted by their age
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">filters&lt;/span> &lt;span style="color:#f92672">=&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">where&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">$gt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">17&lt;/span>, &lt;span style="color:#a6e22e">$lt&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">66&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">options&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">limit&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">sort&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">age&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">queryString&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">filters&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">console:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">where[age][$gt]=17&amp;amp;where[age][$lt]=66&amp;amp;options[limit]=10&amp;amp;options[sort][age]=-1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">json&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">query&lt;/span>.&lt;span style="color:#a6e22e">parse&lt;/span>(&lt;span style="color:#a6e22e">queryString&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">JSON&lt;/span>.&lt;span style="color:#a6e22e">stringify&lt;/span>(&lt;span style="color:#a6e22e">json&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">console:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">{
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;where&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;$gt&amp;#34;: 17,
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;$lt&amp;#34;: 66
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> },
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;options&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;limit&amp;#34;: 10,
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;sort&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> &amp;#34;age&amp;#34;: -1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> }
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">}
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="motivation">Motivation&lt;/h1>
 &lt;p>I have been working on lots of MEVN/MEAN stack applications lately. I thought it would a great idea to write the mongoose queries in the front-end code rather than creating multiple APIs for different queries. It saves lots of effort on the backend code.&lt;/p></content></item><item><title>Developing an Angular project on Cloud9 IDE</title><link>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</link><pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid><description>Update NodeJS version All of the blank VMs on cloud9 have nvm pre installed.</description><content>&lt;h2 id="update-nodejs-version">Update NodeJS version&lt;/h2>
 &lt;ul>
 &lt;li>All of the blank VMs on cloud9 have &lt;a href="https://github.com/creationix/nvm">nvm&lt;/a> pre installed.&lt;/li>
 &lt;li>List all the available versions from &lt;a href="https://nodejs.org">the official site&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm ls-remote
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm ls-remote
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Choose to install the latest version&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm install v10.6.0
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm install v10.6.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Choose to use the latest version&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">nvm use v10.6.0
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm use v10.6.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Check the version in use&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">node --version
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="angular">Angular&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>node --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="angular">Angular&lt;/h2>
 &lt;ul>
 &lt;li>Install latest &lt;a href="https://cli.angular.io/">Angular CLI&lt;/a> package&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -g @angular/cli
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install -g @angular/cli
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Create a new project named &lt;code>my-project&lt;/code> (you can use any name you need)&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">ng new my-project
-cd my-project
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ng new my-project
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd my-project
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Change &lt;code>start&lt;/code> script in &lt;code>package.json&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
-&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-&lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
-&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-&lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ng serve --host $IP --port $PORT --public-host $C9_HOSTNAME&amp;#34;&lt;/span>,
-&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-}
-&lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ng serve --host $IP --port $PORT --public-host $C9_HOSTNAME&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>On IDE menu, click on &lt;code>Preview &amp;gt; Preview Running Application&lt;/code> to get the preview URL.&lt;/li>
 &lt;/ul>
 &lt;h2 id="downside">Downside&lt;/h2>
@@ -296,8 +321,8 @@ cd my-project
 &lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
 &lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
 &lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;a href="https://en.wikipedia.org/wiki/X-Forwarded-For">&lt;code>x-forwarded-for&lt;/code>&lt;/a> header is generally used by proxies to pass originating client&amp;rsquo;s IP.&lt;/li>
 &lt;li>IP value should be hashed to avoid collecting sensitive user or client information.&lt;/li>
 &lt;/ul>
@@ -310,19 +335,20 @@ cd my-project
 &lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="sample-request">Sample Request&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// nodejs
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
-&lt;span style="color:#a6e22e">request&lt;/span>({
-&lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">uri&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/collect&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">body&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">method&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;POST&amp;#39;&lt;/span>
-}, &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>, &lt;span style="color:#a6e22e">response&lt;/span>, &lt;span style="color:#a6e22e">body&lt;/span>) {
-&lt;span style="color:#66d9ef">if&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>){
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>);
-}
-&lt;span style="color:#66d9ef">else&lt;/span>{
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
-}
-});
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// nodejs
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">request&lt;/span>({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">uri&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/collect&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">body&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">method&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;POST&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}, &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>, &lt;span style="color:#a6e22e">response&lt;/span>, &lt;span style="color:#a6e22e">body&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

@@ -5,29 +5,30 @@
 &lt;ul>
 &lt;li>Start the database server&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; -p 3306:3306 -d mysql:latest
-&lt;span style="color:#75715e"># example&lt;/span>
-docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>change-me-later -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>test -p 3306:3306 -d mysql:latest
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; -p 3306:3306 -d mysql:latest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>change-me-later -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>test -p 3306:3306 -d mysql:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Options&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker run
---rm &lt;span style="color:#75715e"># remove container when exits&lt;/span>
---name&lt;span style="color:#f92672">=&lt;/span>mysql &lt;span style="color:#75715e"># name of the container&lt;/span>
--e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; &lt;span style="color:#75715e"># set the database password&lt;/span>
--e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; &lt;span style="color:#75715e"># set the database name&lt;/span>
--p 3306:3306 &lt;span style="color:#75715e"># port forward &lt;/span>
--v $PWD/db/:/docker-entrypoint-initdb.d/ &lt;span style="color:#75715e"># volume mount database init scripts&lt;/span>
--d mysql:latest &lt;span style="color:#75715e"># use latest version of the image&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --rm &lt;span style="color:#75715e"># remove container when exits&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name&lt;span style="color:#f92672">=&lt;/span>mysql &lt;span style="color:#75715e"># name of the container&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; &lt;span style="color:#75715e"># set the database password&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; &lt;span style="color:#75715e"># set the database name&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -p 3306:3306 &lt;span style="color:#75715e"># port forward &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -v $PWD/db/:/docker-entrypoint-initdb.d/ &lt;span style="color:#75715e"># volume mount database init scripts&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -d mysql:latest &lt;span style="color:#75715e"># use latest version of the image&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>View the logs&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker logs mysql
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker logs mysql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Stop the database server&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker stop mysql
-&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Pass Parameters to Docker Build</title><link>https://abskmj.github.io/notes/posts/docker/docker-args/</link><pubDate>Sun, 26 Apr 2020 22:51:06 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/docker/docker-args/</guid><description>ARG in Dockerfile The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the --build-arg &amp;lt;varname&amp;gt;=&amp;lt;value&amp;gt; flag.</description><content>&lt;h1 id="arg-in-dockerfile">ARG in Dockerfile&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker stop mysql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Pass Parameters to Docker Build</title><link>https://abskmj.github.io/notes/posts/docker/docker-args/</link><pubDate>Sun, 26 Apr 2020 22:51:06 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/docker/docker-args/</guid><description>ARG in Dockerfile The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the --build-arg &amp;lt;varname&amp;gt;=&amp;lt;value&amp;gt; flag.</description><content>&lt;h1 id="arg-in-dockerfile">ARG in Dockerfile&lt;/h1>
 &lt;blockquote>
 &lt;p>The &lt;code>ARG&lt;/code> instruction defines a variable that users can pass at build-time to the builder with the docker build command using the &lt;code>--build-arg &amp;lt;varname&amp;gt;=&amp;lt;value&amp;gt;&lt;/code> flag. More details at &lt;a href="https://docs.docker.com/engine/reference/builder/#arg">docs.docker.com&lt;/a>&lt;/p>
 &lt;/blockquote>
@@ -35,8 +36,8 @@ docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_R
 &lt;p>Dockerfile&lt;/p>
 &lt;pre tabindex="0">&lt;code>FROM debian:stable-slim
 ARG HUGO_VERSION
-LABEL maintainer &amp;quot;abskmj@gmail.com&amp;quot;
+LABEL maintainer &amp;#34;abskmj@gmail.com&amp;#34;
 LABEL hugo.version ${HUGO_VERSION}
 &lt;/code>&lt;/pre>&lt;p>Pass the argument value&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker build -t hugo --build-arg HUGO_VERSION&lt;span style="color:#f92672">=&lt;/span>0.69.0 .
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker build -t hugo --build-arg HUGO_VERSION&lt;span style="color:#f92672">=&lt;/span>0.69.0 .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

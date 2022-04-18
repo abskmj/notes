@@ -1,184 +1,53 @@
-<!doctype html><html lang=en>
-<head>
-<title>TamperMonkey Script to hide Facebook Sponsored Posts :: Notes</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="This TamperMonkey script hides sponsored posts on the Facebook feed.">
-<meta name=keywords content>
-<meta name=robots content="noodp">
-<link rel=canonical href=https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/>
-<link rel=stylesheet href=https://abskmj.github.io/notes/assets/style.css>
-<link rel=stylesheet href=https://abskmj.github.io/notes/assets/green.css>
-<link rel=apple-touch-icon href=https://abskmj.github.io/notes/img/apple-touch-icon-192x192.png>
-<link rel="shortcut icon" href=https://github.com/abskmj.png>
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content>
-<meta name=twitter:creator content>
-<meta property="og:locale" content="en">
-<meta property="og:type" content="article">
-<meta property="og:title" content="TamperMonkey Script to hide Facebook Sponsored Posts">
-<meta property="og:description" content="This TamperMonkey script hides sponsored posts on the Facebook feed.">
-<meta property="og:url" content="https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/">
-<meta property="og:site_name" content="Notes">
-<meta property="og:image" content="https://github.com/abskmj.png">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-<meta property="article:published_time" content="2021-04-29 08:42:07 +0530 +0530">
-<meta name=google-site-verification content="f4QUPyqBnCYP57-SME_dv0q-Di8xwBAOMIhlBGeVWJY">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CMVNGMLVMF"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-CMVNGMLVMF')</script>
-</head>
-<body class=green>
-<div class="container center headings--one-size">
-<header class=header>
-<div class=header__inner>
-<div class=header__logo>
-<a href=/notes>
-<div class=logo>
-Notes
-</div>
-</a>
-</div>
-<div class=menu-trigger>menu</div>
-</div>
-<nav class=menu>
-<ul class="menu__inner menu__inner--desktop">
-<li><a href=https://discordapp.com/users/220585271983472650>Discord</a></li>
-<li><a href=https://github.com/abskmj>Github</a></li>
-<li><a href=https://twitter.com/abskmj>Twitter</a></li>
-</ul>
-<ul class="menu__inner menu__inner--mobile">
-<li><a href=https://discordapp.com/users/220585271983472650>Discord</a></li>
-<li><a href=https://github.com/abskmj>Github</a></li>
-<li><a href=https://twitter.com/abskmj>Twitter</a></li>
-</ul>
-</nav>
-</header>
-<div class=content>
-<div class=post>
-<h1 class=post-title>
-<a href=https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/>TamperMonkey Script to hide Facebook Sponsored Posts</a></h1>
-<div class=post-meta>
-<span class=post-date>
-2021-04-29
-</span>
-</div>
-<span class=post-tags>
-#<a href=https://abskmj.github.io/notes/tags/tampermonkey/>TamperMonkey</a>&nbsp;
+<!doctype html><html lang=en><head><title>TamperMonkey Script to hide Facebook Sponsored Posts :: Notes</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="This TamperMonkey script hides sponsored posts on the Facebook feed."><meta name=keywords content><meta name=robots content="noodp"><link rel=canonical href=https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/><link rel=stylesheet href=https://abskmj.github.io/notes/assets/style.css><link rel=stylesheet href=https://abskmj.github.io/notes/assets/green.css><link rel=apple-touch-icon href=https://abskmj.github.io/notes/img/apple-touch-icon-192x192.png><link rel="shortcut icon" href=https://github.com/abskmj.png><meta name=twitter:card content="summary"><meta name=twitter:site content><meta name=twitter:creator content><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="TamperMonkey Script to hide Facebook Sponsored Posts"><meta property="og:description" content="This TamperMonkey script hides sponsored posts on the Facebook feed."><meta property="og:url" content="https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/"><meta property="og:site_name" content="Notes"><meta property="og:image" content="https://github.com/abskmj.png"><meta property="og:image:width" content="2048"><meta property="og:image:height" content="1024"><meta property="article:published_time" content="2021-04-29 08:42:07 +0530 +0530"><meta name=google-site-verification content="f4QUPyqBnCYP57-SME_dv0q-Di8xwBAOMIhlBGeVWJY"><script async src="https://www.googletagmanager.com/gtag/js?id=G-CMVNGMLVMF"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-CMVNGMLVMF")</script></head><body class=green><div class="container center headings--one-size"><header class=header><div class=header__inner><div class=header__logo><a href=/notes><div class=logo>Notes</div></a></div><div class=menu-trigger>menu</div></div><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=https://discordapp.com/users/220585271983472650>Discord</a></li><li><a href=https://github.com/abskmj>Github</a></li><li><a href=https://twitter.com/abskmj>Twitter</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=https://discordapp.com/users/220585271983472650>Discord</a></li><li><a href=https://github.com/abskmj>Github</a></li><li><a href=https://twitter.com/abskmj>Twitter</a></li></ul></nav></header><div class=content><div class=post><h1 class=post-title><a href=https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/>TamperMonkey Script to hide Facebook Sponsored Posts</a></h1><div class=post-meta><span class=post-date>2021-04-29</span></div><span class=post-tags>#<a href=https://abskmj.github.io/notes/tags/tampermonkey/>TamperMonkey</a>&nbsp;
 #<a href=https://abskmj.github.io/notes/tags/facebook/>Facebook</a>&nbsp;
-#<a href=https://abskmj.github.io/notes/tags/javascript/>JavaScript</a>&nbsp;
-</span>
-<div class=post-content><div>
-<p>This TamperMonkey script hides sponsored posts on the Facebook feed.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#75715e>// ==UserScript==
-</span><span style=color:#75715e>// @name         Hide Sponsored Posts on Facebook
-</span><span style=color:#75715e>// @namespace    http://tampermonkey.net/
-</span><span style=color:#75715e>// @version      1.0
-</span><span style=color:#75715e>// @description  Hide Sponsored Posts on Facebook
-</span><span style=color:#75715e>// @author       abskmj@gmail.com
-</span><span style=color:#75715e>// @match        https://www.facebook.com
-</span><span style=color:#75715e>// @grant        none
-</span><span style=color:#75715e>// @require      https://cdnjs.cloudflare.com/ajax/libs/arrive/2.4.1/arrive.min.js
-</span><span style=color:#75715e>// ==/UserScript==
-</span><span style=color:#75715e></span>
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>isSponsored</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>article</span>) =&gt; {
-    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>text</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>;
-
-    <span style=color:#a6e22e>article</span>.<span style=color:#a6e22e>querySelectorAll</span>(<span style=color:#e6db74>&#39;a[href=&#34;#&#34;] &gt; span[aria-labelledby] &gt; span &gt; span&#39;</span>).<span style=color:#a6e22e>forEach</span>((<span style=color:#a6e22e>span</span>) =&gt; {
-        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>span</span>.<span style=color:#a6e22e>getAttribute</span>(<span style=color:#e6db74>&#39;style&#39;</span>)) <span style=color:#a6e22e>text</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>span</span>.<span style=color:#a6e22e>textContent</span>
-    })
-
-    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>text</span>.<span style=color:#a6e22e>toLowerCase</span>().<span style=color:#a6e22e>includes</span>(<span style=color:#e6db74>&#39;ponsored&#39;</span>)
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>checkAndHide</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>article</span>) =&gt; {
-    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>isSponsored</span>(<span style=color:#a6e22e>article</span>)) {
-        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Hiding a sponsored post&#39;</span>)
-        <span style=color:#a6e22e>article</span>.<span style=color:#a6e22e>style</span>.<span style=color:#a6e22e>display</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#39;none&#39;</span>
-    }
-}
-
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>start</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>async</span> () =&gt; {
-    <span style=color:#66d9ef>try</span> {
-        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Start TamperMonkey Script&#39;</span>)
-
-        document.<span style=color:#a6e22e>arrive</span>(<span style=color:#e6db74>&#39;[role=article]&#39;</span>, <span style=color:#66d9ef>function</span> () { <span style=color:#a6e22e>checkAndHide</span>(<span style=color:#66d9ef>this</span>) });
-        document.<span style=color:#a6e22e>querySelectorAll</span>(<span style=color:#e6db74>&#39;[role=article]&#39;</span>).<span style=color:#a6e22e>forEach</span>((<span style=color:#a6e22e>article</span>) =&gt; { <span style=color:#a6e22e>checkAndHide</span>(<span style=color:#a6e22e>article</span>) })
-    } <span style=color:#66d9ef>catch</span> (<span style=color:#a6e22e>err</span>) {
-        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>error</span>(<span style=color:#e6db74>&#39;TamperMonkey Script Error:&#39;</span>, <span style=color:#a6e22e>err</span>)
-    }
-}
-
-<span style=color:#a6e22e>start</span>()
-</code></pre></div>
-</div></div>
-<div class=pagination>
-<div class=pagination__title>
-<span class=pagination__title-h>Read other posts</span>
-<hr>
-</div>
-<div class=pagination__buttons>
-<span class="button previous">
-<a href=https://abskmj.github.io/notes/posts/github/actions/coveralls/>
-<span class=button__icon>←</span>
-<span class=button__text>Publish test coverage on Coveralls.io with a Github Action Workflow</span>
-</a>
-</span>
-<span class="button next">
-<a href=https://abskmj.github.io/notes/posts/freelance/payments/>
-<span class=button__text>Receive International Payments for freelance work in India</span>
-<span class=button__icon>→</span>
-</a>
-</span>
-</div>
-</div>
-<div class=pagination>
-<div class=pagination__title>
-<span class=pagination__title-h>Sponsor</span>
-<hr>
-</div>
-<div class=pagination__buttons>
-<a id=sponsor-link href=https://wise.prf.hn/l/rwNWqOE target=_blank>
-<span class=button id=sponsor-text style=white-space:normal>
-Wise is a cheaper, faster way to send money abroad. Join over 10 million people who get the real exchange rate
-with Wise. They’re up to 8x cheaper than banks.
-</span>
-</a>
-</div>
-</div>
-<script>document.addEventListener('DOMContentLoaded',function(){fetch("/notes/sponsors.json").then(a=>a.json()).then(b=>{const a=b[Math.floor(Math.random()*b.length)],c=document.getElementById("sponsor-link");c.setAttribute('href',a.link),c.onclick=function(){gtag('event','sponsor',{event_category:'link',event_label:a.name})},document.getElementById("sponsor-text").textContent=a.text})})</script>
-<div class=pagination>
-<div class=pagination__title>
-<span class=pagination__title-h>Discuss Post</span>
-<hr>
-</div>
-<div class=pagination__buttons>
-<span class="button next">
-<a href="https://github.com/abskmj/notes/issues/new?template=comment.md&title=TamperMonkey%20Script%20to%20hide%20Facebook%20Sponsored%20Posts">
-<span class=button__text>Comment</span>
-<span class=button__icon>→</span>
-</a>
-</span>
-<span class="button next">
-<a href=https://github.com/abskmj/notes/tree/master/content/posts/tampermonkey/facebook-hide-sponsored.md>
-<span class=button__text>Edit at Github</span>
-<span class=button__icon>→</span>
-</a>
-</span>
-</div>
-</div>
-</div>
-</div>
-<footer class=footer>
-<div class=footer__inner>
-<div class="copyright copyright--user">
-<span>&copy; 2017 abskmj</span>
-<span>:: Theme made by <a href=https://twitter.com/panr>panr</a></span>
-</div>
-</div>
-</footer>
-<script src=https://abskmj.github.io/notes/assets/main.js></script>
-<script src=https://abskmj.github.io/notes/assets/prism.js></script>
-</div>
-</body>
-</html>
+#<a href=https://abskmj.github.io/notes/tags/javascript/>JavaScript</a>&nbsp;</span><div class=post-content><div><p>This TamperMonkey script hides sponsored posts on the Facebook feed.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// ==UserScript==
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// @name         Hide Sponsored Posts on Facebook
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// @namespace    http://tampermonkey.net/
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// @version      1.0
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// @description  Hide Sponsored Posts on Facebook
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// @author       abskmj@gmail.com
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// @match        https://www.facebook.com
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// @grant        none
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// @require      https://cdnjs.cloudflare.com/ajax/libs/arrive/2.4.1/arrive.min.js
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// ==/UserScript==
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>isSponsored</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>article</span>) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>text</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>article</span>.<span style=color:#a6e22e>querySelectorAll</span>(<span style=color:#e6db74>&#39;a[href=&#34;#&#34;] &gt; span[aria-labelledby] &gt; span &gt; span&#39;</span>).<span style=color:#a6e22e>forEach</span>((<span style=color:#a6e22e>span</span>) =&gt; {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>span</span>.<span style=color:#a6e22e>getAttribute</span>(<span style=color:#e6db74>&#39;style&#39;</span>)) <span style=color:#a6e22e>text</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>span</span>.<span style=color:#a6e22e>textContent</span>
+</span></span><span style=display:flex><span>    })
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>text</span>.<span style=color:#a6e22e>toLowerCase</span>().<span style=color:#a6e22e>includes</span>(<span style=color:#e6db74>&#39;ponsored&#39;</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>checkAndHide</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>article</span>) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>isSponsored</span>(<span style=color:#a6e22e>article</span>)) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Hiding a sponsored post&#39;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>article</span>.<span style=color:#a6e22e>style</span>.<span style=color:#a6e22e>display</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#39;none&#39;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>start</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>async</span> () =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Start TamperMonkey Script&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        document.<span style=color:#a6e22e>arrive</span>(<span style=color:#e6db74>&#39;[role=article]&#39;</span>, <span style=color:#66d9ef>function</span> () { <span style=color:#a6e22e>checkAndHide</span>(<span style=color:#66d9ef>this</span>) });
+</span></span><span style=display:flex><span>        document.<span style=color:#a6e22e>querySelectorAll</span>(<span style=color:#e6db74>&#39;[role=article]&#39;</span>).<span style=color:#a6e22e>forEach</span>((<span style=color:#a6e22e>article</span>) =&gt; { <span style=color:#a6e22e>checkAndHide</span>(<span style=color:#a6e22e>article</span>) })
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (<span style=color:#a6e22e>err</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>error</span>(<span style=color:#e6db74>&#39;TamperMonkey Script Error:&#39;</span>, <span style=color:#a6e22e>err</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>start</span>()
+</span></span></code></pre></div></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://abskmj.github.io/notes/posts/github/actions/coveralls/><span class=button__icon>←</span>
+<span class=button__text>Publish test coverage on Coveralls.io with a Github Action Workflow</span></a></span>
+<span class="button next"><a href=https://abskmj.github.io/notes/posts/freelance/payments/><span class=button__text>Receive International Payments for freelance work in India</span>
+<span class=button__icon>→</span></a></span></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Sponsor</span><hr></div><div class=pagination__buttons><a id=sponsor-link href=https://wise.prf.hn/l/rwNWqOE target=_blank><span class=button id=sponsor-text style=white-space:normal>Wise is a cheaper, faster way to send money abroad. Join over 10 million people who get the real exchange rate
+with Wise. They’re up to 8x cheaper than banks.</span></a></div></div><script>document.addEventListener("DOMContentLoaded",function(){fetch("/notes/sponsors.json").then(e=>e.json()).then(t=>{const e=t[Math.floor(Math.random()*t.length)],n=document.getElementById("sponsor-link");n.setAttribute("href",e.link),n.onclick=function(){gtag("event","sponsor",{event_category:"link",event_label:e.name})},document.getElementById("sponsor-text").textContent=e.text})})</script><div class=pagination><div class=pagination__title><span class=pagination__title-h>Discuss Post</span><hr></div><div class=pagination__buttons><span class="button next"><a href="https://github.com/abskmj/notes/issues/new?template=comment.md&title=TamperMonkey%20Script%20to%20hide%20Facebook%20Sponsored%20Posts"><span class=button__text>Comment</span>
+<span class=button__icon>→</span></a></span>
+<span class="button next"><a href=https://github.com/abskmj/notes/tree/master/content/posts/tampermonkey/facebook-hide-sponsored.md><span class=button__text>Edit at Github</span>
+<span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><div class="copyright copyright--user"><span>&copy; 2017 abskmj</span>
+<span>:: Theme made by <a href=https://twitter.com/panr>panr</a></span></div></div></footer><script src=https://abskmj.github.io/notes/assets/main.js></script>
+<script src=https://abskmj.github.io/notes/assets/prism.js></script></div></body></html>

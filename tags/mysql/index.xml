@@ -5,26 +5,27 @@
 &lt;ul>
 &lt;li>Start the database server&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; -p 3306:3306 -d mysql:latest
-&lt;span style="color:#75715e"># example&lt;/span>
-docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>change-me-later -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>test -p 3306:3306 -d mysql:latest
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; -p 3306:3306 -d mysql:latest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run --rm --name&lt;span style="color:#f92672">=&lt;/span>mysql -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>change-me-later -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>test -p 3306:3306 -d mysql:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Options&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker run
---rm &lt;span style="color:#75715e"># remove container when exits&lt;/span>
---name&lt;span style="color:#f92672">=&lt;/span>mysql &lt;span style="color:#75715e"># name of the container&lt;/span>
--e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; &lt;span style="color:#75715e"># set the database password&lt;/span>
--e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; &lt;span style="color:#75715e"># set the database name&lt;/span>
--p 3306:3306 &lt;span style="color:#75715e"># port forward &lt;/span>
--v $PWD/db/:/docker-entrypoint-initdb.d/ &lt;span style="color:#75715e"># volume mount database init scripts&lt;/span>
--d mysql:latest &lt;span style="color:#75715e"># use latest version of the image&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --rm &lt;span style="color:#75715e"># remove container when exits&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name&lt;span style="color:#f92672">=&lt;/span>mysql &lt;span style="color:#75715e"># name of the container&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -e MYSQL_ROOT_PASSWORD&lt;span style="color:#f92672">=&lt;/span>&amp;lt;secret&amp;gt; &lt;span style="color:#75715e"># set the database password&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -e MYSQL_DATABASE&lt;span style="color:#f92672">=&lt;/span>&amp;lt;database_name&amp;gt; &lt;span style="color:#75715e"># set the database name&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -p 3306:3306 &lt;span style="color:#75715e"># port forward &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -v $PWD/db/:/docker-entrypoint-initdb.d/ &lt;span style="color:#75715e"># volume mount database init scripts&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -d mysql:latest &lt;span style="color:#75715e"># use latest version of the image&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>View the logs&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker logs mysql
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker logs mysql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Stop the database server&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker stop mysql
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker stop mysql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

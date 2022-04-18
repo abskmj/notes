@@ -4,33 +4,36 @@
 &lt;li>Instance Method: the method is available on an instance of the model.&lt;/li>
 &lt;/ul>
 &lt;h1 id="model-js-file">Model JS file&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model.js
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>(&lt;span style="color:#a6e22e">Model&lt;/span>) {
-&lt;span style="color:#75715e">// Model Method
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
-...
-}
-&lt;span style="color:#75715e">// Instance Method
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">prototype&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
-...
-}
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// Model method
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">models&lt;/span>.&lt;span style="color:#a6e22e">Model&lt;/span>;
-&lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
-&lt;span style="color:#75715e">// Instance Method
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">instance&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>();
-&lt;span style="color:#a6e22e">instance&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
-&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Enable Destroy All API for a model in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link><pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid><description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.</description><content>&lt;p>Destroy All API (&lt;code>Model.destroyAll()&lt;/code>) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Model.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>(&lt;span style="color:#a6e22e">Model&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Model Method
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Instance Method
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">prototype&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Model method
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">models&lt;/span>.&lt;span style="color:#a6e22e">Model&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Instance Method
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">instance&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">instance&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Enable Destroy All API for a model in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link><pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid><description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.</description><content>&lt;p>Destroy All API (&lt;code>Model.destroyAll()&lt;/code>) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.&lt;/p>
 &lt;h1 id="remote-method">Remote Method&lt;/h1>
 &lt;p>A corresponding remote method can be added to the &lt;code>model.js&lt;/code> file to enable this API. This method also supports a filter to enable selective deletion.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">Model&lt;/span>) {
-&lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">remoteMethod&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;destroyAll&amp;#39;&lt;/span>, {
-&lt;span style="color:#a6e22e">isStatic&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>,
-&lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Delete all matching records&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">accessType&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;WRITE&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">accepts&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">arg&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;where&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;object&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;filter.where object&amp;#39;&lt;/span> },
-&lt;span style="color:#a6e22e">http&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">verb&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;del&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/&amp;#39;&lt;/span> }
-});
-};
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">Model&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">remoteMethod&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;destroyAll&amp;#39;&lt;/span>, {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">isStatic&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Delete all matching records&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">accessType&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;WRITE&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">accepts&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">arg&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;where&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;object&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;filter.where object&amp;#39;&lt;/span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">http&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">verb&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;del&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/&amp;#39;&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> });
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

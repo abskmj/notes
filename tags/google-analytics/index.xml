@@ -13,8 +13,8 @@
 &lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
 &lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
 &lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;a href="https://en.wikipedia.org/wiki/X-Forwarded-For">&lt;code>x-forwarded-for&lt;/code>&lt;/a> header is generally used by proxies to pass originating client&amp;rsquo;s IP.&lt;/li>
 &lt;li>IP value should be hashed to avoid collecting sensitive user or client information.&lt;/li>
 &lt;/ul>
@@ -27,19 +27,20 @@
 &lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="sample-request">Sample Request&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// nodejs
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
-&lt;span style="color:#a6e22e">request&lt;/span>({
-&lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">uri&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/collect&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">body&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">method&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;POST&amp;#39;&lt;/span>
-}, &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>, &lt;span style="color:#a6e22e">response&lt;/span>, &lt;span style="color:#a6e22e">body&lt;/span>) {
-&lt;span style="color:#66d9ef">if&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>){
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>);
-}
-&lt;span style="color:#66d9ef">else&lt;/span>{
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
-}
-});
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// nodejs
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">request&lt;/span>({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">uri&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/collect&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">body&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">method&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;POST&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}, &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>, &lt;span style="color:#a6e22e">response&lt;/span>, &lt;span style="color:#a6e22e">body&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

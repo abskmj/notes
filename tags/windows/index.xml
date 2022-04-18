@@ -4,24 +4,27 @@
 &lt;li>Open a power shell or cmd terminal&lt;/li>
 &lt;li>List distros&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --list --verbose
-&lt;span style="color:#75715e"># output&lt;/span>
-NAME STATE VERSION
-* Ubuntu Running &lt;span style="color:#ae81ff">1&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wsl --list --verbose
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># output&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> NAME STATE VERSION
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Ubuntu Running &lt;span style="color:#ae81ff">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Upgrade to version 2&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>Upgrade can take up to 15 minutes&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --set-version &amp;lt;distro-name&amp;gt; &lt;span style="color:#ae81ff">2&lt;/span>
-&lt;span style="color:#75715e"># example&lt;/span>
-wsl --set-version Ubuntu &lt;span style="color:#ae81ff">2&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wsl --set-version &amp;lt;distro-name&amp;gt; &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wsl --set-version Ubuntu &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Check if the upgrade was successful&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wsl --list --verbose
-&lt;span style="color:#75715e"># output&lt;/span>
-NAME STATE VERSION
-* Ubuntu Running &lt;span style="color:#ae81ff">2&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wsl --list --verbose
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># output&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> NAME STATE VERSION
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Ubuntu Running &lt;span style="color:#ae81ff">2&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

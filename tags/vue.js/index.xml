@@ -6,13 +6,13 @@
 &lt;pre tabindex="0">&lt;code>// @require https://cdn.jsdelivr.net/npm/vue
 &lt;/code>&lt;/pre>&lt;h1 id="initialize-a-vuejs-app">Initialize a Vue.js App&lt;/h1>
 &lt;p>It is recommended to initialize the Vue.js app after the page is ready.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">window.&lt;span style="color:#a6e22e">addEventListener&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;load&amp;#34;&lt;/span>, (&lt;span style="color:#a6e22e">event&lt;/span>) =&amp;gt; {
-&lt;span style="color:#75715e">// initialize app
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Vue&lt;/span>({
-&lt;span style="color:#a6e22e">el&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;#main-content&amp;#39;&lt;/span>,
-&lt;span style="color:#a6e22e">data&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {}
-&lt;span style="color:#a6e22e">methods&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {},
-&lt;span style="color:#a6e22e">template&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">``&lt;/span>
-})
-})
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>window.&lt;span style="color:#a6e22e">addEventListener&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;load&amp;#34;&lt;/span>, (&lt;span style="color:#a6e22e">event&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// initialize app
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Vue&lt;/span>({
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">el&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;#main-content&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">data&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">methods&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {},
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">template&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">``&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> })
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

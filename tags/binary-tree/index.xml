@@ -2,166 +2,203 @@
 &lt;ul>
 &lt;li>Diameter of a binary tree is maximum of diameter of current node, its left and right child.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerEarth: Binary Tree
-&lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/tutorial/
-&lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
-&lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">TestClass&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String args&lt;span style="color:#f92672">[]&lt;/span> &lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#66d9ef">throws&lt;/span> Exception &lt;span style="color:#f92672">{&lt;/span>
-Scanner in &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#66d9ef">int&lt;/span> T &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-&lt;span style="color:#66d9ef">int&lt;/span> X &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-Node root &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>X&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#66d9ef">for&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> t&lt;span style="color:#f92672">=&lt;/span>0&lt;span style="color:#f92672">;&lt;/span> t &lt;span style="color:#f92672">&amp;lt;&lt;/span> T&lt;span style="color:#f92672">-&lt;/span>1&lt;span style="color:#f92672">;&lt;/span> t&lt;span style="color:#f92672">++){&lt;/span>
-String path &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">next&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-Node node &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">());&lt;/span>
-&lt;span style="color:#75715e">// add new node to the tree
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> add&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">,&lt;/span> path&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">toCharArray&lt;/span>&lt;span style="color:#f92672">(),&lt;/span> 0&lt;span style="color:#f92672">,&lt;/span> node&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>diameter&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">));&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">add&lt;/span>&lt;span style="color:#f92672">(&lt;/span>Node root&lt;span style="color:#f92672">,&lt;/span> &lt;span style="color:#66d9ef">char&lt;/span>&lt;span style="color:#f92672">[]&lt;/span> path&lt;span style="color:#f92672">,&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> current&lt;span style="color:#f92672">,&lt;/span> Node target&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">-&lt;/span>1 &lt;span style="color:#f92672">==&lt;/span> current&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">[&lt;/span>current&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;L&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#75715e">// update the value of temporary node or add the new node
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">=&lt;/span> target&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
-root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">=&lt;/span> target&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">[&lt;/span>current&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;R&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#75715e">// update the value of temporary node or add the new node
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">=&lt;/span> target&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
-root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">=&lt;/span> target&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">[&lt;/span>current&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;L&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#75715e">// add a temporary node if not added yet
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-add&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">,&lt;/span> path&lt;span style="color:#f92672">,&lt;/span> current&lt;span style="color:#f92672">+&lt;/span>1&lt;span style="color:#f92672">,&lt;/span> target&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">[&lt;/span>current&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;R&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#75715e">// add a temporary node if not added yet
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-add&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">,&lt;/span> path&lt;span style="color:#f92672">,&lt;/span> current&lt;span style="color:#f92672">+&lt;/span>1&lt;span style="color:#f92672">,&lt;/span> target&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">height&lt;/span>&lt;span style="color:#f92672">(&lt;/span>Node root&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> Math&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">max&lt;/span>&lt;span style="color:#f92672">(&lt;/span>height&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">),&lt;/span> height&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">))+&lt;/span>1&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">diameter&lt;/span>&lt;span style="color:#f92672">(&lt;/span>Node root&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#75715e">// diameter of current node
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> diameter &lt;span style="color:#f92672">=&lt;/span> height&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">)+&lt;/span>height&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">)+&lt;/span>1&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#75715e">// return maximum of diameter of current node or left child or right child
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">return&lt;/span> Math&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">max&lt;/span>&lt;span style="color:#f92672">(&lt;/span>diameter&lt;span style="color:#f92672">,&lt;/span> Math&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">max&lt;/span>&lt;span style="color:#f92672">(&lt;/span>diameter&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">),&lt;/span>diameter&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">)));&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Node&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> value&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> Node left&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> Node right&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#a6e22e">Node&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> value&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">this&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">=&lt;/span> value&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerEarth - Mirror Image</title><link>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</link><pubDate>Sat, 18 Nov 2017 11:36:52 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</guid><description>Solution Parse input and build the tree by maintaining an index HashMap.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/* Solution to HackerEarth: Binary Tree
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/tutorial/
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">TestClass&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String args&lt;span style="color:#f92672">[]&lt;/span> &lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#66d9ef">throws&lt;/span> Exception &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Scanner in &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> T &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> X &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Node root &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>X&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> t&lt;span style="color:#f92672">=&lt;/span>0&lt;span style="color:#f92672">;&lt;/span> t &lt;span style="color:#f92672">&amp;lt;&lt;/span> T&lt;span style="color:#f92672">-&lt;/span>1&lt;span style="color:#f92672">;&lt;/span> t&lt;span style="color:#f92672">++){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String path &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">next&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Node node &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// add new node to the tree
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> add&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">,&lt;/span> path&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">toCharArray&lt;/span>&lt;span style="color:#f92672">(),&lt;/span> 0&lt;span style="color:#f92672">,&lt;/span> node&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>diameter&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">add&lt;/span>&lt;span style="color:#f92672">(&lt;/span>Node root&lt;span style="color:#f92672">,&lt;/span> &lt;span style="color:#66d9ef">char&lt;/span>&lt;span style="color:#f92672">[]&lt;/span> path&lt;span style="color:#f92672">,&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> current&lt;span style="color:#f92672">,&lt;/span> Node target&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">-&lt;/span>1 &lt;span style="color:#f92672">==&lt;/span> current&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">[&lt;/span>current&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;L&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// update the value of temporary node or add the new node
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">=&lt;/span> target&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">=&lt;/span> target&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">[&lt;/span>current&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;R&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// update the value of temporary node or add the new node
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">=&lt;/span> target&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">=&lt;/span> target&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">[&lt;/span>current&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;L&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// add a temporary node if not added yet
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> add&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">,&lt;/span> path&lt;span style="color:#f92672">,&lt;/span> current&lt;span style="color:#f92672">+&lt;/span>1&lt;span style="color:#f92672">,&lt;/span> target&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>path&lt;span style="color:#f92672">[&lt;/span>current&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;R&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// add a temporary node if not added yet
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> add&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">,&lt;/span> path&lt;span style="color:#f92672">,&lt;/span> current&lt;span style="color:#f92672">+&lt;/span>1&lt;span style="color:#f92672">,&lt;/span> target&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">height&lt;/span>&lt;span style="color:#f92672">(&lt;/span>Node root&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> Math&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">max&lt;/span>&lt;span style="color:#f92672">(&lt;/span>height&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">),&lt;/span> height&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">))+&lt;/span>1&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">diameter&lt;/span>&lt;span style="color:#f92672">(&lt;/span>Node root&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> 0&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// diameter of current node
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> diameter &lt;span style="color:#f92672">=&lt;/span> height&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">)+&lt;/span>height&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">)+&lt;/span>1&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// return maximum of diameter of current node or left child or right child
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">return&lt;/span> Math&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">max&lt;/span>&lt;span style="color:#f92672">(&lt;/span>diameter&lt;span style="color:#f92672">,&lt;/span> Math&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">max&lt;/span>&lt;span style="color:#f92672">(&lt;/span>diameter&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">),&lt;/span>diameter&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">)));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Node&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> value&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> Node left&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> Node right&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#a6e22e">Node&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> value&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">this&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">=&lt;/span> value&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerEarth - Mirror Image</title><link>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</link><pubDate>Sat, 18 Nov 2017 11:36:52 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerearth/data-structures/trees/binary-and-nary-trees/mirror-image-2/</guid><description>Solution Parse input and build the tree by maintaining an index HashMap.</description><content>&lt;h1 id="solution">Solution&lt;/h1>
 &lt;ul>
 &lt;li>Parse input and build the tree by maintaining an index &lt;code>HashMap&lt;/code>.&lt;/li>
 &lt;li>Traverse tree and mirror tree simultaneously to find the mirror node.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#75715e">/* Solution to HackerEarth: Mirror Image
-&lt;/span>&lt;span style="color:#75715e"> * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/practice-problems/algorithm/mirror-image-2/
-&lt;/span>&lt;span style="color:#75715e"> */&lt;/span>
-&lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">TestClass&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String args&lt;span style="color:#f92672">[]&lt;/span> &lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#66d9ef">throws&lt;/span> Exception &lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#75715e">//Scanner
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> Scanner in &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#66d9ef">int&lt;/span> N &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-&lt;span style="color:#66d9ef">int&lt;/span> Q &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-Map&lt;span style="color:#f92672">&amp;lt;&lt;/span>Integer&lt;span style="color:#f92672">,&lt;/span> Node&lt;span style="color:#f92672">&amp;gt;&lt;/span> index &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> HashMap&lt;span style="color:#f92672">&amp;lt;&amp;gt;();&lt;/span>
-&lt;span style="color:#75715e">// initialize root node
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> Node root &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
-index&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">put&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">,&lt;/span> root&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#75715e">// build tree
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">for&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> i&lt;span style="color:#f92672">=&lt;/span>0&lt;span style="color:#f92672">;&lt;/span> i &lt;span style="color:#f92672">&amp;lt;&lt;/span> N&lt;span style="color:#f92672">-&lt;/span>1&lt;span style="color:#f92672">;&lt;/span> i&lt;span style="color:#f92672">++){&lt;/span>
-&lt;span style="color:#66d9ef">int&lt;/span> parent &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-&lt;span style="color:#66d9ef">int&lt;/span> child &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-&lt;span style="color:#66d9ef">char&lt;/span> side &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">next&lt;/span>&lt;span style="color:#f92672">().&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#75715e">// get parent node from index
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> Node node &lt;span style="color:#f92672">=&lt;/span> index&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">get&lt;/span>&lt;span style="color:#f92672">(&lt;/span>parent&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#75715e">// create a new child node and add to index
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> Node childNode &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>child&lt;span style="color:#f92672">);&lt;/span>
-index&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">put&lt;/span>&lt;span style="color:#f92672">(&lt;/span>child&lt;span style="color:#f92672">,&lt;/span> childNode&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>side &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;L&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-node&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">=&lt;/span> childNode&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>side &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;R&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-node&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">=&lt;/span> childNode&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#75715e">// process queries
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">for&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> i&lt;span style="color:#f92672">=&lt;/span>0&lt;span style="color:#f92672">;&lt;/span> i &lt;span style="color:#f92672">&amp;lt;&lt;/span> Q&lt;span style="color:#f92672">;&lt;/span> i&lt;span style="color:#f92672">++){&lt;/span>
-&lt;span style="color:#66d9ef">int&lt;/span> target &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>findMirror&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">,&lt;/span> target&lt;span style="color:#f92672">));&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">findMirror&lt;/span>&lt;span style="color:#f92672">(&lt;/span>Node root&lt;span style="color:#f92672">,&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> target&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">==&lt;/span> target&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> target&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> recurse&lt;span style="color:#f92672">(&lt;/span>target&lt;span style="color:#f92672">,&lt;/span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">,&lt;/span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">recurse&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> target&lt;span style="color:#f92672">,&lt;/span> Node left&lt;span style="color:#f92672">,&lt;/span> Node right&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#75715e">// no need to further traverse because either current node or mirror node is null
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>left &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span> &lt;span style="color:#f92672">||&lt;/span> right &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#f92672">-&lt;/span>1&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#75715e">// if target found return mirror node
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>left&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">==&lt;/span> target&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> right&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>right&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">==&lt;/span> target&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> left&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">int&lt;/span> mirror &lt;span style="color:#f92672">=&lt;/span> recurse&lt;span style="color:#f92672">(&lt;/span>target&lt;span style="color:#f92672">,&lt;/span> left&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">,&lt;/span> right&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#75715e">// return mirror if found
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>mirror &lt;span style="color:#f92672">&amp;gt;&lt;/span> 0&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> mirror&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">return&lt;/span> recurse&lt;span style="color:#f92672">(&lt;/span>target&lt;span style="color:#f92672">,&lt;/span> left&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">,&lt;/span> right&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Node&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> value&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> Node left&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> Node right&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#a6e22e">Node&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> value&lt;span style="color:#f92672">){&lt;/span>
-&lt;span style="color:#66d9ef">this&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">=&lt;/span> value&lt;span style="color:#f92672">;&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/* Solution to HackerEarth: Mirror Image
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> * URL: https://www.hackerearth.com/practice/data-structures/trees/binary-and-nary-trees/practice-problems/algorithm/mirror-image-2/
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> java.util.*&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">TestClass&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String args&lt;span style="color:#f92672">[]&lt;/span> &lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#66d9ef">throws&lt;/span> Exception &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">//Scanner
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> Scanner in &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> N &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> Q &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Map&lt;span style="color:#f92672">&amp;lt;&lt;/span>Integer&lt;span style="color:#f92672">,&lt;/span> Node&lt;span style="color:#f92672">&amp;gt;&lt;/span> index &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> HashMap&lt;span style="color:#f92672">&amp;lt;&amp;gt;();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// initialize root node
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> Node root &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> index&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">put&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">,&lt;/span> root&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// build tree
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">for&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> i&lt;span style="color:#f92672">=&lt;/span>0&lt;span style="color:#f92672">;&lt;/span> i &lt;span style="color:#f92672">&amp;lt;&lt;/span> N&lt;span style="color:#f92672">-&lt;/span>1&lt;span style="color:#f92672">;&lt;/span> i&lt;span style="color:#f92672">++){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> parent &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> child &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">char&lt;/span> side &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">next&lt;/span>&lt;span style="color:#f92672">().&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// get parent node from index
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> Node node &lt;span style="color:#f92672">=&lt;/span> index&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">get&lt;/span>&lt;span style="color:#f92672">(&lt;/span>parent&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// create a new child node and add to index
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> Node childNode &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Node&lt;span style="color:#f92672">(&lt;/span>child&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> index&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">put&lt;/span>&lt;span style="color:#f92672">(&lt;/span>child&lt;span style="color:#f92672">,&lt;/span> childNode&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>side &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;L&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> node&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span> &lt;span style="color:#f92672">=&lt;/span> childNode&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>side &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#39;R&amp;#39;&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> node&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span> &lt;span style="color:#f92672">=&lt;/span> childNode&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// process queries
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">for&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> i&lt;span style="color:#f92672">=&lt;/span>0&lt;span style="color:#f92672">;&lt;/span> i &lt;span style="color:#f92672">&amp;lt;&lt;/span> Q&lt;span style="color:#f92672">;&lt;/span> i&lt;span style="color:#f92672">++){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> target &lt;span style="color:#f92672">=&lt;/span> in&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">nextInt&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>findMirror&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">,&lt;/span> target&lt;span style="color:#f92672">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">findMirror&lt;/span>&lt;span style="color:#f92672">(&lt;/span>Node root&lt;span style="color:#f92672">,&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> target&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">==&lt;/span> target&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> target&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> recurse&lt;span style="color:#f92672">(&lt;/span>target&lt;span style="color:#f92672">,&lt;/span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">,&lt;/span> root&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">recurse&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> target&lt;span style="color:#f92672">,&lt;/span> Node left&lt;span style="color:#f92672">,&lt;/span> Node right&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// no need to further traverse because either current node or mirror node is null
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>left &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span> &lt;span style="color:#f92672">||&lt;/span> right &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#f92672">-&lt;/span>1&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// if target found return mirror node
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>left&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">==&lt;/span> target&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> right&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>right&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">==&lt;/span> target&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> left&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> mirror &lt;span style="color:#f92672">=&lt;/span> recurse&lt;span style="color:#f92672">(&lt;/span>target&lt;span style="color:#f92672">,&lt;/span> left&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">,&lt;/span> right&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// return mirror if found
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>mirror &lt;span style="color:#f92672">&amp;gt;&lt;/span> 0&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> mirror&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> recurse&lt;span style="color:#f92672">(&lt;/span>target&lt;span style="color:#f92672">,&lt;/span> left&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">right&lt;/span>&lt;span style="color:#f92672">,&lt;/span> right&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">left&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Node&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> value&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> Node left&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> Node right&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#a6e22e">Node&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span> value&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">this&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">value&lt;/span> &lt;span style="color:#f92672">=&lt;/span> value&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

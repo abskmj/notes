@@ -91,11 +91,11 @@
 &lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl">asus-nb-ctrl&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>Add these packages using package manager&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">echo &lt;span style="color:#e6db74">&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span> | sudo tee /etc/apt/sources.list.d/asus.list
-wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
-apt-get update
-apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="volume-control">Volume Control&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span> | sudo tee /etc/apt/sources.list.d/asus.list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="volume-control">Volume Control&lt;/h2>
 &lt;p>Add below lines to &lt;code>/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common&lt;/code> file, just before the &lt;code>[Element PCM]&lt;/code> section. This will also make the &lt;code>mute the microphone&lt;/code> button usable.&lt;/p>
 &lt;pre tabindex="0">&lt;code>[Element Master]
 switch = mute

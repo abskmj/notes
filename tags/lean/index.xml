@@ -3,19 +3,20 @@
 &lt;blockquote>
 &lt;p>Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments. They have no save method, getters/setters, or other Mongoose magic applied.&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>) =&amp;gt; {
-&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">users&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({ &lt;span style="color:#a6e22e">status&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;active&amp;#39;&lt;/span> }).&lt;span style="color:#a6e22e">limit&lt;/span>(&lt;span style="color:#ae81ff">10&lt;/span>).&lt;span style="color:#a6e22e">lean&lt;/span>();
-&lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">users&lt;/span>);
-});
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="hydrate-method-on-model">Hydrate method on Model&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">use&lt;/span>(&lt;span style="color:#66d9ef">async&lt;/span> (&lt;span style="color:#a6e22e">req&lt;/span>, &lt;span style="color:#a6e22e">res&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">users&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">find&lt;/span>({ &lt;span style="color:#a6e22e">status&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;active&amp;#39;&lt;/span> }).&lt;span style="color:#a6e22e">limit&lt;/span>(&lt;span style="color:#ae81ff">10&lt;/span>).&lt;span style="color:#a6e22e">lean&lt;/span>();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">res&lt;/span>.&lt;span style="color:#a6e22e">json&lt;/span>(&lt;span style="color:#a6e22e">users&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="hydrate-method-on-model">Hydrate method on Model&lt;/h1>
 &lt;p>Hydrating is the opposite of the lean option. &lt;a href="https://mongoosejs.com/docs/api.html#model_Model.hydrate">Hydrate method&lt;/a> is used to initialize a mongoose document from a plain javascript object to get access to its virtuals/methods.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">user&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">findOne&lt;/span>().&lt;span style="color:#a6e22e">lean&lt;/span>();
-&lt;span style="color:#66d9ef">let&lt;/span> document &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">hydrate&lt;/span>(&lt;span style="color:#a6e22e">user&lt;/span>);
-&lt;span style="color:#a6e22e">assert&lt;/span>(document &lt;span style="color:#66d9ef">instanceof&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">Document&lt;/span>); &lt;span style="color:#75715e">// true
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="code-repository">Code Repository&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">user&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">findOne&lt;/span>().&lt;span style="color:#a6e22e">lean&lt;/span>();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> document &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span>.&lt;span style="color:#a6e22e">hydrate&lt;/span>(&lt;span style="color:#a6e22e">user&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">assert&lt;/span>(document &lt;span style="color:#66d9ef">instanceof&lt;/span> &lt;span style="color:#a6e22e">mongoose&lt;/span>.&lt;span style="color:#a6e22e">Document&lt;/span>); &lt;span style="color:#75715e">// true
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="code-repository">Code Repository&lt;/h1>
 &lt;p>A working code repository is available at &lt;a href="https://github.com/abskmj/example-mongoose-lean-hydrate">github&lt;/a>. Get started in your local machine.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/abskmj/example-mongoose-lean-hydrate.git
-cd example-mongoose-lean-hydrate
-npm install
-npm test
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone https://github.com/abskmj/example-mongoose-lean-hydrate.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd example-mongoose-lean-hydrate
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npm install
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npm test
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

@@ -3,21 +3,21 @@
 &lt;p>Enable &lt;code>.GitInfo&lt;/code> object for each page (if the Hugo site is versioned by Git). This will then update the &lt;code>Lastmod&lt;/code> parameter for each page using the last git commit date for that content file.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="terminal">Terminal&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">hugo --enableGitInfo
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config-file">Config File&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo --enableGitInfo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config-file">Config File&lt;/h2>
 &lt;blockquote>
 &lt;p>Hugo uses the &lt;code>config.toml&lt;/code>, &lt;code>config.yaml&lt;/code>, or &lt;code>config.json&lt;/code> (if found in the site root) as the default site config file.&lt;/p>
 &lt;p>The user can choose to override that default with one or more site config files using the command line &lt;code>--config&lt;/code> switch.&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">enableGitInfo&lt;/span> = &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="dates-on-hugo-pages">Dates on Hugo Pages&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">enableGitInfo&lt;/span> = &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="dates-on-hugo-pages">Dates on Hugo Pages&lt;/h1>
 &lt;p>Once Git Info variables are enabled, Hugo updates only the &lt;code>LastMod&lt;/code> parameter for each page which is not used in most of the themes. However, Front Matter configuration can be set in the config file to show the dates from git info.&lt;/p>
 &lt;blockquote>
 &lt;p>Dates are important in Hugo, and you can configure how Hugo assigns dates to your content pages. You do this by adding a frontmatter section to your &lt;code>config.toml&lt;/code>.&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[&lt;span style="color:#a6e22e">frontmatter&lt;/span>]
-&lt;span style="color:#a6e22e">date&lt;/span> = [&lt;span style="color:#e6db74">&amp;#34;:git&amp;#34;&lt;/span> ,&lt;span style="color:#e6db74">&amp;#34;date&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;publishDate&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;lastmod&amp;#34;&lt;/span>]
-&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Deploy a NodeJS application using Git</title><link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link><pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid><description>Remote Repository on Deployment Server Create two folders named project.git and project.</description><content>&lt;h1 id="remote-repository-on-deployment-server">Remote Repository on Deployment Server&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[&lt;span style="color:#a6e22e">frontmatter&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">date&lt;/span> = [&lt;span style="color:#e6db74">&amp;#34;:git&amp;#34;&lt;/span> ,&lt;span style="color:#e6db74">&amp;#34;date&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;publishDate&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;lastmod&amp;#34;&lt;/span>]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Deploy a NodeJS application using Git</title><link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link><pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid><description>Remote Repository on Deployment Server Create two folders named project.git and project.</description><content>&lt;h1 id="remote-repository-on-deployment-server">Remote Repository on Deployment Server&lt;/h1>
 &lt;p>Create two folders named &lt;code>project.git&lt;/code> and &lt;code>project.source&lt;/code>. Create a bare git repo in &lt;code>project.git&lt;/code>&lt;/p>
 &lt;pre tabindex="0">&lt;code>git init --bare
 &lt;/code>&lt;/pre>&lt;p>Configure &lt;code>project.source&lt;/code> as working folder for source code by adding below to &lt;code>project.git/hooks/post-receive&lt;/code>&lt;/p>

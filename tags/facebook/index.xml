@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Facebook on Notes</title><link>https://abskmj.github.io/notes/tags/facebook/</link><description>Recent content in Facebook on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Thu, 29 Apr 2021 08:42:07 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/facebook/index.xml" rel="self" type="application/rss+xml"/><item><title>TamperMonkey Script to hide Facebook Sponsored Posts</title><link>https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/</link><pubDate>Thu, 29 Apr 2021 08:42:07 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tampermonkey/facebook-hide-sponsored/</guid><description>This TamperMonkey script hides sponsored posts on the Facebook feed.</description><content>&lt;p>This TamperMonkey script hides sponsored posts on the Facebook feed.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#75715e">// ==UserScript==
-&lt;/span>&lt;span style="color:#75715e">// @name Hide Sponsored Posts on Facebook
-&lt;/span>&lt;span style="color:#75715e">// @namespace http://tampermonkey.net/
-&lt;/span>&lt;span style="color:#75715e">// @version 1.0
-&lt;/span>&lt;span style="color:#75715e">// @description Hide Sponsored Posts on Facebook
-&lt;/span>&lt;span style="color:#75715e">// @author abskmj@gmail.com
-&lt;/span>&lt;span style="color:#75715e">// @match https://www.facebook.com
-&lt;/span>&lt;span style="color:#75715e">// @grant none
-&lt;/span>&lt;span style="color:#75715e">// @require https://cdnjs.cloudflare.com/ajax/libs/arrive/2.4.1/arrive.min.js
-&lt;/span>&lt;span style="color:#75715e">// ==/UserScript==
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">isSponsored&lt;/span> &lt;span style="color:#f92672">=&lt;/span> (&lt;span style="color:#a6e22e">article&lt;/span>) =&amp;gt; {
-&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">text&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39;&amp;#39;&lt;/span>;
-&lt;span style="color:#a6e22e">article&lt;/span>.&lt;span style="color:#a6e22e">querySelectorAll&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;a[href=&amp;#34;#&amp;#34;] &amp;gt; span[aria-labelledby] &amp;gt; span &amp;gt; span&amp;#39;&lt;/span>).&lt;span style="color:#a6e22e">forEach&lt;/span>((&lt;span style="color:#a6e22e">span&lt;/span>) =&amp;gt; {
-&lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#f92672">!&lt;/span>&lt;span style="color:#a6e22e">span&lt;/span>.&lt;span style="color:#a6e22e">getAttribute&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;style&amp;#39;&lt;/span>)) &lt;span style="color:#a6e22e">text&lt;/span> &lt;span style="color:#f92672">+=&lt;/span> &lt;span style="color:#a6e22e">span&lt;/span>.&lt;span style="color:#a6e22e">textContent&lt;/span>
-})
-&lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#a6e22e">text&lt;/span>.&lt;span style="color:#a6e22e">toLowerCase&lt;/span>().&lt;span style="color:#a6e22e">includes&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;ponsored&amp;#39;&lt;/span>)
-}
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">checkAndHide&lt;/span> &lt;span style="color:#f92672">=&lt;/span> (&lt;span style="color:#a6e22e">article&lt;/span>) =&amp;gt; {
-&lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">isSponsored&lt;/span>(&lt;span style="color:#a6e22e">article&lt;/span>)) {
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Hiding a sponsored post&amp;#39;&lt;/span>)
-&lt;span style="color:#a6e22e">article&lt;/span>.&lt;span style="color:#a6e22e">style&lt;/span>.&lt;span style="color:#a6e22e">display&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;none&amp;#39;&lt;/span>
-}
-}
-&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">start&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">async&lt;/span> () =&amp;gt; {
-&lt;span style="color:#66d9ef">try&lt;/span> {
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Start TamperMonkey Script&amp;#39;&lt;/span>)
-document.&lt;span style="color:#a6e22e">arrive&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;[role=article]&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">function&lt;/span> () { &lt;span style="color:#a6e22e">checkAndHide&lt;/span>(&lt;span style="color:#66d9ef">this&lt;/span>) });
-document.&lt;span style="color:#a6e22e">querySelectorAll&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;[role=article]&amp;#39;&lt;/span>).&lt;span style="color:#a6e22e">forEach&lt;/span>((&lt;span style="color:#a6e22e">article&lt;/span>) =&amp;gt; { &lt;span style="color:#a6e22e">checkAndHide&lt;/span>(&lt;span style="color:#a6e22e">article&lt;/span>) })
-} &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
-&lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;TamperMonkey Script Error:&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">err&lt;/span>)
-}
-}
-&lt;span style="color:#a6e22e">start&lt;/span>()
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// ==UserScript==
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// @name Hide Sponsored Posts on Facebook
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// @namespace http://tampermonkey.net/
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// @version 1.0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// @description Hide Sponsored Posts on Facebook
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// @author abskmj@gmail.com
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// @match https://www.facebook.com
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// @grant none
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// @require https://cdnjs.cloudflare.com/ajax/libs/arrive/2.4.1/arrive.min.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// ==/UserScript==
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">isSponsored&lt;/span> &lt;span style="color:#f92672">=&lt;/span> (&lt;span style="color:#a6e22e">article&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">text&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39;&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">article&lt;/span>.&lt;span style="color:#a6e22e">querySelectorAll&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;a[href=&amp;#34;#&amp;#34;] &amp;gt; span[aria-labelledby] &amp;gt; span &amp;gt; span&amp;#39;&lt;/span>).&lt;span style="color:#a6e22e">forEach&lt;/span>((&lt;span style="color:#a6e22e">span&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#f92672">!&lt;/span>&lt;span style="color:#a6e22e">span&lt;/span>.&lt;span style="color:#a6e22e">getAttribute&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;style&amp;#39;&lt;/span>)) &lt;span style="color:#a6e22e">text&lt;/span> &lt;span style="color:#f92672">+=&lt;/span> &lt;span style="color:#a6e22e">span&lt;/span>.&lt;span style="color:#a6e22e">textContent&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> })
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#a6e22e">text&lt;/span>.&lt;span style="color:#a6e22e">toLowerCase&lt;/span>().&lt;span style="color:#a6e22e">includes&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;ponsored&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">checkAndHide&lt;/span> &lt;span style="color:#f92672">=&lt;/span> (&lt;span style="color:#a6e22e">article&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">isSponsored&lt;/span>(&lt;span style="color:#a6e22e">article&lt;/span>)) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Hiding a sponsored post&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">article&lt;/span>.&lt;span style="color:#a6e22e">style&lt;/span>.&lt;span style="color:#a6e22e">display&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;none&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">start&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">async&lt;/span> () =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Start TamperMonkey Script&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> document.&lt;span style="color:#a6e22e">arrive&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;[role=article]&amp;#39;&lt;/span>, &lt;span style="color:#66d9ef">function&lt;/span> () { &lt;span style="color:#a6e22e">checkAndHide&lt;/span>(&lt;span style="color:#66d9ef">this&lt;/span>) });
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> document.&lt;span style="color:#a6e22e">querySelectorAll&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;[role=article]&amp;#39;&lt;/span>).&lt;span style="color:#a6e22e">forEach&lt;/span>((&lt;span style="color:#a6e22e">article&lt;/span>) =&amp;gt; { &lt;span style="color:#a6e22e">checkAndHide&lt;/span>(&lt;span style="color:#a6e22e">article&lt;/span>) })
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">err&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;TamperMonkey Script Error:&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">err&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">start&lt;/span>()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

@@ -6,8 +6,8 @@
 &lt;p>Dockerfile&lt;/p>
 &lt;pre tabindex="0">&lt;code>FROM debian:stable-slim
 ARG HUGO_VERSION
-LABEL maintainer &amp;quot;abskmj@gmail.com&amp;quot;
+LABEL maintainer &amp;#34;abskmj@gmail.com&amp;#34;
 LABEL hugo.version ${HUGO_VERSION}
 &lt;/code>&lt;/pre>&lt;p>Pass the argument value&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">docker build -t hugo --build-arg HUGO_VERSION&lt;span style="color:#f92672">=&lt;/span>0.69.0 .
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker build -t hugo --build-arg HUGO_VERSION&lt;span style="color:#f92672">=&lt;/span>0.69.0 .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

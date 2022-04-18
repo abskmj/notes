@@ -5,36 +5,36 @@
 &lt;ul>
 &lt;li>Create a folder for this new git repository.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkdir .git-remote
-cd .git-remote
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir .git-remote
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd .git-remote
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Initialize an bare git repository.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git init --bare
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git init --bare
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Add the remote repository&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git remote add orgin &lt;span style="color:#f92672">{{&lt;/span>remote_git_url&lt;span style="color:#f92672">}}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="using-new-git-repository">Using new Git Repository&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote add orgin &lt;span style="color:#f92672">{{&lt;/span>remote_git_url&lt;span style="color:#f92672">}}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="using-new-git-repository">Using new Git Repository&lt;/h2>
 &lt;ul>
 &lt;li>All the git comands can be used by point the git directory to the new repository.&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> &lt;span style="color:#f92672">{{&lt;/span>git_options&lt;span style="color:#f92672">}}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> &lt;span style="color:#f92672">{{&lt;/span>git_options&lt;span style="color:#f92672">}}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Commits:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> commit -am &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> commit -am &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Push/Pull:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> push origin master
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="adding-an-alias">Adding an Alias&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> push origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="adding-an-alias">Adding an Alias&lt;/h2>
 &lt;ul>
 &lt;li>An alias can be added to glitch console by creating a &lt;code>.bash_profile&lt;/code> file in project root and adding:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">alias rgit&lt;span style="color:#f92672">=&lt;/span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias rgit&lt;span style="color:#f92672">=&lt;/span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Alias can be used:&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">rgit commit -m &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rgit commit -m &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>

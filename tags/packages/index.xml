@@ -4,18 +4,18 @@
 &lt;ul>
 &lt;li>Upload&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl &lt;span style="color:#ae81ff">\
-&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>-u $user:$password &lt;span style="color:#ae81ff">\
-&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>--upload-file ./$package_name.zip &lt;span style="color:#ae81ff">\
-&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span>-u $user:$password &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span>--upload-file ./$package_name.zip &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span>https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Download&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl &lt;span style="color:#ae81ff">\
-&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>-u $user:$password &lt;span style="color:#ae81ff">\
-&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>--output /$package_name.zip &lt;span style="color:#ae81ff">\
-&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="prerequisites">Prerequisites&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span>-u $user:$password &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span>--output /$package_name.zip &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ae81ff">&lt;/span>https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="prerequisites">Prerequisites&lt;/h1>
 &lt;h2 id="deploy-token">Deploy Token&lt;/h2>
 &lt;ul>
 &lt;li>Navigate to the &lt;code>Settings &amp;gt; Repository &amp;gt; Deploy Tokens&lt;/code> section of the Gitlab project to create a deploy token&lt;/li>
