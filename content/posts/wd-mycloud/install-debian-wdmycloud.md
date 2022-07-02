@@ -138,6 +138,7 @@ ssh root@192.168.X.XXX # replace with your IP
 > WARNING: Executing `apt-get upgrade` sometimes bricks the device and should avoid it.
 
 # What's Next?
+- [Sources List for Debian 8 (Jessie)]({{< ref "debian-jessie-sources.md" >}})
 - [Setup local timezone]({{< ref "debian-timezone.md" >}})
 - [Setup a Public Samba Share]({{< ref "samba-share-public.md" >}})
 
