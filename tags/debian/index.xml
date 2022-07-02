@@ -36,8 +36,13 @@
 &lt;li>Now you can rerun&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description><content>&lt;h1 id="install-samba">Install Samba&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Create Shares Create shares with proper permissions</description><content>&lt;h1 id="install-samba">Install Samba&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install samba
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="create-shares">Create Shares&lt;/h1>
+&lt;p>Create shares with proper permissions&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p /data/shares/public
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chown -R root:users /data/shares/public/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod -R ug+rwx,o+rx-w /data/shares/public/
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-samba">Configure Samba&lt;/h1>
 &lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nano /etc/samba/smb.conf
@@ -54,7 +59,7 @@ path = /data/shares/Public
 force group = users
 create mask = 0660
 directory mask = 0771
-browsable =yes
+browsable = yes
 writable = yes
 guest ok = yes
 &lt;/code>&lt;/pre>&lt;h1 id="restart-samba-service">Restart Samba Service&lt;/h1>
