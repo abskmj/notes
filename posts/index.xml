@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Notes</title><link>https://abskmj.github.io/notes/posts/</link><description>Recent content in Posts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Sources List for Debian 8 (Jessie)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</guid><description>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018.</description><content>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Notes</title><link>https://abskmj.github.io/notes/posts/</link><description>Recent content in Posts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup Aria2 Download Utility on Debian</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</guid><description>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).</description><content>&lt;p>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://aria2.github.io/">aria2&lt;/a> is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="install-aria2">Install Aria2&lt;/h1>
+&lt;p>Get the latest Debian package for ARM architecture from &lt;a href="https://github.com/q3aql/aria2-static-builds/releases">github.com&lt;/a>. For example, &lt;code>aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb&lt;/code>. You can choose the version and architecture according to your need and machine.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dpkg -i aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="create-configuration">Create Configuration&lt;/h1>
+&lt;p>Create a configuration file in the home directory. This configuration will be automatically picked up by &lt;code>aria2c&lt;/code> executable. For example, &lt;code>/root/aria2/aria.conf&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#basic&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dir&lt;span style="color:#f92672">=&lt;/span>/data/shares/public/Downloads
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-concurrent-downloads&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>check-integrity&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">continue&lt;/span>&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>input-file&lt;span style="color:#f92672">=&lt;/span>/root/.aria2/aria2.session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#bittorrent&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bt-enable-lpd&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-dht&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-peer-exchange&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-overall-upload-limit&lt;span style="color:#f92672">=&lt;/span>1M
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>seed-time&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#rpc&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-rpc&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rpc-listen-all&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#advanced&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>daemon&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>disable-ipv6&lt;span style="color:#f92672">=&lt;/span>true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-overall-download-limit&lt;span style="color:#f92672">=&lt;/span>5M
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>save-session&lt;span style="color:#f92672">=&lt;/span>/root/.aria2/aria2.session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>save-session-interval&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">60&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="start-aria2">Start Aria2&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>aria2c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Sources List for Debian 8 (Jessie)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</guid><description>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018.</description><content>&lt;blockquote>
 &lt;p>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018. Jessie also benefits from Long Term Support (LTS) until the end of June 2020. The LTS is limited to i386, amd64, armel and armhf.&lt;/p>
 &lt;/blockquote>
 &lt;ul>
