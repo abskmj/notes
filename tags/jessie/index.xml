@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jessie on Notes</title><link>https://abskmj.github.io/notes/tags/jessie/</link><description>Recent content in Jessie on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/jessie/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description><content>&lt;h1 id="install-samba">Install Samba&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jessie on Notes</title><link>https://abskmj.github.io/notes/tags/jessie/</link><description>Recent content in Jessie on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/jessie/index.xml" rel="self" type="application/rss+xml"/><item><title>Sources List for Debian 8 (Jessie)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</guid><description>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018.</description><content>&lt;blockquote>
+&lt;p>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018. Jessie also benefits from Long Term Support (LTS) until the end of June 2020. The LTS is limited to i386, amd64, armel and armhf.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Open &lt;code>/etc/apt/sources.list&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Comment existing sources&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add below sources&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian jessie main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian jessie main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian-security/ jessie/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian-security/ jessie/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian jessie-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian jessie-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Now you can run&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>If you get below error&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>There is no public key available &lt;span style="color:#66d9ef">for&lt;/span> the following key IDs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Install below package&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install debian-archive-keyring
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Now you can rerun&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Configure Samba Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.</description><content>&lt;h1 id="install-samba">Install Samba&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install samba
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-samba">Configure Samba&lt;/h1>
 &lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
@@ -167,6 +205,7 @@ alias l=&amp;#39;ls $LS_OPTIONS -lA&amp;#39;
 &lt;/blockquote>
 &lt;h1 id="whats-next">What&amp;rsquo;s Next?&lt;/h1>
 &lt;ul>
+&lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/">Sources List for Debian 8 (Jessie)&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/">Setup local timezone&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/">Setup a Public Samba Share&lt;/a>&lt;/li>
 &lt;/ul>

@@ -472,7 +472,7 @@ X X -
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Largest Permutation</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</link><pubDate>Thu, 09 Nov 2017 22:02:51 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</guid><description>Solution #1 Keep indexes of all numbers in a HashMap.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Largest Permutation</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</link><pubDate>Thu, 09 Nov 2017 22:02:51 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</guid><description>Solution #1 Keep indexes of all numbers in a HashMap. Check if current maximum number is already at desired index i.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
 &lt;ul>
 &lt;li>Keep indexes of all numbers in a &lt;code>HashMap&lt;/code>.&lt;/li>
 &lt;li>Check if current maximum number is already at desired index i.e highest at index 0, second highest at index 1 and so on.&lt;/li>
@@ -649,7 +649,7 @@ X X -
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>count&lt;span style="color:#f92672">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Minimum Loss</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/</link><pubDate>Wed, 08 Nov 2017 21:06:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/</guid><description>Solution #1 Keep prices and corresponding index in a HashMap.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Minimum Loss</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/</link><pubDate>Wed, 08 Nov 2017 21:06:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/</guid><description>Solution #1 Keep prices and corresponding index in a HashMap. Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
 &lt;ul>
 &lt;li>Keep prices and corresponding index in a &lt;code>HashMap&lt;/code>.&lt;/li>
 &lt;li>Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices.&lt;/li>

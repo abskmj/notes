@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Notes</title><link>https://abskmj.github.io/notes/posts/</link><description>Recent content in Posts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 14 Feb 2022 11:21:45 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Manage Generic Packages on Gitlab</title><link>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</link><pubDate>Mon, 14 Feb 2022 11:21:45 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</guid><description>Generic packages on GitLab are a convenient way to manage project artifacts.</description><content>&lt;p>Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Notes</title><link>https://abskmj.github.io/notes/posts/</link><description>Recent content in Posts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Sources List for Debian 8 (Jessie)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</guid><description>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018.</description><content>&lt;blockquote>
+&lt;p>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018. Jessie also benefits from Long Term Support (LTS) until the end of June 2020. The LTS is limited to i386, amd64, armel and armhf.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Open &lt;code>/etc/apt/sources.list&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Comment existing sources&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add below sources&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian jessie main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian jessie main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian-security/ jessie/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian-security/ jessie/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian jessie-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian jessie-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Now you can run&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>If you get below error&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>There is no public key available &lt;span style="color:#66d9ef">for&lt;/span> the following key IDs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Install below package&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install debian-archive-keyring
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Now you can rerun&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Manage Generic Packages on Gitlab</title><link>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</link><pubDate>Mon, 14 Feb 2022 11:21:45 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</guid><description>Generic packages on GitLab are a convenient way to manage project artifacts.</description><content>&lt;p>Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.&lt;/p>
 &lt;h1 id="uploaddownload-a-package">Upload/Download a Package&lt;/h1>
 &lt;p>These packages are accessible at the &lt;code>Packages &amp;amp; Registries &amp;gt; Package Registry&lt;/code> section of the Gitlab project.&lt;/p>
 &lt;ul>
@@ -1161,6 +1199,7 @@ LABEL hugo.version ${HUGO_VERSION}
 &lt;/blockquote>
 &lt;h1 id="whats-next">What&amp;rsquo;s Next?&lt;/h1>
 &lt;ul>
+&lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/">Sources List for Debian 8 (Jessie)&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/">Setup local timezone&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/">Setup a Public Samba Share&lt;/a>&lt;/li>
 &lt;/ul>
@@ -2600,7 +2639,7 @@ X X -
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Largest Permutation</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</link><pubDate>Thu, 09 Nov 2017 22:02:51 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</guid><description>Solution #1 Keep indexes of all numbers in a HashMap.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Largest Permutation</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</link><pubDate>Thu, 09 Nov 2017 22:02:51 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/greedy/largest-permutation/</guid><description>Solution #1 Keep indexes of all numbers in a HashMap. Check if current maximum number is already at desired index i.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
 &lt;ul>
 &lt;li>Keep indexes of all numbers in a &lt;code>HashMap&lt;/code>.&lt;/li>
 &lt;li>Check if current maximum number is already at desired index i.e highest at index 0, second highest at index 1 and so on.&lt;/li>
@@ -2777,7 +2816,7 @@ X X -
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>count&lt;span style="color:#f92672">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Minimum Loss</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/</link><pubDate>Wed, 08 Nov 2017 21:06:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/</guid><description>Solution #1 Keep prices and corresponding index in a HashMap.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>HackerRank - Minimum Loss</title><link>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/</link><pubDate>Wed, 08 Nov 2017 21:06:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/search/minimum-loss/</guid><description>Solution #1 Keep prices and corresponding index in a HashMap. Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices.</description><content>&lt;h1 id="solution-1">Solution #1&lt;/h1>
 &lt;ul>
 &lt;li>Keep prices and corresponding index in a &lt;code>HashMap&lt;/code>.&lt;/li>
 &lt;li>Sort the prices array in ascending order so that combination of minimum difference can be found by comparing adjacent prices.&lt;/li>
