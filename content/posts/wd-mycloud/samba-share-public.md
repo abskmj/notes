@@ -9,6 +9,15 @@ tags: ["WD MyCloud", "Debian", "Jessie", "Samba", "Share"]
 apt-get install samba
 ```
 
+# Create Shares
+Create shares with proper permissions
+
+```bash
+mkdir -p /data/shares/public
+chown -R root:users /data/shares/public/
+chmod -R ug+rwx,o+rx-w /data/shares/public/
+```
+
 # Configure Samba
 Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.
 
@@ -31,13 +40,14 @@ dns proxy = no
    force group = users
    create mask = 0660
    directory mask = 0771
-   browsable =yes
+   browsable = yes
    writable = yes
    guest ok = yes
 ```
 
 # Restart Samba Service
 The samba service has to restarted each time to use the new configuration.
+
 ```bash
 /etc/init.d/samba restart
 ```
