@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JustPlayer on Notes</title><link>https://abskmj.github.io/notes/tags/justplayer/</link><description>Recent content in JustPlayer on Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 27 Aug 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/justplayer/index.xml" rel="self" type="application/rss+xml"/><item><title>External Players in Kodi</title><link>https://abskmj.github.io/notes/posts/android-tv/external-players-kodi/</link><pubDate>Sat, 27 Aug 2022 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/android-tv/external-players-kodi/</guid><description>Setup video players like Just Player and MX Player to use on Kodi</description><content>&lt;p>Setup video players like Just Player and MX Player to use on Kodi&lt;/p>
+&lt;h1 id="video-players">Video Players&lt;/h1>
+&lt;ul>
+&lt;li>Install the player of your choice&lt;/li>
+&lt;li>Use the package name of the player as &lt;code>filename&lt;/code> in the configuration file&lt;/li>
+&lt;/ul>
+&lt;p>I use the below players on my Android TV&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=com.brouken.player">Just Player&lt;/a>
+&lt;ul>
+&lt;li>I use it as the default player on Kodi.&lt;/li>
+&lt;li>It plays most video and audio formats.&lt;/li>
+&lt;li>It is open source and available at &lt;a href="https://github.com/moneytoo/Player">github.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad">MX Player&lt;/a>
+&lt;ul>
+&lt;li>I use it as an alternative to play any files that are not supported by the other player.&lt;/li>
+&lt;li>To use in Kodi, long click on the item to play, and select the &lt;code>Play using&lt;/code> menu option.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="configuration">Configuration&lt;/h1>
+&lt;p>Create a &lt;code>playercorefactory.xml&lt;/code> configure file at &lt;code>Android/data/org.xbmc.kodi/files/.kodi/userdata/&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;lt;playercorefactory&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">&amp;lt;!-- players --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;players&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;player&lt;/span> &lt;span style="color:#a6e22e">name=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;JustPlayer&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">type=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;ExternalPlayer&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">audio=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;false&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">video=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;true&amp;#34;&lt;/span>&lt;span style="color:#f92672">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;filename&amp;gt;&lt;/span>com.brouken.player&lt;span style="color:#f92672">&amp;lt;/filename&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;hidexbmc&amp;gt;&lt;/span>true&lt;span style="color:#f92672">&amp;lt;/hidexbmc&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;playcountminimumtime&amp;gt;&lt;/span>120&lt;span style="color:#f92672">&amp;lt;/playcountminimumtime&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;/player&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;player&lt;/span> &lt;span style="color:#a6e22e">name=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;MXPlayer&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">type=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;ExternalPlayer&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">audio=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;false&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">video=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;true&amp;#34;&lt;/span>&lt;span style="color:#f92672">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;filename&amp;gt;&lt;/span>com.mxtech.videoplayer.ad&lt;span style="color:#f92672">&amp;lt;/filename&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;hidexbmc&amp;gt;&lt;/span>true&lt;span style="color:#f92672">&amp;lt;/hidexbmc&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;playcountminimumtime&amp;gt;&lt;/span>120&lt;span style="color:#f92672">&amp;lt;/playcountminimumtime&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;/player&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;/players&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">&amp;lt;!-- rules --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;rules&lt;/span> &lt;span style="color:#a6e22e">action=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;prepend&amp;#34;&lt;/span>&lt;span style="color:#f92672">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;rule&lt;/span> &lt;span style="color:#a6e22e">protocols=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;smb&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">player=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;JustPlayer&amp;#34;&lt;/span> &lt;span style="color:#f92672">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;rule&lt;/span> &lt;span style="color:#a6e22e">dvdimage=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;true&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">player=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;JustPlayer&amp;#34;&lt;/span>&lt;span style="color:#f92672">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;rule&lt;/span> &lt;span style="color:#a6e22e">protocols=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;rtmp&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">player=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;JustPlayer&amp;#34;&lt;/span>&lt;span style="color:#f92672">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;rule&lt;/span> &lt;span style="color:#a6e22e">protocols=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;rtsp&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">player=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;JustPlayer&amp;#34;&lt;/span> &lt;span style="color:#f92672">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;rule&lt;/span> &lt;span style="color:#a6e22e">protocols=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;sop&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">player=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;JustPlayer&amp;#34;&lt;/span> &lt;span style="color:#f92672">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;rule&lt;/span> &lt;span style="color:#a6e22e">internetstream=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;true&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">player=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;JustPlayer&amp;#34;&lt;/span> &lt;span style="color:#f92672">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;rule&lt;/span> &lt;span style="color:#a6e22e">video=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;true&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">player=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;JustPlayer&amp;#34;&lt;/span>&lt;span style="color:#f92672">/&amp;gt;&lt;/span> &lt;span style="color:#75715e">&amp;lt;!-- Default for anything else not listed --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;/rules&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;lt;/playercorefactory&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="references">References&lt;/h1>
+&lt;ul>
+&lt;li>External Players at &lt;a href="https://kodi.wiki/view/External_players">kodi.wiki&lt;/a>&lt;/li>
+&lt;/ul></content></item></channel></rss>
