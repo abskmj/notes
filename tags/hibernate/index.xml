@@ -43,9 +43,10 @@
 &lt;pre tabindex="0">&lt;code>9999999..
 &lt;/code>&lt;/pre>&lt;h2 id="update-kernel-options">Update Kernel Options&lt;/h2>
 &lt;p>For a Swap File&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset&lt;span style="color:#f92672">=&lt;/span>9999999”
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo kernelstub -a &lt;span style="color:#e6db74">&amp;#34;resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo kernelstub -a &lt;span style="color:#e6db74">&amp;#34;resume_offset=9999999&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For a Swap Partition, &lt;code>resume_offset&lt;/code> option is not needed&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo kernelstub -a “resume&lt;span style="color:#f92672">=&lt;/span>UUID&lt;span style="color:#f92672">=&lt;/span>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo kernelstub -a &lt;span style="color:#e6db74">&amp;#34;resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add below line to &lt;code>/etc/initramfs-tools/conf.d/resume&lt;/code>. Create the file if not present&lt;/p>
 &lt;p>For a Swap File&lt;/p>
 &lt;pre tabindex="0">&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
