@@ -176,6 +176,10 @@ alias l=&amp;#39;ls $LS_OPTIONS -lA&amp;#39;
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkfs -t ext4 /dev/sdb4
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkswap /dev/sdb3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Create RAID partitions&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mdadm --create /dev/md0 --level&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span> --metadata&lt;span style="color:#f92672">=&lt;/span>0.9 --raid-devices&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">2&lt;/span> /dev/sdb1 /dev/sdb2
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="install-debian">Install Debian&lt;/h1>
 &lt;ul>
 &lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size of around 1.8 TB.&lt;/li>
@@ -259,7 +263,7 @@ alias l=&amp;#39;ls $LS_OPTIONS -lA&amp;#39;
 &lt;/ul>
 &lt;h4 id="references">References&lt;/h4>
 &lt;ul>
-&lt;li>Original materials from fox-exe at &lt;a href="https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen1/">fox-exe.ru&lt;/a>&lt;/li>
+&lt;li>Original materials from fox-exe at &lt;a href="https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen1/">fox-exe.ru&lt;/a>, mirror at &lt;a href="https://wd.hides.su/fox_exe/WDMyCloud-Gen1/">wd.hides.su&lt;/a>&lt;/li>
 &lt;li>Re-uploaded packages at &lt;a href="https://github.com/abskmj/wd-mycloud-gen1/releases">github.com&lt;/a>&lt;/li>
 &lt;/ul></content></item><item><title>Sources List for Debian Wheezy</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</link><pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</guid><description>As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.</description><content>&lt;blockquote>
 &lt;p>As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.&lt;/p>
