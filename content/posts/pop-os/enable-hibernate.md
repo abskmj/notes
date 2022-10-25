@@ -76,12 +76,13 @@ It looks something like below
 ## Update Kernel Options
 For a Swap File
 ```bash
-sudo kernelstub -a “resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999”
+sudo kernelstub -a "resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+sudo kernelstub -a "resume_offset=9999999"
 ```
 
 For a Swap Partition, `resume_offset` option is not needed
 ```bash
-sudo kernelstub -a “resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”
+sudo kernelstub -a "resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 ```
 
 Add below line to `/etc/initramfs-tools/conf.d/resume`. Create the file if not present
