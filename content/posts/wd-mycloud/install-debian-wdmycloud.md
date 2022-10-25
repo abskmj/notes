@@ -63,6 +63,11 @@ mkfs -t ext4 /dev/sdb4
 mkswap /dev/sdb3
 ```
 
+- Create RAID partitions
+```bash
+mdadm --create /dev/md0 --level=1 --metadata=0.9 --raid-devices=2 /dev/sdb1 /dev/sdb2
+```
+
 # Install Debian
 - Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was `/dev/sdb` with a size of around 1.8 TB.
 
@@ -143,5 +148,5 @@ ssh root@192.168.X.XXX # replace with your IP
 - [Setup a Public Samba Share]({{< ref "samba-share-public.md" >}})
 
 #### References
-- Original materials from fox-exe at [fox-exe.ru](https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen1/)
+- Original materials from fox-exe at [fox-exe.ru](https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen1/), mirror at [wd.hides.su](https://wd.hides.su/fox_exe/WDMyCloud-Gen1/)
 - Re-uploaded packages at [github.com](https://github.com/abskmj/wd-mycloud-gen1/releases)
