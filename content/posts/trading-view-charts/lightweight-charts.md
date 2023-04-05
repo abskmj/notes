@@ -37,4 +37,4 @@ summary: " "
 >}}
 
 # Looking for a Developer?
-Connect with me on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL)
+I offer a few services related to TradinView charting libraries at [buymeacoffee.com](https://www.buymeacoffee.com/abskmj/commissions).

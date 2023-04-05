@@ -36,3 +36,6 @@ There are a couple of prerequisites that you need to take care of.
 
 # Important Notes
 - The chart is not integrated with a WebSocket or a live feed as Bitquery.io doesn't provide one. Hence, the chart will not update automatically, and you will have to refresh it manually to see the latest data.
+
+# Looking for a Developer?
+I offer a few services related to TradinView charting libraries at [buymeacoffee.com](https://www.buymeacoffee.com/abskmj/commissions).

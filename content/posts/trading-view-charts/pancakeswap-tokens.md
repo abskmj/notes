@@ -45,4 +45,4 @@ By default, plots a chart for PancakeSwap (CAKE) token. Setting `?token=<token_a
 >}}
 
 # Looking for a Developer?
-Connect with me on [Fiverr.com](https://www.fiverr.com/share/Gd8pwL) or [Discord](https://discordapp.com/users/220585271983472650)
+I offer a few services related to TradinView charting libraries at [buymeacoffee.com](https://www.buymeacoffee.com/abskmj/commissions).
