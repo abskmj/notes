@@ -41,4 +41,6 @@ Live Preview - Chart for PancakeSwap Token (CAKE)
 &lt;h1 id="important-notes">Important Notes&lt;/h1>
 &lt;ul>
 &lt;li>The chart is not integrated with a WebSocket or a live feed as Bitquery.io doesn&amp;rsquo;t provide one. Hence, the chart will not update automatically, and you will have to refresh it manually to see the latest data.&lt;/li>
-&lt;/ul></content></item></channel></rss>
+&lt;/ul>
+&lt;h1 id="looking-for-a-developer">Looking for a Developer?&lt;/h1>
+&lt;p>I offer a few services related to TradinView charting libraries at &lt;a href="https://www.buymeacoffee.com/abskmj/commissions">buymeacoffee.com&lt;/a>.&lt;/p></content></item></channel></rss>

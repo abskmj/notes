@@ -62,7 +62,9 @@ Live Preview - Chart for PancakeSwap Token (CAKE)
 &lt;h1 id="important-notes">Important Notes&lt;/h1>
 &lt;ul>
 &lt;li>The chart is not integrated with a WebSocket or a live feed as Bitquery.io doesn&amp;rsquo;t provide one. Hence, the chart will not update automatically, and you will have to refresh it manually to see the latest data.&lt;/li>
-&lt;/ul></content></item><item><title>TradingView Charts for PancakeSwap Tokens</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</link><pubDate>Tue, 08 Jun 2021 17:30:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</guid><description/><content>&lt;h1 id="update---live-preview">Update - Live Preview&lt;/h1>
+&lt;/ul>
+&lt;h1 id="looking-for-a-developer">Looking for a Developer?&lt;/h1>
+&lt;p>I offer a few services related to TradinView charting libraries at &lt;a href="https://www.buymeacoffee.com/abskmj/commissions">buymeacoffee.com&lt;/a>.&lt;/p></content></item><item><title>TradingView Charts for PancakeSwap Tokens</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</link><pubDate>Tue, 08 Jun 2021 17:30:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/pancakeswap-tokens/</guid><description/><content>&lt;h1 id="update---live-preview">Update - Live Preview&lt;/h1>
 &lt;p>I have added a live preview of the charts using the Technical charts from TradingView. &lt;a href="https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/">Source code&lt;/a> of these charts is available.&lt;/p>
 &lt;div style="
 margin: 40px 0;
@@ -140,7 +142,7 @@ UNI/WBNB - A sample integration of TradingView Lightweight Chart library with Bi
 &lt;/p>
 &lt;/div>
 &lt;h1 id="looking-for-a-developer">Looking for a Developer?&lt;/h1>
-&lt;p>Connect with me on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a> or &lt;a href="https://discordapp.com/users/220585271983472650">Discord&lt;/a>&lt;/p></content></item><item><title>Working with TradingView Lightweight Charts</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</link><pubDate>Tue, 01 Jun 2021 10:35:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</guid><description/><content>&lt;blockquote>
+&lt;p>I offer a few services related to TradinView charting libraries at &lt;a href="https://www.buymeacoffee.com/abskmj/commissions">buymeacoffee.com&lt;/a>.&lt;/p></content></item><item><title>Working with TradingView Lightweight Charts</title><link>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</link><pubDate>Tue, 01 Jun 2021 10:35:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/trading-view-charts/lightweight-charts/</guid><description/><content>&lt;blockquote>
 &lt;p>&lt;a href="https://tradingview.com/lightweight-charts/">&lt;strong>TradingView Lightweight Charts&lt;/strong>&lt;/a> Top performance in a tiny package. Free, open-source and feature-rich. At just 40 kilobytes, the dream of lightweight interactive charts is now a reality. HTML5 Canvas technology ensures that (unlike pictures) this chart will always look perfect on any device.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="sample-integrations">Sample Integrations&lt;/h1>
@@ -217,4 +219,4 @@ Bar Chart - A sample integration of TradingView Lightweight Chart library with B
 &lt;/p>
 &lt;/div>
 &lt;h1 id="looking-for-a-developer">Looking for a Developer?&lt;/h1>
-&lt;p>Connect with me on &lt;a href="https://www.fiverr.com/share/Gd8pwL">Fiverr.com&lt;/a>&lt;/p></content></item></channel></rss>
+&lt;p>I offer a few services related to TradinView charting libraries at &lt;a href="https://www.buymeacoffee.com/abskmj/commissions">buymeacoffee.com&lt;/a>.&lt;/p></content></item></channel></rss>
