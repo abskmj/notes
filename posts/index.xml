@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Notes</title><link>https://abskmj.github.io/notes/posts/</link><description>Recent content in Posts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup DNS over HTTPS (DOH) on Firefox Android</title><link>https://abskmj.github.io/notes/posts/android/firefox-dns-https/</link><pubDate>Sat, 15 Jul 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/android/firefox-dns-https/</guid><description>Setup DNS over HTTPS (DOH) in a Firefox browser, on an Android device for privacy and security.</description><content>&lt;p>Setup DNS over HTTPS (DOH) in a Firefox browser, on an Android device for privacy and security.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Notes</title><link>https://abskmj.github.io/notes/posts/</link><description>Recent content in Posts on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>PopOS on ASUS ROG Zephyrus G14 Laptop</title><link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</link><pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</guid><description>Install the latest version of PopOS along side Windows 10 in a multi-boot setup.</description><content>&lt;p>Install the latest version of PopOS along side Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.&lt;/p>
+&lt;h1 id="update---popos-2110-and-newer">Update - PopOS 21.10 and newer&lt;/h1>
+&lt;p>I recommend using the latest version as most of the features will work out of the box without needing to install adding packages as documented.&lt;/p>
+&lt;p>Still doesn&amp;rsquo;t work:&lt;/p>
+&lt;ul>
+&lt;li>Fingerprint login&lt;/li>
+&lt;li>Microphone mute &amp;amp; ROG button on the top of the keyboard&lt;/li>
+&lt;li>Function keys to control fan speed&lt;/li>
+&lt;/ul>
+&lt;h1 id="demo-mode-on-live-usb">Demo Mode on Live USB&lt;/h1>
+&lt;blockquote>
+&lt;p>Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>Download the latest version of PopOS with NVIDIA drivers ISO from &lt;a href="https://pop.system76.com/">the official site&lt;/a>&lt;/li>
+&lt;li>Create a live USB following &lt;a href="https://support.system76.com/articles/live-disk/">the guide&lt;/a>&lt;/li>
+&lt;li>Restart the laptop and press or hold the &lt;code>ESC&lt;/code> key when on the screen with &lt;code>Republic of Gamers&lt;/code> logo&lt;/li>
+&lt;li>Select second EFI partition to boot into PopOS from USB&lt;/li>
+&lt;li>Follow &lt;a href="https://support.system76.com/articles/install-pop/">the guide&lt;/a> to try the Demo Mode&lt;/li>
+&lt;/ul>
+&lt;h1 id="install-on-ssd">Install on SSD&lt;/h1>
+&lt;p>The steps below are to install PopOS and keep the Windows 10 system intact&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Click &lt;code>Custom (Advanced)&lt;/code> to make a new partition on SSD for PopOS&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click on &lt;code>Modify Partitions&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Right-click on the primary SSD partition of around 450+ GB and select resize.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Enter the sum of sizes for the new partitions and click on the &lt;code>Resize/Move&lt;/code> button to create a new unallocated partition&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name / Label&lt;/th>
+&lt;th>Size&lt;/th>
+&lt;th>File System&lt;/th>
+&lt;th>Use as&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>EFI&lt;/td>
+&lt;td>500 MiB&lt;/td>
+&lt;td>fat32&lt;/td>
+&lt;td>Boot&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PopOS&lt;/td>
+&lt;td>Min. 20 GiB&lt;/td>
+&lt;td>ext4&lt;/td>
+&lt;td>Root (/)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Swap&lt;/td>
+&lt;td>Optional&lt;/td>
+&lt;td>linux-swap&lt;/td>
+&lt;td>Swap&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/li>
+&lt;li>
+&lt;p>Right-click on the unallocated partition and create new partitions as the above table&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>After partitions are modified, click on the green tick to create them on SSD&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Find the new partitions and toggle the &lt;code>Use Partition&lt;/code> option and choose &lt;code>Use as&lt;/code> according to the above table&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click on &lt;code>Erase and Install&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click on &lt;code>Restart&lt;/code> when the installation is complete&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>After installation, the laptop will load PopOS by default. To use Windows 10, press or hold the &lt;code>ESC&lt;/code> key when on the screen with &lt;code>Republic of Gamers&lt;/code> logo and select &lt;code>Windows Boot Manager&lt;/code> each time.&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="setup-after-installation">Setup after installation&lt;/h1>
+&lt;h2 id="system-time-in-windows--popos">System Time in Windows &amp;amp; PopOS&lt;/h2>
+&lt;p>Update the below &lt;code>timedatectl&lt;/code> configuration in PopOS. Details are available at &lt;a href="https://support.system76.com/articles/dual-booting/">support.system76.com&lt;/a>&lt;/p>
+&lt;pre tabindex="0">&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
+&lt;/code>&lt;/pre>&lt;p>Verify the change by executing below command. You should see &lt;code>RTC in local TZ&lt;/code> configaration as &lt;code>yes&lt;/code>.&lt;/p>
+&lt;pre tabindex="0">&lt;code>timedatectl
+&lt;/code>&lt;/pre>&lt;h2 id="asus-packages-only-on-popos-2010-and-older">ASUS Packages (Only on PopOS 20.10 and older)&lt;/h2>
+&lt;p>Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at &lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl#implemented">gitlab.com&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.com/asus-linux/hid-asus-rog">hid-asus-rog&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi">asus-rog-nb-wmi&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl">asus-nb-ctrl&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Add these packages using package manager&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span> | sudo tee /etc/apt/sources.list.d/asus.list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="volume-control-only-on-popos-2010-and-older">Volume Control (Only on PopOS 20.10 and older)&lt;/h2>
+&lt;p>Add below lines to the file at location &lt;code>/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common&lt;/code>, just before the &lt;code>[Element PCM]&lt;/code> section. It will also make the &lt;code>mute the microphone&lt;/code> button usable.&lt;/p>
+&lt;pre tabindex="0">&lt;code>[Element Master]
+switch = mute
+volume = ignore
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="pulseaudio-config.png" alt="Pulse Audio Configuration">&lt;/p>
+&lt;h2 id="text-on-screen-too-small-only-on-popos-2010-and-older">Text on screen too small (Only on PopOS 20.10 and older)&lt;/h2>
+&lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for a comfortable reading.&lt;/p>
+&lt;p>&lt;img src="displays-fractional-scaling.png" alt="Display Fractional Scaling">&lt;/p>
+&lt;h1 id="test-laptop">Test Laptop&lt;/h1>
+&lt;p>&lt;a href="https://amzn.to/35NWlNN">ASUS ROG Zephyrus G14 GA401IH-HE012T&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>AMD Ryzen 5 4600HS&lt;/li>
+&lt;li>NVIDIA GeForce GTX 1650 4GB GDDR6 VRAM&lt;/li>
+&lt;li>8GB DDR4 3200MHz SDRAM&lt;/li>
+&lt;li>512GB M.2 NVMe PCIe 3.0 SSD&lt;/li>
+&lt;li>Without Anime Matrix&lt;/li>
+&lt;/ul>
+&lt;h1 id="references">References&lt;/h1>
+&lt;ul>
+&lt;li>ASUS G14 Ubuntu 20.04 Setup at &lt;a href="https://www.reddit.com/r/ZephyrusG14/comments/id4e2d/asus_g14_ubuntu_2004_setup/">reddit.com&lt;/a>&lt;/li>
+&lt;li>DKMS installable module for ASUS ROG laptops at &lt;a href="https://gitlab.com/asus-linux/hid-asus-rog">gitlab.com&lt;/a>&lt;/li>
+&lt;li>Installing Linux (Pop_OS!) on Asus Zephyrus G14 at &lt;a href="https://heinbio.me/blog/5f23042bee73aa31486bff7c">heinbio.me&lt;/a>&lt;/li>
+&lt;/ul></content></item><item><title>Setup DNS over HTTPS (DOH) on Firefox Android</title><link>https://abskmj.github.io/notes/posts/android/firefox-dns-https/</link><pubDate>Sat, 15 Jul 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/android/firefox-dns-https/</guid><description>Setup DNS over HTTPS (DOH) in a Firefox browser, on an Android device for privacy and security.</description><content>&lt;p>Setup DNS over HTTPS (DOH) in a Firefox browser, on an Android device for privacy and security.&lt;/p>
 &lt;h1 id="configuration-editor-on-firefox">Configuration Editor on Firefox&lt;/h1>
 &lt;p>Firefox on an Android device currently does not support setting up &lt;a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS">DNS over HTTPS (DOH)&lt;/a> under the settings menu. However, as a workaround, it can be configured through &lt;a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor for Firefox&lt;/a>.&lt;/p>
 &lt;p>Access it using the &lt;code>about:config&lt;/code> keywords in the address bar of the browser. It is available only in beta and nightly versions of Firefox.&lt;/p>
@@ -798,136 +923,7 @@ coverage
 &lt;td>&lt;a href="https://www.paypal.com/in/webapps/mpp/account-selection?refBy=9HPdLB1oQk1603865477380">Create an Account&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></content></item><item><title>PopOS 20.10 on ASUS ROG Zephyrus G14 Laptop</title><link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</link><pubDate>Sat, 24 Oct 2020 10:34:30 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</guid><description>Install Pop 20.10 next to Windows 10 in a multi-boot setup.</description><content>&lt;p>Install Pop 20.10 next to Windows 10 in a multi-boot setup. Similar steps can be followed to install Ubuntu 20.10.&lt;/p>
-&lt;h1 id="update---popos-2110">Update - PopOS 21.10&lt;/h1>
-&lt;p>If you are doing a fresh installation of the PopOS. I would recommend using their 21.10 version as most of the features will work out of the box without needing to install adding packages as documented.&lt;/p>
-&lt;p>Still doesn&amp;rsquo;t work:&lt;/p>
-&lt;ul>
-&lt;li>Fingerprint login&lt;/li>
-&lt;li>Microphone mute &amp;amp; ROG button on the top of the keyboard&lt;/li>
-&lt;li>Function keys to control fan speed&lt;/li>
-&lt;/ul>
-&lt;h1 id="demo-mode-on-live-usb">Demo Mode on Live USB&lt;/h1>
-&lt;blockquote>
-&lt;p>Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>Download PopOS 20.10 with NVIDIA drivers ISO from &lt;a href="https://pop.system76.com/">the official site&lt;/a>&lt;/li>
-&lt;li>Create a live USB following &lt;a href="https://support.system76.com/articles/live-disk/">the guide&lt;/a>&lt;/li>
-&lt;li>Restart the laptop and press or hold the &lt;code>ESC&lt;/code> key when the &lt;code>Republic of Gamers&lt;/code> logo is seen on the screen&lt;/li>
-&lt;li>Select second EFI partition to boot into PopOS from USB&lt;/li>
-&lt;li>Follow &lt;a href="https://support.system76.com/articles/install-pop/">the guide&lt;/a> to try the Demo Mode&lt;/li>
-&lt;/ul>
-&lt;h1 id="install-on-ssd">Install on SSD&lt;/h1>
-&lt;p>The steps below are to install PopOS and keep the Windows 10 system intact&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Click &lt;code>Custom (Advanced)&lt;/code> to make a new partition on SSD for PopOS&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Click on &lt;code>Modify Partitions&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Right-click on the main SSD partition of around 450+ GB and select resize.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Enter the sum of sizes for the new partitions and click on &lt;code>Resize/Move&lt;/code>. This will create a new unallocated partition&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name / Label&lt;/th>
-&lt;th>Size&lt;/th>
-&lt;th>File System&lt;/th>
-&lt;th>Use as&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>EFI&lt;/td>
-&lt;td>500 MiB&lt;/td>
-&lt;td>fat32&lt;/td>
-&lt;td>Boot&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>PopOS&lt;/td>
-&lt;td>Min. 20 GiB&lt;/td>
-&lt;td>ext4&lt;/td>
-&lt;td>Root (/)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Swap&lt;/td>
-&lt;td>Optional&lt;/td>
-&lt;td>linux-swap&lt;/td>
-&lt;td>Swap&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/li>
-&lt;li>
-&lt;p>Right-click on the unallocated partition and create new partitions as the above table&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>After partitions are modified, click on the green tick to create them on SSD&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Find the new partitions and toggle the &lt;code>Use Partition&lt;/code> option and choose &lt;code>Use as&lt;/code> according to the above table&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Click on &lt;code>Erase and Install&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Click on &lt;code>Restart&lt;/code> when the installation is complete&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>After installation, the laptop will load PopOS by default from now on. To use Windows 10, press or hold the &lt;code>ESC&lt;/code> key when the &lt;code>Republic of Gamers&lt;/code> logo is seen and select &lt;code>Windows Boot Manager&lt;/code> each time.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="setup-after-installation">Setup after installation&lt;/h1>
-&lt;h2 id="asus-packages">ASUS Packages&lt;/h2>
-&lt;p>Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at &lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl#implemented">gitlab.com&lt;/a>.&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://gitlab.com/asus-linux/hid-asus-rog">hid-asus-rog&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi">asus-rog-nb-wmi&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl">asus-nb-ctrl&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Add these packages using package manager&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span> | sudo tee /etc/apt/sources.list.d/asus.list
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get update
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="volume-control">Volume Control&lt;/h2>
-&lt;p>Add below lines to &lt;code>/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common&lt;/code> file, just before the &lt;code>[Element PCM]&lt;/code> section. This will also make the &lt;code>mute the microphone&lt;/code> button usable.&lt;/p>
-&lt;pre tabindex="0">&lt;code>[Element Master]
-switch = mute
-volume = ignore
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="pulseaudio-config.png" alt="Pulse Audio Configuration">&lt;/p>
-&lt;h2 id="system-time-in-windows--popos">System Time in Windows &amp;amp; PopOS&lt;/h2>
-&lt;p>Update the below &lt;code>timedatectl&lt;/code> configuration in PopOS. Details are available at &lt;a href="https://support.system76.com/articles/dual-booting/">support.system76.com&lt;/a>&lt;/p>
-&lt;pre tabindex="0">&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
-&lt;/code>&lt;/pre>&lt;h2 id="text-on-screen-too-small">Text on screen too small&lt;/h2>
-&lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for a comfortable reading.&lt;/p>
-&lt;p>&lt;img src="displays-fractional-scaling.png" alt="Display Fractional Scaling">&lt;/p>
-&lt;h1 id="known-issues">Known Issues&lt;/h1>
-&lt;ul>
-&lt;li>No fingerprint login&lt;/li>
-&lt;li>No display in external monitor using the USB-C port (external display using HDMI port works)&lt;/li>
-&lt;/ul>
-&lt;h1 id="test-laptop">Test Laptop&lt;/h1>
-&lt;p>The above steps are tested on the below laptop model.&lt;/p>
-&lt;p>&lt;a href="https://amzn.to/35NWlNN">ASUS ROG Zephyrus G14 GA401IH-HE012T&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>AMD Ryzen 5 4600HS&lt;/li>
-&lt;li>NVIDIA GeForce GTX 1650 4GB GDDR6 VRAM&lt;/li>
-&lt;li>8GB DDR4 3200MHz SDRAM&lt;/li>
-&lt;li>512GB M.2 NVMe PCIe 3.0 SSD&lt;/li>
-&lt;li>Without Anime Matrix&lt;/li>
-&lt;/ul>
-&lt;h1 id="references">References&lt;/h1>
-&lt;ul>
-&lt;li>ASUS G14 Ubuntu 20.04 Setup at &lt;a href="https://www.reddit.com/r/ZephyrusG14/comments/id4e2d/asus_g14_ubuntu_2004_setup/">reddit.com&lt;/a>&lt;/li>
-&lt;li>DKMS installable module for ASUS ROG laptops at &lt;a href="https://gitlab.com/asus-linux/hid-asus-rog">gitlab.com&lt;/a>&lt;/li>
-&lt;li>Installing Linux (Pop_OS!) on Asus Zephyrus G14 at &lt;a href="https://heinbio.me/blog/5f23042bee73aa31486bff7c">heinbio.me&lt;/a>&lt;/li>
-&lt;/ul></content></item><item><title>Upload files to MongoDB GridFS with Express</title><link>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</link><pubDate>Mon, 21 Sep 2020 12:00:02 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</guid><description>Create express based APIs to upload and download files to and from MongoDB GridFS.</description><content>&lt;p>Create express based APIs to upload and download files to and from MongoDB GridFS.&lt;/p>
+&lt;/table></content></item><item><title>Upload files to MongoDB GridFS with Express</title><link>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</link><pubDate>Mon, 21 Sep 2020 12:00:02 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/express/express-multer-mongoose-gridfile/</guid><description>Create express based APIs to upload and download files to and from MongoDB GridFS.</description><content>&lt;p>Create express based APIs to upload and download files to and from MongoDB GridFS.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a href="https://docs.mongodb.com/manual/reference/glossary/#term-gridfs">GridFS&lt;/a> is a specification for storing and retrieving files that exceed the BSON-document size limit of 16 MB.&lt;/p>
 &lt;/blockquote>
