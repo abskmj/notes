@@ -4,7 +4,7 @@ date: 2023-07-17T00:00:00+05:30
 tags: ["ASUS ROG Zephyrus G14", "PopOS", "Ubuntu"]
 ---
 
-Install the latest version of PopOS along side Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.
+Install the latest version of PopOS alongside Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.
 
 # Update - PopOS 21.10 and newer
 I recommend using the latest version as most of the features will work out of the box without needing to install adding packages as documented.
@@ -15,12 +15,12 @@ Still doesn't work:
 - Function keys to control fan speed
 
 # Demo Mode on Live USB
-> Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled
+> Fast startup option in Windows 10 and the secure boot option in BIOS need to be disabled
 
 - Download the latest version of PopOS with NVIDIA drivers ISO from [the official site](https://pop.system76.com/)
 - Create a live USB following [the guide](https://support.system76.com/articles/live-disk/)
-- Restart the laptop and press or hold the `ESC` key when on the screen with `Republic of Gamers` logo 
-- Select second EFI partition to boot into PopOS from USB
+- Restart the laptop and press or hold the `ESC` key when on the screen with the `Republic of Gamers` logo 
+- Select the second EFI partition to boot into PopOS from USB
 - Follow [the guide](https://support.system76.com/articles/install-pop/) to try the Demo Mode 
 
 # Install on SSD
@@ -47,24 +47,27 @@ The steps below are to install PopOS and keep the Windows 10 system intact
 
 # Setup after installation
 
+## Monitor over USB-C
+Make sure `NVIDIA Graphics` is enabled for this feature to work. Please click on the battery icon on the taskbar, and again on the battery menu. 
+
 ## System Time in Windows & PopOS
 Update the below `timedatectl` configuration in PopOS. Details are available at [support.system76.com](https://support.system76.com/articles/dual-booting/)
 
 ```
 timedatectl set-local-rtc 1 --adjust-system-clock
 ```
-Verify the change by executing below command. You should see `RTC in local TZ` configaration as `yes`.
+Verify the change by executing the below command. You should see the `RTC in local TZ` configuration as `yes`.
 ```
 timedatectl
 ```
 
 ## ASUS Packages (Only on PopOS 20.10 and older)
-Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at [gitlab.com](https://gitlab.com/asus-linux/asus-nb-ctrl#implemented).
+Install the below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at [gitlab.com](https://gitlab.com/asus-linux/asus-nb-ctrl#implemented).
 - [hid-asus-rog](https://gitlab.com/asus-linux/hid-asus-rog)
 - [asus-rog-nb-wmi](https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi)
 - [asus-nb-ctrl](https://gitlab.com/asus-linux/asus-nb-ctrl)
 
-Add these packages using package manager
+Add these packages using the package manager
 ```bash
 echo "deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /" | sudo tee /etc/apt/sources.list.d/asus.list
 wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
@@ -84,7 +87,7 @@ volume = ignore
 ![Pulse Audio Configuration](pulseaudio-config.png)
 
 ## Text on screen too small (Only on PopOS 20.10 and older)
-Out of the box, the text on the screen is too small to read. Enable `Fractional Scaling` in `Settings > Displays` to 125% or 150% for a comfortable reading.
+Out of the box, the text on the screen is too small to read. Enable `Fractional Scaling` in `Settings > Displays` to 125% or 150% for comfortable reading.
 
 ![Display Fractional Scaling](displays-fractional-scaling.png)
 
