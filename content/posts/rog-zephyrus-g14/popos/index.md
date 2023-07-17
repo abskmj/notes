@@ -1,6 +1,6 @@
 ---
 title: "PopOS on ASUS ROG Zephyrus G14 Laptop"
-date: 2023-07-17T00:00:00Z
+date: 2023-07-17T00:00:00+05:30
 tags: ["ASUS ROG Zephyrus G14", "PopOS", "Ubuntu"]
 ---
 
