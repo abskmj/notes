@@ -1,13 +1,13 @@
 ---
-title: "PopOS 20.10 on ASUS ROG Zephyrus G14 Laptop"
-date: 2020-10-24T10:34:30Z
-tags: ['ASUS ROG Zephyrus G14', 'PopOS', 'Ubuntu']
+title: "PopOS on ASUS ROG Zephyrus G14 Laptop"
+date: 2023-07-17T00:00:00Z
+tags: ["ASUS ROG Zephyrus G14", "PopOS", "Ubuntu"]
 ---
 
-Install Pop 20.10 next to Windows 10 in a multi-boot setup. Similar steps can be followed to install Ubuntu 20.10.
+Install the latest version of PopOS along side Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.
 
-# Update - PopOS 21.10
-If you are doing a fresh installation of the PopOS. I would recommend using their 21.10 version as most of the features will work out of the box without needing to install adding packages as documented.
+# Update - PopOS 21.10 and newer
+I recommend using the latest version as most of the features will work out of the box without needing to install adding packages as documented.
 
 Still doesn't work:
 - Fingerprint login
@@ -17,9 +17,9 @@ Still doesn't work:
 # Demo Mode on Live USB
 > Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled
 
-- Download PopOS 20.10 with NVIDIA drivers ISO from [the official site](https://pop.system76.com/)
+- Download the latest version of PopOS with NVIDIA drivers ISO from [the official site](https://pop.system76.com/)
 - Create a live USB following [the guide](https://support.system76.com/articles/live-disk/)
-- Restart the laptop and press or hold the `ESC` key when the `Republic of Gamers` logo is seen on the screen
+- Restart the laptop and press or hold the `ESC` key when on the screen with `Republic of Gamers` logo 
 - Select second EFI partition to boot into PopOS from USB
 - Follow [the guide](https://support.system76.com/articles/install-pop/) to try the Demo Mode 
 
@@ -28,8 +28,8 @@ The steps below are to install PopOS and keep the Windows 10 system intact
 
 - Click `Custom (Advanced)` to make a new partition on SSD for PopOS
 - Click on `Modify Partitions`
-- Right-click on the main SSD partition of around 450+ GB and select resize.
-- Enter the sum of sizes for the new partitions and click on `Resize/Move`. This will create a new unallocated partition
+- Right-click on the primary SSD partition of around 450+ GB and select resize.
+- Enter the sum of sizes for the new partitions and click on the `Resize/Move` button to create a new unallocated partition
 
   | Name / Label | Size | File System | Use as |
   | --- | --- | --- | --- |
@@ -43,11 +43,22 @@ The steps below are to install PopOS and keep the Windows 10 system intact
 - Click on `Erase and Install`
 - Click on `Restart` when the installation is complete
 
-> After installation, the laptop will load PopOS by default from now on. To use Windows 10, press or hold the `ESC` key when the `Republic of Gamers` logo is seen and select `Windows Boot Manager` each time.
+> After installation, the laptop will load PopOS by default. To use Windows 10, press or hold the `ESC` key when on the screen with `Republic of Gamers` logo and select `Windows Boot Manager` each time.
 
 # Setup after installation
 
-## ASUS Packages
+## System Time in Windows & PopOS
+Update the below `timedatectl` configuration in PopOS. Details are available at [support.system76.com](https://support.system76.com/articles/dual-booting/)
+
+```
+timedatectl set-local-rtc 1 --adjust-system-clock
+```
+Verify the change by executing below command. You should see `RTC in local TZ` configaration as `yes`.
+```
+timedatectl
+```
+
+## ASUS Packages (Only on PopOS 20.10 and older)
 Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at [gitlab.com](https://gitlab.com/asus-linux/asus-nb-ctrl#implemented).
 - [hid-asus-rog](https://gitlab.com/asus-linux/hid-asus-rog)
 - [asus-rog-nb-wmi](https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi)
@@ -61,8 +72,8 @@ apt-get update
 apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
 ```
 
-## Volume Control
-Add below lines to `/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common` file, just before the `[Element PCM]` section. This will also make the `mute the microphone` button usable.
+## Volume Control (Only on PopOS 20.10 and older)
+Add below lines to the file at location `/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common`, just before the `[Element PCM]` section. It will also make the `mute the microphone` button usable.
 
 ```
 [Element Master]
@@ -72,25 +83,12 @@ volume = ignore
 
 ![Pulse Audio Configuration](pulseaudio-config.png)
 
-## System Time in Windows & PopOS
-Update the below `timedatectl` configuration in PopOS. Details are available at [support.system76.com](https://support.system76.com/articles/dual-booting/)
-
-```
-timedatectl set-local-rtc 1 --adjust-system-clock
-```
-
-## Text on screen too small
+## Text on screen too small (Only on PopOS 20.10 and older)
 Out of the box, the text on the screen is too small to read. Enable `Fractional Scaling` in `Settings > Displays` to 125% or 150% for a comfortable reading.
 
 ![Display Fractional Scaling](displays-fractional-scaling.png)
 
-# Known Issues
-- No fingerprint login
-- No display in external monitor using the USB-C port (external display using HDMI port works)
-
 # Test Laptop
-The above steps are tested on the below laptop model.
-
 [ASUS ROG Zephyrus G14 GA401IH-HE012T](https://amzn.to/35NWlNN)
 - AMD Ryzen 5 4600HS
 - NVIDIA GeForce GTX 1650 4GB GDDR6 VRAM
