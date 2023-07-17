@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>https://abskmj.github.io/notes/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>PopOS on ASUS ROG Zephyrus G14 Laptop</title><link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</link><pubDate>Mon, 17 Jul 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</guid><description>Install the latest version of PopOS along side Windows 10 in a multi-boot setup.</description><content>&lt;p>Install the latest version of PopOS along side Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>https://abskmj.github.io/notes/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2017 abskmj</copyright><lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>PopOS on ASUS ROG Zephyrus G14 Laptop</title><link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</link><pubDate>Mon, 17 Jul 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</guid><description>Install the latest version of PopOS alongside Windows 10 in a multi-boot setup.</description><content>&lt;p>Install the latest version of PopOS alongside Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.&lt;/p>
 &lt;h1 id="update---popos-2110-and-newer">Update - PopOS 21.10 and newer&lt;/h1>
 &lt;p>I recommend using the latest version as most of the features will work out of the box without needing to install adding packages as documented.&lt;/p>
 &lt;p>Still doesn&amp;rsquo;t work:&lt;/p>
@@ -9,13 +9,13 @@
 &lt;/ul>
 &lt;h1 id="demo-mode-on-live-usb">Demo Mode on Live USB&lt;/h1>
 &lt;blockquote>
-&lt;p>Fast startup option in Windows 10 and the secure boot option in BIOS needs to be disabled&lt;/p>
+&lt;p>Fast startup option in Windows 10 and the secure boot option in BIOS need to be disabled&lt;/p>
 &lt;/blockquote>
 &lt;ul>
 &lt;li>Download the latest version of PopOS with NVIDIA drivers ISO from &lt;a href="https://pop.system76.com/">the official site&lt;/a>&lt;/li>
 &lt;li>Create a live USB following &lt;a href="https://support.system76.com/articles/live-disk/">the guide&lt;/a>&lt;/li>
-&lt;li>Restart the laptop and press or hold the &lt;code>ESC&lt;/code> key when on the screen with &lt;code>Republic of Gamers&lt;/code> logo&lt;/li>
-&lt;li>Select second EFI partition to boot into PopOS from USB&lt;/li>
+&lt;li>Restart the laptop and press or hold the &lt;code>ESC&lt;/code> key when on the screen with the &lt;code>Republic of Gamers&lt;/code> logo&lt;/li>
+&lt;li>Select the second EFI partition to boot into PopOS from USB&lt;/li>
 &lt;li>Follow &lt;a href="https://support.system76.com/articles/install-pop/">the guide&lt;/a> to try the Demo Mode&lt;/li>
 &lt;/ul>
 &lt;h1 id="install-on-ssd">Install on SSD&lt;/h1>
@@ -83,19 +83,21 @@
 &lt;p>After installation, the laptop will load PopOS by default. To use Windows 10, press or hold the &lt;code>ESC&lt;/code> key when on the screen with &lt;code>Republic of Gamers&lt;/code> logo and select &lt;code>Windows Boot Manager&lt;/code> each time.&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="setup-after-installation">Setup after installation&lt;/h1>
+&lt;h2 id="monitor-over-usb-c">Monitor over USB-C&lt;/h2>
+&lt;p>Make sure &lt;code>NVIDIA Graphics&lt;/code> is enabled for this feature to work. Please click on the battery icon on the taskbar, and again on the battery menu.&lt;/p>
 &lt;h2 id="system-time-in-windows--popos">System Time in Windows &amp;amp; PopOS&lt;/h2>
 &lt;p>Update the below &lt;code>timedatectl&lt;/code> configuration in PopOS. Details are available at &lt;a href="https://support.system76.com/articles/dual-booting/">support.system76.com&lt;/a>&lt;/p>
 &lt;pre tabindex="0">&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
-&lt;/code>&lt;/pre>&lt;p>Verify the change by executing below command. You should see &lt;code>RTC in local TZ&lt;/code> configaration as &lt;code>yes&lt;/code>.&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>Verify the change by executing the below command. You should see the &lt;code>RTC in local TZ&lt;/code> configuration as &lt;code>yes&lt;/code>.&lt;/p>
 &lt;pre tabindex="0">&lt;code>timedatectl
 &lt;/code>&lt;/pre>&lt;h2 id="asus-packages-only-on-popos-2010-and-older">ASUS Packages (Only on PopOS 20.10 and older)&lt;/h2>
-&lt;p>Install below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at &lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl#implemented">gitlab.com&lt;/a>.&lt;/p>
+&lt;p>Install the below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at &lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl#implemented">gitlab.com&lt;/a>.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://gitlab.com/asus-linux/hid-asus-rog">hid-asus-rog&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi">asus-rog-nb-wmi&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl">asus-nb-ctrl&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>Add these packages using package manager&lt;/p>
+&lt;p>Add these packages using the package manager&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span> | sudo tee /etc/apt/sources.list.d/asus.list
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get update
@@ -107,7 +109,7 @@ switch = mute
 volume = ignore
 &lt;/code>&lt;/pre>&lt;p>&lt;img src="pulseaudio-config.png" alt="Pulse Audio Configuration">&lt;/p>
 &lt;h2 id="text-on-screen-too-small-only-on-popos-2010-and-older">Text on screen too small (Only on PopOS 20.10 and older)&lt;/h2>
-&lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for a comfortable reading.&lt;/p>
+&lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for comfortable reading.&lt;/p>
 &lt;p>&lt;img src="displays-fractional-scaling.png" alt="Display Fractional Scaling">&lt;/p>
 &lt;h1 id="test-laptop">Test Laptop&lt;/h1>
 &lt;p>&lt;a href="https://amzn.to/35NWlNN">ASUS ROG Zephyrus G14 GA401IH-HE012T&lt;/a>&lt;/p>
