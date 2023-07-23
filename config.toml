@@ -51,7 +51,7 @@ summaryLength = 10
     # subtitle = "A simple, retro theme for Hugo"
     owner = "abskmj"
     keywords = ""
-    copyright = "&copy; 2017 abskmj"
+    copyright = "&copy; abskmj"
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
@@ -64,9 +64,9 @@ summaryLength = 10
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "twitter"
-        name = "Twitter"
-        url = "https://twitter.com/abskmj"
+        identifier = "email"
+        name = "Email"
+        url = "mailto:contact-abskmj.dragonclaw@erine.email"
       [[languages.en.menu.main]]
         identifier = "github"
         name = "Github"
