@@ -24,7 +24,7 @@ summaryLength = 10
   centerTheme = true
 
   # set a custom favicon (default is a `themeColor` square)
-  favicon = "https://github.com/abskmj.png"
+  favicon = "https://avatars.githubusercontent.com/u/29548356?s=32&v=4"
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
