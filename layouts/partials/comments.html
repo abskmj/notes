@@ -1,4 +1,4 @@
-<div class="pagination">
+<div id="sponsor" class="pagination">
   <div class="pagination__title">
     <span class="pagination__title-h">Sponsor</span>
     <hr>
@@ -13,26 +13,7 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    fetch("/notes/sponsors.json")
-      .then(response => response.json())
-      .then(json => {
-        const sponsor = json[Math.floor(Math.random() * json.length)]
-
-        const link = document.getElementById("sponsor-link")
-        link.setAttribute('href', sponsor.link)
-        link.onclick = function () {
-          gtag('event', 'sponsor', {
-            'event_category': 'link',
-            'event_label': sponsor.name
-          });
-        }
-
-        document.getElementById("sponsor-text").textContent = sponsor.text
-      });
-  })
-</script>
+<script src="//ace-ally.onrender.com/next.js"></script>
 
 <div class="pagination">
   <div class="pagination__title">
