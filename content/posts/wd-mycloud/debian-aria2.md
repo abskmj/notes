@@ -1,6 +1,6 @@
 ---
 title: "Setup Aria2 Download Utility on Debian"
-date: 2023-07-01T00:00:00+05:30
+date: 2023-12-28T00:00:00+05:30
 tags: ["WD MyCloud", "Debian", "Jessie", "Aria2"]
 ---
 
@@ -9,10 +9,10 @@ There may be other ways to install the Aria2 download utility on Debian, but thi
 > [aria2](https://aria2.github.io/) is a lightweight multi-protocol & multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.
 
 # Install Aria2
-Get the latest Debian package for ARM architecture from [github.com](https://github.com/q3aql/aria2-static-builds/releases). For example, `aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb`. You can choose the version and architecture according to your need and machine.
+Get the latest Debian package for ARM architecture from [gitlab.com](https://gitlab.com/q3aql/aria2-static-builds). For example, `aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb`. You can choose the version and architecture according to your need and machine.
 
 ```bash
-dpkg -i aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb
+dpkg -i aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb
 ```
 
 # Create Configuration
