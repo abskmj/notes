@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>https://abskmj.github.io/notes/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Thu, 28 Dec 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup Aria2 Download Utility on Debian</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</link><pubDate>Thu, 28 Dec 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</guid><description>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).</description><content>&lt;p>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes</title><link>https://abskmj.github.io/notes/</link><description>Recent content on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>YouTube IPTV on any Device</title><link>https://abskmj.github.io/notes/posts/projects/youtube-live-channels/</link><pubDate>Sun, 18 Feb 2024 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/youtube-live-channels/</guid><description>Many public broadcasts and free-to-air channels are now available on YouTube as live videos.</description><content>&lt;p>Many public broadcasts and free-to-air channels are now available on YouTube as live videos. Most of the smart TVs and streaming boxes now support digital channels. These are channels that stream over the internet. The GitHub project enables the feature to add live channels on YouTube as digital channels on Smart TVs and streaming boxes.&lt;/p>
+&lt;p>It provides a playlist in M3U8 format of all live channels categorized by content and language. The playlist can be added to any IPTV player or client on any device to view the live channels.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/abskmj/iptv-youtube-live">abskmj/iptv-youtube-live&lt;/a> - M3U Playlists of Youtube live channels that add to any IPTV client&lt;/p>
+&lt;/blockquote>
+&lt;p>This tutorial documents the steps for an Android-based device.&lt;/p>
+&lt;h2 id="get-the-playlist">Get the Playlist&lt;/h2>
+&lt;p>The GitHub project generates multiple playlists based on the content and language. The playlists update at intervals to add any newly discovered channels or remove any video that is not live anymore.&lt;/p>
+&lt;p>For example, if you like watching Cartoons in English, add the below playlist.&lt;/p>
+&lt;pre tabindex="0">&lt;code>https://abskmj.github.io/iptv-youtube-live/kids-english.m3u8
+&lt;/code>&lt;/pre>&lt;p>Playlist with all the channels.&lt;/p>
+&lt;pre tabindex="0">&lt;code>https://abskmj.github.io/iptv-youtube-live/index.m3u8
+&lt;/code>&lt;/pre>&lt;h2 id="add-the-playlist">Add the Playlist&lt;/h2>
+&lt;p>I have tried many IPTV apps on my Android mobile and TV, but I recommend the &lt;a href="https://televizo.net/">Televizo&lt;/a> app. It provides a simple and easy-to-use experience on an Android mobile / TV. It has a free and a paid version.&lt;/p>
+&lt;ol>
+&lt;li>Open Televizo app&lt;/li>
+&lt;li>Click on the gear icon on the top right to open the settings screen&lt;/li>
+&lt;li>Click on &lt;code>Playlists&lt;/code> menu item&lt;/li>
+&lt;li>Click on the plus icon on the top right&lt;/li>
+&lt;li>Click on the &lt;code>New M3U Playlist&lt;/code> menu item&lt;/li>
+&lt;li>Type &lt;code>abskmj&lt;/code> as the playlist name&lt;/li>
+&lt;li>Paste the playlist link&lt;/li>
+&lt;/ol>
+&lt;p>You can repeat the above steps to add more playlists.&lt;/p></content></item><item><title>Setup Aria2 Download Utility on Debian</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</link><pubDate>Thu, 28 Dec 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</guid><description>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).</description><content>&lt;p>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a href="https://aria2.github.io/">aria2&lt;/a> is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.&lt;/p>
 &lt;/blockquote>
