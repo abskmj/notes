@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Youtube on Notes</title><link>https://abskmj.github.io/notes/tags/youtube/</link><description>Recent content in Youtube on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/youtube/index.xml" rel="self" type="application/rss+xml"/><item><title>YouTube IPTV on any Device</title><link>https://abskmj.github.io/notes/posts/projects/youtube-live-channels/</link><pubDate>Sun, 18 Feb 2024 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/youtube-live-channels/</guid><description>Many public broadcasts and free-to-air channels are now available on YouTube as live videos.</description><content>&lt;p>Many public broadcasts and free-to-air channels are now available on YouTube as live videos. Many smart TVs and streaming boxes support digital channels by adding a playlist. These stream over the internet rather than satellite or cable.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Youtube on Notes</title><link>https://abskmj.github.io/notes/tags/youtube/</link><description>Recent content in Youtube on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/youtube/index.xml" rel="self" type="application/rss+xml"/><item><title>YouTube Live Channels on any IPTV Client</title><link>https://abskmj.github.io/notes/posts/projects/youtube-live-channels/</link><pubDate>Sun, 18 Feb 2024 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/youtube-live-channels/</guid><description>Many public broadcasts and free-to-air channels are now available on YouTube as live videos.</description><content>&lt;p>Many public broadcasts and free-to-air channels are now available on YouTube as live videos. Many smart TVs and streaming boxes support digital channels by adding a playlist. These stream over the internet rather than satellite or cable.&lt;/p>
 &lt;h2 id="live-channels">Live Channels&lt;/h2>
-&lt;p>The &lt;a href="https://github.com/abskmj/iptv-youtube-live">GitHub project&lt;/a> provides playlists in M3U8 format of all live channels categorized by their content and language. The playlists can be added to any IPTV player or client on any device to view the live channels. They update automatically at intervals to add any newly discovered channels or remove any video that is not live anymore (using &lt;a href="https://github.com/features/actions">GitHub Actions&lt;/a>). A list of channels is available at &lt;a href="https://github.com/abskmj/iptv-youtube-live/blob/main/channels.csv">Github&lt;/a>.&lt;/p>
+&lt;p>The &lt;a href="https://github.com/abskmj/iptv-youtube-live">GitHub project&lt;/a> provides playlists in M3U8 format of all live channels categorized by their content and language. The playlists can be added to any IPTV player or client on any device to view the live channels. They update automatically at intervals to add any newly discovered channels or remove any video that is not live anymore (using &lt;a href="https://github.com/features/actions">GitHub Actions&lt;/a>). A list of channels is available at &lt;a href="https://github.com/abskmj/iptv-youtube-live/blob/main/channels.csv">GitHub&lt;/a>.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a href="https://github.com/abskmj/iptv-youtube-live">abskmj/iptv-youtube-live&lt;/a> - M3U Playlists of Youtube live channels that add to any IPTV client&lt;/p>
 &lt;/blockquote>
@@ -33,12 +33,13 @@ https://ythls-v2.onrender.com/video/Nq2wYlWFucg.m3u8
 &lt;/code>&lt;/pre>&lt;p>All group playlists are available at &lt;a href="https://github.com/abskmj/iptv-youtube-live/tree/gh-pages">Github&lt;/a>. Add &lt;code>https://abskmj.github.io/iptv-youtube-live/&lt;/code> before the name of a playlist to get its link.&lt;/p>
 &lt;h3 id="add-playlist">Add Playlist&lt;/h3>
 &lt;p>I have tried many IPTV apps on my Android mobile and TV, but I recommend the &lt;a href="https://televizo.net/">Televizo&lt;/a> app. It provides a simple and easy-to-use experience on an Android mobile / TV. It has a free and a paid version.&lt;/p>
-&lt;pre>&lt;code>1. Open Televizo app
-2. Click on the gear icon on the top right to open the settings screen
-3. Click on `Playlists` menu item
-4. Click on the plus icon on the top right
-5. Click on the `New M3U Playlist` menu item
-6. Type `abskmj` as the playlist name
-7. Paste the playlist link
-&lt;/code>&lt;/pre>
+&lt;ol>
+&lt;li>Open Televizo app&lt;/li>
+&lt;li>Click on the gear icon on the top right to open the settings screen&lt;/li>
+&lt;li>Click on &lt;code>Playlists&lt;/code> menu item&lt;/li>
+&lt;li>Click on the plus icon on the top right&lt;/li>
+&lt;li>Click on the &lt;code>New M3U Playlist&lt;/code> menu item&lt;/li>
+&lt;li>Type &lt;code>abskmj&lt;/code> as the playlist name&lt;/li>
+&lt;li>Paste the playlist link&lt;/li>
+&lt;/ol>
 &lt;p>You can repeat the above steps to add more playlists.&lt;/p></content></item></channel></rss>
