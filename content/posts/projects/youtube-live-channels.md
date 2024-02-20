@@ -1,5 +1,5 @@
 ---
-title: "YouTube IPTV on any Device"
+title: "YouTube Live Channels on any IPTV Client"
 date: 2024-02-18T00:00:00+05:30
 tags: ["Project","Youtube","IPTV","M3U","Playlist"]
 ---
@@ -7,7 +7,7 @@ tags: ["Project","Youtube","IPTV","M3U","Playlist"]
 Many public broadcasts and free-to-air channels are now available on YouTube as live videos. Many smart TVs and streaming boxes support digital channels by adding a playlist. These stream over the internet rather than satellite or cable.
 
 ## Live Channels
-The [GitHub project](https://github.com/abskmj/iptv-youtube-live) provides playlists in M3U8 format of all live channels categorized by their content and language. The playlists can be added to any IPTV player or client on any device to view the live channels. They update automatically at intervals to add any newly discovered channels or remove any video that is not live anymore (using [GitHub Actions](https://github.com/features/actions)). A list of channels is available at [Github](https://github.com/abskmj/iptv-youtube-live/blob/main/channels.csv).
+The [GitHub project](https://github.com/abskmj/iptv-youtube-live) provides playlists in M3U8 format of all live channels categorized by their content and language. The playlists can be added to any IPTV player or client on any device to view the live channels. They update automatically at intervals to add any newly discovered channels or remove any video that is not live anymore (using [GitHub Actions](https://github.com/features/actions)). A list of channels is available at [GitHub](https://github.com/abskmj/iptv-youtube-live/blob/main/channels.csv).
 
 > [abskmj/iptv-youtube-live](https://github.com/abskmj/iptv-youtube-live) - M3U Playlists of Youtube live channels that add to any IPTV client 
 
@@ -56,12 +56,12 @@ All group playlists are available at [Github](https://github.com/abskmj/iptv-you
 ### Add Playlist
 I have tried many IPTV apps on my Android mobile and TV, but I recommend the [Televizo](https://televizo.net/) app. It provides a simple and easy-to-use experience on an Android mobile / TV. It has a free and a paid version.
 
-	1. Open Televizo app
-	2. Click on the gear icon on the top right to open the settings screen
-	3. Click on `Playlists` menu item
-	4. Click on the plus icon on the top right
-	5. Click on the `New M3U Playlist` menu item
-	6. Type `abskmj` as the playlist name
-	7. Paste the playlist link
+1. Open Televizo app
+2. Click on the gear icon on the top right to open the settings screen
+3. Click on `Playlists` menu item
+4. Click on the plus icon on the top right
+5. Click on the `New M3U Playlist` menu item
+6. Type `abskmj` as the playlist name
+7. Paste the playlist link
 
 You can repeat the above steps to add more playlists.
