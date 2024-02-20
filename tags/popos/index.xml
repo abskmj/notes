@@ -107,10 +107,10 @@
 &lt;pre tabindex="0">&lt;code>[Element Master]
 switch = mute
 volume = ignore
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="pulseaudio-config.png" alt="Pulse Audio Configuration">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img alt="Pulse Audio Configuration" src="https://abskmj.github.io/notes/notes/posts/rog-zephyrus-g14/popos/pulseaudio-config.png">&lt;/p>
 &lt;h2 id="text-on-screen-too-small-only-on-popos-2010-and-older">Text on screen too small (Only on PopOS 20.10 and older)&lt;/h2>
 &lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for comfortable reading.&lt;/p>
-&lt;p>&lt;img src="displays-fractional-scaling.png" alt="Display Fractional Scaling">&lt;/p>
+&lt;p>&lt;img alt="Display Fractional Scaling" src="https://abskmj.github.io/notes/notes/posts/rog-zephyrus-g14/popos/displays-fractional-scaling.png">&lt;/p>
 &lt;h1 id="test-laptop">Test Laptop&lt;/h1>
 &lt;p>&lt;a href="https://amzn.to/35NWlNN">ASUS ROG Zephyrus G14 GA401IH-HE012T&lt;/a>&lt;/p>
 &lt;ul>

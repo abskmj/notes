@@ -51,8 +51,8 @@ Live Preview - Chart for PancakeSwap Token (CAKE)
 &lt;/p>
 &lt;/div>
 &lt;h2 id="screenshots">Screenshots&lt;/h2>
-&lt;p>&lt;img src="chart.png" alt="TradingView Chart">&lt;/p>
-&lt;p>&lt;img src="timeframes.png" alt="TradingView Chart">&lt;/p>
+&lt;p>&lt;img alt="TradingView Chart" src="https://abskmj.github.io/notes/notes/posts/trading-view-charts/bmc-extra-pancake/chart.png">&lt;/p>
+&lt;p>&lt;img alt="TradingView Chart" src="https://abskmj.github.io/notes/notes/posts/trading-view-charts/bmc-extra-pancake/timeframes.png">&lt;/p>
 &lt;h1 id="how-to-use-it">How to use it?&lt;/h1>
 &lt;p>You can view the chart by starting a local server and opening it in your browser. You can also host it with any HTTP server like Nginx and Apache on a remote server. These are static files and don&amp;rsquo;t need a server component other than to host them.&lt;/p>
 &lt;h1 id="before-you-buy">Before you buy&lt;/h1>
