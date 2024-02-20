@@ -66,7 +66,7 @@ summaryLength = 10
       [[languages.en.menu.main]]
         identifier = "email"
         name = "Email"
-        url = "mailto:contact-abskmj.dragonclaw@erine.email"
+        url = "mailto:contact.abskmj@gmail.com"
       [[languages.en.menu.main]]
         identifier = "github"
         name = "Github"
