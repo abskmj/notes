@@ -12,19 +12,21 @@ The server provides the HLS (live streaming) link for a YouTube channel or video
 3. Extract the downloaded zip file.
 
 ## How to use it?
-1. Upload the executable to your machine
-2. Assign the executable the permission to run 
+- Upload the executable to your machine
+- Assign the executable the permission to run 
 ```bash
 chmod +x ./youtube-hls-server
 ```
-3. Start the server
+
+- Start the server
 ```bash
 ./youtube-hls-server
 
 # output
 server listening on port: 3333
 ```
-4. Open the URL on the browser
+
+- Open the URL on the browser
 ```bash
 $server/
 
@@ -35,7 +37,7 @@ $server/
 <domain>/
 ```
 
-5. (optional) Change the port of the server
+- (optional) Change the port of the server
 ```bash
 PORT=8080 ./youtube-hls-server
 
