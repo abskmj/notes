@@ -16,7 +16,7 @@ The project uses an API service to get a live stream of a YouTube video in  HLS 
 
 ### YouTube Channel
 It picks up the live feed of a YouTube channel. It works when a YouTube channel has a single live feed or goes live frequently. It might not work when a channel has multiple live feeds simultaneously. Please use the video link for this case.
-```
+```bash
 # format of the link
 https://ythls-v2.onrender.com/channel/$youtube_channel_id.m3u8
 
@@ -25,7 +25,7 @@ https://ythls-v2.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.m3u8
 ```
 ### Youtube Video
 It picks up the live feed of a YouTube video. It works when the video is live.
-```
+```bash
 # format of the link
 https://ythls-v2.onrender.com/video/$youtube_video_id.m3u8
 
@@ -41,13 +41,13 @@ The playlists are compatible with any IPTV player or client on any device. As an
 ### Get Playlist
 #### Master Playlist 
 It has all the live channels. It categorizes the channels into multiple groups based on their content and language. You would see a list of these groups and a `Ungrouped` section on the IPTV player.
-```
+```bash
 https://abskmj.github.io/iptv-youtube-live/index.m3u8
 ``` 
 
 #### Group Playlist 
 It has channels for a specific group. For example, if you like watching Cartoons in English, add the below playlist.
-```
+```bash
 https://abskmj.github.io/iptv-youtube-live/kids-english.m3u8
 ```
 
