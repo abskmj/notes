@@ -17,7 +17,7 @@ The server provides the HLS (live streaming) link for a YouTube channel or video
 ```bash
 chmod +x ./youtube-hls-server
 ```
-3.   Start the server
+3. Start the server
 ```bash
 ./youtube-hls-server
 
@@ -66,10 +66,10 @@ It picks up the live feed of a YouTube video. It works when the video is live.
 
 ```bash
 # format of the link
-https://ythls-v2.onrender.com/video/$youtube_video_id.m3u8
+$server/video/$youtube_video_id.m3u8
 
 # example
-https://ythls-v2.onrender.com/video/Nq2wYlWFucg.m3u8
+$server/video/Nq2wYlWFucg.m3u8
 ```
 
 ### JSON Metadata
@@ -78,10 +78,10 @@ The API provides information about the YouTube channel or video in JSON format.
 #### Youtube Channel
 ```bash
 # format of the link
-https://ythls-v2.onrender.com/channel/$youtube_channel_id.json
+$server/channel/$youtube_channel_id.json
 
 # example
-https://ythls-v2.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.json
+$server/channel/UCt4t-jeY85JegMlZ-E5UWtA.json
 
 # response
 {
@@ -94,10 +94,10 @@ https://ythls-v2.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.json
 #### Youtube Video
 ```bash
 # format of the link
-https://ythls-v2.onrender.com/video/$youtube_video_id.json
+$server/video/$youtube_video_id.json
 
 # example
-https://ythls-v2.onrender.com/video/Nq2wYlWFucg.json
+$server/video/Nq2wYlWFucg.json
 
 # response
 {
