@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HLS on Notes</title><link>https://abskmj.github.io/notes/tags/hls/</link><description>Recent content in HLS on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/hls/index.xml" rel="self" type="application/rss+xml"/><item><title>YouTube HLS Server</title><link>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</link><pubDate>Wed, 21 Feb 2024 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</guid><description>The server provides the HLS (live streaming) link for a YouTube channel or video.</description><content>&lt;p>The server provides the HLS (live streaming) link for a YouTube channel or video. Any video or IPTV player can play a YouTube live video using this link.&lt;/p>
 &lt;h2 id="how-to-get-it">How to get it?&lt;/h2>
 &lt;ol>
-&lt;li>An executable of the server is available for purchase at &lt;a href="https://abskmj.github.io/notes/notes/">buyeacoffee.com&lt;/a>.&lt;/li>
+&lt;li>An executable of the server is available for purchase at &lt;a href="https://www.buymeacoffee.com/abskmj/e/223409">buyeacoffee.com&lt;/a>.&lt;/li>
 &lt;li>You will receive an email with a link to download.&lt;/li>
 &lt;li>Extract the downloaded zip file.&lt;/li>
 &lt;/ol>
@@ -87,5 +87,4 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;stream&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;&amp;lt;url&amp;gt;/index.m3u8&amp;#34;&lt;/span>, &lt;span style="color:#75715e"># hls of youtube video&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;status&amp;#34;&lt;/span>: &amp;lt;http_code&amp;gt; &lt;span style="color:#75715e"># response code from youtube&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="api-errors">API Errors&lt;/h3>
-&lt;h3 id="how-to-get-the-youtube-channel-id">How to get the YouTube channel ID&lt;/h3></content></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
