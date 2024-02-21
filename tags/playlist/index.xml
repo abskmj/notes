@@ -53,18 +53,18 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="youtube-video">Youtube Video&lt;/h4>
 &lt;p>It picks up the live feed of a YouTube video. It works when the video is live.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># format of the link&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/video/$youtube_video_id.m3u8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$server/video/$youtube_video_id.m3u8
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/video/Nq2wYlWFucg.m3u8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$server/video/Nq2wYlWFucg.m3u8
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="json-metadata">JSON Metadata&lt;/h3>
 &lt;p>The API provides information about the YouTube channel or video in JSON format.&lt;/p>
 &lt;h4 id="youtube-channel-1">Youtube Channel&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># format of the link&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/channel/$youtube_channel_id.json
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$server/channel/$youtube_channel_id.json
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.json
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$server/channel/UCt4t-jeY85JegMlZ-E5UWtA.json
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># response&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">{&lt;/span>
@@ -75,10 +75,10 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="youtube-video-1">Youtube Video&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># format of the link&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/video/$youtube_video_id.json
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$server/video/$youtube_video_id.json
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/video/Nq2wYlWFucg.json
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$server/video/Nq2wYlWFucg.json
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># response&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">{&lt;/span>
