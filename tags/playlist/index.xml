@@ -8,17 +8,19 @@
 &lt;p>The project uses an API service to get a live stream of a YouTube video in HLS or M3U format.&lt;/p>
 &lt;h3 id="youtube-channel">YouTube Channel&lt;/h3>
 &lt;p>It picks up the live feed of a YouTube channel. It works when a YouTube channel has a single live feed or goes live frequently. It might not work when a channel has multiple live feeds simultaneously. Please use the video link for this case.&lt;/p>
-&lt;pre tabindex="0">&lt;code># format of the link
-https://ythls-v2.onrender.com/channel/$youtube_channel_id.m3u8
-# example
-https://ythls-v2.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.m3u8
-&lt;/code>&lt;/pre>&lt;h3 id="youtube-video">Youtube Video&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># format of the link&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/channel/$youtube_channel_id.m3u8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.m3u8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="youtube-video">Youtube Video&lt;/h3>
 &lt;p>It picks up the live feed of a YouTube video. It works when the video is live.&lt;/p>
-&lt;pre tabindex="0">&lt;code># format of the link
-https://ythls-v2.onrender.com/video/$youtube_video_id.m3u8
-# example
-https://ythls-v2.onrender.com/video/Nq2wYlWFucg.m3u8
-&lt;/code>&lt;/pre>&lt;blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># format of the link&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/video/$youtube_video_id.m3u8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/video/Nq2wYlWFucg.m3u8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>Although I have taken great care to keep the service stable, please note that the service is hosted on a basic tier of a cloud provider to minimize the cost. It might not have sufficient resources to handle numerous requests at a time. If you need a stable service, I would suggest you deploy this service with your cloud provider. An executable of this service is available for download.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="setup-iptv">Setup IPTV&lt;/h2>
@@ -26,11 +28,11 @@ https://ythls-v2.onrender.com/video/Nq2wYlWFucg.m3u8
 &lt;h3 id="get-playlist">Get Playlist&lt;/h3>
 &lt;h4 id="master-playlist">Master Playlist&lt;/h4>
 &lt;p>It has all the live channels. It categorizes the channels into multiple groups based on their content and language. You would see a list of these groups and a &lt;code>Ungrouped&lt;/code> section on the IPTV player.&lt;/p>
-&lt;pre tabindex="0">&lt;code>https://abskmj.github.io/iptv-youtube-live/index.m3u8
-&lt;/code>&lt;/pre>&lt;h4 id="group-playlist">Group Playlist&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>https://abskmj.github.io/iptv-youtube-live/index.m3u8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="group-playlist">Group Playlist&lt;/h4>
 &lt;p>It has channels for a specific group. For example, if you like watching Cartoons in English, add the below playlist.&lt;/p>
-&lt;pre tabindex="0">&lt;code>https://abskmj.github.io/iptv-youtube-live/kids-english.m3u8
-&lt;/code>&lt;/pre>&lt;p>All group playlists are available at &lt;a href="https://github.com/abskmj/iptv-youtube-live/tree/gh-pages">Github&lt;/a>. Add &lt;code>https://abskmj.github.io/iptv-youtube-live/&lt;/code> before the name of a playlist to get its link.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>https://abskmj.github.io/iptv-youtube-live/kids-english.m3u8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All group playlists are available at &lt;a href="https://github.com/abskmj/iptv-youtube-live/tree/gh-pages">Github&lt;/a>. Add &lt;code>https://abskmj.github.io/iptv-youtube-live/&lt;/code> before the name of a playlist to get its link.&lt;/p>
 &lt;h3 id="add-playlist">Add Playlist&lt;/h3>
 &lt;p>I have tried many IPTV apps on my Android mobile and TV, but I recommend the &lt;a href="https://televizo.net/">Televizo&lt;/a> app. It provides a simple and easy-to-use experience on an Android mobile / TV. It has a free and a paid version.&lt;/p>
 &lt;ol>
