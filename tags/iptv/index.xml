@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IPTV on Notes</title><link>https://abskmj.github.io/notes/tags/iptv/</link><description>Recent content in IPTV on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/iptv/index.xml" rel="self" type="application/rss+xml"/><item><title>YouTube HLS Server</title><link>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</link><pubDate>Wed, 21 Feb 2024 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</guid><description>The server provides the HLS (live streaming) link for a YouTube channel or video.</description><content>&lt;p>The server provides the HLS (live streaming) link for a YouTube channel or video. Any video or IPTV player can play a YouTube live video using this link.&lt;/p>
 &lt;h2 id="how-to-get-it">How to get it?&lt;/h2>
 &lt;ol>
-&lt;li>An executable of the server is available for purchase at &lt;a href="https://www.buymeacoffee.com/abskmj/e/223409">buyeacoffee.com&lt;/a>.&lt;/li>
+&lt;li>An executable of the server is available for purchase at &lt;a href="https://www.buymeacoffee.com/abskmj/e/223409">buymeacoffee.com&lt;/a>.&lt;/li>
 &lt;li>You will receive an email with a link to download.&lt;/li>
 &lt;li>Extract the downloaded zip file.&lt;/li>
 &lt;/ol>
