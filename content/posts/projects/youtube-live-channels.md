@@ -1,5 +1,5 @@
 ---
-title: "YouTube Live Channels on any IPTV Client"
+title: "YouTube Live Channels on any IPTV Player"
 date: 2024-02-18T00:00:00+05:30
 tags: ["Project","Youtube","IPTV","M3U","Playlist"]
 ---
@@ -33,7 +33,7 @@ https://ythls-v2.onrender.com/video/$youtube_video_id.m3u8
 https://ythls-v2.onrender.com/video/Nq2wYlWFucg.m3u8
 ```
 
-> Although I have taken great care to keep the service stable, please note that the service is hosted on a basic tier of a cloud provider to minimize the cost. It might not have sufficient resources to handle numerous requests at a time. If you need a stable service, I would suggest you deploy this service with your cloud provider. An executable of this service is available for [download]({{< ref "debian-jessie-sources.md" >}}).
+> Although I have taken great care to keep the service stable, please note that the service is hosted on a basic tier of a cloud provider to minimize the cost. It might not have sufficient resources to handle numerous requests at a time. If you need a stable service, I would suggest you deploy this service with your cloud provider. An executable of this service is available for [download]({{< ref "youtube-hls-server.md" >}}).
 
 ## Setup IPTV
 The playlists are compatible with any IPTV player or client on any device. As an example, I have added the steps for an Android-based device.
