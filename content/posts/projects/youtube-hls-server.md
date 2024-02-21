@@ -7,7 +7,7 @@ tags: ["Project","Youtube","IPTV","M3U","Playlist", "HLS"]
 The server provides the HLS (live streaming) link for a YouTube channel or video. Any video or IPTV player can play a YouTube live video using this link.
 
 ## How to get it?
-1. An executable of the server is available for purchase at [buyeacoffee.com](https://www.buymeacoffee.com/abskmj/e/223409).
+1. An executable of the server is available for purchase at [buymeacoffee.com](https://www.buymeacoffee.com/abskmj/e/223409).
 2. You will receive an email with a link to download.
 3. Extract the downloaded zip file.
 
