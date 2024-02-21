@@ -1,18 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IPTV on Notes</title><link>https://abskmj.github.io/notes/tags/iptv/</link><description>Recent content in IPTV on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/iptv/index.xml" rel="self" type="application/rss+xml"/><item><title>YouTube HLS Server</title><link>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</link><pubDate>Wed, 21 Feb 2024 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</guid><description>The server provides a set of APIs.
-HLS Link JSON Metadata HLS Link The link has a .</description><content>&lt;p>The server provides a set of APIs.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IPTV on Notes</title><link>https://abskmj.github.io/notes/tags/iptv/</link><description>Recent content in IPTV on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/iptv/index.xml" rel="self" type="application/rss+xml"/><item><title>YouTube HLS Server</title><link>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</link><pubDate>Wed, 21 Feb 2024 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</guid><description>The server provides the HLS (live streaming) link for a YouTube channel or video.</description><content>&lt;p>The server provides the HLS (live streaming) link for a YouTube channel or video. Any video or IPTV player can play a YouTube live video using this link.&lt;/p>
+&lt;h2 id="how-to-get-it">How to get it?&lt;/h2>
 &lt;ol>
-&lt;li>HLS Link&lt;/li>
-&lt;li>JSON Metadata&lt;/li>
+&lt;li>An executable of the server is available for purchase at &lt;a href="https://abskmj.github.io/notes/notes/">buyeacoffee.com&lt;/a>.&lt;/li>
+&lt;li>You will receive an email with a link to download.&lt;/li>
+&lt;li>Extract the downloaded zip file.&lt;/li>
 &lt;/ol>
+&lt;h2 id="how-to-use-it">How to use it?&lt;/h2>
+&lt;ol>
+&lt;li>Upload the executable to your machine&lt;/li>
+&lt;li>Assign the executable the permission to run&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>chmod +x ./youtube-hls-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>Start the server&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>./youtube-hls-server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># output&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>server listening on port: &lt;span style="color:#ae81ff">3333&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>Open the URL on the browser&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$server/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># IP with port&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;ip&amp;gt;:3333/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Domain without port&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;domain&amp;gt;/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>(optional) Change the port of the server&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>PORT&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">8080&lt;/span> ./youtube-hls-server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># output&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>server listening on port: &lt;span style="color:#ae81ff">8080&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="before-you-buy">Before you buy?&lt;/h2>
+&lt;ol>
+&lt;li>The executable supports Linux machines with &lt;code>amd64&lt;/code> architecture only. Most of the cloud providers provision machines with this architecture by default.&lt;/li>
+&lt;li>The server connects to youtube.com for each request. If you send many requests in a short time, YouTube will impose a rate limit on your server. Requests over the rate limit will fail with the &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429">&lt;code>429 Too Many Requests&lt;/code>&lt;/a> error status code. To avoid this, consider adding a cache before the server. If you are planning to use the server for you and your family, there is a low chance of hitting the rate limit.&lt;/li>
+&lt;/ol>
+&lt;h2 id="server">Server&lt;/h2>
 &lt;h3 id="hls-link">HLS Link&lt;/h3>
 &lt;p>The link has a &lt;code>.m3u8&lt;/code> extension, a popular extension for a live stream. Most IPTV players are compatible with this format. It redirects to the &lt;a href="https://en.wikipedia.org/wiki/HTTP_Live_Streaming">HLS&lt;/a> streaming feed of the YouTube video. When successful, it responds with a &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302">&lt;code>302 Found&lt;/code>&lt;/a> status code.&lt;/p>
 &lt;h4 id="youtube-channel">Youtube Channel&lt;/h4>
 &lt;p>It picks up the live feed of a YouTube channel. It works when a YouTube channel has a single live feed or goes live frequently. It might not work when a channel has multiple live feeds simultaneously. Please use the video link for this case.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># format of the link&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/channel/$youtube_channel_id.m3u8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$server/channel/$youtube_channel_id.m3u8
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># example&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://ythls-v2.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.m3u8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$server/channel/UCt4t-jeY85JegMlZ-E5UWtA.m3u8
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="youtube-video">Youtube Video&lt;/h4>
 &lt;p>It picks up the live feed of a YouTube video. It works when the video is live.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># format of the link&lt;/span>
