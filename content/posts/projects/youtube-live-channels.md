@@ -18,19 +18,19 @@ The project uses an API service to get a live stream of a YouTube video in  HLS 
 It picks up the live feed of a YouTube channel. It works when a YouTube channel has a single live feed or goes live frequently. It might not work when a channel has multiple live feeds simultaneously. Please use the video link for this case.
 ```bash
 # format of the link
-https://ythls-v2.onrender.com/channel/$youtube_channel_id.m3u8
+https://ythls-v3.onrender.com/channel/$youtube_channel_id.m3u8
 
 # example
-https://ythls-v2.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.m3u8
+https://ythls-v3.onrender.com/channel/UCt4t-jeY85JegMlZ-E5UWtA.m3u8
 ```
 ### Youtube Video
 It picks up the live feed of a YouTube video. It works when the video is live.
 ```bash
 # format of the link
-https://ythls-v2.onrender.com/video/$youtube_video_id.m3u8
+https://ythls-v3.onrender.com/video/$youtube_video_id.m3u8
 
 # example
-https://ythls-v2.onrender.com/video/Nq2wYlWFucg.m3u8
+https://ythls-v3.onrender.com/video/Nq2wYlWFucg.m3u8
 ```
 
 > Although I have taken great care to keep the service stable, please note that the service is hosted on a basic tier of a cloud provider to minimize the cost. It might not have sufficient resources to handle numerous requests at a time. If you need a stable service, I would suggest you deploy this service with your cloud provider. An executable of this service is available for [download]({{< ref "youtube-hls-server.md" >}}).
