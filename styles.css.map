@@ -3,7 +3,7 @@
 	"file": "styles.css",
 	"sourceRoot": "/home/runner/work/notes/notes",
 	"sources": [
-		"/css/base.scss",
+		"css/base.scss",
 		"themes/terminal/assets/css/variables.scss",
 		"themes/terminal/assets/css/font.scss",
 		"themes/terminal/assets/css/buttons.scss",
