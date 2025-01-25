@@ -1,21 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lint on Notes</title><link>https://abskmj.github.io/notes/tags/lint/</link><description>Recent content in Lint on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/lint/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure ES Lint with Airbnb rules for a Node.js Application</title><link>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</link><pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</guid><description>Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.</description><content>&lt;h2 id="install-es-lint-modules">Install ES Lint modules&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install --save-dev eslint-plugin-import eslint
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-airbnb-config">Install Airbnb config&lt;/h2>
-&lt;p>Use the base version for Node.js applications. They also publish a version for React applications as &lt;code>eslint-config-airbnb&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install --save-dev eslint-config-airbnb-base
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config-file">Config File&lt;/h2>
-&lt;p>Create a &lt;code>.eslintrc&lt;/code> file with following contents to Airbnb rules for the Node.js Application.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;extends&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint-config-airbnb-base&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="npm-scripts">NPM Scripts&lt;/h2>
-&lt;p>Create few npm scripts to integrate linting into development flow.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>:{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;node .&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;lint&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint --fix .&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;dev&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;nodemon --exec &amp;#39;npm run lint &amp;amp;&amp;amp; npm run start&amp;#39;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vs-code">VS Code&lt;/h2>
-&lt;p>There is an extension on VS Code for ES Lint, available at &lt;a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&lt;/a>&lt;/p></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lint on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/lint/</link>
+    <description>Recent content in Lint on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/lint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure ES Lint with Airbnb rules for a Node.js Application</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</guid>
+      <description>&lt;h2 id=&#34;install-es-lint-modules&#34;&gt;Install ES Lint modules&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install --save-dev eslint-plugin-import eslint
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-airbnb-config&#34;&gt;Install Airbnb config&lt;/h2&gt;
+&lt;p&gt;Use the base version for Node.js applications. They also publish a version for React applications as &lt;code&gt;eslint-config-airbnb&lt;/code&gt;.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;install-es-lint-modules&#34;&gt;Install ES Lint modules&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install --save-dev eslint-plugin-import eslint
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-airbnb-config&#34;&gt;Install Airbnb config&lt;/h2&gt;
+&lt;p&gt;Use the base version for Node.js applications. They also publish a version for React applications as &lt;code&gt;eslint-config-airbnb&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install --save-dev eslint-config-airbnb-base
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;config-file&#34;&gt;Config File&lt;/h2&gt;
+&lt;p&gt;Create a &lt;code&gt;.eslintrc&lt;/code&gt; file with following contents to Airbnb rules for the Node.js Application.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;extends&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eslint-config-airbnb-base&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;npm-scripts&#34;&gt;NPM Scripts&lt;/h2&gt;
+&lt;p&gt;Create few npm scripts to integrate linting into development flow.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;:{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;start&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;node .&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lint&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eslint --fix .&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;dev&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;nodemon --exec &amp;#39;npm run lint &amp;amp;&amp;amp; npm run start&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vs-code&#34;&gt;VS Code&lt;/h2&gt;
+&lt;p&gt;There is an extension on VS Code for ES Lint, available at &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&#34;&gt;https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,40 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Glitch.com on Notes</title><link>https://abskmj.github.io/notes/tags/glitch.com/</link><description>Recent content in Glitch.com on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Mon, 18 Jun 2018 11:25:57 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/glitch.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Using a remote repository with Glitch.com</title><link>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</link><pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</guid><description>Glitch is a online workspace that support javascript for development with live previews.</description><content>&lt;p>&lt;a href="https://glitch.com/">Glitch&lt;/a> is a online workspace that support javascript for development with live previews.&lt;/p>
-&lt;p>A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.&lt;/p>
-&lt;p>Rather, a separate git repository can be set using the current project as working directory.&lt;/p>
-&lt;h2 id="create-a-separate-local-git-repository">Create a separate local Git repository&lt;/h2>
-&lt;ul>
-&lt;li>Create a folder for this new git repository.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir .git-remote
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd .git-remote
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Initialize an bare git repository.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git init --bare
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Add the remote repository&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote add orgin &lt;span style="color:#f92672">{{&lt;/span>remote_git_url&lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="using-new-git-repository">Using new Git Repository&lt;/h2>
-&lt;ul>
-&lt;li>All the git comands can be used by point the git directory to the new repository.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> &lt;span style="color:#f92672">{{&lt;/span>git_options&lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Commits:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> commit -am &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Push/Pull:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> push origin master
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="adding-an-alias">Adding an Alias&lt;/h2>
-&lt;ul>
-&lt;li>An alias can be added to glitch console by creating a &lt;code>.bash_profile&lt;/code> file in project root and adding:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias rgit&lt;span style="color:#f92672">=&lt;/span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Alias can be used:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rgit commit -m &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Glitch.com on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/glitch.com/</link>
+    <description>Recent content in Glitch.com on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Mon, 18 Jun 2018 11:25:57 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/glitch.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using a remote repository with Glitch.com</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</link>
+      <pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://glitch.com/&#34;&gt;Glitch&lt;/a&gt; is a online workspace that support javascript for development with live previews.&lt;/p&gt;</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://glitch.com/&#34;&gt;Glitch&lt;/a&gt; is a online workspace that support javascript for development with live previews.&lt;/p&gt;
+&lt;p&gt;A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.&lt;/p&gt;
+&lt;p&gt;Rather, a separate git repository can be set using the current project as working directory.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-separate-local-git-repository&#34;&gt;Create a separate local Git repository&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a folder for this new git repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir .git-remote
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd .git-remote
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Initialize an bare git repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init --bare
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Add the remote repository&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add orgin &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;remote_git_url&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-new-git-repository&#34;&gt;Using new Git Repository&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;All the git comands can be used by point the git directory to the new repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;git_options&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Commits:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; commit -am &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;new commit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Push/Pull:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; push origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;adding-an-alias&#34;&gt;Adding an Alias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;An alias can be added to glitch console by creating a &lt;code&gt;.bash_profile&lt;/code&gt; file in project root and adding:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias rgit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Alias can be used:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rgit commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;new commit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

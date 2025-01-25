@@ -1,46 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google Analytics on Notes</title><link>https://abskmj.github.io/notes/tags/google-analytics/</link><description>Recent content in Google Analytics on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Wed, 15 Nov 2017 18:02:07 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/google-analytics/index.xml" rel="self" type="application/rss+xml"/><item><title>Track API usage with Google Analytics</title><link>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</link><pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</guid><description>Google analytics is a popular tool to track your website usage.</description><content>&lt;p>Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://developers.google.com/analytics/devguides/collection/protocol/">Measurement Protocol&lt;/a> can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="api-hit">API Hit&lt;/h1>
-&lt;p>Each invocation of an API can be tracked as a unique event. Optionally, the response time in millisecond can be included as well.&lt;/p>
-&lt;pre tabindex="0">&lt;code>&amp;amp;t=event // Event hit type
-&amp;amp;ec=api // Event category: api
-&amp;amp;ea=invoke // Event action: invoke
-&amp;amp;el=registration // Event label: name of the API
-&amp;amp;ev=300 // Event value: (optional) response time in milliseconds
-&lt;/code>&lt;/pre>&lt;h2 id="user-session">User Session&lt;/h2>
-&lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
-&lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
-&lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/X-Forwarded-For">&lt;code>x-forwarded-for&lt;/code>&lt;/a> header is generally used by proxies to pass originating client&amp;rsquo;s IP.&lt;/li>
-&lt;li>IP value should be hashed to avoid collecting sensitive user or client information.&lt;/li>
-&lt;/ul>
-&lt;h2 id="user-analytics">User Analytics&lt;/h2>
-&lt;p>Most of this data is captured by processing user&amp;rsquo;s IP address and browser&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/User_agent">user agent&lt;/a>. In this case, user&amp;rsquo;s IP and UA is not passed to Google Analytics rather the server&amp;rsquo;s IP is passed. All the analytics will have details of the servers only.&lt;/p>
-&lt;p>To fix this, &lt;code>uip&lt;/code> &amp;amp; &lt;code>ua&lt;/code> fields can be used to set user information.&lt;/p>
-&lt;pre tabindex="0">&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
-&amp;amp;ua=Opera/9.80 // User agent override.
-&lt;/code>&lt;/pre>&lt;blockquote>
-&lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="sample-request">Sample Request&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// nodejs
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">request&lt;/span>({
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">uri&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/collect&amp;#39;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">body&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">method&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;POST&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}, &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>, &lt;span style="color:#a6e22e">response&lt;/span>, &lt;span style="color:#a6e22e">body&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Analytics on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/google-analytics/</link>
+    <description>Recent content in Google Analytics on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Wed, 15 Nov 2017 18:02:07 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/google-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Track API usage with Google Analytics</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</link>
+      <pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</guid>
+      <description>&lt;p&gt;Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/analytics/devguides/collection/protocol/&#34;&gt;Measurement Protocol&lt;/a&gt; can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;api-hit&#34;&gt;API Hit&lt;/h1&gt;
+&lt;p&gt;Each invocation of an API can be tracked as a unique event. Optionally, the response time in millisecond can be included as well.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;amp;t=event            // Event hit type
+&amp;amp;ec=api             // Event category: api
+&amp;amp;ea=invoke          // Event action: invoke
+&amp;amp;el=registration    // Event label: name of the API
+&amp;amp;ev=300             // Event value: (optional) response time in milliseconds
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;user-session&#34;&gt;User Session&lt;/h2&gt;
+&lt;p&gt;Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code&gt;cid&lt;/code&gt; field appropriately. Each unique value set will correspond to a new user.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;amp;cid=555    // Anonymous Client ID.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;cid&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hash&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;request&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;headers&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x-forwarded-for&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;request&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;connection&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;remoteAddress&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/X-Forwarded-For&#34;&gt;&lt;code&gt;x-forwarded-for&lt;/code&gt;&lt;/a&gt; header is generally used by proxies to pass originating client&amp;rsquo;s IP.&lt;/li&gt;
+&lt;li&gt;IP value should be hashed to avoid collecting sensitive user or client information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;user-analytics&#34;&gt;User Analytics&lt;/h2&gt;
+&lt;p&gt;Most of this data is captured by processing user&amp;rsquo;s IP address and browser&amp;rsquo;s &lt;a href=&#34;https://en.wikipedia.org/wiki/User_agent&#34;&gt;user agent&lt;/a&gt;. In this case, user&amp;rsquo;s IP and UA is not passed to Google Analytics rather the server&amp;rsquo;s IP is passed. All the analytics will have details of the servers only.&lt;/p&gt;
+&lt;p&gt;To fix this, &lt;code&gt;uip&lt;/code&gt; &amp;amp; &lt;code&gt;ua&lt;/code&gt; fields can be used to set user information.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;amp;uip=1.2.3.4     // IP address override.
+&amp;amp;ua=Opera/9.80   // User agent override.
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;I have published a npm module which allows such overrides &lt;a href=&#34;https://www.npmjs.com/package/@abskmj/google-analytics-tracker&#34;&gt;@abskmj/google-analytics-tracker&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sample-request&#34;&gt;Sample Request&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// nodejs
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;request&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;require&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;request&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;request&lt;/span&gt;({
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;baseUrl&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;uri&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/collect&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;method&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;response&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;body&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;body&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

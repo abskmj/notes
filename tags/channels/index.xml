@@ -1,32 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Channels on Notes</title><link>https://abskmj.github.io/notes/tags/channels/</link><description>Recent content in Channels on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/channels/index.xml" rel="self" type="application/rss+xml"/><item><title>Kodi channels on Android TV Home Screen</title><link>https://abskmj.github.io/notes/posts/android-tv/kodi-channels/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/android-tv/kodi-channels/</guid><description>Create custom Kodi channels to be shown on the home screen of an Android TV</description><content>&lt;p>Create custom Kodi channels to be shown on the home screen of an Android TV&lt;/p>
-&lt;h1 id="create-a-channel">Create a Channel&lt;/h1>
-&lt;ul>
-&lt;li>Navigate to &lt;code>Videos &amp;gt; Playlist &amp;gt; New smart playlist&lt;/code> to create a smart playlist on Kodi.&lt;/li>
-&lt;li>Navigate to &lt;code>Customize Channels &amp;gt; Kodi&lt;/code> on the Android TV home screen.&lt;/li>
-&lt;li>Enable the newly created playlist or channel.&lt;/li>
-&lt;/ul>
-&lt;h1 id="my-playlists">My Playlists&lt;/h1>
-&lt;p>I use Kodi to organize movies and shows on my Android TV. I have set up two channels to list items to watch or are in progress.&lt;/p>
-&lt;ul>
-&lt;li>Unwatched Movies
-&lt;ul>
-&lt;li>Type - Movies&lt;/li>
-&lt;li>Playlist name - Movies&lt;/li>
-&lt;li>Rules - Play count less than 1&lt;/li>
-&lt;li>Order by - Date added - descending&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Unwatched Shows
-&lt;ul>
-&lt;li>Type - TV shows&lt;/li>
-&lt;li>Playlist name - Shows&lt;/li>
-&lt;li>Rules - items must match one or more of the rules
-&lt;ul>
-&lt;li>In progress true&lt;/li>
-&lt;li>Watched episode count less than 1&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Order by - Date added - descending&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Channels on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/channels/</link>
+    <description>Recent content in Channels on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/channels/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kodi channels on Android TV Home Screen</title>
+      <link>https://abskmj.github.io/notes/posts/android-tv/kodi-channels/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/android-tv/kodi-channels/</guid>
+      <description>&lt;p&gt;Create custom Kodi channels to be shown on the home screen of an Android TV&lt;/p&gt;</description>
+      <content>&lt;p&gt;Create custom Kodi channels to be shown on the home screen of an Android TV&lt;/p&gt;
+&lt;h1 id=&#34;create-a-channel&#34;&gt;Create a Channel&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigate to &lt;code&gt;Videos &amp;gt; Playlist &amp;gt; New smart playlist&lt;/code&gt; to create a smart playlist on Kodi.&lt;/li&gt;
+&lt;li&gt;Navigate to &lt;code&gt;Customize Channels &amp;gt; Kodi&lt;/code&gt; on the Android TV home screen.&lt;/li&gt;
+&lt;li&gt;Enable the newly created playlist or channel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;my-playlists&#34;&gt;My Playlists&lt;/h1&gt;
+&lt;p&gt;I use Kodi to organize movies and shows on my Android TV. I have set up two channels to list items to watch or are in progress.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unwatched Movies
+&lt;ul&gt;
+&lt;li&gt;Type - Movies&lt;/li&gt;
+&lt;li&gt;Playlist name - Movies&lt;/li&gt;
+&lt;li&gt;Rules - Play count less than 1&lt;/li&gt;
+&lt;li&gt;Order by - Date added - descending&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unwatched Shows
+&lt;ul&gt;
+&lt;li&gt;Type - TV shows&lt;/li&gt;
+&lt;li&gt;Playlist name - Shows&lt;/li&gt;
+&lt;li&gt;Rules - items must match one or more of the rules
+&lt;ul&gt;
+&lt;li&gt;In progress true&lt;/li&gt;
+&lt;li&gt;Watched episode count less than 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Order by - Date added - descending&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

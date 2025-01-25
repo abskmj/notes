@@ -1,42 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Continuous Deployment on Notes</title><link>https://abskmj.github.io/notes/tags/continuous-deployment/</link><description>Recent content in Continuous Deployment on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Wed, 09 Feb 2022 15:41:04 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/continuous-deployment/index.xml" rel="self" type="application/rss+xml"/><item><title>Continuous Deployment pipeline for a Subgraph</title><link>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</link><pubDate>Wed, 09 Feb 2022 15:41:04 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</guid><description>Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.</description><content>&lt;p>Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://thegraph.com/">The Graph&lt;/a> is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="npm-scripts">NPM Scripts&lt;/h1>
-&lt;p>Below scripts need to be added in the &lt;code>package.json&lt;/code> file.&lt;/p>
-&lt;ol>
-&lt;li>Generate the assembly code&lt;/li>
-&lt;li>Authenticate with The Graph&amp;rsquo;s hosted service&lt;/li>
-&lt;li>Deploy&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// package.json
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;scripts&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;codegen&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;graph codegen&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;auth&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;graph auth --product hosted-service&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;deploy&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;graph deploy --product hosted-service &amp;lt;user/subgraph&amp;gt;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The scripts can be used on local as well&lt;/p>
-&lt;pre tabindex="0">&lt;code>npm run codegen
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Continuous Deployment on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/continuous-deployment/</link>
+    <description>Recent content in Continuous Deployment on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Wed, 09 Feb 2022 15:41:04 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/continuous-deployment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Continuous Deployment pipeline for a Subgraph</title>
+      <link>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</link>
+      <pubDate>Wed, 09 Feb 2022 15:41:04 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</guid>
+      <description>&lt;p&gt;Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://thegraph.com/&#34;&gt;The Graph&lt;/a&gt; is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;npm-scripts&#34;&gt;NPM Scripts&lt;/h1&gt;
+&lt;p&gt;Below scripts need to be added in the &lt;code&gt;package.json&lt;/code&gt; file.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Generate the assembly code&lt;/li&gt;
+&lt;li&gt;Authenticate with The Graph&amp;rsquo;s hosted service&lt;/li&gt;
+&lt;li&gt;Deploy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// package.json
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;codegen&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;graph codegen&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;auth&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;graph auth --product hosted-service&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deploy&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;graph deploy --product hosted-service &amp;lt;user/subgraph&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The scripts can be used on local as well&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm run codegen
 npm run auth &amp;lt;token&amp;gt;
 npm run deploy
-&lt;/code>&lt;/pre>&lt;h1 id="gitlab-pipeline">Gitlab Pipeline&lt;/h1>
-&lt;p>Below is a sample pipeline using Gitlab CI/CD. &lt;code>$GRAPH_TOKEN&lt;/code> is the authentication token for The Graph&amp;rsquo;s hosted service.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yml" data-lang="yml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># .gitlab-ci.yml &lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">image&lt;/span>: &lt;span style="color:#ae81ff">node:latest&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">deploy&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">only&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">main&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">script&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">npm ci&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">npm run codegen&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">npm run auth $GRAPH_TOKEN&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">npm run deploy&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="references">References&lt;/h1>
-&lt;ul>
-&lt;li>&lt;a href="https://thegraph.com/docs/en/hosted-service/deploy-subgraph-hosted/">Deploy a Subgraph to the Hosted Service&lt;/a>&lt;/li>
-&lt;/ul></content></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;gitlab-pipeline&#34;&gt;Gitlab Pipeline&lt;/h1&gt;
+&lt;p&gt;Below is a sample pipeline using Gitlab CI/CD. &lt;code&gt;$GRAPH_TOKEN&lt;/code&gt; is the authentication token for The Graph&amp;rsquo;s hosted service.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# .gitlab-ci.yml &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;node:latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;deploy&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;only&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;npm ci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;npm run codegen&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;npm run auth $GRAPH_TOKEN&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;npm run deploy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://thegraph.com/docs/en/hosted-service/deploy-subgraph-hosted/&#34;&gt;Deploy a Subgraph to the Hosted Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

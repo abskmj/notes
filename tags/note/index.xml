@@ -1,3 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Note on Notes</title><link>https://abskmj.github.io/notes/tags/note/</link><description>Recent content in Note on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Fri, 18 May 2018 11:15:44 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/note/index.xml" rel="self" type="application/rss+xml"/><item><title>Fix TWRP E3004 Error on OnePlus2</title><link>https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/</link><pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/</guid><description>I have recently installed LineageOS custom ROM on my OnePlus2 device to keep on trying new android versions as they come.</description><content>&lt;p>I have recently installed &lt;a href="https://www.lineageos.org/">LineageOS&lt;/a> custom ROM on my OnePlus2 device to keep on trying new android versions as they come. While installing/updating the OS, I was getting below error on &lt;a href="https://twrp.me/">TWRP&lt;/a> recovery screen.&lt;/p>
-&lt;pre tabindex="0">&lt;code>script aborted: E3004: This package is for device: OnePlus2,oneplus2; this device is .
-&lt;/code>&lt;/pre>&lt;p>To fix this, I updated to the lastest version of &lt;a href="https://dl.twrp.me/oneplus2/">TWRP for OnePlus2&lt;/a>.&lt;/p></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Note on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/note/</link>
+    <description>Recent content in Note on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Fri, 18 May 2018 11:15:44 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix TWRP E3004 Error on OnePlus2</title>
+      <link>https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/</link>
+      <pubDate>Fri, 18 May 2018 11:15:44 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/notes/oneplus2-e3004-error/</guid>
+      <description>&lt;p&gt;I have recently installed &lt;a href=&#34;https://www.lineageos.org/&#34;&gt;LineageOS&lt;/a&gt; custom ROM on my OnePlus2 device to keep on trying new android versions as they come. While installing/updating the OS, I was getting below error on &lt;a href=&#34;https://twrp.me/&#34;&gt;TWRP&lt;/a&gt; recovery screen.&lt;/p&gt;</description>
+      <content>&lt;p&gt;I have recently installed &lt;a href=&#34;https://www.lineageos.org/&#34;&gt;LineageOS&lt;/a&gt; custom ROM on my OnePlus2 device to keep on trying new android versions as they come. While installing/updating the OS, I was getting below error on &lt;a href=&#34;https://twrp.me/&#34;&gt;TWRP&lt;/a&gt; recovery screen.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;script aborted: E3004: This package is for device: OnePlus2,oneplus2; this device is .
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To fix this, I updated to the lastest version of &lt;a href=&#34;https://dl.twrp.me/oneplus2/&#34;&gt;TWRP for OnePlus2&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

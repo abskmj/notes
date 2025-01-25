@@ -1,162 +1,192 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>API on Notes</title><link>https://abskmj.github.io/notes/tags/api/</link><description>Recent content in API on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Sun, 16 Dec 2018 07:30:14 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/api/index.xml" rel="self" type="application/rss+xml"/><item><title>Implement a Javascript Client for Crypto Compare API</title><link>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link><pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid><description>Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies.</description><content>&lt;h1 id="crypto-compare">Crypto Compare&lt;/h1>
-&lt;p>&lt;a href="https://www.cryptocompare.com/">Crypto Compare&lt;/a> is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available &lt;a href="https://min-api.cryptocompare.com/documentation">here&lt;/a>.&lt;/p>
-&lt;h1 id="javascript-client">Javascript Client&lt;/h1>
-&lt;p>I&amp;rsquo;m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I&amp;rsquo;m using an NPM module called &lt;a href="https://github.com/abskmj/cligen">Cligen&lt;/a> to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.&lt;/p>
-&lt;h1 id="cligen-specification">Cligen Specification&lt;/h1>
-&lt;p>I&amp;rsquo;m writing the specification for 2 of the commonly used endpoints. You can follow a similar way for other endpoints as well.&lt;/p>
-&lt;ul>
-&lt;li>Single Symbol Price&lt;/li>
-&lt;li>Historical Minute OHLCV&lt;/li>
-&lt;/ul>
-&lt;h2 id="specjson">spec.json&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;baseUrl&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;https://min-api.cryptocompare.com/data&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;operations&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;price&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;uri&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/price&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;data&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;query&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;parameters&amp;#34;&lt;/span>: [
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tryConversion&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fsym&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsyms&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;e&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;extraParams&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;sign&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;histominute&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;uri&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/histominute&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;data&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;query&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;parameters&amp;#34;&lt;/span>: [
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tryConversion&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fsym&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsym&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;e&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;aggregate&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;aggregatePredictableTimePeriods&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;limit&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;toTs&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;extraParams&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;sign&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="nodejs">NodeJS&lt;/h1>
-&lt;h2 id="installing-cligen-module">Installing Cligen Module&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install -save github:@abskmj/cligen
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="generating-and-using-the-client">Generating and Using the client&lt;/h2>
-&lt;pre tabindex="0">&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require(&amp;#39;@abskmj/cligen&amp;#39;);
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/api/</link>
+    <description>Recent content in API on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Sun, 16 Dec 2018 07:30:14 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implement a Javascript Client for Crypto Compare API </title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link>
+      <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid>
+      <description>&lt;h1 id=&#34;crypto-compare&#34;&gt;Crypto Compare&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cryptocompare.com/&#34;&gt;Crypto Compare&lt;/a&gt; is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available &lt;a href=&#34;https://min-api.cryptocompare.com/documentation&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;crypto-compare&#34;&gt;Crypto Compare&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cryptocompare.com/&#34;&gt;Crypto Compare&lt;/a&gt; is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available &lt;a href=&#34;https://min-api.cryptocompare.com/documentation&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;javascript-client&#34;&gt;Javascript Client&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I&amp;rsquo;m using an NPM module called &lt;a href=&#34;https://github.com/abskmj/cligen&#34;&gt;Cligen&lt;/a&gt; to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.&lt;/p&gt;
+&lt;h1 id=&#34;cligen-specification&#34;&gt;Cligen Specification&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m writing the specification for 2 of the commonly used endpoints. You can follow a similar way for other endpoints as well.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Single Symbol Price&lt;/li&gt;
+&lt;li&gt;Historical Minute OHLCV&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;specjson&#34;&gt;spec.json&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;baseUrl&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://min-api.cryptocompare.com/data&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;operations&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;price&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/price&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;query&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;parameters&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tryConversion&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fsym&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tsyms&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;e&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;extraParams&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sign&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;histominute&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/histominute&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;query&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;parameters&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tryConversion&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fsym&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tsym&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;e&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;aggregate&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;aggregatePredictableTimePeriods&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;limit&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;toTs&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;extraParams&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sign&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;nodejs&#34;&gt;NodeJS&lt;/h1&gt;
+&lt;h2 id=&#34;installing-cligen-module&#34;&gt;Installing Cligen Module&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install -save github:@abskmj/cligen
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;generating-and-using-the-client&#34;&gt;Generating and Using the client&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-jvascript&#34; data-lang=&#34;jvascript&#34;&gt;const cligen = require(&amp;#39;@abskmj/cligen&amp;#39;);
+
 const spec = require(&amp;#39;./spec.json&amp;#39;);
+
 const client = cligen.getClient(spec);
+
+
 // supports callback
 client.price({ fsym: &amp;#39;BTC&amp;#39;, tsyms: &amp;#39;USDT&amp;#39; }, (error, response) =&amp;gt; {
-if (error) {
-console.log(error);
-}
-else {
-console.log(response);
-/*
-{ headers:
-{ server: &amp;#39;nginx/1.10.3&amp;#39;,
-date: &amp;#39;Sun, 16 Dec 2018 08:09:00 GMT&amp;#39;,
-&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
-&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
-connection: &amp;#39;close&amp;#39;,
-vary: &amp;#39;Accept-Encoding&amp;#39;,
-&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
-&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
-&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
-&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
-&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
-&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
-data: { USDT: 3261.81 },
-status: 200,
-request:
-{ url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
-method: &amp;#39;GET&amp;#39;,
-headers: {},
-body: undefined } }
-*/
-}
+    if (error) {
+        console.log(error);
+    }
+    else {
+        console.log(response);
+        
+        /*
+            { headers: 
+               { server: &amp;#39;nginx/1.10.3&amp;#39;,
+                 date: &amp;#39;Sun, 16 Dec 2018 08:09:00 GMT&amp;#39;,
+                 &amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+                 &amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+                 connection: &amp;#39;close&amp;#39;,
+                 vary: &amp;#39;Accept-Encoding&amp;#39;,
+                 &amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+                 &amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+                 &amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+                 &amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+                 &amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
+                 &amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
+              data: { USDT: 3261.81 },
+              status: 200,
+              request: 
+               { url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
+                 method: &amp;#39;GET&amp;#39;,
+                 headers: {},
+                 body: undefined } }
+        
+        */
+    }
 });
+
 // supports promise
 client.histominute({ fsym: &amp;#39;BTC&amp;#39;, tsym: &amp;#39;USDT&amp;#39; })
 .then((response) =&amp;gt; {
-console.log(response);
-/*
-{ headers:
-{ server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
-date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
-&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
-&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
-connection: &amp;#39;close&amp;#39;,
-vary: &amp;#39;Accept-Encoding&amp;#39;,
-&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
-&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
-&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
-&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
-&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
-&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
-data: { USDT: 3263.88 },
-status: 200,
-request:
-{ url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
-method: &amp;#39;GET&amp;#39;,
-headers: {},
-body: undefined } }
-{ headers:
-{ server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
-date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
-&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
-&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
-connection: &amp;#39;close&amp;#39;,
-vary: &amp;#39;Accept-Encoding&amp;#39;,
-&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
-&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
-&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
-&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
-&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=40&amp;#39;,
-&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;true&amp;#39; },
-data:
-{ Response: &amp;#39;Success&amp;#39;,
-Type: 100,
-Aggregated: false,
-Data:
-[ ... ],
-TimeTo: 1544949660,
-TimeFrom: 1544863260,
-FirstValueInArray: true,
-ConversionType: { type: &amp;#39;direct&amp;#39;, conversionSymbol: &amp;#39;&amp;#39; },
-RateLimit: {},
-HasWarning: false },
-status: 200,
-request:
-{ url: &amp;#39;https://min-api.cryptocompare.com/data/histominute?fsym=BTC&amp;amp;tsym=USDT&amp;#39;,
-method: &amp;#39;GET&amp;#39;,
-headers: {},
-body: undefined } }
-*/
+    console.log(response);
+    
+    /*
+        { headers: 
+           { server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
+             date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
+             &amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+             &amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+             connection: &amp;#39;close&amp;#39;,
+             vary: &amp;#39;Accept-Encoding&amp;#39;,
+             &amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+             &amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+             &amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+             &amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+             &amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
+             &amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
+          data: { USDT: 3263.88 },
+          status: 200,
+          request: 
+           { url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
+             method: &amp;#39;GET&amp;#39;,
+             headers: {},
+             body: undefined } }
+        { headers: 
+           { server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
+             date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
+             &amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+             &amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+             connection: &amp;#39;close&amp;#39;,
+             vary: &amp;#39;Accept-Encoding&amp;#39;,
+             &amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+             &amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+             &amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+             &amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+             &amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=40&amp;#39;,
+             &amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;true&amp;#39; },
+          data: 
+           { Response: &amp;#39;Success&amp;#39;,
+             Type: 100,
+             Aggregated: false,
+             Data: 
+              [ ... ],
+             TimeTo: 1544949660,
+             TimeFrom: 1544863260,
+             FirstValueInArray: true,
+             ConversionType: { type: &amp;#39;direct&amp;#39;, conversionSymbol: &amp;#39;&amp;#39; },
+             RateLimit: {},
+             HasWarning: false },
+          status: 200,
+          request: 
+           { url: &amp;#39;https://min-api.cryptocompare.com/data/histominute?fsym=BTC&amp;amp;tsym=USDT&amp;#39;,
+             method: &amp;#39;GET&amp;#39;,
+             headers: {},
+             body: undefined } }
+    */
 }). catch((error) =&amp;gt; {
-console.log(error);
+    console.log(error);
 })
-&lt;/code>&lt;/pre></content></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,14 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Firefox on Notes</title><link>https://abskmj.github.io/notes/tags/firefox/</link><description>Recent content in Firefox on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/firefox/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup DNS over HTTPS (DOH) on Firefox Android</title><link>https://abskmj.github.io/notes/posts/android/firefox-dns-https/</link><pubDate>Sat, 15 Jul 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/android/firefox-dns-https/</guid><description>Setup DNS over HTTPS (DOH) in a Firefox browser, on an Android device for privacy and security.</description><content>&lt;p>Setup DNS over HTTPS (DOH) in a Firefox browser, on an Android device for privacy and security.&lt;/p>
-&lt;h1 id="configuration-editor-on-firefox">Configuration Editor on Firefox&lt;/h1>
-&lt;p>Firefox on an Android device currently does not support setting up &lt;a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS">DNS over HTTPS (DOH)&lt;/a> under the settings menu. However, as a workaround, it can be configured through &lt;a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor for Firefox&lt;/a>.&lt;/p>
-&lt;p>Access it using the &lt;code>about:config&lt;/code> keywords in the address bar of the browser. It is available only in beta and nightly versions of Firefox.&lt;/p>
-&lt;p>This setup also works on other variants of Firefox, for example, Focus and Mull.&lt;/p>
-&lt;p>Update the configuration related to &lt;a href="https://wiki.mozilla.org/Trusted_Recursive_Resolver">Trusted Recursive Resolver(TRR)&lt;/a>.&lt;/p>
-&lt;ul>
-&lt;li>network.trr.mode = 3&lt;/li>
-&lt;/ul>
-&lt;p>I set it to &lt;code>3&lt;/code> instead of &lt;code>2&lt;/code> as there is no way to know when the connection falls back when in mode &lt;code>2&lt;/code>.&lt;/p>
-&lt;ul>
-&lt;li>network.trr.uri = &lt;a href="https://dns.adguard-dns.com/dns-query">https://dns.adguard-dns.com/dns-query&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>If this is not set, Firefox uses Cloudflare DNS as the default provider. I set it to &lt;a href="https://adguard-dns.io/en/welcome.html">AdGuard DNS&lt;/a> mainly to block ads and trackers. AdGuard has a &lt;a href="https://adguard.com/en/test.html">test page&lt;/a> to check if their DNS is configured correctly and working.&lt;/p></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firefox on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/firefox/</link>
+    <description>Recent content in Firefox on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup DNS over HTTPS (DOH) on Firefox Android</title>
+      <link>https://abskmj.github.io/notes/posts/android/firefox-dns-https/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/android/firefox-dns-https/</guid>
+      <description>&lt;p&gt;Setup DNS over HTTPS (DOH) in a Firefox browser, on an Android device for privacy and security.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Setup DNS over HTTPS (DOH) in a Firefox browser, on an Android device for privacy and security.&lt;/p&gt;
+&lt;h1 id=&#34;configuration-editor-on-firefox&#34;&gt;Configuration Editor on Firefox&lt;/h1&gt;
+&lt;p&gt;Firefox on an Android device currently does not support setting up &lt;a href=&#34;https://en.wikipedia.org/wiki/DNS_over_HTTPS&#34;&gt;DNS over HTTPS (DOH)&lt;/a&gt; under the settings menu. However, as a workaround, it can be configured through &lt;a href=&#34;https://support.mozilla.org/en-US/kb/about-config-editor-firefox&#34;&gt;Configuration Editor for Firefox&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Access it using the &lt;code&gt;about:config&lt;/code&gt; keywords in the address bar of the browser. It is available only in beta and nightly versions of Firefox.&lt;/p&gt;
+&lt;p&gt;This setup also works on other variants of Firefox, for example,  Focus and Mull.&lt;/p&gt;
+&lt;p&gt;Update the configuration related to &lt;a href=&#34;https://wiki.mozilla.org/Trusted_Recursive_Resolver&#34;&gt;Trusted Recursive Resolver(TRR)&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;network.trr.mode = 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I set it to &lt;code&gt;3&lt;/code&gt; instead of &lt;code&gt;2&lt;/code&gt; as there is no way to know when the connection falls back when in mode &lt;code&gt;2&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;network.trr.uri = &lt;a href=&#34;https://dns.adguard-dns.com/dns-query&#34;&gt;https://dns.adguard-dns.com/dns-query&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If this is not set, Firefox uses Cloudflare DNS as the default provider. I set it to &lt;a href=&#34;https://adguard-dns.io/en/welcome.html&#34;&gt;AdGuard DNS&lt;/a&gt; mainly to block ads and trackers. AdGuard has a &lt;a href=&#34;https://adguard.com/en/test.html&#34;&gt;test page&lt;/a&gt; to check if their DNS is configured correctly and working.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

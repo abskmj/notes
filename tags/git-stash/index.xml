@@ -1,21 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git Stash on Notes</title><link>https://abskmj.github.io/notes/tags/git-stash/</link><description>Recent content in Git Stash on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Fri, 14 Jun 2019 12:49:55 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/git-stash/index.xml" rel="self" type="application/rss+xml"/><item><title>Working with Git Stash</title><link>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</link><pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</guid><description>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.</description><content>&lt;p>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p>
-&lt;h2 id="save-the-local-changes-in-stash">Save the local changes in Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash push -m &lt;span style="color:#f92672">{{&lt;/span> commit message&lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>// example
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git stash push -m &lt;span style="color:#f92672">{{&lt;/span> new logging module &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="list-all-the-change-sets-in-stash">List all the change sets in Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="apply-a-change-set-from-stash">Apply a change set from Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash apply &lt;span style="color:#f92672">{{&lt;/span> index &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//example
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git stash apply &lt;span style="color:#ae81ff">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>Not specifying an index with automatically apply first index&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="delete-a-change-set-without-applying-from-stash">Delete a change set without applying from Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash drop &lt;span style="color:#f92672">{{&lt;/span> index &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>// example
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git stash drop &lt;span style="color:#ae81ff">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>Not specifying an index with automatically drop first index&lt;/p>
-&lt;/blockquote></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Stash on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/git-stash/</link>
+    <description>Recent content in Git Stash on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Fri, 14 Jun 2019 12:49:55 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/git-stash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Working with Git Stash</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</link>
+      <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</guid>
+      <description>&lt;p&gt;Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p&gt;
+&lt;h2 id=&#34;save-the-local-changes-in-stash&#34;&gt;Save the local changes in Stash&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -m &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; commit message&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// example
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -m &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; new logging module &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;list-all-the-change-sets-in-stash&#34;&gt;List all the change sets in Stash&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;apply-a-change-set-from-stash&#34;&gt;Apply a change set from Stash&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash apply &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; index &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;//example
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash apply &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Not specifying an index with automatically apply first index&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;delete-a-change-set-without-applying-from-stash&#34;&gt;Delete a change set without applying from Stash&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash drop &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; index &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// example
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash drop &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Not specifying an index with automatically drop first index&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

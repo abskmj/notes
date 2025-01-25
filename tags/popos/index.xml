@@ -1,191 +1,224 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PopOS on Notes</title><link>https://abskmj.github.io/notes/tags/popos/</link><description>Recent content in PopOS on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/popos/index.xml" rel="self" type="application/rss+xml"/><item><title>PopOS on ASUS ROG Zephyrus G14 Laptop</title><link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</link><pubDate>Mon, 17 Jul 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</guid><description>Install the latest version of PopOS alongside Windows 10 in a multi-boot setup.</description><content>&lt;p>Install the latest version of PopOS alongside Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.&lt;/p>
-&lt;h1 id="update---popos-2110-and-newer">Update - PopOS 21.10 and newer&lt;/h1>
-&lt;p>I recommend using the latest version as most of the features will work out of the box without needing to install adding packages as documented.&lt;/p>
-&lt;p>Still doesn&amp;rsquo;t work:&lt;/p>
-&lt;ul>
-&lt;li>Fingerprint login&lt;/li>
-&lt;li>Microphone mute &amp;amp; ROG button on the top of the keyboard&lt;/li>
-&lt;li>Function keys to control fan speed&lt;/li>
-&lt;/ul>
-&lt;h1 id="demo-mode-on-live-usb">Demo Mode on Live USB&lt;/h1>
-&lt;blockquote>
-&lt;p>Fast startup option in Windows 10 and the secure boot option in BIOS need to be disabled&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>Download the latest version of PopOS with NVIDIA drivers ISO from &lt;a href="https://pop.system76.com/">the official site&lt;/a>&lt;/li>
-&lt;li>Create a live USB following &lt;a href="https://support.system76.com/articles/live-disk/">the guide&lt;/a>&lt;/li>
-&lt;li>Restart the laptop and press or hold the &lt;code>ESC&lt;/code> key when on the screen with the &lt;code>Republic of Gamers&lt;/code> logo&lt;/li>
-&lt;li>Select the second EFI partition to boot into PopOS from USB&lt;/li>
-&lt;li>Follow &lt;a href="https://support.system76.com/articles/install-pop/">the guide&lt;/a> to try the Demo Mode&lt;/li>
-&lt;/ul>
-&lt;h1 id="install-on-ssd">Install on SSD&lt;/h1>
-&lt;p>The steps below are to install PopOS and keep the Windows 10 system intact&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Click &lt;code>Custom (Advanced)&lt;/code> to make a new partition on SSD for PopOS&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Click on &lt;code>Modify Partitions&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Right-click on the primary SSD partition of around 450+ GB and select resize.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Enter the sum of sizes for the new partitions and click on the &lt;code>Resize/Move&lt;/code> button to create a new unallocated partition&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name / Label&lt;/th>
-&lt;th>Size&lt;/th>
-&lt;th>File System&lt;/th>
-&lt;th>Use as&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>EFI&lt;/td>
-&lt;td>500 MiB&lt;/td>
-&lt;td>fat32&lt;/td>
-&lt;td>Boot&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>PopOS&lt;/td>
-&lt;td>Min. 20 GiB&lt;/td>
-&lt;td>ext4&lt;/td>
-&lt;td>Root (/)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Swap&lt;/td>
-&lt;td>Optional&lt;/td>
-&lt;td>linux-swap&lt;/td>
-&lt;td>Swap&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/li>
-&lt;li>
-&lt;p>Right-click on the unallocated partition and create new partitions as the above table&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>After partitions are modified, click on the green tick to create them on SSD&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Find the new partitions and toggle the &lt;code>Use Partition&lt;/code> option and choose &lt;code>Use as&lt;/code> according to the above table&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Click on &lt;code>Erase and Install&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Click on &lt;code>Restart&lt;/code> when the installation is complete&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>After installation, the laptop will load PopOS by default. To use Windows 10, press or hold the &lt;code>ESC&lt;/code> key when on the screen with &lt;code>Republic of Gamers&lt;/code> logo and select &lt;code>Windows Boot Manager&lt;/code> each time.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="setup-after-installation">Setup after installation&lt;/h1>
-&lt;h2 id="monitor-over-usb-c">Monitor over USB-C&lt;/h2>
-&lt;p>Make sure &lt;code>NVIDIA Graphics&lt;/code> is enabled for this feature to work. Please click on the battery icon on the taskbar, and again on the battery menu.&lt;/p>
-&lt;h2 id="system-time-in-windows--popos">System Time in Windows &amp;amp; PopOS&lt;/h2>
-&lt;p>Update the below &lt;code>timedatectl&lt;/code> configuration in PopOS. Details are available at &lt;a href="https://support.system76.com/articles/dual-booting/">support.system76.com&lt;/a>&lt;/p>
-&lt;pre tabindex="0">&lt;code>timedatectl set-local-rtc 1 --adjust-system-clock
-&lt;/code>&lt;/pre>&lt;p>Verify the change by executing the below command. You should see the &lt;code>RTC in local TZ&lt;/code> configuration as &lt;code>yes&lt;/code>.&lt;/p>
-&lt;pre tabindex="0">&lt;code>timedatectl
-&lt;/code>&lt;/pre>&lt;h2 id="asus-packages-only-on-popos-2010-and-older">ASUS Packages (Only on PopOS 20.10 and older)&lt;/h2>
-&lt;p>Install the below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at &lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl#implemented">gitlab.com&lt;/a>.&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://gitlab.com/asus-linux/hid-asus-rog">hid-asus-rog&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi">asus-rog-nb-wmi&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://gitlab.com/asus-linux/asus-nb-ctrl">asus-nb-ctrl&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Add these packages using the package manager&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span> | sudo tee /etc/apt/sources.list.d/asus.list
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get update
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="volume-control-only-on-popos-2010-and-older">Volume Control (Only on PopOS 20.10 and older)&lt;/h2>
-&lt;p>Add below lines to the file at location &lt;code>/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common&lt;/code>, just before the &lt;code>[Element PCM]&lt;/code> section. It will also make the &lt;code>mute the microphone&lt;/code> button usable.&lt;/p>
-&lt;pre tabindex="0">&lt;code>[Element Master]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PopOS on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/popos/</link>
+    <description>Recent content in PopOS on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/popos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PopOS on ASUS ROG Zephyrus G14 Laptop</title>
+      <link>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/rog-zephyrus-g14/popos/</guid>
+      <description>&lt;p&gt;Install the latest version of PopOS alongside Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Install the latest version of PopOS alongside Windows 10 in a multi-boot setup. Follow similar steps to install Ubuntu as well.&lt;/p&gt;
+&lt;h1 id=&#34;update---popos-2110-and-newer&#34;&gt;Update - PopOS 21.10 and newer&lt;/h1&gt;
+&lt;p&gt;I recommend using the latest version as most of the features will work out of the box without needing to install adding packages as documented.&lt;/p&gt;
+&lt;p&gt;Still doesn&amp;rsquo;t work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fingerprint login&lt;/li&gt;
+&lt;li&gt;Microphone mute &amp;amp; ROG button on the top of the keyboard&lt;/li&gt;
+&lt;li&gt;Function keys to control fan speed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;demo-mode-on-live-usb&#34;&gt;Demo Mode on Live USB&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fast startup option in Windows 10 and the secure boot option in BIOS need to be disabled&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Download the latest version of PopOS with NVIDIA drivers ISO from &lt;a href=&#34;https://pop.system76.com/&#34;&gt;the official site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create a live USB following &lt;a href=&#34;https://support.system76.com/articles/live-disk/&#34;&gt;the guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Restart the laptop and press or hold the &lt;code&gt;ESC&lt;/code&gt; key when on the screen with the &lt;code&gt;Republic of Gamers&lt;/code&gt; logo&lt;/li&gt;
+&lt;li&gt;Select the second EFI partition to boot into PopOS from USB&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://support.system76.com/articles/install-pop/&#34;&gt;the guide&lt;/a&gt; to try the Demo Mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;install-on-ssd&#34;&gt;Install on SSD&lt;/h1&gt;
+&lt;p&gt;The steps below are to install PopOS and keep the Windows 10 system intact&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;code&gt;Custom (Advanced)&lt;/code&gt; to make a new partition on SSD for PopOS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &lt;code&gt;Modify Partitions&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Right-click on the primary SSD partition of around 450+ GB and select resize.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter the sum of sizes for the new partitions and click on the &lt;code&gt;Resize/Move&lt;/code&gt; button to create a new unallocated partition&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Name / Label&lt;/th&gt;
+          &lt;th&gt;Size&lt;/th&gt;
+          &lt;th&gt;File System&lt;/th&gt;
+          &lt;th&gt;Use as&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;EFI&lt;/td&gt;
+          &lt;td&gt;500 MiB&lt;/td&gt;
+          &lt;td&gt;fat32&lt;/td&gt;
+          &lt;td&gt;Boot&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;PopOS&lt;/td&gt;
+          &lt;td&gt;Min. 20 GiB&lt;/td&gt;
+          &lt;td&gt;ext4&lt;/td&gt;
+          &lt;td&gt;Root (/)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Swap&lt;/td&gt;
+          &lt;td&gt;Optional&lt;/td&gt;
+          &lt;td&gt;linux-swap&lt;/td&gt;
+          &lt;td&gt;Swap&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Right-click on the unallocated partition and create new partitions as the above table&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After partitions are modified, click on the green tick to create them on SSD&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Find the new partitions and toggle the &lt;code&gt;Use Partition&lt;/code&gt; option and choose &lt;code&gt;Use as&lt;/code&gt; according to the above table&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &lt;code&gt;Erase and Install&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &lt;code&gt;Restart&lt;/code&gt; when the installation is complete&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;After installation, the laptop will load PopOS by default. To use Windows 10, press or hold the &lt;code&gt;ESC&lt;/code&gt; key when on the screen with &lt;code&gt;Republic of Gamers&lt;/code&gt; logo and select &lt;code&gt;Windows Boot Manager&lt;/code&gt; each time.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;setup-after-installation&#34;&gt;Setup after installation&lt;/h1&gt;
+&lt;h2 id=&#34;monitor-over-usb-c&#34;&gt;Monitor over USB-C&lt;/h2&gt;
+&lt;p&gt;Make sure &lt;code&gt;NVIDIA Graphics&lt;/code&gt; is enabled for this feature to work. Please click on the battery icon on the taskbar, and again on the battery menu.&lt;/p&gt;
+&lt;h2 id=&#34;system-time-in-windows--popos&#34;&gt;System Time in Windows &amp;amp; PopOS&lt;/h2&gt;
+&lt;p&gt;Update the below &lt;code&gt;timedatectl&lt;/code&gt; configuration in PopOS. Details are available at &lt;a href=&#34;https://support.system76.com/articles/dual-booting/&#34;&gt;support.system76.com&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;timedatectl set-local-rtc 1 --adjust-system-clock
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Verify the change by executing the below command. You should see the &lt;code&gt;RTC in local TZ&lt;/code&gt; configuration as &lt;code&gt;yes&lt;/code&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;timedatectl
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;asus-packages-only-on-popos-2010-and-older&#34;&gt;ASUS Packages (Only on PopOS 20.10 and older)&lt;/h2&gt;
+&lt;p&gt;Install the below packages to use the function key combinations, Animatrix display, fan speed, and graphic modes. A complete list of features is available at &lt;a href=&#34;https://gitlab.com/asus-linux/asus-nb-ctrl#implemented&#34;&gt;gitlab.com&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/asus-linux/hid-asus-rog&#34;&gt;hid-asus-rog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/asus-linux/asus-rog-nb-wmihttps://gitlab.com/asus-linux/asus-rog-nb-wmi&#34;&gt;asus-rog-nb-wmi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/asus-linux/asus-nb-ctrl&#34;&gt;asus-nb-ctrl&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Add these packages using the package manager&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/ /&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/asus.list
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget -q -O - https://download.opensuse.org/repositories/home:/luke_nukem:/asus/xUbuntu_20.04/Release.key | sudo apt-key add -
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install dkms-hid-asus-rog dkms-asus-rog-nb-wmi asus-nb-ctrl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;volume-control-only-on-popos-2010-and-older&#34;&gt;Volume Control (Only on PopOS 20.10 and older)&lt;/h2&gt;
+&lt;p&gt;Add below lines to the file at location &lt;code&gt;/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common&lt;/code&gt;, just before the &lt;code&gt;[Element PCM]&lt;/code&gt; section. It will also make the &lt;code&gt;mute the microphone&lt;/code&gt; button usable.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Element Master]
 switch = mute
 volume = ignore
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="Pulse Audio Configuration" src="https://abskmj.github.io/notes/notes/posts/rog-zephyrus-g14/popos/pulseaudio-config.png">&lt;/p>
-&lt;h2 id="text-on-screen-too-small-only-on-popos-2010-and-older">Text on screen too small (Only on PopOS 20.10 and older)&lt;/h2>
-&lt;p>Out of the box, the text on the screen is too small to read. Enable &lt;code>Fractional Scaling&lt;/code> in &lt;code>Settings &amp;gt; Displays&lt;/code> to 125% or 150% for comfortable reading.&lt;/p>
-&lt;p>&lt;img alt="Display Fractional Scaling" src="https://abskmj.github.io/notes/notes/posts/rog-zephyrus-g14/popos/displays-fractional-scaling.png">&lt;/p>
-&lt;h1 id="test-laptop">Test Laptop&lt;/h1>
-&lt;p>&lt;a href="https://amzn.to/35NWlNN">ASUS ROG Zephyrus G14 GA401IH-HE012T&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>AMD Ryzen 5 4600HS&lt;/li>
-&lt;li>NVIDIA GeForce GTX 1650 4GB GDDR6 VRAM&lt;/li>
-&lt;li>8GB DDR4 3200MHz SDRAM&lt;/li>
-&lt;li>512GB M.2 NVMe PCIe 3.0 SSD&lt;/li>
-&lt;li>Without Anime Matrix&lt;/li>
-&lt;/ul>
-&lt;h1 id="references">References&lt;/h1>
-&lt;ul>
-&lt;li>ASUS G14 Ubuntu 20.04 Setup at &lt;a href="https://www.reddit.com/r/ZephyrusG14/comments/id4e2d/asus_g14_ubuntu_2004_setup/">reddit.com&lt;/a>&lt;/li>
-&lt;li>DKMS installable module for ASUS ROG laptops at &lt;a href="https://gitlab.com/asus-linux/hid-asus-rog">gitlab.com&lt;/a>&lt;/li>
-&lt;li>Installing Linux (Pop_OS!) on Asus Zephyrus G14 at &lt;a href="https://heinbio.me/blog/5f23042bee73aa31486bff7c">heinbio.me&lt;/a>&lt;/li>
-&lt;/ul></content></item><item><title>Enable Hibernate on Pop OS</title><link>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</link><pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</guid><description/><content>&lt;h1 id="prerequisites">Prerequisites&lt;/h1>
-&lt;h2 id="check-if-the-kernel-supports-hibernation">Check if the kernel supports Hibernation&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat /sys/power/state
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It should list &lt;code>disk&lt;/code> as an option on the list&lt;/p>
-&lt;h2 id="check-if-a-swap-file-or-partition-is-available">Check if a Swap file or partition is available&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>free -h
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If &lt;code>Swap&lt;/code> is listed as 0, it means a swap is not available and needs to be created.&lt;/p>
-&lt;h1 id="create-a-swap-file">Create a Swap file&lt;/h1>
-&lt;ul>
-&lt;li>Create a swap file.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo fallocate -l 6G /swapfile
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>6G&lt;/code> can be updated with a recommended swap size for the machine which is listed under &lt;code>How much swap do I need?&lt;/code> section at &lt;a href="https://help.ubuntu.com/community/SwapFaq">help.ubuntu.com&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>Permissions&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#ae81ff">600&lt;/span> /swapfile
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Format as swap&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mkswap /swapfile
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Activate the swap&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo swapon /swapfile
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#39;/swapfile none swap defaults 0 0&amp;#39;&lt;/span> | sudo tee -a /etc/fstab
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-hibernation">Configure Hibernation&lt;/h1>
-&lt;p>List the swap&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat /proc/swaps
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Swap file is generally listed as &lt;code>/swapfile&lt;/code>&lt;/li>
-&lt;li>Swap partition is listed as &lt;code>/dev/sdxx&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="swap-uuid">Swap UUID&lt;/h2>
-&lt;p>Get the UUID for the swap&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>findmnt -no UUID -T /swapfile
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
-&lt;pre tabindex="0">&lt;code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-&lt;/code>&lt;/pre>&lt;h2 id="swap-offset">Swap offset&lt;/h2>
-&lt;p>This is only needed when a swap file is available. Get the offset&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo filefrag -v /swapfile | awk &lt;span style="color:#e6db74">&amp;#39;{ if($1==&amp;#34;0:&amp;#34;){print $4} }&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It looks something like below&lt;/p>
-&lt;pre tabindex="0">&lt;code>9999999..
-&lt;/code>&lt;/pre>&lt;h2 id="update-kernel-options">Update Kernel Options&lt;/h2>
-&lt;p>For a Swap File&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo kernelstub -a &lt;span style="color:#e6db74">&amp;#34;resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo kernelstub -a &lt;span style="color:#e6db74">&amp;#34;resume_offset=9999999&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For a Swap Partition, &lt;code>resume_offset&lt;/code> option is not needed&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo kernelstub -a &lt;span style="color:#e6db74">&amp;#34;resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add below line to &lt;code>/etc/initramfs-tools/conf.d/resume&lt;/code>. Create the file if not present&lt;/p>
-&lt;p>For a Swap File&lt;/p>
-&lt;pre tabindex="0">&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
-&lt;/code>&lt;/pre>&lt;p>For a Swap Partition&lt;/p>
-&lt;pre tabindex="0">&lt;code>resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-&lt;/code>&lt;/pre>&lt;p>Update the configurations&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo update-initramfs -u
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="test-hibernation">Test Hibernation&lt;/h1>
-&lt;p>Remember to save your work before trying this out&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl hibernate
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="references">References&lt;/h1>
-&lt;ul>
-&lt;li>SwapFaq at &lt;a href="https://help.ubuntu.com/community/SwapFaq">help.ubuntu.com&lt;/a>&lt;/li>
-&lt;li>Guide to hibernate? &lt;a href="https://pop-planet.info/forums/threads/guide-to-hibernate-answer-is-a-guide.426/">pop-planet.info&lt;/a>&lt;/li>
-&lt;/ul></content></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://abskmj.github.io/notes/notes/posts/rog-zephyrus-g14/popos/pulseaudio-config.png&#34; alt=&#34;Pulse Audio Configuration&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;text-on-screen-too-small-only-on-popos-2010-and-older&#34;&gt;Text on screen too small (Only on PopOS 20.10 and older)&lt;/h2&gt;
+&lt;p&gt;Out of the box, the text on the screen is too small to read. Enable &lt;code&gt;Fractional Scaling&lt;/code&gt; in &lt;code&gt;Settings &amp;gt; Displays&lt;/code&gt; to 125% or 150% for comfortable reading.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://abskmj.github.io/notes/notes/posts/rog-zephyrus-g14/popos/displays-fractional-scaling.png&#34; alt=&#34;Display Fractional Scaling&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;test-laptop&#34;&gt;Test Laptop&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://amzn.to/35NWlNN&#34;&gt;ASUS ROG Zephyrus G14 GA401IH-HE012T&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AMD Ryzen 5 4600HS&lt;/li&gt;
+&lt;li&gt;NVIDIA GeForce GTX 1650 4GB GDDR6 VRAM&lt;/li&gt;
+&lt;li&gt;8GB DDR4 3200MHz SDRAM&lt;/li&gt;
+&lt;li&gt;512GB M.2 NVMe PCIe 3.0 SSD&lt;/li&gt;
+&lt;li&gt;Without Anime Matrix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ASUS G14 Ubuntu 20.04 Setup at &lt;a href=&#34;https://www.reddit.com/r/ZephyrusG14/comments/id4e2d/asus_g14_ubuntu_2004_setup/&#34;&gt;reddit.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DKMS installable module for ASUS ROG laptops at &lt;a href=&#34;https://gitlab.com/asus-linux/hid-asus-rog&#34;&gt;gitlab.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Installing Linux (Pop_OS!) on Asus Zephyrus G14 at &lt;a href=&#34;https://heinbio.me/blog/5f23042bee73aa31486bff7c&#34;&gt;heinbio.me&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Enable Hibernate on Pop OS</title>
+      <link>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</link>
+      <pubDate>Sun, 26 Jul 2020 20:17:30 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/pop-os/enable-hibernate/</guid>
+      <description></description>
+      <content>&lt;h1 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h1&gt;
+&lt;h2 id=&#34;check-if-the-kernel-supports-hibernation&#34;&gt;Check if the kernel supports Hibernation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /sys/power/state
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It should list &lt;code&gt;disk&lt;/code&gt; as an option on the list&lt;/p&gt;
+&lt;h2 id=&#34;check-if-a-swap-file-or-partition-is-available&#34;&gt;Check if a Swap file or partition is available&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;free -h
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If &lt;code&gt;Swap&lt;/code&gt; is listed as 0, it means a swap is not available and needs to be created.&lt;/p&gt;
+&lt;h1 id=&#34;create-a-swap-file&#34;&gt;Create a Swap file&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a swap file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo fallocate -l 6G /swapfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;6G&lt;/code&gt; can be updated with a recommended swap size for the machine which is listed under &lt;code&gt;How much swap do I need?&lt;/code&gt; section at &lt;a href=&#34;https://help.ubuntu.com/community/SwapFaq&#34;&gt;help.ubuntu.com&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Permissions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt; /swapfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Format as swap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo mkswap /swapfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Activate the swap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo swapon /swapfile
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/swapfile none swap defaults 0 0&amp;#39;&lt;/span&gt; | sudo tee -a /etc/fstab
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;configure-hibernation&#34;&gt;Configure Hibernation&lt;/h1&gt;
+&lt;p&gt;List the swap&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /proc/swaps
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Swap file is generally listed as &lt;code&gt;/swapfile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Swap partition is listed as &lt;code&gt;/dev/sdxx&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;swap-uuid&#34;&gt;Swap UUID&lt;/h2&gt;
+&lt;p&gt;Get the UUID for the swap&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;findmnt -no UUID -T /swapfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It looks something like below&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;swap-offset&#34;&gt;Swap offset&lt;/h2&gt;
+&lt;p&gt;This is only needed when a swap file is available. Get the offset&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo filefrag -v /swapfile | awk &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;{ if($1==&amp;#34;0:&amp;#34;){print $4} }&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It looks something like below&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;9999999..
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;update-kernel-options&#34;&gt;Update Kernel Options&lt;/h2&gt;
+&lt;p&gt;For a Swap File&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo kernelstub -a &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo kernelstub -a &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;resume_offset=9999999&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For a Swap Partition, &lt;code&gt;resume_offset&lt;/code&gt; option is not needed&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo kernelstub -a &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add below line to &lt;code&gt;/etc/initramfs-tools/conf.d/resume&lt;/code&gt;. Create the file if not present&lt;/p&gt;
+&lt;p&gt;For a Swap File&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx resume_offset=9999999
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For a Swap Partition&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;resume=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Update the configurations&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo update-initramfs -u
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;test-hibernation&#34;&gt;Test Hibernation&lt;/h1&gt;
+&lt;p&gt;Remember to save your work before trying this out&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl hibernate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;SwapFaq at &lt;a href=&#34;https://help.ubuntu.com/community/SwapFaq&#34;&gt;help.ubuntu.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guide to hibernate? &lt;a href=&#34;https://pop-planet.info/forums/threads/guide-to-hibernate-answer-is-a-guide.426/&#34;&gt;pop-planet.info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

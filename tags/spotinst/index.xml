@@ -1,98 +1,120 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spotinst on Notes</title><link>https://abskmj.github.io/notes/tags/spotinst/</link><description>Recent content in Spotinst on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Tue, 08 Jan 2019 09:56:04 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/spotinst/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploy functions on Spotinst using Serverless Framework</title><link>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</link><pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</guid><description>Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service).</description><content>&lt;p>&lt;a href="https://spotinst.com/products/spotinst-functions/">Spotinst&lt;/a> is one of the providers which support deploying serverless functions or FaaS (Function as a Service). &lt;a href="https://serverless.com/">Serverless Framework&lt;/a> is an NPM module which makes building serverless applications easy and open.&lt;/p>
-&lt;h1 id="isolated-workspace">Isolated Workspace&lt;/h1>
-&lt;p>The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects. This also allows me to use multiple Spotinst credentials for multiple serverless applications.&lt;/p>
-&lt;h1 id="serverless-framework">Serverless Framework&lt;/h1>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>Install the framework globally&lt;/p>
-&lt;pre tabindex="0">&lt;code>npm install -g serverless
-&lt;/code>&lt;/pre>&lt;p>Install the Spotinst functions plugin locally.&lt;/p>
-&lt;pre tabindex="0">&lt;code>npm install --save-dev serverless-spotinst-functions
-&lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
-&lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># This file is the main config file for your service.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># It&amp;#39;s very minimal at this point and uses default values.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># You can always add more config options for more control.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># We&amp;#39;ve included some commented out config examples here.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Just uncomment any of them to get that config option.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># For full config options, check the docs:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># docs.serverless.com&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Happy Coding!&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">service: demo # NOTE&lt;/span>: &lt;span style="color:#ae81ff">update this with your service name&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">provider&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">spotinst&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#stage: &amp;lt;Stage Name&amp;gt; #Optional. Defaults to &amp;#39;dev&amp;#39;, see https://help.spotinst.com/hc/en-us/articles/115005893409&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">spotinst&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">environment&lt;/span>: &lt;span style="color:#ae81ff">env-c0XXbXeb&lt;/span> &lt;span style="color:#75715e">#&amp;lt;env-XXXX&amp;gt; Required.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># exclude serverless files that are needed to be deployed&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">package&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">exclude&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.aws/**&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.config/**&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.serverlessrc&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.spotinst/** &lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">functions&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">hello&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">runtime&lt;/span>: &lt;span style="color:#ae81ff">nodejs8.3&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">handler&lt;/span>: &lt;span style="color:#ae81ff">handler.main&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">memory&lt;/span>: &lt;span style="color:#ae81ff">128&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">timeout&lt;/span>: &lt;span style="color:#ae81ff">30&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">access&lt;/span>: &lt;span style="color:#ae81ff">private&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># iamRoleConfig:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># roleId: # role-id&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># activeVersions:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># - &amp;#34;version&amp;#34;: &amp;#34;$LATEST&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># &amp;#34;percentage&amp;#34;: 100.0&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cors:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># enabled: # false by default&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># origin: # &amp;#39;*&amp;#39; by default&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># headers: # &amp;#39;Content-Type,Authorization&amp;#39; by default&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># methods: # &amp;#39;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT&amp;#39; by default&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cron: # Setup scheduled trigger with cron expression&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># active: true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># value: &amp;#39;* * * * *&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># environmentVariables:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># key: Value&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># extend the framework using plugins listed here:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># https://github.com/serverless/plugins&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">plugins&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
-&lt;p>Save the spotinst credentials for serverless framework.&lt;/p>
-&lt;pre tabindex="0">&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>&lt;code>HOME=./&lt;/code> sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of &lt;code>~/.spotinst/credentials&lt;/code>.&lt;/li>
-&lt;li>Spotinst Account ID can be found at &lt;a href="https://console.spotinst.com/#/settings/account/general">https://console.spotinst.com/#/settings/account/general&lt;/a>&lt;/li>
-&lt;li>Spotinst Token can be found at &lt;a href="https://console.spotinst.com/#/settings/tokens/permanent">https://console.spotinst.com/#/settings/tokens/permanent&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="deployment">Deployment&lt;/h2>
-&lt;p>Add a &lt;code>deploy&lt;/code> script to &lt;code>package.json&lt;/code> file.&lt;/p>
-&lt;pre tabindex="0">&lt;code>{
-...
-&amp;#34;scripts&amp;#34;: {
-...
-&amp;#34;deploy&amp;#34;: &amp;#34;HOME=./ serverless deploy&amp;#34;
-},
-...
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spotinst on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/spotinst/</link>
+    <description>Recent content in Spotinst on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Tue, 08 Jan 2019 09:56:04 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/spotinst/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy functions on Spotinst using Serverless Framework</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</link>
+      <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://spotinst.com/products/spotinst-functions/&#34;&gt;Spotinst&lt;/a&gt; is one of the providers which support deploying serverless functions or FaaS (Function as a Service). &lt;a href=&#34;https://serverless.com/&#34;&gt;Serverless Framework&lt;/a&gt; is an NPM module which makes building serverless applications easy and open.&lt;/p&gt;</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://spotinst.com/products/spotinst-functions/&#34;&gt;Spotinst&lt;/a&gt; is one of the providers which support deploying serverless functions or FaaS (Function as a Service). &lt;a href=&#34;https://serverless.com/&#34;&gt;Serverless Framework&lt;/a&gt; is an NPM module which makes building serverless applications easy and open.&lt;/p&gt;
+&lt;h1 id=&#34;isolated-workspace&#34;&gt;Isolated Workspace&lt;/h1&gt;
+&lt;p&gt;The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects. This also allows me to use multiple Spotinst credentials for multiple serverless applications.&lt;/p&gt;
+&lt;h1 id=&#34;serverless-framework&#34;&gt;Serverless Framework&lt;/h1&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Install the framework globally&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g serverless
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install the Spotinst functions plugin locally.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install --save-dev serverless-spotinst-functions
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;Create a &lt;code&gt;serverless.yml&lt;/code&gt; file in the root directory of the project.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Welcome to Serverless!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# This file is the main config file for your service.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# It&amp;#39;s very minimal at this point and uses default values.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# You can always add more config options for more control.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# We&amp;#39;ve included some commented out config examples here.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Just uncomment any of them to get that config option.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# For full config options, check the docs:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    docs.serverless.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Happy Coding!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;service: demo # NOTE&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;update this with your service name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;provider&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;spotinst&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;#stage: &amp;lt;Stage Name&amp;gt;  #Optional. Defaults to &amp;#39;dev&amp;#39;, see https://help.spotinst.com/hc/en-us/articles/115005893409&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;spotinst&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;environment&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;env-c0XXbXeb&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#&amp;lt;env-XXXX&amp;gt; Required.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# exclude serverless files that are needed to be deployed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;exclude&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;.aws/**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;.config/**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;.serverlessrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;.spotinst/**       &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;functions&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;hello&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;runtime&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nodejs8.3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;handler&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;handler.main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;128&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;timeout&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;access&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;private&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    iamRoleConfig:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#      roleId: # role-id&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    activeVersions:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        - &amp;#34;version&amp;#34;: &amp;#34;$LATEST&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#          &amp;#34;percentage&amp;#34;: 100.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    cors:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        enabled: # false by default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        origin:  # &amp;#39;*&amp;#39; by default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        headers: # &amp;#39;Content-Type,Authorization&amp;#39; by default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        methods: # &amp;#39;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT&amp;#39; by default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    cron:  # Setup scheduled trigger with cron expression&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#      active: true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#      value: &amp;#39;* * * * *&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    environmentVariables:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#      key: Value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# extend the framework using plugins listed here:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# https://github.com/serverless/plugins&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;plugins&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#ae81ff&#34;&gt;serverless-spotinst-functions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;credentials&#34;&gt;Credentials&lt;/h2&gt;
+&lt;p&gt;Save the spotinst credentials for serverless framework.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;HOME=./ serverless config credentials --provider spotinst --token {{your token}}  --account {{your account id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HOME=./&lt;/code&gt; sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of &lt;code&gt;~/.spotinst/credentials&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Spotinst Account ID can be found at &lt;a href=&#34;https://console.spotinst.com/#/settings/account/general&#34;&gt;https://console.spotinst.com/#/settings/account/general&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Spotinst Token can be found at &lt;a href=&#34;https://console.spotinst.com/#/settings/tokens/permanent&#34;&gt;https://console.spotinst.com/#/settings/tokens/permanent&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+&lt;p&gt;Add a &lt;code&gt;deploy&lt;/code&gt; script to &lt;code&gt;package.json&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  ...
+  &amp;#34;scripts&amp;#34;: {
+    ...
+    &amp;#34;deploy&amp;#34;: &amp;#34;HOME=./ serverless deploy&amp;#34;
+  },
+  ...
 }
-&lt;/code>&lt;/pre>&lt;p>Run the script to deploy.&lt;/p>
-&lt;pre tabindex="0">&lt;code>npm run deploy
-&lt;/code>&lt;/pre>&lt;h2 id="version-control">Version Control&lt;/h2>
-&lt;p>Some of the serverless directories or files should not be tracked as part of the version control. These can be added to a &lt;code>.gitignore&lt;/code> file.&lt;/p>
-&lt;pre tabindex="0">&lt;code># package directories
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run the script to deploy.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm run deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;version-control&#34;&gt;Version Control&lt;/h2&gt;
+&lt;p&gt;Some of the serverless directories or files should not be tracked as part of the version control. These can be added to a &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# package directories
 node_modules
+
 # serverless directories
 .aws
 .config
 .serverless
 .serverlessrc
 .spotinst
-&lt;/code>&lt;/pre></content></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

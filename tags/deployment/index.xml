@@ -1,22 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deployment on Notes</title><link>https://abskmj.github.io/notes/tags/deployment/</link><description>Recent content in Deployment on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Wed, 09 May 2018 05:09:36 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/deployment/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploy a NodeJS application using Git</title><link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link><pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid><description>Remote Repository on Deployment Server Create two folders named project.git and project.</description><content>&lt;h1 id="remote-repository-on-deployment-server">Remote Repository on Deployment Server&lt;/h1>
-&lt;p>Create two folders named &lt;code>project.git&lt;/code> and &lt;code>project.source&lt;/code>. Create a bare git repo in &lt;code>project.git&lt;/code>&lt;/p>
-&lt;pre tabindex="0">&lt;code>git init --bare
-&lt;/code>&lt;/pre>&lt;p>Configure &lt;code>project.source&lt;/code> as working folder for source code by adding below to &lt;code>project.git/hooks/post-receive&lt;/code>&lt;/p>
-&lt;pre tabindex="0">&lt;code>#!/bin/sh
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deployment on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/deployment/</link>
+    <description>Recent content in Deployment on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Wed, 09 May 2018 05:09:36 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/deployment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy a NodeJS application using Git</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link>
+      <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid>
+      <description>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;
+&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;
+&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init --bare
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Configure &lt;code&gt;project.source&lt;/code&gt; as working folder for source code by adding below to &lt;code&gt;project.git/hooks/post-receive&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
-&lt;/code>&lt;/pre>&lt;p>Change file persion to &lt;code>755&lt;/code> to make it executable.&lt;/p>
-&lt;pre tabindex="0">&lt;code>chmod 755 project.git/hooks/post-receive
-&lt;/code>&lt;/pre>&lt;p>Add a remote to local repo&lt;/p>
-&lt;pre tabindex="0">&lt;code>git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
-&lt;/code>&lt;/pre>&lt;p>Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p>
-&lt;pre tabindex="0">&lt;code>git push dev master
-&lt;/code>&lt;/pre>&lt;h1 id="deployment-using-hooks">Deployment using Hooks&lt;/h1>
-&lt;p>Steps to install dependencies, build, test, deploy can be added to the &lt;code>post-receive&lt;/code> hook script which will be executed every time the source code is pushed.&lt;/p>
-&lt;pre tabindex="0">&lt;code>#!/bin/sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Change file persion to &lt;code&gt;755&lt;/code&gt; to make it executable.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chmod 755 project.git/hooks/post-receive
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Add a remote to local repo&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push dev master
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;deployment-using-hooks&#34;&gt;Deployment using Hooks&lt;/h1&gt;
+&lt;p&gt;Steps to install dependencies, build, test, deploy can be added to the &lt;code&gt;post-receive&lt;/code&gt; hook script which will be executed every time the source code is pushed.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
+
 # Steps to build and deploy nodejs application
 cd /{{path}}/project.source
 npm install
 npm run build
 pm2 restart node_app
-&lt;/code>&lt;/pre></content></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,537 +1,735 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on Notes</title><link>https://abskmj.github.io/notes/tags/tutorial/</link><description>Recent content in Tutorial on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure ES Lint with Airbnb rules for a Node.js Application</title><link>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</link><pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</guid><description>Install ES Lint modules npm install --save-dev eslint-plugin-import eslint Install Airbnb config Use the base version for Node.</description><content>&lt;h2 id="install-es-lint-modules">Install ES Lint modules&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install --save-dev eslint-plugin-import eslint
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-airbnb-config">Install Airbnb config&lt;/h2>
-&lt;p>Use the base version for Node.js applications. They also publish a version for React applications as &lt;code>eslint-config-airbnb&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install --save-dev eslint-config-airbnb-base
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="config-file">Config File&lt;/h2>
-&lt;p>Create a &lt;code>.eslintrc&lt;/code> file with following contents to Airbnb rules for the Node.js Application.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;extends&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint-config-airbnb-base&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="npm-scripts">NPM Scripts&lt;/h2>
-&lt;p>Create few npm scripts to integrate linting into development flow.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>:{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;node .&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;lint&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;eslint --fix .&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;dev&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;nodemon --exec &amp;#39;npm run lint &amp;amp;&amp;amp; npm run start&amp;#39;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vs-code">VS Code&lt;/h2>
-&lt;p>There is an extension on VS Code for ES Lint, available at &lt;a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&lt;/a>&lt;/p></content></item><item><title>Working with Git Stash</title><link>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</link><pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</guid><description>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.</description><content>&lt;p>Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p>
-&lt;h2 id="save-the-local-changes-in-stash">Save the local changes in Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash push -m &lt;span style="color:#f92672">{{&lt;/span> commit message&lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>// example
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git stash push -m &lt;span style="color:#f92672">{{&lt;/span> new logging module &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="list-all-the-change-sets-in-stash">List all the change sets in Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="apply-a-change-set-from-stash">Apply a change set from Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash apply &lt;span style="color:#f92672">{{&lt;/span> index &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//example
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git stash apply &lt;span style="color:#ae81ff">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>Not specifying an index with automatically apply first index&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="delete-a-change-set-without-applying-from-stash">Delete a change set without applying from Stash&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash drop &lt;span style="color:#f92672">{{&lt;/span> index &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>// example
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git stash drop &lt;span style="color:#ae81ff">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>Not specifying an index with automatically drop first index&lt;/p>
-&lt;/blockquote></content></item><item><title>Deploy functions on Spotinst using Serverless Framework</title><link>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</link><pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</guid><description>Spotinst is one of the providers which support deploying serverless functions or FaaS (Function as a Service).</description><content>&lt;p>&lt;a href="https://spotinst.com/products/spotinst-functions/">Spotinst&lt;/a> is one of the providers which support deploying serverless functions or FaaS (Function as a Service). &lt;a href="https://serverless.com/">Serverless Framework&lt;/a> is an NPM module which makes building serverless applications easy and open.&lt;/p>
-&lt;h1 id="isolated-workspace">Isolated Workspace&lt;/h1>
-&lt;p>The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects. This also allows me to use multiple Spotinst credentials for multiple serverless applications.&lt;/p>
-&lt;h1 id="serverless-framework">Serverless Framework&lt;/h1>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>Install the framework globally&lt;/p>
-&lt;pre tabindex="0">&lt;code>npm install -g serverless
-&lt;/code>&lt;/pre>&lt;p>Install the Spotinst functions plugin locally.&lt;/p>
-&lt;pre tabindex="0">&lt;code>npm install --save-dev serverless-spotinst-functions
-&lt;/code>&lt;/pre>&lt;h2 id="configuration">Configuration&lt;/h2>
-&lt;p>Create a &lt;code>serverless.yml&lt;/code> file in the root directory of the project.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Welcome to Serverless!&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># This file is the main config file for your service.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># It&amp;#39;s very minimal at this point and uses default values.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># You can always add more config options for more control.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># We&amp;#39;ve included some commented out config examples here.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Just uncomment any of them to get that config option.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># For full config options, check the docs:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># docs.serverless.com&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Happy Coding!&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">service: demo # NOTE&lt;/span>: &lt;span style="color:#ae81ff">update this with your service name&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">provider&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">spotinst&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#stage: &amp;lt;Stage Name&amp;gt; #Optional. Defaults to &amp;#39;dev&amp;#39;, see https://help.spotinst.com/hc/en-us/articles/115005893409&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">spotinst&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">environment&lt;/span>: &lt;span style="color:#ae81ff">env-c0XXbXeb&lt;/span> &lt;span style="color:#75715e">#&amp;lt;env-XXXX&amp;gt; Required.&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># exclude serverless files that are needed to be deployed&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">package&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">exclude&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.aws/**&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.config/**&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.serverlessrc&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">.spotinst/** &lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">functions&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">hello&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">runtime&lt;/span>: &lt;span style="color:#ae81ff">nodejs8.3&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">handler&lt;/span>: &lt;span style="color:#ae81ff">handler.main&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">memory&lt;/span>: &lt;span style="color:#ae81ff">128&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">timeout&lt;/span>: &lt;span style="color:#ae81ff">30&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">access&lt;/span>: &lt;span style="color:#ae81ff">private&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># iamRoleConfig:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># roleId: # role-id&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># activeVersions:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># - &amp;#34;version&amp;#34;: &amp;#34;$LATEST&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># &amp;#34;percentage&amp;#34;: 100.0&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cors:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># enabled: # false by default&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># origin: # &amp;#39;*&amp;#39; by default&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># headers: # &amp;#39;Content-Type,Authorization&amp;#39; by default&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># methods: # &amp;#39;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT&amp;#39; by default&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cron: # Setup scheduled trigger with cron expression&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># active: true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># value: &amp;#39;* * * * *&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># environmentVariables:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># key: Value&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># extend the framework using plugins listed here:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># https://github.com/serverless/plugins&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">plugins&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">serverless-spotinst-functions&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="credentials">Credentials&lt;/h2>
-&lt;p>Save the spotinst credentials for serverless framework.&lt;/p>
-&lt;pre tabindex="0">&lt;code>HOME=./ serverless config credentials --provider spotinst --token {{your token}} --account {{your account id}}
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>&lt;code>HOME=./&lt;/code> sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of &lt;code>~/.spotinst/credentials&lt;/code>.&lt;/li>
-&lt;li>Spotinst Account ID can be found at &lt;a href="https://console.spotinst.com/#/settings/account/general">https://console.spotinst.com/#/settings/account/general&lt;/a>&lt;/li>
-&lt;li>Spotinst Token can be found at &lt;a href="https://console.spotinst.com/#/settings/tokens/permanent">https://console.spotinst.com/#/settings/tokens/permanent&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="deployment">Deployment&lt;/h2>
-&lt;p>Add a &lt;code>deploy&lt;/code> script to &lt;code>package.json&lt;/code> file.&lt;/p>
-&lt;pre tabindex="0">&lt;code>{
-...
-&amp;#34;scripts&amp;#34;: {
-...
-&amp;#34;deploy&amp;#34;: &amp;#34;HOME=./ serverless deploy&amp;#34;
-},
-...
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Mon, 01 Jul 2019 20:15:18 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure ES Lint with Airbnb rules for a Node.js Application</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</link>
+      <pubDate>Mon, 01 Jul 2019 20:15:18 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/nodejs/es-lint/</guid>
+      <description>&lt;h2 id=&#34;install-es-lint-modules&#34;&gt;Install ES Lint modules&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install --save-dev eslint-plugin-import eslint
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-airbnb-config&#34;&gt;Install Airbnb config&lt;/h2&gt;
+&lt;p&gt;Use the base version for Node.js applications. They also publish a version for React applications as &lt;code&gt;eslint-config-airbnb&lt;/code&gt;.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;install-es-lint-modules&#34;&gt;Install ES Lint modules&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install --save-dev eslint-plugin-import eslint
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-airbnb-config&#34;&gt;Install Airbnb config&lt;/h2&gt;
+&lt;p&gt;Use the base version for Node.js applications. They also publish a version for React applications as &lt;code&gt;eslint-config-airbnb&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install --save-dev eslint-config-airbnb-base
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;config-file&#34;&gt;Config File&lt;/h2&gt;
+&lt;p&gt;Create a &lt;code&gt;.eslintrc&lt;/code&gt; file with following contents to Airbnb rules for the Node.js Application.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;extends&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eslint-config-airbnb-base&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;npm-scripts&#34;&gt;NPM Scripts&lt;/h2&gt;
+&lt;p&gt;Create few npm scripts to integrate linting into development flow.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;:{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;start&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;node .&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lint&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eslint --fix .&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;dev&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;nodemon --exec &amp;#39;npm run lint &amp;amp;&amp;amp; npm run start&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vs-code&#34;&gt;VS Code&lt;/h2&gt;
+&lt;p&gt;There is an extension on VS Code for ES Lint, available at &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&#34;&gt;https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Working with Git Stash</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</link>
+      <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</guid>
+      <description>&lt;p&gt;Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p&gt;
+&lt;h2 id=&#34;save-the-local-changes-in-stash&#34;&gt;Save the local changes in Stash&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -m &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; commit message&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// example
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -m &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; new logging module &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;list-all-the-change-sets-in-stash&#34;&gt;List all the change sets in Stash&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;apply-a-change-set-from-stash&#34;&gt;Apply a change set from Stash&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash apply &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; index &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;//example
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash apply &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Not specifying an index with automatically apply first index&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;delete-a-change-set-without-applying-from-stash&#34;&gt;Delete a change set without applying from Stash&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash drop &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; index &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// example
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash drop &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Not specifying an index with automatically drop first index&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Deploy functions on Spotinst using Serverless Framework</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</link>
+      <pubDate>Tue, 08 Jan 2019 09:56:04 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/spotinst/serverless-spotinst-setup/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://spotinst.com/products/spotinst-functions/&#34;&gt;Spotinst&lt;/a&gt; is one of the providers which support deploying serverless functions or FaaS (Function as a Service). &lt;a href=&#34;https://serverless.com/&#34;&gt;Serverless Framework&lt;/a&gt; is an NPM module which makes building serverless applications easy and open.&lt;/p&gt;</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://spotinst.com/products/spotinst-functions/&#34;&gt;Spotinst&lt;/a&gt; is one of the providers which support deploying serverless functions or FaaS (Function as a Service). &lt;a href=&#34;https://serverless.com/&#34;&gt;Serverless Framework&lt;/a&gt; is an NPM module which makes building serverless applications easy and open.&lt;/p&gt;
+&lt;h1 id=&#34;isolated-workspace&#34;&gt;Isolated Workspace&lt;/h1&gt;
+&lt;p&gt;The steps listed below is different from the traditional steps listed on the official site. I always like to keep all the NPM modules and related files within the project directory to keep things isolated from other projects. This also allows me to use multiple Spotinst credentials for multiple serverless applications.&lt;/p&gt;
+&lt;h1 id=&#34;serverless-framework&#34;&gt;Serverless Framework&lt;/h1&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Install the framework globally&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g serverless
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install the Spotinst functions plugin locally.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install --save-dev serverless-spotinst-functions
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;Create a &lt;code&gt;serverless.yml&lt;/code&gt; file in the root directory of the project.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Welcome to Serverless!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# This file is the main config file for your service.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# It&amp;#39;s very minimal at this point and uses default values.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# You can always add more config options for more control.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# We&amp;#39;ve included some commented out config examples here.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Just uncomment any of them to get that config option.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# For full config options, check the docs:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    docs.serverless.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Happy Coding!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;service: demo # NOTE&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;update this with your service name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;provider&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;spotinst&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;#stage: &amp;lt;Stage Name&amp;gt;  #Optional. Defaults to &amp;#39;dev&amp;#39;, see https://help.spotinst.com/hc/en-us/articles/115005893409&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;spotinst&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;environment&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;env-c0XXbXeb&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#&amp;lt;env-XXXX&amp;gt; Required.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# exclude serverless files that are needed to be deployed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;exclude&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;.aws/**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;.config/**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;.serverlessrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;.spotinst/**       &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;functions&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;hello&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;runtime&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nodejs8.3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;handler&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;handler.main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;memory&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;128&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;timeout&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;access&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;private&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    iamRoleConfig:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#      roleId: # role-id&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    activeVersions:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        - &amp;#34;version&amp;#34;: &amp;#34;$LATEST&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#          &amp;#34;percentage&amp;#34;: 100.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    cors:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        enabled: # false by default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        origin:  # &amp;#39;*&amp;#39; by default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        headers: # &amp;#39;Content-Type,Authorization&amp;#39; by default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#        methods: # &amp;#39;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT&amp;#39; by default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    cron:  # Setup scheduled trigger with cron expression&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#      active: true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#      value: &amp;#39;* * * * *&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#    environmentVariables:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#      key: Value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# extend the framework using plugins listed here:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# https://github.com/serverless/plugins&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;plugins&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#ae81ff&#34;&gt;serverless-spotinst-functions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;credentials&#34;&gt;Credentials&lt;/h2&gt;
+&lt;p&gt;Save the spotinst credentials for serverless framework.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;HOME=./ serverless config credentials --provider spotinst --token {{your token}}  --account {{your account id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HOME=./&lt;/code&gt; sets the home directory as current project directory so that the Spotinst credentials are stored within the project directory instead of &lt;code&gt;~/.spotinst/credentials&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Spotinst Account ID can be found at &lt;a href=&#34;https://console.spotinst.com/#/settings/account/general&#34;&gt;https://console.spotinst.com/#/settings/account/general&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Spotinst Token can be found at &lt;a href=&#34;https://console.spotinst.com/#/settings/tokens/permanent&#34;&gt;https://console.spotinst.com/#/settings/tokens/permanent&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+&lt;p&gt;Add a &lt;code&gt;deploy&lt;/code&gt; script to &lt;code&gt;package.json&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  ...
+  &amp;#34;scripts&amp;#34;: {
+    ...
+    &amp;#34;deploy&amp;#34;: &amp;#34;HOME=./ serverless deploy&amp;#34;
+  },
+  ...
 }
-&lt;/code>&lt;/pre>&lt;p>Run the script to deploy.&lt;/p>
-&lt;pre tabindex="0">&lt;code>npm run deploy
-&lt;/code>&lt;/pre>&lt;h2 id="version-control">Version Control&lt;/h2>
-&lt;p>Some of the serverless directories or files should not be tracked as part of the version control. These can be added to a &lt;code>.gitignore&lt;/code> file.&lt;/p>
-&lt;pre tabindex="0">&lt;code># package directories
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run the script to deploy.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm run deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;version-control&#34;&gt;Version Control&lt;/h2&gt;
+&lt;p&gt;Some of the serverless directories or files should not be tracked as part of the version control. These can be added to a &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# package directories
 node_modules
+
 # serverless directories
 .aws
 .config
 .serverless
 .serverlessrc
 .spotinst
-&lt;/code>&lt;/pre></content></item><item><title>Implement a Javascript Client for Crypto Compare API</title><link>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link><pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid><description>Crypto Compare Crypto Compare is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies.</description><content>&lt;h1 id="crypto-compare">Crypto Compare&lt;/h1>
-&lt;p>&lt;a href="https://www.cryptocompare.com/">Crypto Compare&lt;/a> is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available &lt;a href="https://min-api.cryptocompare.com/documentation">here&lt;/a>.&lt;/p>
-&lt;h1 id="javascript-client">Javascript Client&lt;/h1>
-&lt;p>I&amp;rsquo;m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I&amp;rsquo;m using an NPM module called &lt;a href="https://github.com/abskmj/cligen">Cligen&lt;/a> to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.&lt;/p>
-&lt;h1 id="cligen-specification">Cligen Specification&lt;/h1>
-&lt;p>I&amp;rsquo;m writing the specification for 2 of the commonly used endpoints. You can follow a similar way for other endpoints as well.&lt;/p>
-&lt;ul>
-&lt;li>Single Symbol Price&lt;/li>
-&lt;li>Historical Minute OHLCV&lt;/li>
-&lt;/ul>
-&lt;h2 id="specjson">spec.json&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;baseUrl&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;https://min-api.cryptocompare.com/data&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;operations&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;price&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;uri&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/price&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;data&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;query&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;parameters&amp;#34;&lt;/span>: [
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tryConversion&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fsym&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsyms&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;e&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;extraParams&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;sign&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;histominute&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;uri&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;/histominute&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;data&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;query&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;parameters&amp;#34;&lt;/span>: [
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tryConversion&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;fsym&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;tsym&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;required&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;e&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;aggregate&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;aggregatePredictableTimePeriods&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;limit&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;toTs&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;extraParams&amp;#34;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;sign&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="nodejs">NodeJS&lt;/h1>
-&lt;h2 id="installing-cligen-module">Installing Cligen Module&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install -save github:@abskmj/cligen
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="generating-and-using-the-client">Generating and Using the client&lt;/h2>
-&lt;pre tabindex="0">&lt;code class="language-jvascript" data-lang="jvascript">const cligen = require(&amp;#39;@abskmj/cligen&amp;#39;);
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Implement a Javascript Client for Crypto Compare API </title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</link>
+      <pubDate>Sun, 16 Dec 2018 07:30:14 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/javascript/cligen-cryptocompare-api-client/</guid>
+      <description>&lt;h1 id=&#34;crypto-compare&#34;&gt;Crypto Compare&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cryptocompare.com/&#34;&gt;Crypto Compare&lt;/a&gt; is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available &lt;a href=&#34;https://min-api.cryptocompare.com/documentation&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;crypto-compare&#34;&gt;Crypto Compare&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cryptocompare.com/&#34;&gt;Crypto Compare&lt;/a&gt; is a website and API provider which brings you all the latest streaming pricing data in the world of cryptocurrencies. Their API documentation is available &lt;a href=&#34;https://min-api.cryptocompare.com/documentation&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;javascript-client&#34;&gt;Javascript Client&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m writing a javascript based client for few commonly used crypto compare APIs which can be used on both nodejs and browser. I&amp;rsquo;m using an NPM module called &lt;a href=&#34;https://github.com/abskmj/cligen&#34;&gt;Cligen&lt;/a&gt; to generate the client. The module only needs a corresponding JSON specification of the API endpoints to generate the client.&lt;/p&gt;
+&lt;h1 id=&#34;cligen-specification&#34;&gt;Cligen Specification&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m writing the specification for 2 of the commonly used endpoints. You can follow a similar way for other endpoints as well.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Single Symbol Price&lt;/li&gt;
+&lt;li&gt;Historical Minute OHLCV&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;specjson&#34;&gt;spec.json&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;baseUrl&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://min-api.cryptocompare.com/data&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;operations&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;price&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/price&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;query&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;parameters&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tryConversion&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fsym&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tsyms&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;e&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;extraParams&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sign&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;histominute&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/histominute&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;query&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;parameters&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tryConversion&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fsym&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tsym&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;e&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;aggregate&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;aggregatePredictableTimePeriods&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;limit&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;toTs&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;extraParams&amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sign&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;nodejs&#34;&gt;NodeJS&lt;/h1&gt;
+&lt;h2 id=&#34;installing-cligen-module&#34;&gt;Installing Cligen Module&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install -save github:@abskmj/cligen
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;generating-and-using-the-client&#34;&gt;Generating and Using the client&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-jvascript&#34; data-lang=&#34;jvascript&#34;&gt;const cligen = require(&amp;#39;@abskmj/cligen&amp;#39;);
+
 const spec = require(&amp;#39;./spec.json&amp;#39;);
+
 const client = cligen.getClient(spec);
+
+
 // supports callback
 client.price({ fsym: &amp;#39;BTC&amp;#39;, tsyms: &amp;#39;USDT&amp;#39; }, (error, response) =&amp;gt; {
-if (error) {
-console.log(error);
-}
-else {
-console.log(response);
-/*
-{ headers:
-{ server: &amp;#39;nginx/1.10.3&amp;#39;,
-date: &amp;#39;Sun, 16 Dec 2018 08:09:00 GMT&amp;#39;,
-&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
-&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
-connection: &amp;#39;close&amp;#39;,
-vary: &amp;#39;Accept-Encoding&amp;#39;,
-&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
-&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
-&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
-&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
-&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
-&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
-data: { USDT: 3261.81 },
-status: 200,
-request:
-{ url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
-method: &amp;#39;GET&amp;#39;,
-headers: {},
-body: undefined } }
-*/
-}
+    if (error) {
+        console.log(error);
+    }
+    else {
+        console.log(response);
+        
+        /*
+            { headers: 
+               { server: &amp;#39;nginx/1.10.3&amp;#39;,
+                 date: &amp;#39;Sun, 16 Dec 2018 08:09:00 GMT&amp;#39;,
+                 &amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+                 &amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+                 connection: &amp;#39;close&amp;#39;,
+                 vary: &amp;#39;Accept-Encoding&amp;#39;,
+                 &amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+                 &amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+                 &amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+                 &amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+                 &amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
+                 &amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
+              data: { USDT: 3261.81 },
+              status: 200,
+              request: 
+               { url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
+                 method: &amp;#39;GET&amp;#39;,
+                 headers: {},
+                 body: undefined } }
+        
+        */
+    }
 });
+
 // supports promise
 client.histominute({ fsym: &amp;#39;BTC&amp;#39;, tsym: &amp;#39;USDT&amp;#39; })
 .then((response) =&amp;gt; {
-console.log(response);
-/*
-{ headers:
-{ server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
-date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
-&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
-&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
-connection: &amp;#39;close&amp;#39;,
-vary: &amp;#39;Accept-Encoding&amp;#39;,
-&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
-&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
-&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
-&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
-&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
-&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
-data: { USDT: 3263.88 },
-status: 200,
-request:
-{ url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
-method: &amp;#39;GET&amp;#39;,
-headers: {},
-body: undefined } }
-{ headers:
-{ server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
-date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
-&amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
-&amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
-connection: &amp;#39;close&amp;#39;,
-vary: &amp;#39;Accept-Encoding&amp;#39;,
-&amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
-&amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
-&amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
-&amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
-&amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=40&amp;#39;,
-&amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;true&amp;#39; },
-data:
-{ Response: &amp;#39;Success&amp;#39;,
-Type: 100,
-Aggregated: false,
-Data:
-[ ... ],
-TimeTo: 1544949660,
-TimeFrom: 1544863260,
-FirstValueInArray: true,
-ConversionType: { type: &amp;#39;direct&amp;#39;, conversionSymbol: &amp;#39;&amp;#39; },
-RateLimit: {},
-HasWarning: false },
-status: 200,
-request:
-{ url: &amp;#39;https://min-api.cryptocompare.com/data/histominute?fsym=BTC&amp;amp;tsym=USDT&amp;#39;,
-method: &amp;#39;GET&amp;#39;,
-headers: {},
-body: undefined } }
-*/
+    console.log(response);
+    
+    /*
+        { headers: 
+           { server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
+             date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
+             &amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+             &amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+             connection: &amp;#39;close&amp;#39;,
+             vary: &amp;#39;Accept-Encoding&amp;#39;,
+             &amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+             &amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+             &amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+             &amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+             &amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=10&amp;#39;,
+             &amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;false&amp;#39; },
+          data: { USDT: 3263.88 },
+          status: 200,
+          request: 
+           { url: &amp;#39;https://min-api.cryptocompare.com/data/price?fsym=BTC&amp;amp;tsyms=USDT&amp;#39;,
+             method: &amp;#39;GET&amp;#39;,
+             headers: {},
+             body: undefined } }
+        { headers: 
+           { server: &amp;#39;nginx/1.4.6 (Ubuntu)&amp;#39;,
+             date: &amp;#39;Sun, 16 Dec 2018 08:41:46 GMT&amp;#39;,
+             &amp;#39;content-type&amp;#39;: &amp;#39;application/json; charset=UTF-8&amp;#39;,
+             &amp;#39;transfer-encoding&amp;#39;: &amp;#39;chunked&amp;#39;,
+             connection: &amp;#39;close&amp;#39;,
+             vary: &amp;#39;Accept-Encoding&amp;#39;,
+             &amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+             &amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET, POST, OPTIONS&amp;#39;,
+             &amp;#39;access-control-allow-headers&amp;#39;: &amp;#39;Content-Type, Cookie, Set-Cookie&amp;#39;,
+             &amp;#39;access-control-allow-credentials&amp;#39;: &amp;#39;true&amp;#39;,
+             &amp;#39;cache-control&amp;#39;: &amp;#39;public, max-age=40&amp;#39;,
+             &amp;#39;cryptocompare-cache-hit&amp;#39;: &amp;#39;true&amp;#39; },
+          data: 
+           { Response: &amp;#39;Success&amp;#39;,
+             Type: 100,
+             Aggregated: false,
+             Data: 
+              [ ... ],
+             TimeTo: 1544949660,
+             TimeFrom: 1544863260,
+             FirstValueInArray: true,
+             ConversionType: { type: &amp;#39;direct&amp;#39;, conversionSymbol: &amp;#39;&amp;#39; },
+             RateLimit: {},
+             HasWarning: false },
+          status: 200,
+          request: 
+           { url: &amp;#39;https://min-api.cryptocompare.com/data/histominute?fsym=BTC&amp;amp;tsym=USDT&amp;#39;,
+             method: &amp;#39;GET&amp;#39;,
+             headers: {},
+             body: undefined } }
+    */
 }). catch((error) =&amp;gt; {
-console.log(error);
+    console.log(error);
 })
-&lt;/code>&lt;/pre></content></item><item><title>Developing an Angular project on Cloud9 IDE</title><link>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</link><pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid><description>Update NodeJS version All of the blank VMs on cloud9 have nvm pre installed.</description><content>&lt;h2 id="update-nodejs-version">Update NodeJS version&lt;/h2>
-&lt;ul>
-&lt;li>All of the blank VMs on cloud9 have &lt;a href="https://github.com/creationix/nvm">nvm&lt;/a> pre installed.&lt;/li>
-&lt;li>List all the available versions from &lt;a href="https://nodejs.org">the official site&lt;/a>.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm ls-remote
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Choose to install the latest version&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm install v10.6.0
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Choose to use the latest version&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm use v10.6.0
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Check the version in use&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>node --version
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="angular">Angular&lt;/h2>
-&lt;ul>
-&lt;li>Install latest &lt;a href="https://cli.angular.io/">Angular CLI&lt;/a> package&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install -g @angular/cli
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Create a new project named &lt;code>my-project&lt;/code> (you can use any name you need)&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ng new my-project
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd my-project
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Change &lt;code>start&lt;/code> script in &lt;code>package.json&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;scripts&amp;#34;&lt;/span>: {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;start&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;ng serve --host $IP --port $PORT --public-host $C9_HOSTNAME&amp;#34;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#960050;background-color:#1e0010">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>On IDE menu, click on &lt;code>Preview &amp;gt; Preview Running Application&lt;/code> to get the preview URL.&lt;/li>
-&lt;/ul>
-&lt;h2 id="downside">Downside&lt;/h2>
-&lt;p>Everything works perfectly expect that the live reload, sometimes, is slower than usual.&lt;/p></content></item><item><title>Using a remote repository with Glitch.com</title><link>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</link><pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</guid><description>Glitch is a online workspace that support javascript for development with live previews.</description><content>&lt;p>&lt;a href="https://glitch.com/">Glitch&lt;/a> is a online workspace that support javascript for development with live previews.&lt;/p>
-&lt;p>A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.&lt;/p>
-&lt;p>Rather, a separate git repository can be set using the current project as working directory.&lt;/p>
-&lt;h2 id="create-a-separate-local-git-repository">Create a separate local Git repository&lt;/h2>
-&lt;ul>
-&lt;li>Create a folder for this new git repository.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir .git-remote
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd .git-remote
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Initialize an bare git repository.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git init --bare
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Add the remote repository&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote add orgin &lt;span style="color:#f92672">{{&lt;/span>remote_git_url&lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="using-new-git-repository">Using new Git Repository&lt;/h2>
-&lt;ul>
-&lt;li>All the git comands can be used by point the git directory to the new repository.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> &lt;span style="color:#f92672">{{&lt;/span>git_options&lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Commits:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> commit -am &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Push/Pull:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span> push origin master
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="adding-an-alias">Adding an Alias&lt;/h2>
-&lt;ul>
-&lt;li>An alias can be added to glitch console by creating a &lt;code>.bash_profile&lt;/code> file in project root and adding:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias rgit&lt;span style="color:#f92672">=&lt;/span>git --git-dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;.git-remote&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Alias can be used:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rgit commit -m &lt;span style="color:#e6db74">&amp;#34;new commit&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Set Proxy for Maven</title><link>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</link><pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</guid><description>Proxy settings can be changed in {{maven_installation_folder}}/conf/settings.xml. Un-comment and change the values in proxies section of the file.</description><content>&lt;p>Proxy settings can be changed in &lt;code>{{maven_installation_folder}}/conf/settings.xml&lt;/code>. Un-comment and change the values in &lt;code>proxies&lt;/code> section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;lt;proxies&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">&amp;lt;!-- proxy
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> | Specification for one proxy, to be used in connecting to the network.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"> |--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;proxy&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;id&amp;gt;&lt;/span>optional&lt;span style="color:#f92672">&amp;lt;/id&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;active&amp;gt;&lt;/span>true&lt;span style="color:#f92672">&amp;lt;/active&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;protocol&amp;gt;&lt;/span>http&lt;span style="color:#f92672">&amp;lt;/protocol&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;username&amp;gt;&amp;lt;/username&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;password&amp;gt;&amp;lt;/password&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;host&amp;gt;&lt;/span>{{proxy_host_or_ip}}&lt;span style="color:#f92672">&amp;lt;/host&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;port&amp;gt;&lt;/span>8080&lt;span style="color:#f92672">&amp;lt;/port&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;nonProxyHosts&amp;gt;&lt;/span>local.net|some.host.com&lt;span style="color:#f92672">&amp;lt;/nonProxyHosts&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;lt;/proxy&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;lt;/proxies&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>...
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Deploy a NodeJS application using Git</title><link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link><pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid><description>Remote Repository on Deployment Server Create two folders named project.git and project.</description><content>&lt;h1 id="remote-repository-on-deployment-server">Remote Repository on Deployment Server&lt;/h1>
-&lt;p>Create two folders named &lt;code>project.git&lt;/code> and &lt;code>project.source&lt;/code>. Create a bare git repo in &lt;code>project.git&lt;/code>&lt;/p>
-&lt;pre tabindex="0">&lt;code>git init --bare
-&lt;/code>&lt;/pre>&lt;p>Configure &lt;code>project.source&lt;/code> as working folder for source code by adding below to &lt;code>project.git/hooks/post-receive&lt;/code>&lt;/p>
-&lt;pre tabindex="0">&lt;code>#!/bin/sh
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Developing an Angular project on Cloud9 IDE</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</link>
+      <pubDate>Tue, 10 Jul 2018 12:46:13 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/cloud9/angular-project-cloud9-ide/</guid>
+      <description>&lt;h2 id=&#34;update-nodejs-version&#34;&gt;Update NodeJS version&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;All of the blank VMs on cloud9 have &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;nvm&lt;/a&gt; pre installed.&lt;/li&gt;
+&lt;li&gt;List all the available versions from &lt;a href=&#34;https://nodejs.org&#34;&gt;the official site&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvm ls-remote
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Choose to install the latest version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvm install v10.6.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Choose to use the latest version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvm use v10.6.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Check the version in use&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;angular&#34;&gt;Angular&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install latest &lt;a href=&#34;https://cli.angular.io/&#34;&gt;Angular CLI&lt;/a&gt; package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install -g @angular/cli
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Create a new project named &lt;code&gt;my-project&lt;/code&gt; (you can use any name you need)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ng new my-project
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd my-project
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Change &lt;code&gt;start&lt;/code&gt; script in &lt;code&gt;package.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;start&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ng serve --host $IP  --port $PORT --public-host $C9_HOSTNAME&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;On IDE menu, click on &lt;code&gt;Preview &amp;gt; Preview Running Application&lt;/code&gt; to get the preview URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;downside&#34;&gt;Downside&lt;/h2&gt;
+&lt;p&gt;Everything works perfectly expect that the live reload, sometimes, is slower than usual.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;update-nodejs-version&#34;&gt;Update NodeJS version&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;All of the blank VMs on cloud9 have &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;nvm&lt;/a&gt; pre installed.&lt;/li&gt;
+&lt;li&gt;List all the available versions from &lt;a href=&#34;https://nodejs.org&#34;&gt;the official site&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvm ls-remote
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Choose to install the latest version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvm install v10.6.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Choose to use the latest version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nvm use v10.6.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Check the version in use&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;angular&#34;&gt;Angular&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install latest &lt;a href=&#34;https://cli.angular.io/&#34;&gt;Angular CLI&lt;/a&gt; package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install -g @angular/cli
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Create a new project named &lt;code&gt;my-project&lt;/code&gt; (you can use any name you need)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ng new my-project
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd my-project
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Change &lt;code&gt;start&lt;/code&gt; script in &lt;code&gt;package.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;start&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ng serve --host $IP  --port $PORT --public-host $C9_HOSTNAME&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;On IDE menu, click on &lt;code&gt;Preview &amp;gt; Preview Running Application&lt;/code&gt; to get the preview URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;downside&#34;&gt;Downside&lt;/h2&gt;
+&lt;p&gt;Everything works perfectly expect that the live reload, sometimes, is slower than usual.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Using a remote repository with Glitch.com</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</link>
+      <pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://glitch.com/&#34;&gt;Glitch&lt;/a&gt; is a online workspace that support javascript for development with live previews.&lt;/p&gt;</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://glitch.com/&#34;&gt;Glitch&lt;/a&gt; is a online workspace that support javascript for development with live previews.&lt;/p&gt;
+&lt;p&gt;A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.&lt;/p&gt;
+&lt;p&gt;Rather, a separate git repository can be set using the current project as working directory.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-separate-local-git-repository&#34;&gt;Create a separate local Git repository&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a folder for this new git repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir .git-remote
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd .git-remote
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Initialize an bare git repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init --bare
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Add the remote repository&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add orgin &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;remote_git_url&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-new-git-repository&#34;&gt;Using new Git Repository&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;All the git comands can be used by point the git directory to the new repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;git_options&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Commits:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; commit -am &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;new commit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Push/Pull:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; push origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;adding-an-alias&#34;&gt;Adding an Alias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;An alias can be added to glitch console by creating a &lt;code&gt;.bash_profile&lt;/code&gt; file in project root and adding:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias rgit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Alias can be used:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rgit commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;new commit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Set Proxy for Maven</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</link>
+      <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</guid>
+      <description>&lt;p&gt;Proxy settings can be changed in &lt;code&gt;{{maven_installation_folder}}/conf/settings.xml&lt;/code&gt;. Un-comment and change the values in &lt;code&gt;proxies&lt;/code&gt; section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Proxy settings can be changed in &lt;code&gt;{{maven_installation_folder}}/conf/settings.xml&lt;/code&gt;. Un-comment and change the values in &lt;code&gt;proxies&lt;/code&gt; section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;proxies&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- proxy
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     | Specification for one proxy, to be used in connecting to the network.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     |--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;proxy&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;optional&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;active&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/active&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;protocol&amp;gt;&lt;/span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/protocol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;username&amp;gt;&amp;lt;/username&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;password&amp;gt;&amp;lt;/password&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;host&amp;gt;&lt;/span&gt;{{proxy_host_or_ip}}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/host&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;port&amp;gt;&lt;/span&gt;8080&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/port&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;nonProxyHosts&amp;gt;&lt;/span&gt;local.net|some.host.com&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/nonProxyHosts&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/proxy&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/proxies&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Deploy a NodeJS application using Git</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link>
+      <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid>
+      <description>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;
+&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;
+&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init --bare
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Configure &lt;code&gt;project.source&lt;/code&gt; as working folder for source code by adding below to &lt;code&gt;project.git/hooks/post-receive&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
-&lt;/code>&lt;/pre>&lt;p>Change file persion to &lt;code>755&lt;/code> to make it executable.&lt;/p>
-&lt;pre tabindex="0">&lt;code>chmod 755 project.git/hooks/post-receive
-&lt;/code>&lt;/pre>&lt;p>Add a remote to local repo&lt;/p>
-&lt;pre tabindex="0">&lt;code>git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
-&lt;/code>&lt;/pre>&lt;p>Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p>
-&lt;pre tabindex="0">&lt;code>git push dev master
-&lt;/code>&lt;/pre>&lt;h1 id="deployment-using-hooks">Deployment using Hooks&lt;/h1>
-&lt;p>Steps to install dependencies, build, test, deploy can be added to the &lt;code>post-receive&lt;/code> hook script which will be executed every time the source code is pushed.&lt;/p>
-&lt;pre tabindex="0">&lt;code>#!/bin/sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Change file persion to &lt;code&gt;755&lt;/code&gt; to make it executable.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chmod 755 project.git/hooks/post-receive
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Add a remote to local repo&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push dev master
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;deployment-using-hooks&#34;&gt;Deployment using Hooks&lt;/h1&gt;
+&lt;p&gt;Steps to install dependencies, build, test, deploy can be added to the &lt;code&gt;post-receive&lt;/code&gt; hook script which will be executed every time the source code is pushed.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
 git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
+
 # Steps to build and deploy nodejs application
 cd /{{path}}/project.source
 npm install
 npm run build
 pm2 restart node_app
-&lt;/code>&lt;/pre></content></item><item><title>Custom Model Methods in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</link><pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</guid><description>Loopback models can be extended by adding custom methods to them.</description><content>&lt;p>Loopback models can be extended by adding custom methods to them. A method can be:&lt;/p>
-&lt;ul>
-&lt;li>Model Method: the method is available on Model itself.&lt;/li>
-&lt;li>Instance Method: the method is available on an instance of the model.&lt;/li>
-&lt;/ul>
-&lt;h1 id="model-js-file">Model JS file&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Model.js
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>(&lt;span style="color:#a6e22e">Model&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Model Method
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Instance Method
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">prototype&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span>() {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Model method
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">app&lt;/span>.&lt;span style="color:#a6e22e">models&lt;/span>.&lt;span style="color:#a6e22e">Model&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Instance Method
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">instance&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Model&lt;/span>();
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">instance&lt;/span>.&lt;span style="color:#a6e22e">method&lt;/span>();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Enable Destroy All API for a model in Loopback</title><link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link><pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid><description>Destroy All API (Model.destroyAll()) is, by default, disabled to avoid accidental bulk deletion of data.</description><content>&lt;p>Destroy All API (&lt;code>Model.destroyAll()&lt;/code>) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.&lt;/p>
-&lt;h1 id="remote-method">Remote Method&lt;/h1>
-&lt;p>A corresponding remote method can be added to the &lt;code>model.js&lt;/code> file to enable this API. This method also supports a filter to enable selective deletion.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">module&lt;/span>.&lt;span style="color:#a6e22e">exports&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">Model&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">Model&lt;/span>.&lt;span style="color:#a6e22e">remoteMethod&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;destroyAll&amp;#39;&lt;/span>, {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">isStatic&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Delete all matching records&amp;#39;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">accessType&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;WRITE&amp;#39;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">accepts&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">arg&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;where&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">type&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;object&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">description&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;filter.where object&amp;#39;&lt;/span> },
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">http&lt;/span>&lt;span style="color:#f92672">:&lt;/span> { &lt;span style="color:#a6e22e">verb&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;del&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/&amp;#39;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> });
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Deploy Hugo Website with Surge for Free</title><link>https://abskmj.github.io/notes/posts/tutorials/deploy-hugo-surge-free/</link><pubDate>Mon, 20 Nov 2017 20:28:20 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/deploy-hugo-surge-free/</guid><description>Surge is static web publishing for Web Developers, right from the CLI.</description><content>&lt;blockquote>
-&lt;p>&lt;a href="https://surge.sh/">Surge&lt;/a> is static web publishing for Web Developers, right from the CLI.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="install-surge-cli">Install Surge CLI&lt;/h1>
-&lt;pre tabindex="0">&lt;code>npm install -g surge
-&lt;/code>&lt;/pre>&lt;h1 id="deploy-with-surge">Deploy with Surge&lt;/h1>
-&lt;p>Navigate to the &lt;code>public&lt;/code> folder generated by &lt;a href="https://gohugo.io/">Hugo&lt;/a> CLI.&lt;/p>
-&lt;pre tabindex="0">&lt;code>surge
-&lt;/code>&lt;/pre>&lt;p>The site, by default, will hosted on a sub domain of &lt;code>surge.sh&lt;/code>.&lt;/p>
-&lt;h1 id="deploy-changes">Deploy Changes&lt;/h1>
-&lt;pre tabindex="0">&lt;code>surge --domain &amp;lt;your-site&amp;gt;.surge.sh
-&lt;/code>&lt;/pre>&lt;p>If the same domain name is not provided, another random sub domain will be prompted by Surge CLI which has to changed to original for each deployment.&lt;/p>
-&lt;h1 id="custom-domain">Custom Domain&lt;/h1>
-&lt;p>A &lt;code>CNAME&lt;/code> record has be added to your domain or sub domain and by setting the hostname to:&lt;/p>
-&lt;pre tabindex="0">&lt;code>na-west1.surge.sh
-&lt;/code>&lt;/pre>&lt;p>Site can now be deployed on the new custom domain.&lt;/p>
-&lt;pre tabindex="0">&lt;code>surge --domain &amp;lt;your-site.your-domain.com&amp;gt;
-&lt;/code>&lt;/pre>&lt;h1 id="script">Script&lt;/h1>
-&lt;p>All these steps can be added to a script for easy deployment. A script named &lt;code>deploy.sh&lt;/code> can be created in the root folder of Hugo project with below contents.&lt;/p>
-&lt;p>This script will build the Hugo site and deploy it on the given domain.&lt;/p>
-&lt;pre tabindex="0">&lt;code>hugo
-surge --domain &amp;lt;your-site.your-domain.com&amp;gt; ./public
-&lt;/code>&lt;/pre>&lt;p>Appropriate permissions has be set to make it executable.&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo chmod 755 ./deploy.sh
-&lt;/code>&lt;/pre>&lt;p>Easy Deploy&lt;/p>
-&lt;pre tabindex="0">&lt;code>./deploy.sh
-&lt;/code>&lt;/pre></content></item><item><title>Track API usage with Google Analytics</title><link>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</link><pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</guid><description>Google analytics is a popular tool to track your website usage.</description><content>&lt;p>Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://developers.google.com/analytics/devguides/collection/protocol/">Measurement Protocol&lt;/a> can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="api-hit">API Hit&lt;/h1>
-&lt;p>Each invocation of an API can be tracked as a unique event. Optionally, the response time in millisecond can be included as well.&lt;/p>
-&lt;pre tabindex="0">&lt;code>&amp;amp;t=event // Event hit type
-&amp;amp;ec=api // Event category: api
-&amp;amp;ea=invoke // Event action: invoke
-&amp;amp;el=registration // Event label: name of the API
-&amp;amp;ev=300 // Event value: (optional) response time in milliseconds
-&lt;/code>&lt;/pre>&lt;h2 id="user-session">User Session&lt;/h2>
-&lt;p>Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code>cid&lt;/code> field appropriately. Each unique value set will correspond to a new user.&lt;/p>
-&lt;pre tabindex="0">&lt;code>&amp;amp;cid=555 // Anonymous Client ID.
-&lt;/code>&lt;/pre>&lt;p>User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">cid&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">hash&lt;/span>(&lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">headers&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;x-forwarded-for&amp;#39;&lt;/span>] &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span>.&lt;span style="color:#a6e22e">connection&lt;/span>.&lt;span style="color:#a6e22e">remoteAddress&lt;/span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/X-Forwarded-For">&lt;code>x-forwarded-for&lt;/code>&lt;/a> header is generally used by proxies to pass originating client&amp;rsquo;s IP.&lt;/li>
-&lt;li>IP value should be hashed to avoid collecting sensitive user or client information.&lt;/li>
-&lt;/ul>
-&lt;h2 id="user-analytics">User Analytics&lt;/h2>
-&lt;p>Most of this data is captured by processing user&amp;rsquo;s IP address and browser&amp;rsquo;s &lt;a href="https://en.wikipedia.org/wiki/User_agent">user agent&lt;/a>. In this case, user&amp;rsquo;s IP and UA is not passed to Google Analytics rather the server&amp;rsquo;s IP is passed. All the analytics will have details of the servers only.&lt;/p>
-&lt;p>To fix this, &lt;code>uip&lt;/code> &amp;amp; &lt;code>ua&lt;/code> fields can be used to set user information.&lt;/p>
-&lt;pre tabindex="0">&lt;code>&amp;amp;uip=1.2.3.4 // IP address override.
-&amp;amp;ua=Opera/9.80 // User agent override.
-&lt;/code>&lt;/pre>&lt;blockquote>
-&lt;p>I have published a npm module which allows such overrides &lt;a href="https://www.npmjs.com/package/@abskmj/google-analytics-tracker">@abskmj/google-analytics-tracker&lt;/a>.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="sample-request">Sample Request&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// nodejs
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">request&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">require&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;request&amp;#39;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">request&lt;/span>({
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">baseUrl&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">uri&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/collect&amp;#39;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">body&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span>,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">method&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;POST&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}, &lt;span style="color:#66d9ef">function&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>, &lt;span style="color:#a6e22e">response&lt;/span>, &lt;span style="color:#a6e22e">body&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">error&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">body&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Custom Model Methods in Loopback</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</link>
+      <pubDate>Mon, 07 May 2018 08:44:22 +0000</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/loopback/custom-model-methods/</guid>
+      <description>&lt;p&gt;Loopback models can be extended by adding custom methods to them. A method can be:&lt;/p&gt;</description>
+      <content>&lt;p&gt;Loopback models can be extended by adding custom methods to them. A method can be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model Method: the method is available on Model itself.&lt;/li&gt;
+&lt;li&gt;Instance Method: the method is available on an instance of the model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;model-js-file&#34;&gt;Model JS file&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Model.js
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;module&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;exports&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// Model Method
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;method&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// Instance Method
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;prototype&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;method&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Model method
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;app&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;models&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;method&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Instance Method
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;instance&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;instance&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;method&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Enable Destroy All API for a model in Loopback</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</link>
+      <pubDate>Wed, 31 Jan 2018 19:28:48 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/loopback/enable-destroy-all-api/</guid>
+      <description>&lt;p&gt;Destroy All API (&lt;code&gt;Model.destroyAll()&lt;/code&gt;) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Destroy All API (&lt;code&gt;Model.destroyAll()&lt;/code&gt;) is, by default, disabled to avoid accidental bulk deletion of data. However, it might be required for developmental purposes.&lt;/p&gt;
+&lt;h1 id=&#34;remote-method&#34;&gt;Remote Method&lt;/h1&gt;
+&lt;p&gt;A corresponding remote method can be added to the &lt;code&gt;model.js&lt;/code&gt; file to enable this API. This method also supports a filter to enable selective deletion.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;module&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;exports&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;Model&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;remoteMethod&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;destroyAll&amp;#39;&lt;/span&gt;, {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;isStatic&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Delete all matching records&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;accessType&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;WRITE&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;accepts&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;arg&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;where&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;object&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;filter.where object&amp;#39;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;verb&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;del&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Deploy Hugo Website with Surge for Free</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/deploy-hugo-surge-free/</link>
+      <pubDate>Mon, 20 Nov 2017 20:28:20 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/deploy-hugo-surge-free/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://surge.sh/&#34;&gt;Surge&lt;/a&gt; is static web publishing for Web Developers, right from the CLI.&lt;/p&gt;</description>
+      <content>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://surge.sh/&#34;&gt;Surge&lt;/a&gt; is static web publishing for Web Developers, right from the CLI.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;install-surge-cli&#34;&gt;Install Surge CLI&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g surge
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;deploy-with-surge&#34;&gt;Deploy with Surge&lt;/h1&gt;
+&lt;p&gt;Navigate to the &lt;code&gt;public&lt;/code&gt; folder generated by &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; CLI.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;surge
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The site, by default, will hosted on a sub domain of &lt;code&gt;surge.sh&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;deploy-changes&#34;&gt;Deploy Changes&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;surge --domain &amp;lt;your-site&amp;gt;.surge.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the same domain name is not provided, another random sub domain will be prompted by Surge CLI which has to changed to original for each deployment.&lt;/p&gt;
+&lt;h1 id=&#34;custom-domain&#34;&gt;Custom Domain&lt;/h1&gt;
+&lt;p&gt;A &lt;code&gt;CNAME&lt;/code&gt; record has be added to your domain or sub domain and by setting the hostname to:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;na-west1.surge.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Site can now be deployed on the new custom domain.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;surge --domain &amp;lt;your-site.your-domain.com&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;script&#34;&gt;Script&lt;/h1&gt;
+&lt;p&gt;All these steps can be added to a script for easy deployment. A script named &lt;code&gt;deploy.sh&lt;/code&gt; can be created in the root folder of Hugo project with below contents.&lt;/p&gt;
+&lt;p&gt;This script will build the Hugo site and deploy it on the given domain.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo
+surge --domain &amp;lt;your-site.your-domain.com&amp;gt; ./public 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Appropriate permissions has be set to make it executable.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo chmod 755 ./deploy.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Easy Deploy&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;./deploy.sh
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Track API usage with Google Analytics</title>
+      <link>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</link>
+      <pubDate>Wed, 15 Nov 2017 18:02:07 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/tutorials/track-api-usage-google-analytics/</guid>
+      <description>&lt;p&gt;Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Google analytics is a popular tool to track your website usage. Usage of server APIs can also be tracked with this tool. Measurement Protocol APIs can be used to post the usage data to Google Analytics.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/analytics/devguides/collection/protocol/&#34;&gt;Measurement Protocol&lt;/a&gt; can be used to track user interactions in any environment of internet connected devices. It allows developers to collect user-interaction in form of event or hit.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;api-hit&#34;&gt;API Hit&lt;/h1&gt;
+&lt;p&gt;Each invocation of an API can be tracked as a unique event. Optionally, the response time in millisecond can be included as well.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;amp;t=event            // Event hit type
+&amp;amp;ec=api             // Event category: api
+&amp;amp;ea=invoke          // Event action: invoke
+&amp;amp;el=registration    // Event label: name of the API
+&amp;amp;ev=300             // Event value: (optional) response time in milliseconds
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;user-session&#34;&gt;User Session&lt;/h2&gt;
+&lt;p&gt;Multiple APIs can be invoked by multiple users over multiple sessions. Multiple sessions is automatically handled by Google Analytics. Multiple users can be handled by setting &lt;code&gt;cid&lt;/code&gt; field appropriately. Each unique value set will correspond to a new user.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;amp;cid=555    // Anonymous Client ID.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;User&amp;rsquo;s IP can be used to set this field uniquely.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;cid&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hash&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;request&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;headers&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x-forwarded-for&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;request&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;connection&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;remoteAddress&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/X-Forwarded-For&#34;&gt;&lt;code&gt;x-forwarded-for&lt;/code&gt;&lt;/a&gt; header is generally used by proxies to pass originating client&amp;rsquo;s IP.&lt;/li&gt;
+&lt;li&gt;IP value should be hashed to avoid collecting sensitive user or client information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;user-analytics&#34;&gt;User Analytics&lt;/h2&gt;
+&lt;p&gt;Most of this data is captured by processing user&amp;rsquo;s IP address and browser&amp;rsquo;s &lt;a href=&#34;https://en.wikipedia.org/wiki/User_agent&#34;&gt;user agent&lt;/a&gt;. In this case, user&amp;rsquo;s IP and UA is not passed to Google Analytics rather the server&amp;rsquo;s IP is passed. All the analytics will have details of the servers only.&lt;/p&gt;
+&lt;p&gt;To fix this, &lt;code&gt;uip&lt;/code&gt; &amp;amp; &lt;code&gt;ua&lt;/code&gt; fields can be used to set user information.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;amp;uip=1.2.3.4     // IP address override.
+&amp;amp;ua=Opera/9.80   // User agent override.
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;I have published a npm module which allows such overrides &lt;a href=&#34;https://www.npmjs.com/package/@abskmj/google-analytics-tracker&#34;&gt;@abskmj/google-analytics-tracker&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sample-request&#34;&gt;Sample Request&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// nodejs
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;request&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;require&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;request&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;request&lt;/span&gt;({
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;baseUrl&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://www.google-analytics.com&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;uri&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/collect&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;v=1&amp;amp;tid=UA-XXXXXXXX-X&amp;amp;cid=XXXXXXX&amp;amp;t=event&amp;amp;ec=api&amp;amp;ea=invoke&amp;amp;el=registration&amp;amp;ev=300&amp;amp;uip=1.2.3.4&amp;amp;ua=Opera/9.80&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;method&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;response&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;body&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;body&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

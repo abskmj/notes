@@ -1,277 +1,353 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jessie on Notes</title><link>https://abskmj.github.io/notes/tags/jessie/</link><description>Recent content in Jessie on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Thu, 28 Dec 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/jessie/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup Aria2 Download Utility on Debian</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</link><pubDate>Thu, 28 Dec 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</guid><description>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).</description><content>&lt;p>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://aria2.github.io/">aria2&lt;/a> is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="install-aria2">Install Aria2&lt;/h1>
-&lt;p>Get the latest Debian package for ARM architecture from &lt;a href="https://gitlab.com/q3aql/aria2-static-builds">gitlab.com&lt;/a>. For example, &lt;code>aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb&lt;/code>. You can choose the version and architecture according to your need and machine.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dpkg -i aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="create-configuration">Create Configuration&lt;/h1>
-&lt;p>Create a configuration file in the home directory. This configuration will be automatically picked up by the &lt;code>aria2c&lt;/code> executable. For example, &lt;code>/root/aria2/aria.conf&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#basic&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dir&lt;span style="color:#f92672">=&lt;/span>/data/shares/public/Downloads
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-concurrent-downloads&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">3&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>check-integrity&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">continue&lt;/span>&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>input-file&lt;span style="color:#f92672">=&lt;/span>/root/.aria2/aria2.session
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#bittorrent&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bt-enable-lpd&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-dht&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-peer-exchange&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-overall-upload-limit&lt;span style="color:#f92672">=&lt;/span>1M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>seed-time&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#rpc&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-rpc&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rpc-listen-all&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#advanced&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>daemon&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>disable-ipv6&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-overall-download-limit&lt;span style="color:#f92672">=&lt;/span>5M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>save-session&lt;span style="color:#f92672">=&lt;/span>/root/.aria2/aria2.session
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>save-session-interval&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">60&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="start-aria2">Start Aria2&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>aria2c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="android-app-for-remote-control">Android App for Remote Control&lt;/h1>
-&lt;p>Since I use Aria2 on a headless device, I have enabled remote control over RPC and use &lt;a href="https://github.com/devgianlu/Aria2App">Aria2App&lt;/a>, an open-source app on my Android phone.&lt;/p>
-&lt;h1 id="download-completion-script">Download Completion Script&lt;/h1>
-&lt;p>I generally download a lot of large-sized archive files using Aria2. These files take a good amount of time to be extracted because of the low specification of the device.&lt;/p>
-&lt;p>Aria2 allows configuring a bash script which is executed automatically every time a download is completed.&lt;/p>
-&lt;p>The below script checks for if the downloaded file is an archive file, either a zip or a rar file, and extracts it to a folder with the same name.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#!/bin/bash
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#75715e"># check for archive file&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">[&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>3: -4&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;.rar&amp;#34;&lt;/span> &lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#f92672">[&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>3: -4&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;.zip&amp;#34;&lt;/span> &lt;span style="color:#f92672">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">then&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7z x &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$3&lt;span style="color:#e6db74">&amp;#34;&lt;/span> -o&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>3%.*&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> chmod &lt;span style="color:#ae81ff">777&lt;/span> -R &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>3%.*&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#75715e"># optional folder permissions&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fi&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It uses the 7zip utility to extract the file which can be installed by executing the below command&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install p7zip-full p7zip-rar
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the below line to the &lt;code>aria2.conf&lt;/code> file&lt;/p>
-&lt;pre tabindex="0">&lt;code>on-download-complete=/root/.aria2/dl-complete.sh
-&lt;/code>&lt;/pre></content></item><item><title>Sources List for Debian 8 (Jessie)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</link><pubDate>Sat, 02 Jul 2022 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</guid><description>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018.</description><content>&lt;blockquote>
-&lt;p>Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018. Jessie also benefits from Long Term Support (LTS) until the end of June 2020. The LTS is limited to i386, amd64, armel and armhf.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Open &lt;code>/etc/apt/sources.list&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Comment existing sources&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Add below sources&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian jessie main contrib non-free
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian jessie main contrib non-free
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian-security/ jessie/updates main contrib non-free
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian-security/ jessie/updates main contrib non-free
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb http://deb.debian.org/debian jessie-updates main contrib non-free
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb-src http://deb.debian.org/debian jessie-updates main contrib non-free
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Now you can run&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>If you get below error&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>There is no public key available &lt;span style="color:#66d9ef">for&lt;/span> the following key IDs
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Install below package&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install debian-archive-keyring
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Now you can rerun&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Setup a Public Samba Share</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link><pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid><description>Install Samba apt-get install samba Create Shares Create shares with proper permissions</description><content>&lt;h1 id="install-samba">Install Samba&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install samba
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="create-shares">Create Shares&lt;/h1>
-&lt;p>Create shares with proper permissions&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p /data/shares/public
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chown -R root:users /data/shares/public/
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod -R ug+rwx,o+rx-w /data/shares/public/
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="configure-samba">Configure Samba&lt;/h1>
-&lt;p>Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nano /etc/samba/smb.conf
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Contents of &lt;code>smb.conf&lt;/code>&lt;/p>
-&lt;pre tabindex="0">&lt;code>[global]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jessie on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/jessie/</link>
+    <description>Recent content in Jessie on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Thu, 28 Dec 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/jessie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Aria2 Download Utility on Debian</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</link>
+      <pubDate>Thu, 28 Dec 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</guid>
+      <description>&lt;p&gt;There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p&gt;</description>
+      <content>&lt;p&gt;There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://aria2.github.io/&#34;&gt;aria2&lt;/a&gt; is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;install-aria2&#34;&gt;Install Aria2&lt;/h1&gt;
+&lt;p&gt;Get the latest Debian package for ARM architecture from &lt;a href=&#34;https://gitlab.com/q3aql/aria2-static-builds&#34;&gt;gitlab.com&lt;/a&gt;. For example, &lt;code&gt;aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb&lt;/code&gt;. You can choose the version and architecture according to your need and machine.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dpkg -i aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-configuration&#34;&gt;Create Configuration&lt;/h1&gt;
+&lt;p&gt;Create a configuration file in the home directory. This configuration will be automatically picked up by the &lt;code&gt;aria2c&lt;/code&gt; executable. For example, &lt;code&gt;/root/aria2/aria.conf&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#basic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/data/shares/public/Downloads
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;max-concurrent-downloads&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;check-integrity&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;continue&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;input-file&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/root/.aria2/aria2.session
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#bittorrent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bt-enable-lpd&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;enable-dht&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;enable-peer-exchange&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;max-overall-upload-limit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;seed-time&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#rpc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;enable-rpc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rpc-listen-all&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#advanced&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;daemon&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;disable-ipv6&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;max-overall-download-limit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;5M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;save-session&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/root/.aria2/aria2.session
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;save-session-interval&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;start-aria2&#34;&gt;Start Aria2&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aria2c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;android-app-for-remote-control&#34;&gt;Android App for Remote Control&lt;/h1&gt;
+&lt;p&gt;Since I use Aria2 on a headless device, I have enabled remote control over RPC and use &lt;a href=&#34;https://github.com/devgianlu/Aria2App&#34;&gt;Aria2App&lt;/a&gt;, an open-source app on my Android phone.&lt;/p&gt;
+&lt;h1 id=&#34;download-completion-script&#34;&gt;Download Completion Script&lt;/h1&gt;
+&lt;p&gt;I generally download a lot of large-sized archive files using Aria2. These files take a good amount of time to be extracted because of the low specification of the device.&lt;/p&gt;
+&lt;p&gt;Aria2 allows configuring a bash script which is executed automatically every time a download is completed.&lt;/p&gt;
+&lt;p&gt;The below script checks for if the downloaded file is an archive file, either a zip or a rar file, and extracts it to a folder with the same name.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# check for archive file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;3: -4&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.rar&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;3: -4&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.zip&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  7z x &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$3&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; -o&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;3%.*&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;777&lt;/span&gt; -R &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;3%.*&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# optional folder permissions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It uses the 7zip utility to extract the file which can be installed by executing the below command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install p7zip-full p7zip-rar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add the below line to the &lt;code&gt;aria2.conf&lt;/code&gt; file&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;on-download-complete=/root/.aria2/dl-complete.sh
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Sources List for Debian 8 (Jessie)</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</link>
+      <pubDate>Sat, 02 Jul 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018. Jessie also benefits from Long Term Support (LTS) until the end of June 2020. The LTS is limited to i386, amd64, armel and armhf.&lt;/p&gt;</description>
+      <content>&lt;blockquote&gt;
+&lt;p&gt;Debian 8 has been superseded by Debian 9 (stretch). Regular security support updates have been discontinued as of June 17th, 2018. Jessie also benefits from Long Term Support (LTS) until the end of June 2020. The LTS is limited to i386, amd64, armel and armhf.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;/etc/apt/sources.list&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Comment existing sources&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add below sources&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deb http://deb.debian.org/debian jessie main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deb-src http://deb.debian.org/debian jessie main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deb http://deb.debian.org/debian-security/ jessie/updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deb-src http://deb.debian.org/debian-security/ jessie/updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deb http://deb.debian.org/debian jessie-updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deb-src http://deb.debian.org/debian jessie-updates main contrib non-free
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Now you can run&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;If you get below error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;There is no public key available &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; the following key IDs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Install below package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install debian-archive-keyring
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Now you can rerun&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Setup a Public Samba Share</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link>
+      <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid>
+      <description>&lt;h1 id=&#34;install-samba&#34;&gt;Install Samba&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install samba
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-shares&#34;&gt;Create Shares&lt;/h1&gt;
+&lt;p&gt;Create shares with proper permissions&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;install-samba&#34;&gt;Install Samba&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install samba
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-shares&#34;&gt;Create Shares&lt;/h1&gt;
+&lt;p&gt;Create shares with proper permissions&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir -p /data/shares/public
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chown -R root:users /data/shares/public/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod -R ug+rwx,o+rx-w /data/shares/public/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;configure-samba&#34;&gt;Configure Samba&lt;/h1&gt;
+&lt;p&gt;Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nano /etc/samba/smb.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Contents of &lt;code&gt;smb.conf&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[global]
 workgroup = WORKGROUP
 server string = Samba Server %v
 netbios name = WDMyCloud
 security = user
 map to guest = bad user
 dns proxy = no
+
 [Public]
-path = /data/shares/Public
-force group = users
-create mask = 0660
-directory mask = 0771
-browsable = yes
-writable = yes
-guest ok = yes
-&lt;/code>&lt;/pre>&lt;h1 id="restart-samba-service">Restart Samba Service&lt;/h1>
-&lt;p>The samba service has to restarted each time to use the new configuration.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/etc/init.d/samba restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Turn off the color with ls command</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</link><pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</guid><description>Alias See if there are any alias defined for ls on your terminal</description><content>&lt;h1 id="alias">Alias&lt;/h1>
-&lt;p>See if there are any alias defined for &lt;code>ls&lt;/code> on your terminal&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For me it was &lt;code>alias ls='ls $LS_OPTIONS'&lt;/code> and &lt;code>LS_OPTIONS&lt;/code> environment variable had a value of &lt;code>--color=auto&lt;/code>&lt;/p>
-&lt;h1 id="bashrc">.bashrc&lt;/h1>
-&lt;p>Check the contents of your &lt;code>~/.bashrc&lt;/code> file. Generally, these aliases are defined here. Mine had these lines&lt;/p>
-&lt;pre tabindex="0">&lt;code>export LS_OPTIONS=&amp;#39;--color=auto&amp;#39;
+   path = /data/shares/Public
+   force group = users
+   create mask = 0660
+   directory mask = 0771
+   browsable = yes
+   writable = yes
+   guest ok = yes
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;restart-samba-service&#34;&gt;Restart Samba Service&lt;/h1&gt;
+&lt;p&gt;The samba service has to restarted each time to use the new configuration.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/init.d/samba restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Turn off the color with ls command</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</link>
+      <pubDate>Fri, 01 May 2020 10:05:46 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/ls-color/</guid>
+      <description>&lt;h1 id=&#34;alias&#34;&gt;Alias&lt;/h1&gt;
+&lt;p&gt;See if there are any alias defined for &lt;code&gt;ls&lt;/code&gt; on your terminal&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;alias&#34;&gt;Alias&lt;/h1&gt;
+&lt;p&gt;See if there are any alias defined for &lt;code&gt;ls&lt;/code&gt; on your terminal&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For me it was &lt;code&gt;alias ls=&#39;ls $LS_OPTIONS&#39;&lt;/code&gt; and &lt;code&gt;LS_OPTIONS&lt;/code&gt; environment variable had a value of &lt;code&gt;--color=auto&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;bashrc&#34;&gt;.bashrc&lt;/h1&gt;
+&lt;p&gt;Check the contents of your &lt;code&gt;~/.bashrc&lt;/code&gt; file. Generally, these aliases are defined here. Mine had these lines&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;export LS_OPTIONS=&amp;#39;--color=auto&amp;#39;
 eval &amp;#34;`dircolors`&amp;#34;
 alias ls=&amp;#39;ls $LS_OPTIONS&amp;#39;
 alias ll=&amp;#39;ls $LS_OPTIONS -l&amp;#39;
 alias l=&amp;#39;ls $LS_OPTIONS -lA&amp;#39;
-&lt;/code>&lt;/pre>&lt;p>Update &lt;code>export LS_OPTIONS='--color=auto'&lt;/code> to &lt;code>export LS_OPTIONS='--color=never'&lt;/code> and restart the terminal&lt;/p>
-&lt;pre tabindex="0">&lt;code>export LS_OPTIONS=&amp;#39;--color=never&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Update &lt;code&gt;export LS_OPTIONS=&#39;--color=auto&#39;&lt;/code&gt; to &lt;code&gt;export LS_OPTIONS=&#39;--color=never&#39;&lt;/code&gt; and restart the terminal&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;export LS_OPTIONS=&amp;#39;--color=never&amp;#39;
 eval &amp;#34;`dircolors`&amp;#34;
 alias ls=&amp;#39;ls $LS_OPTIONS&amp;#39;
 alias ll=&amp;#39;ls $LS_OPTIONS -l&amp;#39;
 alias l=&amp;#39;ls $LS_OPTIONS -lA&amp;#39;
-&lt;/code>&lt;/pre>&lt;p>Also, take note of the other two helpful aliases.&lt;/p></content></item><item><title>Install Debian Jessie on WD MyCloud (Gen1)</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</link><pubDate>Wed, 15 Apr 2020 14:33:04 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</guid><description>De-attach WD Drive You will have to open your WD MyCloud device and remove the HDD or drive inside it.</description><content>&lt;h1 id="de-attach-wd-drive">De-attach WD Drive&lt;/h1>
-&lt;ul>
-&lt;li>You will have to open your WD MyCloud device and remove the HDD or drive inside it.&lt;/li>
-&lt;li>Attach the drive to your computer.&lt;/li>
-&lt;li>If you don&amp;rsquo;t have a Linux based OS installed on your computer, you can boot your computer through a live USB. See how to create one at &lt;a href="https://ubuntu.com/tutorials/tutorial-create-a-usb-stick-on-windows#1-overview">ubuntu.com&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h1 id="create-partitions">Create Partitions&lt;/h1>
-&lt;p>You can skip this section if you have not formatted the drive after connecting it to your computer and have the original partitions.&lt;/p>
-&lt;ul>
-&lt;li>Install need software&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install parted
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size around 1.8 TB.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fdisk -l
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Run the utility on your WD drive&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>parted /dev/sdb
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Print all partitions on the drive&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>print
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Remove all the partitions. For me, there was only one partition&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>remove &lt;span style="color:#ae81ff">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Recreate all needed partitions&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mklabel gpt
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkpart primary 528M 2576M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkpart primary 2576M 4624M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkpart primary 16M 528M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkpart primary 4828M 100%
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkpart primary 4624M 4724M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkpart primary 4724M 4824M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkpart primary 4824M 4826M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkpart primary 4826M 4828M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>set &lt;span style="color:#ae81ff">1&lt;/span> raid on
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>set &lt;span style="color:#ae81ff">2&lt;/span> raid on
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Quit the utility&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>quit
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Format data and swap partitions&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkfs -t ext4 /dev/sdb4
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkswap /dev/sdb3
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Create RAID partitions&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mdadm --create /dev/md0 --level&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span> --metadata&lt;span style="color:#f92672">=&lt;/span>0.9 --raid-devices&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">2&lt;/span> /dev/sdb1 /dev/sdb2
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="install-debian">Install Debian&lt;/h1>
-&lt;ul>
-&lt;li>Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code>/dev/sdb&lt;/code> with a size of around 1.8 TB.&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fdisk -l
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Install software for RAID devices&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install mdadm
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Mount RAID partitions&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mdadm --stop /dev/md*
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mdadm -A /dev/md0 /dev/sdb1 /dev/sdb2
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Mount data partitions&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mount -t ext4 /dev/sdb4 /mnt
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd /mnt
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>Download the Clean Debian package and extract it&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -xvfz clean-debian-jessie.tgz
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>If you are planning to install one of the original packages. You can download that package instead of Debian.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># v3.x&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v03.04.01-230.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -xvfz original-v03.04.01-230.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># v4.x&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v04.01.02-417.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -xvfz original-v04.01.02-417.tar.gz
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/blockquote>
-&lt;ul>
-&lt;li>Copy images to partitions&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb5
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>kernel.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb6
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>config.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb7
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>config.img of&lt;span style="color:#f92672">=&lt;/span>/dev/sdb8
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dd &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">=&lt;/span>rootfs.img of&lt;span style="color:#f92672">=&lt;/span>/dev/md0
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="re-attach-wd-drive">Re-attach WD Drive&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>You can shut your computer down and remove the WD drive.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>You don&amp;rsquo;t have to assemble the device completely right now, you can simply connect the plate to the drive and attach a LAN / power cord to it.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>It should start up and show a yellow light.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>You should see a green light in a while, which means Debian has started properly.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>You can now ssh into your MyCloud device.&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ssh root@192.168.X.XXX &lt;span style="color:#75715e"># replace with your IP &lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>
-&lt;p>The default password for the root user is &lt;code>mycloud&lt;/code>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>DO WHATEVER YOU WANT WITH YOUR NEW LINUX BOX! : )&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>WARNING: Executing &lt;code>apt-get upgrade&lt;/code> sometimes bricks the device and should avoid it.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="whats-next">What&amp;rsquo;s Next?&lt;/h1>
-&lt;ul>
-&lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/">Sources List for Debian 8 (Jessie)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/">Setup local timezone&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/">Setup a Public Samba Share&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h4 id="references">References&lt;/h4>
-&lt;ul>
-&lt;li>Original materials from fox-exe at &lt;a href="https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen1/">fox-exe.ru&lt;/a>, mirror at &lt;a href="https://wd.hides.su/fox_exe/WDMyCloud-Gen1/">wd.hides.su&lt;/a>&lt;/li>
-&lt;li>Re-uploaded packages at &lt;a href="https://github.com/abskmj/wd-mycloud-gen1/releases">github.com&lt;/a>&lt;/li>
-&lt;/ul></content></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Also, take note of the other two helpful aliases.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Install Debian Jessie on WD MyCloud (Gen1)</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</link>
+      <pubDate>Wed, 15 Apr 2020 14:33:04 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/install-debian-wdmycloud/</guid>
+      <description>&lt;h1 id=&#34;de-attach-wd-drive&#34;&gt;De-attach WD Drive&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;You will have to open your WD MyCloud device and remove the HDD or drive inside it.&lt;/li&gt;
+&lt;li&gt;Attach the drive to your computer.&lt;/li&gt;
+&lt;li&gt;If you don&amp;rsquo;t have a Linux based OS installed on your computer, you can boot your computer through a live USB. See how to create one at &lt;a href=&#34;https://ubuntu.com/tutorials/tutorial-create-a-usb-stick-on-windows#1-overview&#34;&gt;ubuntu.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;create-partitions&#34;&gt;Create Partitions&lt;/h1&gt;
+&lt;p&gt;You can skip this section if you have not formatted the drive after connecting it to your computer and have the original partitions.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;de-attach-wd-drive&#34;&gt;De-attach WD Drive&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;You will have to open your WD MyCloud device and remove the HDD or drive inside it.&lt;/li&gt;
+&lt;li&gt;Attach the drive to your computer.&lt;/li&gt;
+&lt;li&gt;If you don&amp;rsquo;t have a Linux based OS installed on your computer, you can boot your computer through a live USB. See how to create one at &lt;a href=&#34;https://ubuntu.com/tutorials/tutorial-create-a-usb-stick-on-windows#1-overview&#34;&gt;ubuntu.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;create-partitions&#34;&gt;Create Partitions&lt;/h1&gt;
+&lt;p&gt;You can skip this section if you have not formatted the drive after connecting it to your computer and have the original partitions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install need software&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install parted
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code&gt;/dev/sdb&lt;/code&gt; with a size around 1.8 TB.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fdisk -l
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Run the utility on your WD drive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;parted /dev/sdb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Print all partitions on the drive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Remove all the partitions. For me, there was only one partition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remove &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Recreate all needed partitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mklabel gpt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkpart primary 528M 2576M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkpart primary 2576M 4624M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkpart primary 16M 528M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkpart primary 4828M 100%
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkpart primary 4624M 4724M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkpart primary 4724M 4824M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkpart primary 4824M 4826M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkpart primary 4826M 4828M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; raid on
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; raid on
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Quit the utility&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Format data and swap partitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkfs -t ext4 /dev/sdb4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkswap /dev/sdb3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Create RAID partitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mdadm --create /dev/md0 --level&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; --metadata&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0.9 --raid-devices&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; /dev/sdb1 /dev/sdb2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;install-debian&#34;&gt;Install Debian&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Find your WD drive on your computer, look at the partition sizes and find the one that has a similar size as your WD MyCloud. For me, it was &lt;code&gt;/dev/sdb&lt;/code&gt; with a size of around 1.8 TB.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fdisk -l
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Install software for RAID devices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install mdadm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Mount RAID partitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mdadm --stop /dev/md*
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mdadm -A /dev/md0 /dev/sdb1 /dev/sdb2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Mount data partitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mount -t ext4 /dev/sdb4 /mnt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd /mnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Download the Clean Debian package and extract it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/clean-debian-jessie.tgz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar -xvfz clean-debian-jessie.tgz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;If you are planning to install one of the original packages. You can download that package instead of Debian.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# v3.x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v03.04.01-230.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar -xvfz original-v03.04.01-230.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# v4.x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://github.com/abskmj/wd-mycloud-gen1/releases/download/packages/original-v04.01.02-417.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar -xvfz original-v04.01.02-417.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy images to partitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dd &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;kernel.img of&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/sdb5
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dd &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;kernel.img of&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/sdb6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dd &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;config.img of&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/sdb7
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dd &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;config.img of&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/sdb8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dd &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;rootfs.img of&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/dev/md0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;re-attach-wd-drive&#34;&gt;Re-attach WD Drive&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You can shut your computer down and remove the WD drive.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You don&amp;rsquo;t have to assemble the device completely right now, you can simply connect the plate to the drive and attach a LAN / power cord to it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It should start up and show a yellow light.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You should see a green light in a while, which means Debian has started properly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can now ssh into your MyCloud device.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh root@192.168.X.XXX &lt;span style=&#34;color:#75715e&#34;&gt;# replace with your IP &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The default password for the root user is &lt;code&gt;mycloud&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DO WHATEVER YOU WANT WITH YOUR NEW LINUX BOX! : )&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WARNING: Executing &lt;code&gt;apt-get upgrade&lt;/code&gt; sometimes bricks the device and should avoid it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s Next?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://abskmj.github.io/notes/posts/wd-mycloud/debian-jessie-sources/&#34;&gt;Sources List for Debian 8 (Jessie)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://abskmj.github.io/notes/posts/wd-mycloud/debian-timezone/&#34;&gt;Setup local timezone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/&#34;&gt;Setup a Public Samba Share&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Original materials from fox-exe at &lt;a href=&#34;https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen1/&#34;&gt;fox-exe.ru&lt;/a&gt;, mirror at &lt;a href=&#34;https://wd.hides.su/fox_exe/WDMyCloud-Gen1/&#34;&gt;wd.hides.su&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Re-uploaded packages at &lt;a href=&#34;https://github.com/abskmj/wd-mycloud-gen1/releases&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

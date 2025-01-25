@@ -1,53 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Aria2 on Notes</title><link>https://abskmj.github.io/notes/tags/aria2/</link><description>Recent content in Aria2 on Notes</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; abskmj</copyright><lastBuildDate>Thu, 28 Dec 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/aria2/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup Aria2 Download Utility on Debian</title><link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</link><pubDate>Thu, 28 Dec 2023 00:00:00 +0530</pubDate><guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</guid><description>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).</description><content>&lt;p>There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://aria2.github.io/">aria2&lt;/a> is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="install-aria2">Install Aria2&lt;/h1>
-&lt;p>Get the latest Debian package for ARM architecture from &lt;a href="https://gitlab.com/q3aql/aria2-static-builds">gitlab.com&lt;/a>. For example, &lt;code>aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb&lt;/code>. You can choose the version and architecture according to your need and machine.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dpkg -i aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="create-configuration">Create Configuration&lt;/h1>
-&lt;p>Create a configuration file in the home directory. This configuration will be automatically picked up by the &lt;code>aria2c&lt;/code> executable. For example, &lt;code>/root/aria2/aria.conf&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#basic&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dir&lt;span style="color:#f92672">=&lt;/span>/data/shares/public/Downloads
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-concurrent-downloads&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">3&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>check-integrity&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">continue&lt;/span>&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>input-file&lt;span style="color:#f92672">=&lt;/span>/root/.aria2/aria2.session
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#bittorrent&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bt-enable-lpd&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-dht&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-peer-exchange&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-overall-upload-limit&lt;span style="color:#f92672">=&lt;/span>1M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>seed-time&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#rpc&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enable-rpc&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rpc-listen-all&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#advanced&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>daemon&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>disable-ipv6&lt;span style="color:#f92672">=&lt;/span>true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>max-overall-download-limit&lt;span style="color:#f92672">=&lt;/span>5M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>save-session&lt;span style="color:#f92672">=&lt;/span>/root/.aria2/aria2.session
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>save-session-interval&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">60&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="start-aria2">Start Aria2&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>aria2c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="android-app-for-remote-control">Android App for Remote Control&lt;/h1>
-&lt;p>Since I use Aria2 on a headless device, I have enabled remote control over RPC and use &lt;a href="https://github.com/devgianlu/Aria2App">Aria2App&lt;/a>, an open-source app on my Android phone.&lt;/p>
-&lt;h1 id="download-completion-script">Download Completion Script&lt;/h1>
-&lt;p>I generally download a lot of large-sized archive files using Aria2. These files take a good amount of time to be extracted because of the low specification of the device.&lt;/p>
-&lt;p>Aria2 allows configuring a bash script which is executed automatically every time a download is completed.&lt;/p>
-&lt;p>The below script checks for if the downloaded file is an archive file, either a zip or a rar file, and extracts it to a folder with the same name.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#!/bin/bash
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#75715e"># check for archive file&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">[&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>3: -4&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;.rar&amp;#34;&lt;/span> &lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#f92672">[&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>3: -4&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;.zip&amp;#34;&lt;/span> &lt;span style="color:#f92672">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">then&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7z x &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$3&lt;span style="color:#e6db74">&amp;#34;&lt;/span> -o&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>3%.*&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> chmod &lt;span style="color:#ae81ff">777&lt;/span> -R &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>3%.*&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#75715e"># optional folder permissions&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fi&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It uses the 7zip utility to extract the file which can be installed by executing the below command&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install p7zip-full p7zip-rar
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the below line to the &lt;code>aria2.conf&lt;/code> file&lt;/p>
-&lt;pre tabindex="0">&lt;code>on-download-complete=/root/.aria2/dl-complete.sh
-&lt;/code>&lt;/pre></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aria2 on Notes</title>
+    <link>https://abskmj.github.io/notes/tags/aria2/</link>
+    <description>Recent content in Aria2 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; abskmj</copyright>
+    <lastBuildDate>Thu, 28 Dec 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/aria2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Aria2 Download Utility on Debian</title>
+      <link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</link>
+      <pubDate>Thu, 28 Dec 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</guid>
+      <description>&lt;p&gt;There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p&gt;</description>
+      <content>&lt;p&gt;There may be other ways to install the Aria2 download utility on Debian, but this is what I follow on my almost 10 years old network hard disc device which runs on Debian 8 (Jessie).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://aria2.github.io/&#34;&gt;aria2&lt;/a&gt; is a lightweight multi-protocol &amp;amp; multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;install-aria2&#34;&gt;Install Aria2&lt;/h1&gt;
+&lt;p&gt;Get the latest Debian package for ARM architecture from &lt;a href=&#34;https://gitlab.com/q3aql/aria2-static-builds&#34;&gt;gitlab.com&lt;/a&gt;. For example, &lt;code&gt;aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb&lt;/code&gt;. You can choose the version and architecture according to your need and machine.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dpkg -i aria2-1.37.0-linux-gnu-arm-rbpi-build1.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-configuration&#34;&gt;Create Configuration&lt;/h1&gt;
+&lt;p&gt;Create a configuration file in the home directory. This configuration will be automatically picked up by the &lt;code&gt;aria2c&lt;/code&gt; executable. For example, &lt;code&gt;/root/aria2/aria.conf&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#basic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/data/shares/public/Downloads
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;max-concurrent-downloads&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;check-integrity&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;continue&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;input-file&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/root/.aria2/aria2.session
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#bittorrent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bt-enable-lpd&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;enable-dht&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;enable-peer-exchange&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;max-overall-upload-limit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;seed-time&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#rpc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;enable-rpc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rpc-listen-all&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#advanced&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;daemon&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;disable-ipv6&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;max-overall-download-limit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;5M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;save-session&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/root/.aria2/aria2.session
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;save-session-interval&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;start-aria2&#34;&gt;Start Aria2&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aria2c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;android-app-for-remote-control&#34;&gt;Android App for Remote Control&lt;/h1&gt;
+&lt;p&gt;Since I use Aria2 on a headless device, I have enabled remote control over RPC and use &lt;a href=&#34;https://github.com/devgianlu/Aria2App&#34;&gt;Aria2App&lt;/a&gt;, an open-source app on my Android phone.&lt;/p&gt;
+&lt;h1 id=&#34;download-completion-script&#34;&gt;Download Completion Script&lt;/h1&gt;
+&lt;p&gt;I generally download a lot of large-sized archive files using Aria2. These files take a good amount of time to be extracted because of the low specification of the device.&lt;/p&gt;
+&lt;p&gt;Aria2 allows configuring a bash script which is executed automatically every time a download is completed.&lt;/p&gt;
+&lt;p&gt;The below script checks for if the downloaded file is an archive file, either a zip or a rar file, and extracts it to a folder with the same name.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# check for archive file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;3: -4&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.rar&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;3: -4&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.zip&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  7z x &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$3&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; -o&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;3%.*&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;777&lt;/span&gt; -R &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;3%.*&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# optional folder permissions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It uses the 7zip utility to extract the file which can be installed by executing the below command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install p7zip-full p7zip-rar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add the below line to the &lt;code&gt;aria2.conf&lt;/code&gt; file&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;on-download-complete=/root/.aria2/dl-complete.sh
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+  </channel>
+</rss>
