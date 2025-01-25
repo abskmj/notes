@@ -6,6 +6,10 @@ tags: ["Project","Youtube","IPTV","M3U","Playlist"]
 
 Many public broadcasts and free-to-air channels are now available on YouTube as live videos. Many smart TVs and streaming boxes support digital channels by adding a playlist. These stream over the internet rather than satellite or cable.
 
+> **IMPORTANT UPDATE**
+Recent changes on YouTube have broken below public API service completely. If you want a functional solution, you must host the service on your local network. An executable of this service is available for [download]({{< ref "youtube-hls-server.md" >}}).
+
+
 ## Live Channels
 The [GitHub project](https://github.com/abskmj/iptv-youtube-live) provides playlists in M3U8 format of all live channels categorized by their content and language. The playlists can be added to any IPTV player or client on any device to view the live channels. They update automatically at intervals to add any newly discovered channels or remove any video that is not live anymore (using [GitHub Actions](https://github.com/features/actions)). A list of channels is available at [GitHub](https://github.com/abskmj/iptv-youtube-live/blob/main/channels.csv).
 
