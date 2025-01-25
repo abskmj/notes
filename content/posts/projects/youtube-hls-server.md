@@ -11,8 +11,13 @@ The server provides the HLS (live streaming) link for a YouTube channel or video
 2. You will receive an email with a link to download.
 3. Extract the downloaded zip file.
 
+## Before you buy?
+1. The video player and the server must have the same public IP address to stream the live feed.
+2. The executable supports Linux machines with `amd64` architecture only. Please reach out to me if you need support for other architecture.
+3. The server connects to youtube.com for each request. If you send many requests in a short time, YouTube will impose a rate limit on your server. Requests over the rate limit will fail with the [`429 Too Many Requests`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) error status code. To avoid this, consider adding a cache before the server. If you are planning to use the server for you and your family, there is a low chance of hitting the rate limit.
+
 ## How to use it?
-- Upload the executable to your machine
+- Download the executable to your machine
 - Assign the executable the permission to run 
 ```bash
 chmod +x ./youtube-hls-server
@@ -44,10 +49,6 @@ PORT=8080 ./youtube-hls-server
 # output
 server listening on port: 8080
 ``` 
-
-## Before you buy?
-1. The executable supports Linux machines with `amd64` architecture only. Most of the cloud providers provision machines with this architecture by default.
-2. The server connects to youtube.com for each request. If you send many requests in a short time, YouTube will impose a rate limit on your server. Requests over the rate limit will fail with the [`429 Too Many Requests`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) error status code. To avoid this, consider adding a cache before the server. If you are planning to use the server for you and your family, there is a low chance of hitting the rate limit.
 
 ## Server
 ### HLS Link
