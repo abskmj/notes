@@ -4,41 +4,17 @@
     <title>Hydrate on Notes</title>
     <link>https://abskmj.github.io/notes/tags/hydrate/</link>
     <description>Recent content in Hydrate on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Fri, 08 Mar 2019 03:09:10 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/hydrate/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Mar 2019 03:09:10 +0000</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/hydrate/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lean option and Hydrate method in Mongoose</title>
       <link>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</link>
       <pubDate>Fri, 08 Mar 2019 03:09:10 +0000</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/topics/mongoose/mongoose-lean-hydrate/</guid>
-      <description>&lt;h1 id=&#34;lean-option-on-query&#34;&gt;Lean option on Query&lt;/h1&gt;
-&lt;p&gt;While returning data from the database as an API response,  the virtuals/methods available on a mongoose document are unnecessary. &lt;a href=&#34;https://mongoosejs.com/docs/api.html#query_Query-lean&#34;&gt;Lean option&lt;/a&gt; can be set on such queries to return just the data directly from the database. It also improves the overall performance of the API.&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;lean-option-on-query&#34;&gt;Lean option on Query&lt;/h1&gt;
-&lt;p&gt;While returning data from the database as an API response,  the virtuals/methods available on a mongoose document are unnecessary. &lt;a href=&#34;https://mongoosejs.com/docs/api.html#query_Query-lean&#34;&gt;Lean option&lt;/a&gt; can be set on such queries to return just the data directly from the database. It also improves the overall performance of the API.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Documents returned from queries with the lean option enabled are plain javascript objects, not MongooseDocuments. They have no save method, getters/setters, or other Mongoose magic applied.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;app&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;use&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;req&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;res&lt;/span&gt;) =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;find&lt;/span&gt;({ &lt;span style=&#34;color:#a6e22e&#34;&gt;status&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;active&amp;#39;&lt;/span&gt; }).&lt;span style=&#34;color:#a6e22e&#34;&gt;limit&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;lean&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#a6e22e&#34;&gt;res&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;json&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;users&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hydrate-method-on-model&#34;&gt;Hydrate method on Model&lt;/h1&gt;
-&lt;p&gt;Hydrating is the opposite of the lean option. &lt;a href=&#34;https://mongoosejs.com/docs/api.html#model_Model.hydrate&#34;&gt;Hydrate method&lt;/a&gt; is used to initialize a mongoose document from a plain javascript object to get access to its virtuals/methods.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;user&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;findOne&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;lean&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; document &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;hydrate&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;user&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;assert&lt;/span&gt;(document &lt;span style=&#34;color:#66d9ef&#34;&gt;instanceof&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mongoose&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Document&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// true
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;code-repository&#34;&gt;Code Repository&lt;/h1&gt;
-&lt;p&gt;A working code repository is available at &lt;a href=&#34;https://github.com/abskmj/example-mongoose-lean-hydrate&#34;&gt;github&lt;/a&gt;. Get started in your local machine.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/abskmj/example-mongoose-lean-hydrate.git
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd example-mongoose-lean-hydrate
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm test
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+      <description>&lt;h1 id=&#34;lean-option-on-query&#34;&gt;Lean option on Query&lt;/h1&gt;&#xA;&lt;p&gt;While returning data from the database as an API response,  the virtuals/methods available on a mongoose document are unnecessary. &lt;a href=&#34;https://mongoosejs.com/docs/api.html#query_Query-lean&#34;&gt;Lean option&lt;/a&gt; can be set on such queries to return just the data directly from the database. It also improves the overall performance of the API.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

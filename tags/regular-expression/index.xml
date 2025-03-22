@@ -4,233 +4,31 @@
     <title>Regular Expression on Notes</title>
     <link>https://abskmj.github.io/notes/tags/regular-expression/</link>
     <description>Recent content in Regular Expression on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Sun, 19 Nov 2017 20:57:21 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/regular-expression/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Nov 2017 20:57:21 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/regular-expression/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HackerRank Contest - Regular Expresso - Vowels in the Back</title>
       <link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</link>
       <pubDate>Sun, 19 Nov 2017 20:57:21 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/vowels-in-the-back/</guid>
-      <description>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Vowels in the Back
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/vowels-in-the-back
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[aeiouy][a-z]{9}$&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      <content>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Vowels in the Back
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/vowels-in-the-back
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[aeiouy][a-z]{9}$&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+      <description>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Vowels in the Back&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/vowels-in-the-back&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[aeiouy][a-z]{9}$&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>HackerRank Contest - Regular Expresso - Balanced Strings</title>
       <link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</link>
       <pubDate>Sun, 19 Nov 2017 20:52:09 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/balanced-strings/</guid>
-      <description>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Balanced Strings
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;^(ab|ba)+$&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;possible strings:
-
-ababab
-abba
-babaab
-
-but not:
-
-a
-bab
-abbaaba
-&lt;/code&gt;&lt;/pre&gt;</description>
-      <content>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Balanced Strings
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;^(ab|ba)+$&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;possible strings:
-
-ababab
-abba
-babaab
-
-but not:
-
-a
-bab
-abbaaba
-&lt;/code&gt;&lt;/pre&gt;</content>
+      <description>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Balanced Strings&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/balanced-strings&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;^(ab|ba)+$&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;possible strings:&#xA;&#xA;ababab&#xA;abba&#xA;babaab&#xA;&#xA;but not:&#xA;&#xA;a&#xA;bab&#xA;abbaaba&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>HackerRank Contest - Regular Expresso - Winning Tic Tac Toe</title>
       <link>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</link>
       <pubDate>Sun, 19 Nov 2017 20:31:51 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/solutions/hackerrank/contests/regular-expresso/winning-tic-tac-toe/</guid>
-      <description>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Winning Tic Tac Toe
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;case-1&#34;&gt;Case 1&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(...\\1){2}) or (...\\1...\\1)
-
-will take care of
-
-X O -
-O X O
-- - X 
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-2&#34;&gt;Case 2&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(..\\1..\\1)
-
-will take care of 
-
-X - O
-X O -
-X - O
-
-OR 
-
-- X O
-O X -
-- X O
-
-OR
-
-- O X
-O - X
-- O X
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-3&#34;&gt;Case 3&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(.\\1.\\1..$)
-
-will take care of 
-
-O - X
-- X O
-X O -
-
-false positive if ..$ is not included
-
-O X -
-X O X
-- O X
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-4&#34;&gt;Case 4&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(\\1\\1(...)*$)
-
-will take care of 
-
-X X X
-O - O
-- - -
-
-OR 
-
-O - O
-X X X
-O - -
-
-OR
-
-O - -
-O - X
-X X X
-
-false positive if (...)*$ is not included
-
-O - X
-X X -
-- O O
-&lt;/code&gt;&lt;/pre&gt;</description>
-      <content>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Winning Tic Tac Toe
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;case-1&#34;&gt;Case 1&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(...\\1){2}) or (...\\1...\\1)
-
-will take care of
-
-X O -
-O X O
-- - X 
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-2&#34;&gt;Case 2&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(..\\1..\\1)
-
-will take care of 
-
-X - O
-X O -
-X - O
-
-OR 
-
-- X O
-O X -
-- X O
-
-OR
-
-- O X
-O - X
-- O X
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-3&#34;&gt;Case 3&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(.\\1.\\1..$)
-
-will take care of 
-
-O - X
-- X O
-X O -
-
-false positive if ..$ is not included
-
-O X -
-X O X
-- O X
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-4&#34;&gt;Case 4&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(\\1\\1(...)*$)
-
-will take care of 
-
-X X X
-O - O
-- - -
-
-OR 
-
-O - O
-X X X
-O - -
-
-OR
-
-O - -
-O - X
-X X X
-
-false positive if (...)*$ is not included
-
-O - X
-X X -
-- O O
-&lt;/code&gt;&lt;/pre&gt;</content>
+      <description>&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* Solution to HackerRank: Winning Tic Tac Toe&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * URL: https://www.hackerrank.com/contests/regular-expresso/challenges/winning-tic-tac-toe&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;(X|O)((...\\1){2}|..\\1..\\1|.\\1.\\1..$|\\1\\1(...)*$)&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;case-1&#34;&gt;Case 1&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(...\\1){2}) or (...\\1...\\1)&#xA;&#xA;will take care of&#xA;&#xA;X O -&#xA;O X O&#xA;- - X &#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-2&#34;&gt;Case 2&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(..\\1..\\1)&#xA;&#xA;will take care of &#xA;&#xA;X - O&#xA;X O -&#xA;X - O&#xA;&#xA;OR &#xA;&#xA;- X O&#xA;O X -&#xA;- X O&#xA;&#xA;OR&#xA;&#xA;- O X&#xA;O - X&#xA;- O X&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-3&#34;&gt;Case 3&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(.\\1.\\1..$)&#xA;&#xA;will take care of &#xA;&#xA;O - X&#xA;- X O&#xA;X O -&#xA;&#xA;false positive if ..$ is not included&#xA;&#xA;O X -&#xA;X O X&#xA;- O X&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;case-4&#34;&gt;Case 4&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(\\1\\1(...)*$)&#xA;&#xA;will take care of &#xA;&#xA;X X X&#xA;O - O&#xA;- - -&#xA;&#xA;OR &#xA;&#xA;O - O&#xA;X X X&#xA;O - -&#xA;&#xA;OR&#xA;&#xA;O - -&#xA;O - X&#xA;X X X&#xA;&#xA;false positive if (...)*$ is not included&#xA;&#xA;O - X&#xA;X X -&#xA;- O O&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
   </channel>
 </rss>

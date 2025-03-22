@@ -4,52 +4,17 @@
     <title>Wheezy on Notes</title>
     <link>https://abskmj.github.io/notes/tags/wheezy/</link>
     <description>Recent content in Wheezy on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Sun, 05 Apr 2020 18:26:32 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/wheezy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Apr 2020 18:26:32 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/wheezy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sources List for Debian Wheezy</title>
       <link>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</link>
       <pubDate>Sun, 05 Apr 2020 18:26:32 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/wd-mycloud/debian-wheezy-sources/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.&lt;/p&gt;</description>
-      <content>&lt;blockquote&gt;
-&lt;p&gt;As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;code&gt;/etc/apt/sources.list&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Comment existing sources&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add below sources&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deb http://archive.debian.org/debian/ wheezy main non-free contrib
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;deb-src http://archive.debian.org/debian/ wheezy main non-free contrib
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Now you can run&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get update
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;If you get below error&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;There is no public key available &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; the following key IDs
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Install below package&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install debian-archive-keyring
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Now you can rerun&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get update
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;As Debian wheezy version has reached the end of life, the usual repositories do not exist anymore and have been moved to the archive.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

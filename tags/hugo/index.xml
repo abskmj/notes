@@ -4,110 +4,31 @@
     <title>Hugo on Notes</title>
     <link>https://abskmj.github.io/notes/tags/hugo/</link>
     <description>Recent content in Hugo on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Thu, 23 Apr 2020 13:16:58 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Apr 2020 13:16:58 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Info Variables on Hugo</title>
       <link>https://abskmj.github.io/notes/posts/hugo/hugo-git-info/</link>
       <pubDate>Thu, 23 Apr 2020 13:16:58 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/hugo/hugo-git-info/</guid>
-      <description>&lt;h1 id=&#34;enable-git-info-variables&#34;&gt;Enable Git Info Variables&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Enable &lt;code&gt;.GitInfo&lt;/code&gt; object for each page (if the Hugo site is versioned by Git). This will then update the &lt;code&gt;Lastmod&lt;/code&gt; parameter for each page using the last git commit date for that content file.&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;enable-git-info-variables&#34;&gt;Enable Git Info Variables&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Enable &lt;code&gt;.GitInfo&lt;/code&gt; object for each page (if the Hugo site is versioned by Git). This will then update the &lt;code&gt;Lastmod&lt;/code&gt; parameter for each page using the last git commit date for that content file.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;terminal&#34;&gt;Terminal&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo --enableGitInfo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;config-file&#34;&gt;Config File&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Hugo uses the &lt;code&gt;config.toml&lt;/code&gt;, &lt;code&gt;config.yaml&lt;/code&gt;, or &lt;code&gt;config.json&lt;/code&gt; (if found in the site root) as the default site config file.&lt;/p&gt;
-&lt;p&gt;The user can choose to override that default with one or more site config files using the command line &lt;code&gt;--config&lt;/code&gt; switch.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;enableGitInfo&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;dates-on-hugo-pages&#34;&gt;Dates on Hugo Pages&lt;/h1&gt;
-&lt;p&gt;Once Git Info variables are enabled, Hugo updates only the &lt;code&gt;LastMod&lt;/code&gt; parameter for each page which is not used in most of the themes. However, Front Matter configuration can be set in the config file to show the dates from git info.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Dates are important in Hugo, and you can configure how Hugo assigns dates to your content pages. You do this by adding a frontmatter section to your &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;frontmatter&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:git&amp;#34;&lt;/span&gt; ,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;publishDate&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lastmod&amp;#34;&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+      <description>&lt;h1 id=&#34;enable-git-info-variables&#34;&gt;Enable Git Info Variables&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Enable &lt;code&gt;.GitInfo&lt;/code&gt; object for each page (if the Hugo site is versioned by Git). This will then update the &lt;code&gt;Lastmod&lt;/code&gt; parameter for each page using the last git commit date for that content file.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Deploy a NodeJS application using Git</title>
       <link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link>
       <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid>
-      <description>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;
-&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;
-&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init --bare
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Configure &lt;code&gt;project.source&lt;/code&gt; as working folder for source code by adding below to &lt;code&gt;project.git/hooks/post-receive&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
-git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Change file persion to &lt;code&gt;755&lt;/code&gt; to make it executable.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chmod 755 project.git/hooks/post-receive
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Add a remote to local repo&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push dev master
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;deployment-using-hooks&#34;&gt;Deployment using Hooks&lt;/h1&gt;
-&lt;p&gt;Steps to install dependencies, build, test, deploy can be added to the &lt;code&gt;post-receive&lt;/code&gt; hook script which will be executed every time the source code is pushed.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
-git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
-
-# Steps to build and deploy nodejs application
-cd /{{path}}/project.source
-npm install
-npm run build
-pm2 restart node_app
-&lt;/code&gt;&lt;/pre&gt;</content>
+      <description>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;&#xA;&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Deploy Hugo Website with Surge for Free</title>
       <link>https://abskmj.github.io/notes/posts/tutorials/deploy-hugo-surge-free/</link>
       <pubDate>Mon, 20 Nov 2017 20:28:20 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/tutorials/deploy-hugo-surge-free/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://surge.sh/&#34;&gt;Surge&lt;/a&gt; is static web publishing for Web Developers, right from the CLI.&lt;/p&gt;</description>
-      <content>&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://surge.sh/&#34;&gt;Surge&lt;/a&gt; is static web publishing for Web Developers, right from the CLI.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;install-surge-cli&#34;&gt;Install Surge CLI&lt;/h1&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g surge
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;deploy-with-surge&#34;&gt;Deploy with Surge&lt;/h1&gt;
-&lt;p&gt;Navigate to the &lt;code&gt;public&lt;/code&gt; folder generated by &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; CLI.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;surge
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The site, by default, will hosted on a sub domain of &lt;code&gt;surge.sh&lt;/code&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;deploy-changes&#34;&gt;Deploy Changes&lt;/h1&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;surge --domain &amp;lt;your-site&amp;gt;.surge.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the same domain name is not provided, another random sub domain will be prompted by Surge CLI which has to changed to original for each deployment.&lt;/p&gt;
-&lt;h1 id=&#34;custom-domain&#34;&gt;Custom Domain&lt;/h1&gt;
-&lt;p&gt;A &lt;code&gt;CNAME&lt;/code&gt; record has be added to your domain or sub domain and by setting the hostname to:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;na-west1.surge.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Site can now be deployed on the new custom domain.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;surge --domain &amp;lt;your-site.your-domain.com&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;script&#34;&gt;Script&lt;/h1&gt;
-&lt;p&gt;All these steps can be added to a script for easy deployment. A script named &lt;code&gt;deploy.sh&lt;/code&gt; can be created in the root folder of Hugo project with below contents.&lt;/p&gt;
-&lt;p&gt;This script will build the Hugo site and deploy it on the given domain.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo
-surge --domain &amp;lt;your-site.your-domain.com&amp;gt; ./public 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Appropriate permissions has be set to make it executable.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo chmod 755 ./deploy.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Easy Deploy&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;./deploy.sh
-&lt;/code&gt;&lt;/pre&gt;</content>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://surge.sh/&#34;&gt;Surge&lt;/a&gt; is static web publishing for Web Developers, right from the CLI.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

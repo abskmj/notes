@@ -4,48 +4,17 @@
     <title>CryptoCompare on Notes</title>
     <link>https://abskmj.github.io/notes/tags/cryptocompare/</link>
     <description>Recent content in CryptoCompare on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/cryptocompare/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/cryptocompare/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TradingView Advanced Charts with CryptoCompare APIs</title>
       <link>https://abskmj.github.io/notes/posts/trading-view-charts/cyptocompare/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/trading-view-charts/cyptocompare/</guid>
       <description>&lt;p&gt;Below is a functional demo of a financial chart using the &lt;a href=&#34;https://in.tradingview.com/advanced-charts/&#34;&gt;Technical Advanced Charts&lt;/a&gt; library from &lt;a href=&#34;https://www.tradingview.com/&#34;&gt;TradingView&lt;/a&gt; and data from &lt;a href=&#34;https://developers.cryptocompare.com/&#34;&gt;CryptoCompare&lt;/a&gt;. The chart plots historical OHLCV (Open High Low Close Volume) data for a crypto coin pair. The data on the chart updates automatically in real-time using a web socket connection. It uses the &lt;a href=&#34;https://www.tradingview.com/charting-library-docs/latest/connecting_data/Datafeed-API&#34;&gt;Datafeed API&lt;/a&gt; to integrate with the TradingView charting library.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Below is a functional demo of a financial chart using the &lt;a href=&#34;https://in.tradingview.com/advanced-charts/&#34;&gt;Technical Advanced Charts&lt;/a&gt; library from &lt;a href=&#34;https://www.tradingview.com/&#34;&gt;TradingView&lt;/a&gt; and data from &lt;a href=&#34;https://developers.cryptocompare.com/&#34;&gt;CryptoCompare&lt;/a&gt;. The chart plots historical OHLCV (Open High Low Close Volume) data for a crypto coin pair. The data on the chart updates automatically in real-time using a web socket connection. It uses the &lt;a href=&#34;https://www.tradingview.com/charting-library-docs/latest/connecting_data/Datafeed-API&#34;&gt;Datafeed API&lt;/a&gt; to integrate with the TradingView charting library.&lt;/p&gt;
-&lt;div style=&#34;
-    margin: 40px 0;
-    padding: 40px 0;
-    border-top: 1px solid #78e2a0;  
-    border-bottom: 1px solid #78e2a0;
-    text-align: center;
-&#34;&gt;
-    
-    &lt;iframe src=&#34;//tradingviewcharts.gitlab.io/cryptocompare/&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; style=&#34;
-        width: 100%;
-        min-height: 400px;
-        border: none;
-        margin-bottom: 20px;
-    &#34;&gt;
-    &lt;/iframe&gt;
-    &lt;a href=&#34;//tradingviewcharts.gitlab.io/cryptocompare/&#34; target=&#34;_blank&#34;&gt;View in new tab&lt;/a&gt;
-    
-
-    
-    &lt;p&gt;
-        Live Preview - TradingView Charts with CryptoCompare APIs (BTC/USDT)
-    &lt;/p&gt;
-    
-&lt;/div&gt;
-&lt;h1 id=&#34;source-code&#34;&gt;Source Code&lt;/h1&gt;
-&lt;p&gt;If you are interested, the source code of this demo is available at &lt;a href=&#34;https://www.buymeacoffee.com/abskmj/e/39007&#34;&gt;buymeacoffee.com&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;looking-for-a-developer&#34;&gt;Looking for a Developer?&lt;/h1&gt;
-&lt;p&gt;If you are looking for a developer to work on your integration of the TradingView charting library, please feel free to contact me.&lt;/p&gt;
-</content>
     </item>
-    
   </channel>
 </rss>

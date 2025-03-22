@@ -4,89 +4,17 @@
     <title>Payoneer on Notes</title>
     <link>https://abskmj.github.io/notes/tags/payoneer/</link>
     <description>Recent content in Payoneer on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Wed, 28 Oct 2020 11:50:27 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/payoneer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Oct 2020 11:50:27 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/payoneer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Receive International Payments for freelance work in India</title>
       <link>https://abskmj.github.io/notes/posts/freelance/payments/</link>
       <pubDate>Wed, 28 Oct 2020 11:50:27 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/freelance/payments/</guid>
       <description>&lt;p&gt;Payment methods to receive payments from foreign clients in a bank account in India.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Payment methods to receive payments from foreign clients in a bank account in India.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Please note that the information provided below is from personal experience and may not same as what is listed on the website of the methods. This would help to decide which method is better in different scenarios.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;/th&gt;
-          &lt;th&gt;Transferwise&lt;/th&gt;
-          &lt;th&gt;Payoneer&lt;/th&gt;
-          &lt;th&gt;Paypal&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;How is fund deposited?&lt;/td&gt;
-          &lt;td&gt;Deposited &lt;code&gt;directly&lt;/code&gt; to an Indian Bank Acount&lt;/td&gt;
-          &lt;td&gt;Deposited to the Payoneer account and auto-withdrawn daily to an Indian Bank Account&lt;/td&gt;
-          &lt;td&gt;Deposited to the Paypal account and auto-withdrawn daily to an Indian Bank Account&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;How much time is taken to get the fund in the bank account?&lt;/td&gt;
-          &lt;td&gt;Within a day, sometimes within &lt;code&gt;few hours&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;1 to 2 Days&lt;/td&gt;
-          &lt;td&gt;2 to 15 days (There were instances where the fund was put on hold for verification and took around 15 days to get deposited)&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;How much transaction fee is charged?&lt;/td&gt;
-          &lt;td&gt;Dynamic fee based on the amount to be transferred but the &lt;code&gt;fee is shown upfront&lt;/code&gt; and &lt;code&gt;lowest&lt;/code&gt; compared to other methods  &lt;a href=&#34;https://transferwise.com/help/articles/2522717/fees-for-sending-money&#34;&gt;Details&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Upto 2%&lt;/code&gt; as currency conversion fee when withdrawing to a bank &lt;a href=&#34;https://www.payoneer.com/about/fees/&#34;&gt;Details&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;4.40%&lt;/code&gt; + Fixed Fee when receiving the payment and &lt;code&gt;4%&lt;/code&gt; as currency conversion fee when withdrawing to a bank &lt;a href=&#34;https://www.paypal.com/in/webapps/mpp/merchant-fees&#34;&gt;Details&lt;/a&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;How is the exchange rate to INR?&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Best&lt;/code&gt; (Mid-market rate)&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Better&lt;/code&gt; compared to Paypal as conversion fee is lower&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Bad&lt;/code&gt; as conversion fee is higher&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;How much of a hassle is it for the client?&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;High&lt;/code&gt; as they have to create an account with Transferwise and add a payee. Clients with a low-value project &lt;code&gt;might not agree&lt;/code&gt; to this.&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Low&lt;/code&gt; if they have a Payoneer Account&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Low&lt;/code&gt; if they have a Paypal account&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Can a client pay without signing up for an account?&lt;/td&gt;
-          &lt;td&gt;No&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Yes&lt;/code&gt;, a client can send the funds as a bank transfer to Payoneer local receiving accounts &lt;a href=&#34;https://www.payoneer.com/solutions/global-payment-service/&#34;&gt;Details&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;No&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;What information to share with the client?&lt;/td&gt;
-          &lt;td&gt;Full Name, Postal Address with Pincode, Bank Account with IFSC&lt;/td&gt;
-          &lt;td&gt;Payoneer Email Address&lt;/td&gt;
-          &lt;td&gt;Paypal Email Address&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Which is recommended?&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Highly recommended&lt;/code&gt; for best conversion rate and upfront fees. Few clients would cover the fees while making the payment.&lt;/td&gt;
-          &lt;td&gt;Recommended for business transaction for better conversion rates than Paypal&lt;/td&gt;
-          &lt;td&gt;Recommended when no other method is feasible&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Sign Up&lt;/td&gt;
-          &lt;td&gt;Only the client needs an account, &lt;a href=&#34;https://transferwise.prf.hn/l/K9elZnL&#34;&gt;Create an Account&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://share.payoneer.com/nav/v5CqoAaBZxefM8qZvxOiFR8Nvw9o8VEUczhFfTrw9vEEKkcEsWmbic15QF5gMDmYcBqw_L4hrrdl4ujHnavZmQ2&#34;&gt;Create an Account&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;https://www.paypal.com/in/webapps/mpp/account-selection?refBy=9HPdLB1oQk1603865477380&#34;&gt;Create an Account&lt;/a&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</content>
     </item>
-    
   </channel>
 </rss>

@@ -4,193 +4,45 @@
     <title>Git on Notes</title>
     <link>https://abskmj.github.io/notes/tags/git/</link>
     <description>Recent content in Git on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Wed, 15 Jul 2020 18:10:09 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jul 2020 18:10:09 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Backup Repository with a Github Action Workflow</title>
       <link>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</link>
       <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</guid>
       <description>&lt;p&gt;I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.&lt;/p&gt;</description>
-      <content>&lt;p&gt;I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.&lt;/p&gt;
-&lt;h1 id=&#34;github-action-workflow&#34;&gt;Github Action Workflow&lt;/h1&gt;
-&lt;p&gt;Create a &lt;code&gt;.github/workflows/mirror.yml&lt;/code&gt; in the Github repository with the follow contents.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Mirror to Gitlab&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;push, delete]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;gitlab&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-latest&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;pixta-dev/repository-mirroring-action@v1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;target_repo_url&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;git@gitlab.com:&amp;lt;username&amp;gt;/&amp;lt;repository&amp;gt;.git&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;ssh_private_key&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.GITLAB_SSH_KEY }}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;credentials&#34;&gt;Credentials&lt;/h1&gt;
-&lt;p&gt;Create an RSA key pair to allow the Github action runner to write to the Gitlab repository.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-keygen -t rsa -b &lt;span style=&#34;color:#ae81ff&#34;&gt;2048&lt;/span&gt; -C &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;comment&amp;gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Executing the command will create two files, one with a &lt;code&gt;.pub&lt;/code&gt; extension which is the public key and one with no extension which is the private key.&lt;/p&gt;
-&lt;p&gt;Since I like to use a different set of key pair for each repository, I&lt;/p&gt;
-&lt;h2 id=&#34;gitlab-public-key&#34;&gt;Gitlab (Public Key)&lt;/h2&gt;
-&lt;p&gt;Add a deploy key by navigating to &lt;code&gt;Repository &amp;gt; Settings &amp;gt; Deploy Keys &amp;gt; Expand &amp;gt; Add Key&lt;/code&gt;. Fill the contents of &lt;code&gt;.pub&lt;/code&gt; file or the public key here. Details at &lt;a href=&#34;https://docs.gitlab.com/ce/user/project/deploy_keys/&#34;&gt;docs.gitlab.com&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt; - Remember to check the &lt;code&gt;Write access allowed&lt;/code&gt; option while adding the key&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;github-private-key&#34;&gt;Github (Private Key)&lt;/h2&gt;
-&lt;p&gt;Add a secret by navigating to &lt;code&gt;Repository &amp;gt; Settings &amp;gt; Repository &amp;gt; Secrets &amp;gt; New Secret&lt;/code&gt;. Fill the contents of the private key and name as &lt;code&gt;GITLAB_SSH_KEY&lt;/code&gt;. Details at &lt;a href=&#34;https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets&#34;&gt;docs.github.com&lt;/a&gt;.&lt;/p&gt;
-</content>
     </item>
-    
     <item>
       <title>Git Info Variables on Hugo</title>
       <link>https://abskmj.github.io/notes/posts/hugo/hugo-git-info/</link>
       <pubDate>Thu, 23 Apr 2020 13:16:58 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/hugo/hugo-git-info/</guid>
-      <description>&lt;h1 id=&#34;enable-git-info-variables&#34;&gt;Enable Git Info Variables&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Enable &lt;code&gt;.GitInfo&lt;/code&gt; object for each page (if the Hugo site is versioned by Git). This will then update the &lt;code&gt;Lastmod&lt;/code&gt; parameter for each page using the last git commit date for that content file.&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;enable-git-info-variables&#34;&gt;Enable Git Info Variables&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Enable &lt;code&gt;.GitInfo&lt;/code&gt; object for each page (if the Hugo site is versioned by Git). This will then update the &lt;code&gt;Lastmod&lt;/code&gt; parameter for each page using the last git commit date for that content file.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;terminal&#34;&gt;Terminal&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo --enableGitInfo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;config-file&#34;&gt;Config File&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Hugo uses the &lt;code&gt;config.toml&lt;/code&gt;, &lt;code&gt;config.yaml&lt;/code&gt;, or &lt;code&gt;config.json&lt;/code&gt; (if found in the site root) as the default site config file.&lt;/p&gt;
-&lt;p&gt;The user can choose to override that default with one or more site config files using the command line &lt;code&gt;--config&lt;/code&gt; switch.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;enableGitInfo&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;dates-on-hugo-pages&#34;&gt;Dates on Hugo Pages&lt;/h1&gt;
-&lt;p&gt;Once Git Info variables are enabled, Hugo updates only the &lt;code&gt;LastMod&lt;/code&gt; parameter for each page which is not used in most of the themes. However, Front Matter configuration can be set in the config file to show the dates from git info.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Dates are important in Hugo, and you can configure how Hugo assigns dates to your content pages. You do this by adding a frontmatter section to your &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;frontmatter&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:git&amp;#34;&lt;/span&gt; ,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;publishDate&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lastmod&amp;#34;&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+      <description>&lt;h1 id=&#34;enable-git-info-variables&#34;&gt;Enable Git Info Variables&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Enable &lt;code&gt;.GitInfo&lt;/code&gt; object for each page (if the Hugo site is versioned by Git). This will then update the &lt;code&gt;Lastmod&lt;/code&gt; parameter for each page using the last git commit date for that content file.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Working with Git Stash</title>
       <link>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</link>
       <pubDate>Fri, 14 Jun 2019 12:49:55 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/tutorials/git/git-stash/</guid>
       <description>&lt;p&gt;Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Git stash is a great set of commands while working on volatile porjects where you are just trying out a proof of concept or a module.&lt;/p&gt;
-&lt;h2 id=&#34;save-the-local-changes-in-stash&#34;&gt;Save the local changes in Stash&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -m &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; commit message&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// example
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -m &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; new logging module &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;list-all-the-change-sets-in-stash&#34;&gt;List all the change sets in Stash&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash list
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;apply-a-change-set-from-stash&#34;&gt;Apply a change set from Stash&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash apply &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; index &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;//example
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash apply &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Not specifying an index with automatically apply first index&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;delete-a-change-set-without-applying-from-stash&#34;&gt;Delete a change set without applying from Stash&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash drop &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; index &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// example
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash drop &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Not specifying an index with automatically drop first index&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
     </item>
-    
     <item>
       <title>Using a remote repository with Glitch.com</title>
       <link>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</link>
       <pubDate>Mon, 18 Jun 2018 11:25:57 +0000</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/tutorials/glitch/remote-git/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://glitch.com/&#34;&gt;Glitch&lt;/a&gt; is a online workspace that support javascript for development with live previews.&lt;/p&gt;</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://glitch.com/&#34;&gt;Glitch&lt;/a&gt; is a online workspace that support javascript for development with live previews.&lt;/p&gt;
-&lt;p&gt;A gitch project already has a local git repository that adds remix and review functionality. Each of the changes done to the code is automatically committed to this repository. Hence, one should NOT connect to a remote to this repository. If done, there will be unnecessary checkpoint commits in the remote repository as well when pushed.&lt;/p&gt;
-&lt;p&gt;Rather, a separate git repository can be set using the current project as working directory.&lt;/p&gt;
-&lt;h2 id=&#34;create-a-separate-local-git-repository&#34;&gt;Create a separate local Git repository&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Create a folder for this new git repository.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir .git-remote
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd .git-remote
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Initialize an bare git repository.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init --bare
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Add the remote repository&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add orgin &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;remote_git_url&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-new-git-repository&#34;&gt;Using new Git Repository&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;All the git comands can be used by point the git directory to the new repository.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;git_options&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Commits:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; commit -am &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;new commit&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Push/Pull:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt; push origin master
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;adding-an-alias&#34;&gt;Adding an Alias&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;An alias can be added to glitch console by creating a &lt;code&gt;.bash_profile&lt;/code&gt; file in project root and adding:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias rgit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.git-remote&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Alias can be used:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rgit commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;new commit&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     </item>
-    
     <item>
       <title>Deploy a NodeJS application using Git</title>
       <link>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</link>
       <pubDate>Wed, 09 May 2018 05:09:36 +0000</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/tutorials/git/deploy-nodejs-git/</guid>
-      <description>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;
-&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;
-&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init --bare
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Configure &lt;code&gt;project.source&lt;/code&gt; as working folder for source code by adding below to &lt;code&gt;project.git/hooks/post-receive&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
-git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Change file persion to &lt;code&gt;755&lt;/code&gt; to make it executable.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chmod 755 project.git/hooks/post-receive
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Add a remote to local repo&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote add dev git+ssh://{{user}}@{{server}}/{{path}}/project.git
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above steps are generic to any kind of project as it simply transfers the code to the server. The latest version of the source code will be available in the working folder after each push.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git push dev master
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;deployment-using-hooks&#34;&gt;Deployment using Hooks&lt;/h1&gt;
-&lt;p&gt;Steps to install dependencies, build, test, deploy can be added to the &lt;code&gt;post-receive&lt;/code&gt; hook script which will be executed every time the source code is pushed.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
-git --work-tree=/{{path}}/project.source --git-dir=/{{path}}/project.git checkout -f
-
-# Steps to build and deploy nodejs application
-cd /{{path}}/project.source
-npm install
-npm run build
-pm2 restart node_app
-&lt;/code&gt;&lt;/pre&gt;</content>
+      <description>&lt;h1 id=&#34;remote-repository-on-deployment-server&#34;&gt;Remote Repository on Deployment Server&lt;/h1&gt;&#xA;&lt;p&gt;Create two folders named &lt;code&gt;project.git&lt;/code&gt; and &lt;code&gt;project.source&lt;/code&gt;. Create a bare git repo in &lt;code&gt;project.git&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

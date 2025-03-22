@@ -2,38 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://abskmj.github.io/notes/tags/hls/</loc>
-    <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://abskmj.github.io/notes/tags/iptv/</loc>
-    <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://abskmj.github.io/notes/tags/m3u/</loc>
-    <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
     <loc>https://abskmj.github.io/notes/</loc>
-    <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://abskmj.github.io/notes/tags/playlist/</loc>
     <lastmod>2024-02-21T00:00:00+05:30</lastmod>
   </url><url>
     <loc>https://abskmj.github.io/notes/posts/</loc>
     <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://abskmj.github.io/notes/tags/project/</loc>
-    <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://abskmj.github.io/notes/tags/</loc>
-    <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://abskmj.github.io/notes/tags/youtube/</loc>
-    <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://abskmj.github.io/notes/posts/projects/youtube-hls-server/</loc>
-    <lastmod>2024-02-21T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://abskmj.github.io/notes/posts/projects/youtube-live-channels/</loc>
-    <lastmod>2024-02-18T00:00:00+05:30</lastmod>
   </url><url>
     <loc>https://abskmj.github.io/notes/tags/aria2/</loc>
     <lastmod>2023-12-28T00:00:00+05:30</lastmod>
@@ -45,6 +18,9 @@
     <lastmod>2023-12-28T00:00:00+05:30</lastmod>
   </url><url>
     <loc>https://abskmj.github.io/notes/posts/wd-mycloud/debian-aria2/</loc>
+    <lastmod>2023-12-28T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://abskmj.github.io/notes/tags/</loc>
     <lastmod>2023-12-28T00:00:00+05:30</lastmod>
   </url><url>
     <loc>https://abskmj.github.io/notes/tags/wd-mycloud/</loc>
@@ -477,6 +453,9 @@
     <lastmod>2018-12-16T07:30:14+00:00</lastmod>
   </url><url>
     <loc>https://abskmj.github.io/notes/posts/projects/npm/abskmj-query/</loc>
+    <lastmod>2018-10-17T06:38:37+00:00</lastmod>
+  </url><url>
+    <loc>https://abskmj.github.io/notes/tags/project/</loc>
     <lastmod>2018-10-17T06:38:37+00:00</lastmod>
   </url><url>
     <loc>https://abskmj.github.io/notes/posts/solutions/hackerrank/algorithms/implementation/divisible-sum-pairs/</loc>

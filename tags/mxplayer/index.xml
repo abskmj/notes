@@ -4,72 +4,17 @@
     <title>MXPlayer on Notes</title>
     <link>https://abskmj.github.io/notes/tags/mxplayer/</link>
     <description>Recent content in MXPlayer on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Sat, 27 Aug 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/mxplayer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Aug 2022 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/mxplayer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>External Players in Kodi</title>
       <link>https://abskmj.github.io/notes/posts/android-tv/external-players-kodi/</link>
       <pubDate>Sat, 27 Aug 2022 00:00:00 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/android-tv/external-players-kodi/</guid>
       <description>&lt;p&gt;Setup video players like Just Player and MX Player to use on Kodi&lt;/p&gt;</description>
-      <content>&lt;p&gt;Setup video players like Just Player and MX Player to use on Kodi&lt;/p&gt;
-&lt;h1 id=&#34;video-players&#34;&gt;Video Players&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Install the player of your choice&lt;/li&gt;
-&lt;li&gt;Use the package name of the player as &lt;code&gt;filename&lt;/code&gt; in the configuration file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I use the below players on my Android TV&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.brouken.player&#34;&gt;Just Player&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;I use it as the default player on Kodi.&lt;/li&gt;
-&lt;li&gt;It plays most video and audio formats.&lt;/li&gt;
-&lt;li&gt;It is open source and available at &lt;a href=&#34;https://github.com/moneytoo/Player&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad&#34;&gt;MX Player&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;I use it as an alternative to play any files that are not supported by the other player.&lt;/li&gt;
-&lt;li&gt;To use in Kodi, long click on the item to play, and select the &lt;code&gt;Play using&lt;/code&gt; menu option.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;configuration&#34;&gt;Configuration&lt;/h1&gt;
-&lt;p&gt;Create a &lt;code&gt;playercorefactory.xml&lt;/code&gt; configure file at &lt;code&gt;Android/data/org.xbmc.kodi/files/.kodi/userdata/&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;playercorefactory&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- players --&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;players&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;player&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JustPlayer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ExternalPlayer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;audio=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;video=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;filename&amp;gt;&lt;/span&gt;com.brouken.player&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/filename&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;hidexbmc&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/hidexbmc&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;playcountminimumtime&amp;gt;&lt;/span&gt;120&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/playcountminimumtime&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/player&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;player&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MXPlayer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ExternalPlayer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;audio=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;video=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;filename&amp;gt;&lt;/span&gt;com.mxtech.videoplayer.ad&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/filename&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;hidexbmc&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/hidexbmc&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;playcountminimumtime&amp;gt;&lt;/span&gt;120&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/playcountminimumtime&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/player&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/players&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- rules --&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rules&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;action=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;prepend&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;protocols=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;smb&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;player=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JustPlayer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;dvdimage=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;player=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JustPlayer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;protocols=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rtmp&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;player=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JustPlayer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;protocols=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rtsp&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;player=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JustPlayer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;protocols=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sop&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;player=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JustPlayer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;internetstream=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;player=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JustPlayer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;video=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;player=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JustPlayer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- Default for anything else not listed --&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/rules&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/playercorefactory&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;External Players at &lt;a href=&#34;https://kodi.wiki/view/External_players&#34;&gt;kodi.wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
     </item>
-    
   </channel>
 </rss>

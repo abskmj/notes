@@ -4,142 +4,31 @@
     <title>Gitlab on Notes</title>
     <link>https://abskmj.github.io/notes/tags/gitlab/</link>
     <description>Recent content in Gitlab on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Mon, 14 Feb 2022 11:21:45 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 11:21:45 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Manage Generic Packages on Gitlab</title>
       <link>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</link>
       <pubDate>Mon, 14 Feb 2022 11:21:45 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</guid>
       <description>&lt;p&gt;Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.&lt;/p&gt;
-&lt;h1 id=&#34;uploaddownload-a-package&#34;&gt;Upload/Download a Package&lt;/h1&gt;
-&lt;p&gt;These packages are accessible at the &lt;code&gt;Packages &amp;amp; Registries &amp;gt; Package Registry&lt;/code&gt; section of the Gitlab project.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Upload&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-u $user:$password &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--upload-file ./$package_name.zip &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Download&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-u $user:$password &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--output /$package_name.zip &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h1&gt;
-&lt;h2 id=&#34;deploy-token&#34;&gt;Deploy Token&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigate to the &lt;code&gt;Settings &amp;gt; Repository &amp;gt; Deploy Tokens&lt;/code&gt; section of the Gitlab project to create a deploy token&lt;/li&gt;
-&lt;li&gt;Set the username and use it as &lt;code&gt;$user&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Select scopes &lt;code&gt;read_package_registry&lt;/code&gt; and &lt;code&gt;write_package_registry&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Create the token and use it as &lt;code&gt;$password&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;project-id&#34;&gt;Project ID&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigate to repo home page&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Project ID&lt;/code&gt; is mentioned in the top header section, just below the repo name&lt;/li&gt;
-&lt;li&gt;Use the value as &lt;code&gt;$project_id&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
     </item>
-    
     <item>
       <title>Continuous Deployment pipeline for a Subgraph</title>
       <link>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</link>
       <pubDate>Wed, 09 Feb 2022 15:41:04 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/subgraphs/continuous-deployment/</guid>
       <description>&lt;p&gt;Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Steps to implement a continuous deployment (CD) pipeline to deploy a subgraph to The Graph&amp;rsquo;s hosted service.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://thegraph.com/&#34;&gt;The Graph&lt;/a&gt; is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;npm-scripts&#34;&gt;NPM Scripts&lt;/h1&gt;
-&lt;p&gt;Below scripts need to be added in the &lt;code&gt;package.json&lt;/code&gt; file.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Generate the assembly code&lt;/li&gt;
-&lt;li&gt;Authenticate with The Graph&amp;rsquo;s hosted service&lt;/li&gt;
-&lt;li&gt;Deploy&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// package.json
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scripts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;codegen&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;graph codegen&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;auth&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;graph auth --product hosted-service&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deploy&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;graph deploy --product hosted-service &amp;lt;user/subgraph&amp;gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The scripts can be used on local as well&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm run codegen
-npm run auth &amp;lt;token&amp;gt;
-npm run deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;gitlab-pipeline&#34;&gt;Gitlab Pipeline&lt;/h1&gt;
-&lt;p&gt;Below is a sample pipeline using Gitlab CI/CD. &lt;code&gt;$GRAPH_TOKEN&lt;/code&gt; is the authentication token for The Graph&amp;rsquo;s hosted service.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# .gitlab-ci.yml &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;node:latest&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;deploy&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;only&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;main&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;npm ci&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;npm run codegen&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;npm run auth $GRAPH_TOKEN&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;npm run deploy&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://thegraph.com/docs/en/hosted-service/deploy-subgraph-hosted/&#34;&gt;Deploy a Subgraph to the Hosted Service&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
     </item>
-    
     <item>
       <title>Backup Repository with a Github Action Workflow</title>
       <link>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</link>
       <pubDate>Wed, 15 Jul 2020 18:10:09 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/github/actions/backup-repo/</guid>
       <description>&lt;p&gt;I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.&lt;/p&gt;</description>
-      <content>&lt;p&gt;I always like to have a backup copy of all my important git repositories hosted on Github. I use a private repository at Gitlab to mirror each of these repositories. Currently, I have a Github Action workflow configured to copy it on any git push on any branches.&lt;/p&gt;
-&lt;h1 id=&#34;github-action-workflow&#34;&gt;Github Action Workflow&lt;/h1&gt;
-&lt;p&gt;Create a &lt;code&gt;.github/workflows/mirror.yml&lt;/code&gt; in the Github repository with the follow contents.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Mirror to Gitlab&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;push, delete]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;gitlab&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-latest&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;pixta-dev/repository-mirroring-action@v1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;target_repo_url&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;git@gitlab.com:&amp;lt;username&amp;gt;/&amp;lt;repository&amp;gt;.git&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;ssh_private_key&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.GITLAB_SSH_KEY }}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;credentials&#34;&gt;Credentials&lt;/h1&gt;
-&lt;p&gt;Create an RSA key pair to allow the Github action runner to write to the Gitlab repository.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-keygen -t rsa -b &lt;span style=&#34;color:#ae81ff&#34;&gt;2048&lt;/span&gt; -C &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;comment&amp;gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Executing the command will create two files, one with a &lt;code&gt;.pub&lt;/code&gt; extension which is the public key and one with no extension which is the private key.&lt;/p&gt;
-&lt;p&gt;Since I like to use a different set of key pair for each repository, I&lt;/p&gt;
-&lt;h2 id=&#34;gitlab-public-key&#34;&gt;Gitlab (Public Key)&lt;/h2&gt;
-&lt;p&gt;Add a deploy key by navigating to &lt;code&gt;Repository &amp;gt; Settings &amp;gt; Deploy Keys &amp;gt; Expand &amp;gt; Add Key&lt;/code&gt;. Fill the contents of &lt;code&gt;.pub&lt;/code&gt; file or the public key here. Details at &lt;a href=&#34;https://docs.gitlab.com/ce/user/project/deploy_keys/&#34;&gt;docs.gitlab.com&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt; - Remember to check the &lt;code&gt;Write access allowed&lt;/code&gt; option while adding the key&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;github-private-key&#34;&gt;Github (Private Key)&lt;/h2&gt;
-&lt;p&gt;Add a secret by navigating to &lt;code&gt;Repository &amp;gt; Settings &amp;gt; Repository &amp;gt; Secrets &amp;gt; New Secret&lt;/code&gt;. Fill the contents of the private key and name as &lt;code&gt;GITLAB_SSH_KEY&lt;/code&gt;. Details at &lt;a href=&#34;https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets&#34;&gt;docs.github.com&lt;/a&gt;.&lt;/p&gt;
-</content>
     </item>
-    
   </channel>
 </rss>

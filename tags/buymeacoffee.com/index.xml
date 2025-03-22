@@ -4,70 +4,17 @@
     <title>BuyMeACoffee.com on Notes</title>
     <link>https://abskmj.github.io/notes/tags/buymeacoffee.com/</link>
     <description>Recent content in BuyMeACoffee.com on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/buymeacoffee.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/buymeacoffee.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Source Code: TradingView Charts for Pancakeswap Tokens</title>
       <link>https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/</link>
       <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/trading-view-charts/bmc-extra-pancake/</guid>
       <description>&lt;p&gt;This is an informational post for my extra available at &lt;a href=&#34;https://www.buymeacoffee.com/abskmj/e/39007&#34;&gt;BuyMeACoffee.com&lt;/a&gt;. Connect me on my &lt;a href=&#34;mailto:abskmj@gmail.com&#34;&gt;email&lt;/a&gt; for any queries or feedback.&lt;/p&gt;</description>
-      <content>&lt;p&gt;This is an informational post for my extra available at &lt;a href=&#34;https://www.buymeacoffee.com/abskmj/e/39007&#34;&gt;BuyMeACoffee.com&lt;/a&gt;. Connect me on my &lt;a href=&#34;mailto:abskmj@gmail.com&#34;&gt;email&lt;/a&gt; for any queries or feedback.&lt;/p&gt;
-&lt;h1 id=&#34;what-will-you-get&#34;&gt;What will you get?&lt;/h1&gt;
-&lt;p&gt;You will get a zip file with the source code for an OHLC Chart for PancakeSwap Tokens.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;It uses TradingView Techincal Analysis Charts as the charting library and Bitquery.io APIs as the data provider.&lt;/li&gt;
-&lt;li&gt;Code is in HTML and Javascript.&lt;/li&gt;
-&lt;li&gt;Prices in the charts are in BUSD.&lt;/li&gt;
-&lt;li&gt;Supports both Pancakeswap v1 and v2 tokens&lt;/li&gt;
-&lt;li&gt;Supports 1m,5m,15m,30m,1h,4h,12d,1d,7d timeframes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div style=&#34;
-    margin: 40px 0;
-    padding: 40px 0;
-    border-top: 1px solid #78e2a0;  
-    border-bottom: 1px solid #78e2a0;
-    text-align: center;
-&#34;&gt;
-    
-    &lt;iframe src=&#34;//tradingviewcharts.gitlab.io/pancakeswap-bitquery/&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; style=&#34;
-        width: 100%;
-        min-height: 400px;
-        border: none;
-        margin-bottom: 20px;
-    &#34;&gt;
-    &lt;/iframe&gt;
-    &lt;a href=&#34;//tradingviewcharts.gitlab.io/pancakeswap-bitquery/&#34; target=&#34;_blank&#34;&gt;View in new tab&lt;/a&gt;
-    
-
-    
-    &lt;p&gt;
-        Live Preview - Chart for PancakeSwap Token (CAKE)
-    &lt;/p&gt;
-    
-&lt;/div&gt;
-&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://abskmj.github.io/notes/notes/posts/trading-view-charts/bmc-extra-pancake/chart.png&#34; alt=&#34;TradingView Chart&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://abskmj.github.io/notes/notes/posts/trading-view-charts/bmc-extra-pancake/timeframes.png&#34; alt=&#34;TradingView Chart&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;how-to-use-it&#34;&gt;How to use it?&lt;/h1&gt;
-&lt;p&gt;You can view the chart by starting a local server and opening it in your browser. You can also host it with any HTTP server like Nginx and Apache on a remote server. These are static files and don&amp;rsquo;t need a server component other than to host them.&lt;/p&gt;
-&lt;h1 id=&#34;before-you-buy&#34;&gt;Before you buy&lt;/h1&gt;
-&lt;p&gt;There are a couple of prerequisites that you need to take care of.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Access to a copy of &lt;a href=&#34;https://in.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts&#34;&gt;TradingView Technical Analysis Charts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;An API Key from &lt;a href=&#34;https://bitquery.io/&#34;&gt;Bitquery.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;important-notes&#34;&gt;Important Notes&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;The chart is not integrated with a WebSocket or a live feed as Bitquery.io doesn&amp;rsquo;t provide one. Hence, the chart will not update automatically, and you will have to refresh it manually to see the latest data.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;looking-for-a-developer&#34;&gt;Looking for a Developer?&lt;/h1&gt;
-&lt;p&gt;I offer a few services related to TradinView charting libraries at &lt;a href=&#34;https://www.buymeacoffee.com/abskmj/commissions&#34;&gt;buymeacoffee.com&lt;/a&gt;.&lt;/p&gt;
-</content>
     </item>
-    
   </channel>
 </rss>

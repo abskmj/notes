@@ -4,50 +4,17 @@
     <title>Packages on Notes</title>
     <link>https://abskmj.github.io/notes/tags/packages/</link>
     <description>Recent content in Packages on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Mon, 14 Feb 2022 11:21:45 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/packages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 11:21:45 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/packages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Manage Generic Packages on Gitlab</title>
       <link>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</link>
       <pubDate>Mon, 14 Feb 2022 11:21:45 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/gitlab/generic-packages/</guid>
       <description>&lt;p&gt;Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Generic packages on GitLab are a convenient way to manage project artifacts. It supports versioning. They can be pulled and used in other CI/CD pipelines too.&lt;/p&gt;
-&lt;h1 id=&#34;uploaddownload-a-package&#34;&gt;Upload/Download a Package&lt;/h1&gt;
-&lt;p&gt;These packages are accessible at the &lt;code&gt;Packages &amp;amp; Registries &amp;gt; Package Registry&lt;/code&gt; section of the Gitlab project.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Upload&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-u $user:$password &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--upload-file ./$package_name.zip &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Download&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-u $user:$password &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--output /$package_name.zip &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;https://gitlab.com/api/v4/projects/$project_id/packages/generic/$package_name/$package_version/$package_name.zip
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h1&gt;
-&lt;h2 id=&#34;deploy-token&#34;&gt;Deploy Token&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigate to the &lt;code&gt;Settings &amp;gt; Repository &amp;gt; Deploy Tokens&lt;/code&gt; section of the Gitlab project to create a deploy token&lt;/li&gt;
-&lt;li&gt;Set the username and use it as &lt;code&gt;$user&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Select scopes &lt;code&gt;read_package_registry&lt;/code&gt; and &lt;code&gt;write_package_registry&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Create the token and use it as &lt;code&gt;$password&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;project-id&#34;&gt;Project ID&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigate to repo home page&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Project ID&lt;/code&gt; is mentioned in the top header section, just below the repo name&lt;/li&gt;
-&lt;li&gt;Use the value as &lt;code&gt;$project_id&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
     </item>
-    
   </channel>
 </rss>

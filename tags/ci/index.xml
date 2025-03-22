@@ -4,35 +4,17 @@
     <title>CI on Notes</title>
     <link>https://abskmj.github.io/notes/tags/ci/</link>
     <description>Recent content in CI on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Sun, 26 Apr 2020 22:51:06 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/ci/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Apr 2020 22:51:06 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/ci/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pass Parameters to Docker Build</title>
       <link>https://abskmj.github.io/notes/posts/docker/docker-args/</link>
       <pubDate>Sun, 26 Apr 2020 22:51:06 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/docker/docker-args/</guid>
-      <description>&lt;h1 id=&#34;arg-in-dockerfile&#34;&gt;ARG in Dockerfile&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The &lt;code&gt;ARG&lt;/code&gt; instruction defines a variable that users can pass at build-time to the builder with the docker build command using the &lt;code&gt;--build-arg &amp;lt;varname&amp;gt;=&amp;lt;value&amp;gt;&lt;/code&gt; flag. More details at &lt;a href=&#34;https://docs.docker.com/engine/reference/builder/#arg&#34;&gt;docs.docker.com&lt;/a&gt;&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;arg-in-dockerfile&#34;&gt;ARG in Dockerfile&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The &lt;code&gt;ARG&lt;/code&gt; instruction defines a variable that users can pass at build-time to the builder with the docker build command using the &lt;code&gt;--build-arg &amp;lt;varname&amp;gt;=&amp;lt;value&amp;gt;&lt;/code&gt; flag. More details at &lt;a href=&#34;https://docs.docker.com/engine/reference/builder/#arg&#34;&gt;docs.docker.com&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-&lt;p&gt;Dockerfile&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FROM debian:stable-slim
-
-ARG HUGO_VERSION
-
-LABEL maintainer &amp;#34;abskmj@gmail.com&amp;#34;
-LABEL hugo.version ${HUGO_VERSION}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pass the argument value&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker build -t hugo --build-arg HUGO_VERSION&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0.69.0 .
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+      <description>&lt;h1 id=&#34;arg-in-dockerfile&#34;&gt;ARG in Dockerfile&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The &lt;code&gt;ARG&lt;/code&gt; instruction defines a variable that users can pass at build-time to the builder with the docker build command using the &lt;code&gt;--build-arg &amp;lt;varname&amp;gt;=&amp;lt;value&amp;gt;&lt;/code&gt; flag. More details at &lt;a href=&#34;https://docs.docker.com/engine/reference/builder/#arg&#34;&gt;docs.docker.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

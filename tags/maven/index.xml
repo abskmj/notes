@@ -4,40 +4,17 @@
     <title>Maven on Notes</title>
     <link>https://abskmj.github.io/notes/tags/maven/</link>
     <description>Recent content in Maven on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Fri, 18 May 2018 10:54:22 +0000</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 May 2018 10:54:22 +0000</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Set Proxy for Maven</title>
       <link>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</link>
       <pubDate>Fri, 18 May 2018 10:54:22 +0000</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/tutorials/maven/maven-proxy/</guid>
       <description>&lt;p&gt;Proxy settings can be changed in &lt;code&gt;{{maven_installation_folder}}/conf/settings.xml&lt;/code&gt;. Un-comment and change the values in &lt;code&gt;proxies&lt;/code&gt; section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Proxy settings can be changed in &lt;code&gt;{{maven_installation_folder}}/conf/settings.xml&lt;/code&gt;. Un-comment and change the values in &lt;code&gt;proxies&lt;/code&gt; section of the file. Changes to this file doesn&amp;rsquo;t require maven restart.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;proxies&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- proxy
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     | Specification for one proxy, to be used in connecting to the network.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     |--&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;proxy&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;optional&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;active&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/active&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;protocol&amp;gt;&lt;/span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/protocol&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;username&amp;gt;&amp;lt;/username&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;password&amp;gt;&amp;lt;/password&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;host&amp;gt;&lt;/span&gt;{{proxy_host_or_ip}}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/host&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;port&amp;gt;&lt;/span&gt;8080&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/port&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;nonProxyHosts&amp;gt;&lt;/span&gt;local.net|some.host.com&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/nonProxyHosts&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/proxy&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/proxies&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     </item>
-    
   </channel>
 </rss>

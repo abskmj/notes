@@ -4,52 +4,17 @@
     <title>Share on Notes</title>
     <link>https://abskmj.github.io/notes/tags/share/</link>
     <description>Recent content in Share on Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate><atom:link href="https://abskmj.github.io/notes/tags/share/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jul 2020 16:59:31 +0530</lastBuildDate>
+    <atom:link href="https://abskmj.github.io/notes/tags/share/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup a Public Samba Share</title>
       <link>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</link>
       <pubDate>Fri, 10 Jul 2020 16:59:31 +0530</pubDate>
-      
       <guid>https://abskmj.github.io/notes/posts/wd-mycloud/samba-share-public/</guid>
-      <description>&lt;h1 id=&#34;install-samba&#34;&gt;Install Samba&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install samba
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-shares&#34;&gt;Create Shares&lt;/h1&gt;
-&lt;p&gt;Create shares with proper permissions&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;install-samba&#34;&gt;Install Samba&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install samba
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-shares&#34;&gt;Create Shares&lt;/h1&gt;
-&lt;p&gt;Create shares with proper permissions&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir -p /data/shares/public
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chown -R root:users /data/shares/public/
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod -R ug+rwx,o+rx-w /data/shares/public/
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;configure-samba&#34;&gt;Configure Samba&lt;/h1&gt;
-&lt;p&gt;Below configuration will create a new samba share which can be accessed by anybody on the network without entering any credentials.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nano /etc/samba/smb.conf
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Contents of &lt;code&gt;smb.conf&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[global]
-workgroup = WORKGROUP
-server string = Samba Server %v
-netbios name = WDMyCloud
-security = user
-map to guest = bad user
-dns proxy = no
-
-[Public]
-   path = /data/shares/Public
-   force group = users
-   create mask = 0660
-   directory mask = 0771
-   browsable = yes
-   writable = yes
-   guest ok = yes
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;restart-samba-service&#34;&gt;Restart Samba Service&lt;/h1&gt;
-&lt;p&gt;The samba service has to restarted each time to use the new configuration.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/init.d/samba restart
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+      <description>&lt;h1 id=&#34;install-samba&#34;&gt;Install Samba&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt-get install samba&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-shares&#34;&gt;Create Shares&lt;/h1&gt;&#xA;&lt;p&gt;Create shares with proper permissions&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
