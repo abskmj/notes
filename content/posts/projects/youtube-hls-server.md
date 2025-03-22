@@ -2,6 +2,7 @@
 title: "YouTube HLS Server"
 date: 2024-02-21T00:00:00+05:30
 tags: ["Project","Youtube","IPTV","M3U","Playlist", "HLS"]
+draft: true
 ---
 
 The server provides the HLS (live streaming) link for a YouTube channel or video. Any video or IPTV player can play a YouTube live video using this link.
