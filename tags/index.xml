@@ -7,8 +7,36 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Thu, 28 Dec 2023 00:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 11 May 2025 00:00:00 +0530</lastBuildDate>
     <atom:link href="https://abskmj.github.io/notes/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AndroidTV</title>
+      <link>https://abskmj.github.io/notes/tags/androidtv/</link>
+      <pubDate>Sun, 11 May 2025 00:00:00 +0530</pubDate>
+      <guid>https://abskmj.github.io/notes/tags/androidtv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JustPlayer</title>
+      <link>https://abskmj.github.io/notes/tags/justplayer/</link>
+      <pubDate>Sun, 11 May 2025 00:00:00 +0530</pubDate>
+      <guid>https://abskmj.github.io/notes/tags/justplayer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kodi</title>
+      <link>https://abskmj.github.io/notes/tags/kodi/</link>
+      <pubDate>Sun, 11 May 2025 00:00:00 +0530</pubDate>
+      <guid>https://abskmj.github.io/notes/tags/kodi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NextPlayer</title>
+      <link>https://abskmj.github.io/notes/tags/nextplayer/</link>
+      <pubDate>Sun, 11 May 2025 00:00:00 +0530</pubDate>
+      <guid>https://abskmj.github.io/notes/tags/nextplayer/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Aria2</title>
       <link>https://abskmj.github.io/notes/tags/aria2/</link>
@@ -108,38 +136,10 @@
       <description></description>
     </item>
     <item>
-      <title>AndroidTV</title>
-      <link>https://abskmj.github.io/notes/tags/androidtv/</link>
-      <pubDate>Mon, 26 Sep 2022 00:00:00 +0530</pubDate>
-      <guid>https://abskmj.github.io/notes/tags/androidtv/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Channels</title>
       <link>https://abskmj.github.io/notes/tags/channels/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0530</pubDate>
       <guid>https://abskmj.github.io/notes/tags/channels/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kodi</title>
-      <link>https://abskmj.github.io/notes/tags/kodi/</link>
-      <pubDate>Mon, 26 Sep 2022 00:00:00 +0530</pubDate>
-      <guid>https://abskmj.github.io/notes/tags/kodi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>JustPlayer</title>
-      <link>https://abskmj.github.io/notes/tags/justplayer/</link>
-      <pubDate>Sat, 27 Aug 2022 00:00:00 +0530</pubDate>
-      <guid>https://abskmj.github.io/notes/tags/justplayer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MXPlayer</title>
-      <link>https://abskmj.github.io/notes/tags/mxplayer/</link>
-      <pubDate>Sat, 27 Aug 2022 00:00:00 +0530</pubDate>
-      <guid>https://abskmj.github.io/notes/tags/mxplayer/</guid>
       <description></description>
     </item>
     <item>

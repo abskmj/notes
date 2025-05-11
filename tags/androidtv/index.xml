@@ -7,21 +7,21 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; abskmj</copyright>
-    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 11 May 2025 00:00:00 +0530</lastBuildDate>
     <atom:link href="https://abskmj.github.io/notes/tags/androidtv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>External Players in Kodi</title>
+      <link>https://abskmj.github.io/notes/posts/android-tv/external-players-kodi/</link>
+      <pubDate>Sun, 11 May 2025 00:00:00 +0530</pubDate>
+      <guid>https://abskmj.github.io/notes/posts/android-tv/external-players-kodi/</guid>
+      <description>&lt;p&gt;Setup video players like Just Player and Next Player as external players on Kodi&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Kodi channels on Android TV Home Screen</title>
       <link>https://abskmj.github.io/notes/posts/android-tv/kodi-channels/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0530</pubDate>
       <guid>https://abskmj.github.io/notes/posts/android-tv/kodi-channels/</guid>
       <description>&lt;p&gt;Create custom Kodi channels to be shown on the home screen of an Android TV&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>External Players in Kodi</title>
-      <link>https://abskmj.github.io/notes/posts/android-tv/external-players-kodi/</link>
-      <pubDate>Sat, 27 Aug 2022 00:00:00 +0530</pubDate>
-      <guid>https://abskmj.github.io/notes/posts/android-tv/external-players-kodi/</guid>
-      <description>&lt;p&gt;Setup video players like Just Player and MX Player to use on Kodi&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
